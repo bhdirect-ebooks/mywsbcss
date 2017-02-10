@@ -524,7 +524,7 @@ figcaption {
 }
 
 /*
- * List containers
+ * Ordered and unordered lists
  */
 
 ol {
@@ -593,10 +593,6 @@ ul {
   }
 }
 
-/*
- * List items
- */
-
 li {
   font-size: 1.05em;
   line-height: 1.5em;
@@ -611,6 +607,31 @@ li {
 
   p {
     text-indent: 0;
+  }
+}
+
+.paren,
+.right-paren {
+  list-style-type: none;
+
+  > li > ol {
+    padding-left: 2.25em;
+  }
+}
+
+.paren,
+.right-paren {
+  counter-reset: list;
+
+  > li {
+    left: -1em;
+    position: relative;
+  }
+
+  &:before {
+    left: -0.4em;
+    counter-increment: list;
+    position: relative;
   }
 }
 

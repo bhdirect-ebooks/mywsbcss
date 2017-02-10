@@ -500,19 +500,18 @@ figcaption {
   padding: 0 0 0 1em;
 }
 
-@mixin parenthetical() {
+@mixin parenthetical($leftness, $indentation) {
   counter-reset: list;
   list-style-type: none;
 
   > li {
-    left: -1em;
+    left: $leftness;
     position: relative;
+    text-indent: $indentation;
 
-    > {
-      ul,
-      ol {
-        padding-left: 2.25em;
-      }
+    > ol,
+    > ul {
+      padding-left: 2.25em;
     }
 
     &:before {
@@ -522,6 +521,7 @@ figcaption {
     }
   }
 }
+
 
 /*
  * Ordered and unordered lists
@@ -610,26 +610,12 @@ li {
   }
 }
 
-.paren,
+.paren {
+  @include parenthetical(0.15em, -1.15em);
+}
+
 .right-paren {
-  counter-reset: list;
-  list-style-type: none;
-
-  > li {
-    position: relative;
-    text-indent: -0.75em;
-
-    > ol,
-    > ul {
-      padding-left: 2.25em;
-    }
-
-    &:before {
-      left: -0.4em;
-      counter-increment: list;
-      position: relative;
-    }
-  }
+  @include parenthetical(0, -0.75em);
 }
 
 ol:not(.none) li {

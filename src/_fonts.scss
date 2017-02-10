@@ -1,11 +1,17 @@
-/*
- *  VERSION: 20161019
- *  See ../../../META-INF/FONT_LICENSES for Font Software license information.
+/**
+ * FILE:     _fonts.scss
+ * VERSION:  2017-02-10
+ * AUTHOR:   Weston Littrell
+ */
+/*!*
+ * See META-INF/FONT_LICENSES in this EPUB package
+ * for Font Software license information.
  */
 
 @font-face {
   font-family: "WS Extra";
-  src: url("../fonts/wsextra-webfont.woff2") format("woff2"),
+  src: url("../fonts/wsextra-webfont.woff2");
+  src: url("../fonts/wsextra-webfont.woff2?#iefix") format("woff2"),
        url("../fonts/wsextra-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
@@ -13,105 +19,120 @@
 
 @font-face {
   font-family: "Gentium Plus";
-  src: url("../fonts/GentiumPlus-R.woff") format("woff");
+  src: url("../fonts/GentiumPlus-R.woff");
+  src: url("../fonts/GentiumPlus-R.woff?#iefix") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Gentium Plus";
-  src: url("../fonts/GentiumPlus-I.woff") format("woff");
+  src: url("../fonts/GentiumPlus-I.woff");
+  src: url("../fonts/GentiumPlus-I.woff?#iefix") format("woff");
   font-style: italic;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Ezra SIL";
-  src: url("../fonts/SILEOT.woff") format("woff");
+  src: url("../fonts/SILEOT.woff");
+  src: url("../fonts/SILEOT.woff?#iefix") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "New Athena Unicode";
-  src: url("../fonts/newathu5.woff") format("woff");
+  src: url("../fonts/newathu5.woff");
+  src: url("../fonts/newathu5.woff?#iefix") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "GFS Decker";
-  src: url("../fonts/GFSDecker.otf") format("opentype");
+  src: url("../fonts/GFSDecker.otf");
+  src: url("../fonts/GFSDecker.otf?#iefix") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Alegreya";
-  src: url("../fonts/Alegreya-Regular.otf") format("opentype");
+  src: url("../fonts/Alegreya-Regular.otf");
+  src: url("../fonts/Alegreya-Regular.otf?#iefix") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Alegreya";
-  src: url("../fonts/Alegreya-Bold.otf") format("opentype");
+  src: url("../fonts/Alegreya-Bold.otf");
+  src: url("../fonts/Alegreya-Bold.otf?#iefix") format("opentype");
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Alegreya";
-  src: url("../fonts/Alegreya-Italic.otf") format("opentype");
+  src: url("../fonts/Alegreya-Italic.otf");
+  src: url("../fonts/Alegreya-Italic.otf?#iefix") format("opentype");
   font-style: italic;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Alegreya";
-  src: url("../fonts/Alegreya-BoldItalic.otf") format("opentype");
+  src: url("../fonts/Alegreya-BoldItalic.otf");
+  src: url("../fonts/Alegreya-BoldItalic.otf?#iefix") format("opentype");
   font-style: italic;
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Alegreya Sans";
-  src: url("../fonts/AlegreyaSans-Regular.otf") format("opentype");
+  src: url("../fonts/AlegreyaSans-Regular.otf");
+  src: url("../fonts/AlegreyaSans-Regular.otf?#iefix") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Alegreya Sans";
-  src: url("../fonts/AlegreyaSans-Italic.otf") format("opentype");
+  src: url("../fonts/AlegreyaSans-Italic.otf");
+  src: url("../fonts/AlegreyaSans-Italic.otf?#iefix") format("opentype");
   font-style: italic;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Alegreya Sans";
-  src: url("../fonts/AlegreyaSans-Medium.otf") format("opentype");
+  src: url("../fonts/AlegreyaSans-Medium.otf");
+  src: url("../fonts/AlegreyaSans-Medium.otf?#iefix") format("opentype");
   font-style: normal;
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Alegreya Sans";
-  src: url("../fonts/AlegreyaSans-MediumItalic.otf") format("opentype");
+  src: url("../fonts/AlegreyaSans-MediumItalic.otf");
+  src: url("../fonts/AlegreyaSans-MediumItalic.otf?#iefix") format("opentype");
   font-style: italic;
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Alegreya Sans";
-  src: url("../fonts/AlegreyaSans-Light.otf") format("opentype");
+  src: url("../fonts/AlegreyaSans-Light.otf");
+  src: url("../fonts/AlegreyaSans-Light.otf?#iefix") format("opentype");
   font-style: normal;
   font-weight: 300;
 }
 
 @font-face {
   font-family: "Alegreya Sans";
-  src: url("../fonts/AlegreyaSans-LightItalic.otf") format("opentype");
+  src: url("../fonts/AlegreyaSans-LightItalic.otf");
+  src: url("../fonts/AlegreyaSans-LightItalic.otf?#iefix") format("opentype");
   font-style: italic;
   font-weight: 300;
 }

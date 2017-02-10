@@ -46,7 +46,7 @@
  * TEXT-TYPES...........Classes for specific types of content.
  * LANGUAGES............Styling for language elements and classes.
  *
- * WIDTHS..............Simple grid-like width classes.
+ * WIDTHS...............Simple grid-like width classes.
  * OVERRIDES............Media queries and other overrides.
  */
 
@@ -864,7 +864,7 @@ blockquote {
 
 
 /*------------------------------------*\
-  #OTHER
+  #BLOCKS
 \*------------------------------------*/
 
 /*
@@ -1005,8 +1005,8 @@ div {
 .fn {
   color: #ff0000;
   font: normal normal 0.75em $sans-font;
+  position: relative;
   vertical-align: 0.7em;
-  @include sup-sub();
 }
 
 
@@ -1183,7 +1183,7 @@ span[lang=grc] {
 
 
 /*------------------------------------*\
-  #COLUMNS
+  #WIDTHS
 \*------------------------------------*/
 
 .col-1 {

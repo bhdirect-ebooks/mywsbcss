@@ -68,9 +68,9 @@
  #GLOBAL
 \*------------------------------------*/
 
-$serif-font: "Alegreya", serif;
-$sans-font: "Alegreya Sans", sans-serif;
-$lang-font: "Gentium Plus", serif;
+$serif-font: "Alegreya", "Gentium Plus", serif;
+$sans-font:  "Alegreya Sans", sans-serif;
+$lang-font:  "Gentium Plus", serif;
 
 
 
@@ -260,6 +260,33 @@ h6 {
   font: $level-6-font;
   margin: $lower-level-margin;
   @include heading-left();
+}
+
+
+/*
+ * Label and Ordinal classes for use with <span> in <h1>
+ */
+
+/* Use for "Chapter X" or "Part X" */
+.label {
+  display: block;
+  color: #808285;
+  font-variant: small-caps;
+  font-weight: 300;
+  font-size: 1.3em;
+  margin: 1em 0 0.5em 0;
+}
+
+/* Use for just numbers */
+.ordinal {
+  font-size: 1.35em;
+  font-style: italic;
+  font-weight: 300;
+  padding: 0 0.25em 0 0;
+
+  &::after {
+    content: ".";
+  }
 }
 
 

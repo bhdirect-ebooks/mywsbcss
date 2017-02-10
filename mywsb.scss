@@ -1,0 +1,1286 @@
+/**
+ * FILE: mywsb.css
+ * VERSION: 2017-02-10
+ * AUTHOR: Weston Littrell
+ *
+ * A refactor of legacy WORDsearch CSS for myWSB EPUBs, mywsb.css
+ * is (mostly) written to this standard: http://cssguidelin.es/.
+ *
+ * mywsb.css acts as the default stylesheet for all EPUBs developed
+ * by the B&H Direct eBook Development team and can be tweaked or
+ * extended with a separate stylesheet.
+ *
+ * This version is a developer document and should be concatenated
+ * and minified for production environments.
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #CONTENTS
+\*------------------------------------*/
+/**
+// IMPORTS..............Import fonts and the epub namespace.
+// GLOBAL...............Globally-available variables.
+//
+ * MAIN.................Set up our document defaults.
+ * EPUB-SECTIONS........Epub section styling.
+ * EPUB-NAVIGATION......Epub navigation document styling.
+ * HEADINGS.............h1–h6 and other headings styles.
+ * INLINE-ELEMENTS......HTML inline element styles.
+ *
+ * ASIDES...............Aside styles.
+ * FIGURES..............Figures and related helper classes.
+ * LISTS................List styles.
+ * TABLES...............Table styles.
+ * VIDEOS...............Video and video glyph styles.
+ * QUOTES...............Block quotes and pull quotes.
+ * BLOCKS...............Other type-associated blocks.
+ *
+ * TEXT-GENERAL.........Classes for formatting elements containing text.
+ * TEXT-TYPES...........Classes for specific types of textual content.
+ * LANGUAGES............Styling for language elements and classes.
+ *
+ * WIDTHS..............Simple grid-like width classes.
+ * OVERRIDES............Media queries and other overrides.
+ */
+
+
+
+
+
+///*------------------------------------*\
+// #IMPORTS
+//\*------------------------------------*/
+
+@import "fonts.css";
+@namespace epub "http://www.idpf.org/2007/ops";
+
+
+
+
+
+///*------------------------------------*\
+// #GLOBAL
+//\*------------------------------------*/
+
+$serif-font: "Alegreya", serif;
+$sans-font: "Alegreya Sans", sans-serif;
+$lang-font: "Gentium Plus", serif;
+
+
+
+
+
+/*------------------------------------*\
+  #MAIN
+\*------------------------------------*/
+
+body {
+  font: normal normal 100% $serif-font;
+  margin: 0 5%;
+}
+
+p {
+  line-height: 1.55em;
+  font-size: 1.05em;
+  margin: 0;
+  text-align: justify;
+  text-indent: 1.5em;
+}
+
+a {
+  color: #0099ff;
+  text-decoration: none;
+}
+
+img {
+  border-style: none;
+  width: 100%;
+}
+
+
+
+
+/*------------------------------------*\
+  #EPUB-SECTIONS
+\*------------------------------------*/
+
+section {
+  &[epub|type~=copyright-page],
+  &[epub\:type~=copyright-page] {
+    margin: 2.5% 10%;
+  }
+
+  &[epub|type~=copyright-page] p,
+  &[epub\:type~=copyright-page] p {
+    text-indent: 0;
+  }
+
+  &[epub|type~=cover] img,
+  &[epub\:type~=cover] img,
+  &[epub|type~=titlepage] img,
+  &[epub\:type~=titlepage] img {
+    display: block;
+    margin: 0 auto 2em auto;
+    max-width: 555px;
+  }
+
+  &[epub|type~=titlepage],
+  &[epub\:type~=titlepage],
+  &[epub|type~=dedication] p,
+  &[epub\:type~=dedication] p {
+    text-align: center;
+    text-indent: 0;
+  }
+
+  &[epub|type~=index-group] ul,
+  &[epub\:type~=index-group] ul {
+    list-style-type: none;
+    padding: 0 10%;
+    text-indent: -5%;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  #EPUB-NAVIGATION
+\*------------------------------------*/
+
+nav {
+  ol {
+    list-style-type: none;
+    margin-bottom: 0.3em;
+    > li:first-child {
+      margin-top: 0.3em;
+    }
+  }
+
+  &[epub|type~=toc] > ol > li > ol > li,
+  &[epub\:type~=toc] > ol > li > ol > li {
+    margin-top: 0.3em;
+  }
+
+  &[epub|type~="page-list"],
+  &[epub\:type~="page-list"] {
+    display: none;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+
+$lower-level-margin: 1.3em 0 0.5em 0;
+$subheading-margin: -0.4em 0 0.5em 0;
+
+$level-1-font: normal 500 1.5em $sans-font;
+$level-2-font: normal 500 1.3em $sans-font;
+$level-3-font: normal 500 1.2em $sans-font;
+$level-4-font: italic 500 1.1em $sans-font;
+$level-5-font: normal bold 1em $sans-font;
+$level-6-font: italic bold 0.9em $sans-font;
+
+@mixin heading() {
+  clear: both;
+  text-indent: 0;
+}
+
+@mixin heading-center() {
+  @include heading();
+  text-align: center;
+}
+
+@mixin heading-left() {
+  @include heading();
+  text-align: left;
+}
+
+@mixin subheading() {
+  color: #4c4e4f;
+  margin: $subheading-margin;
+}
+
+/* h1-6 */
+
+h1 {
+  font: $level-1-font;
+  margin: 1.5em 0 0.75em 0;
+  @include heading-center();
+}
+
+h2 {
+  font: $level-2-font;
+  margin: 1.3em 0 0.7em 0;
+  @include heading-center();
+}
+
+h3 {
+  font: $level-3-font;
+  margin: $lower-level-margin;
+  @include heading-left();
+}
+
+h4 {
+  font: $level-4-font;
+  margin: $lower-level-margin;
+  @include heading-left();
+}
+
+h5 {
+  font: $level-5-font;
+  margin: $lower-level-margin;
+  @include heading-left();
+}
+
+h6 {
+  font: $level-6-font;
+  margin: $lower-level-margin;
+  @include heading-left();
+}
+
+
+/* Levels 1-3 subheadings for use with <p> */
+
+.h1sub {
+  font: $level-2-font;
+  @include subheading();
+  @include heading-center();
+}
+
+.h2sub {
+  font: $level-3-font;
+  @include subheading();
+  @include heading-center();
+}
+
+.h3sub {
+  font: $level-4-font;
+  @include subheading();
+  @include heading-left();
+}
+
+
+/* epub:type=bridgehead for use with <p> */
+
+p {
+  &[epub|type~=bridgehead],
+  &[epub\:type~=bridgehead] {
+    font: $level-3-font;
+    margin: 0 0 0.75em 0;
+    @include heading-center();
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  #INLINE-ELEMENTS
+\*------------------------------------*/
+
+@mixin sup-sub() {
+  position: relative;
+  vertical-align: baseline;
+}
+
+a {
+  &[epub|type~=pagebreak],
+  &[epub\:type~=pagebreak] {
+    display: none !important;
+  }
+
+  &[data-cross-link*=strongs] {
+    color: #006400;
+    font: 0.9em $sans-font;
+  }
+
+  &[data-cross-ref] {
+    border-bottom: 1px dashed #000;
+    color: #000;
+    margin-bottom: -1px;
+  }
+}
+
+abbr {
+  color: #800000;
+}
+
+article dfn {
+  color: #000080;
+  font: bold 1.15em $sans-font;
+  text-align: left;
+  text-indent: 0;
+}
+
+hr,
+.nd {
+  display: none !important;
+}
+
+sub {
+  top: 0.2em;
+  @include sup-sub();
+}
+
+sup {
+  top: -0.2em;
+  @include sup-sub();
+}
+
+
+
+
+
+/*------------------------------------*\
+  #ASIDES
+\*------------------------------------*/
+
+aside {
+  border: 1px solid #808285;
+  margin: 1.5em 0;
+  padding: 3% 5%;
+
+  p {
+    margin: 1% 0 0 0;
+    text-indent: 0;
+  }
+
+  blockquote {
+    border: none;
+  }
+
+  p {
+    &[epub|type~=bridgehead],
+    &[epub\:type~=bridgehead] {
+      border-bottom: 1px solid #999b9d;
+      margin: 0 0 1.5% 0;
+      padding: 0 0 1% 0;
+    }
+  }
+
+  ol, ul {
+    padding-left: 5%;
+  }
+
+  &[epub|type~=footnote],
+  &[epub\:type~=footnote] {
+    border: 0;
+    line-height: 1.55em;
+    margin: 0 0 0 1.5em;
+    padding: 0.25em 0;
+    text-indent: -1em;
+
+    sup {
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  #FIGURES
+\*------------------------------------*/
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.85em;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  text-indent: 0;
+}
+
+/* Classes for use with <figure> */
+
+// Do not remove - mixin also used in media query below
+@mixin figure-full() {
+  margin: 1.2em auto;
+  max-width: 555px;
+  width: 90%;
+}
+
+.full-width {
+  @include figure-full();
+}
+
+@mixin figure-float() {
+  margin: 0.7em 1.1em;
+  max-width: 19em;
+}
+
+.float-right {
+  float: right;
+  @include figure-float();
+}
+
+.float-left {
+  float: left;
+  @include figure-float();
+}
+
+
+
+
+
+/*------------------------------------*\
+  #LISTS
+\*------------------------------------*/
+
+@mixin list-layout() {
+  margin: 0.7em 0 1em 0;
+  padding: 0 0 0 calc(1em + 7%);
+}
+
+@mixin sublist-layout() {
+  margin: 0;
+  padding: 0 0 0 1em;
+}
+
+@mixin parenthetical() {
+  counter-reset: list;
+  list-style-type: none;
+
+  > li {
+    left: -1em;
+    position: relative;
+
+    > {
+      ul,
+      ol {
+        padding-left: 2.25em;
+      }
+    }
+
+    &:before {
+      left: -0.4em;
+      counter-increment: list;
+      position: relative;
+    }
+  }
+}
+
+/* List containers */
+
+ol {
+  @include list-layout();
+
+  ul,
+  ol {
+    @include sublist-layout();
+  }
+}
+
+ul {
+  @include list-layout();
+
+  ul,
+  ol {
+    @include sublist-layout();
+  }
+}
+
+.upper-roman {
+  list-style-type: upper-roman;
+}
+
+.lower-roman {
+  list-style-type: lower-roman;
+}
+
+.upper-alpha {
+  list-style-type: upper-alpha;
+}
+
+.lower-alpha {
+  list-style-type: lower-alpha;
+}
+
+.digit {
+  list-style-type: decimal;
+}
+
+.disc {
+  list-style-type: disc;
+}
+
+.circle {
+  list-style-type: circle;
+}
+
+.square {
+  list-style-type: square;
+}
+
+.none {
+  list-style-type: none;
+
+  > li {
+    margin-left: 1em;
+    text-indent: -1.5em;
+
+    > {
+      ul:not(.none),
+      ol:not(.none) {
+        text-indent: 0;
+      }
+    }
+  }
+}
+
+/* List items */
+
+li {
+  font-size: 1.05em;
+  line-height: 1.5em;
+  padding: 0.1em 0 0 0;
+
+  > {
+    ul > li,
+    ol > li {
+      font-size: inherit;
+    }
+  }
+
+  p {
+    text-indent: 0;
+  }
+}
+
+ol:not(.none) li {
+  padding-left: 0.25em;
+}
+
+.digit.paren > li:before {
+  content: "(" counter(list, decimal) ")";
+}
+
+.lower-alpha.paren > li:before {
+  content: "(" counter(list, lower-alpha) ")";
+}
+
+.lower-roman.paren > li:before {
+  content: "(" counter(list, lower-roman) ")";
+}
+
+.upper-alpha.paren > li:before {
+  content: "(" counter(list, upper-alpha) ")";
+}
+
+.upper-roman.paren > li:before {
+  content: "(" coutner(list, upper-roman) ")";
+}
+
+.digit.right-paren > li:before {
+  content: counter(list, decimal) ")";
+}
+
+.lower-alpha.right-paren > li:before {
+  content: counter(list, lower-alpha) ")";
+}
+
+.lower-roman.right-paren > li:before {
+  content: counter(list, lower-roman) ")";
+}
+
+.upper-alpha.right-paren > li:before {
+  content: counter(list, upper-alpha) ")";
+}
+
+.upper-roman.right-paren > li:before {
+  content: counter(list, upper-roman) ")";
+}
+
+
+/* Definition lists */
+
+dt {
+  clear: both;
+  padding: 0 0 0.8em 0;
+  text-align: center;
+
+  dfn {
+    font: normal bold 1em/1.5em $sans-font;
+  }
+}
+
+dd {
+  margin: 0;
+  padding: 0 0 2em 0;
+
+  p {
+    text-indent: 0;
+  }
+}
+
+.abbr-list {
+  padding: 0 0 0 1.5em;
+
+  dt {
+    clear: left;
+    float: left;
+    padding: 0;
+    text-align: left;
+    width: 20%;
+    dfn {
+      font-family: $serif-font;
+      font-weight: normal;
+    }
+  }
+
+  dd {
+    float: left;
+    padding: 0 1%;
+    width: 78%;
+  }
+
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+
+
+
+
+
+/*------------------------------------*\
+  #TABLES
+\*------------------------------------*/
+
+$offset-color: #d3d3d3;
+
+
+/* Table container */
+
+div[data-cross-tour*=table] {
+  overflow: auto;
+}
+
+/* Tables */
+
+table, tr {
+  page-break-inside: avoid !important;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 100%;
+  margin: 1.5em auto;
+  text-align: left;
+  width: 100%;
+}
+
+td {
+  line-height: 1.55em;
+  font-size: 1.05em;
+  padding: 0.5em;
+}
+
+th {
+  line-height: 1.55em;
+  font-size: 1.05em;
+  padding: 0.5em;
+  text-align: center;
+}
+
+td {
+  vertical-align: top;
+}
+
+/* bdr class for use with <table> */
+
+@mixin table-border() {
+  border: 1px solid $offset-color;
+}
+
+.bdr {
+  @include table-border();
+  td,
+  th {
+    @include table-border();
+  }
+}
+
+/* offset class for use with any <tr>, <th>, or <td> element */
+
+.offset {
+  background-color: $offset-color;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #VIDEOS
+\*------------------------------------*/
+
+video {
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  box-shadow: 0 0 3px rgba(1, 1, 1, 0.2), inset 0 0 100px rgba(1, 1, 1, 0.1);
+  height: auto;
+  margin-bottom: 1.25em;
+  margin-top: 1.5em;
+  text-align: center;
+  text-indent: 0;
+  width: 100%;
+}
+
+.video-glyph {
+  background: url("../images/video.svg") (center / contain) no-repeat;
+  display: block;
+  float: left;
+  height: 50px;
+  margin: 0 0.75em 2em 0;
+  min-height: 50px;
+  padding: 0;
+  width: 50px;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #QUOTES
+\*------------------------------------*/
+
+blockquote {
+  border-left: 1px dotted #000;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  padding-left: 1em;
+  p {
+    margin: 0.5em 0;
+    text-indent: 0;
+  }
+}
+
+.scriptext {
+  border: none;
+  font-size: 1em;
+  font-style: italic;
+  margin: 1em 10%;
+  padding: 0;
+}
+
+.pullquotec,
+.pullquotel,
+.pullquoter {
+  font-size: 0.8em;
+  letter-spacing: 0.063em;
+}
+
+.pullquotec {
+  font-size: 0.9em;
+  margin: 2em 15%;
+}
+
+.pullquotel,
+.pullquoter {
+  margin: 2em;
+  width: 30%;
+  text-transform: uppercase;
+}
+
+.pullquotel {
+  float: left;
+}
+
+.pullquoter {
+  float: right;
+}
+
+.pullquotec p,
+.pullquotel p,
+.pullquoter p {
+  text-indent: 0;
+  text-align: left;
+}
+
+.pullquotec .sig,
+.pullquotel .sig,
+.pullquoter .sig {
+  margin-left: 0;
+  text-align: right;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #OTHER
+\*------------------------------------*/
+
+/* Index terms */
+
+span {
+  &[epub|type~=index-term],
+  &[epub\:type~=index-term] {
+    padding: 0 0.3em 0 0;
+  }
+}
+
+
+/* Footnote divs */
+
+div {
+  &[epub|type~=footnote] p,
+  &[epub\:type~=footnote] p {
+    margin-left: 2em;
+    text-align: left;
+    text-indent: -2em;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  #TEXT-GENERAL
+\*------------------------------------*/
+
+/* With block elements */
+
+.br-before {
+  padding: 1.3em 0 0 0;
+}
+
+.center {
+  text-align: center !important;
+  text-indent: 0;
+}
+
+.hang {
+  margin-left: 2em;
+  text-indent: -2em;
+}
+
+.left {
+  text-align: left !important;
+}
+
+.noind {
+  text-indent: 0;
+}
+
+.right {
+  text-align: right !important;
+  text-indent: 0;
+}
+
+
+/* With inline or block elements */
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold-italic {
+  @extend .bold;
+  @extend .italic;
+}
+
+.smcaps {
+  font-variant: small-caps;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+
+
+
+/*------------------------------------*\
+  #TEXT-TYPES
+\*------------------------------------*/
+
+/* Chapter author's name, for use with <p> */
+
+.auth {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0.5em 0;
+  text-indent: 0;
+}
+
+
+/* Dedication lines, for use with <p> */
+
+.ded1 {
+  font-size: 0.9em;
+  font-style: italic;
+  margin: 1em 25% 0 25%;
+}
+
+.ded2 {
+  font-size: 0.9em;
+  font-style: italic;
+  margin: 1em 25% 0 25%;
+  margin: 0 25%;
+}
+
+
+/* Footnote indicator, for use with <sup> */
+
+.fn {
+  color: #ff0000;
+  font: normal normal 0.75em $sans-font;
+  vertical-align: 0.7em;
+  @include sup-sub();
+}
+
+
+/* Poetry lines, for use with <p> */
+
+@mixin poetry() {
+  text-indent: -0.5em;
+}
+
+.poem1 {
+  margin: 0 0 0 2em;
+  @include poetry();
+}
+
+.poem2 {
+  margin: 0 0 0 3em;
+  @include poetry();
+}
+
+.poem3 {
+  margin: 0 0 0 4em;
+  @include poetry();
+}
+
+.poem4 {
+  margin: 0 0 0 5em;
+  @include poetry();
+}
+
+.poem5 {
+  margin: 0 0 0 6em;
+  @include poetry();
+}
+
+.poem6 {
+  margin: 0 0 0 7em;
+  @include poetry();
+}
+
+.poem7 {
+  margin: 0 0 0 8em;
+  @include poetry();
+}
+
+.poem8 {
+  margin: 0 0 0 9em;
+  @include poetry();
+}
+
+.poem9 {
+  margin: 0 0 0 10em;
+  @include poetry();
+}
+
+.poem10 {
+  margin: 0 0 0 11em;
+  @include poetry();
+}
+
+
+/* Quote or section 'signature', for use with <p> */
+
+.sig {
+  margin-bottom: 1em;
+  margin-left: 60%;
+  text-align: left;
+  text-indent: 0;
+}
+
+
+/* Verse number in Scripture quote, for use with <sup> */
+
+.verse {
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #LANGUAGES
+\*------------------------------------*/
+
+@mixin lang-normal() {
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin new-athena() {
+  font-family: "New Athena Unicode", $lang-font;
+  @include lang-normal();
+}
+
+.wsextra {
+  font: 1.1em "WS Extra";
+  @include lang-normal();
+}
+
+/* pronunciation */
+
+:lang(x-phonetic) {
+  font: 1.1em $lang-font;
+  @include lang-normal();
+}
+
+/* Ancient Hebrew */
+
+:lang(hbo) {
+  font-family: "Ezra SIL";
+  @include lang-normal();
+}
+
+/* Ancient Greek */
+
+span[lang=grc] {
+  font: italic normal 1.05em/1.55em $lang-font;
+}
+
+/* Greek - Uncial Script */
+
+:lang(grc-x-Uncl) {
+  font-family: "GFS Decker", "New Athena Unicode";
+}
+
+:lang(cop),
+:lang(xmk) {
+  @include new-athena();
+}
+
+.symbols {
+  font-size: 1.1em;
+  @include new-athena();
+}
+
+:lang(la),
+:lang(fr),
+:lang(de),
+:lang(it),
+:lang(es),
+:lang(hbo-Latn),
+:lang(grc-Latn),
+:lang(aii-Latn),
+:lang(akk-Latn),
+:lang(am-Latn),
+:lang(ar-Latn),
+:lang(arc-Latn),
+:lang(hy-Latn),
+:lang(egy-Latn),
+:lang(peo-Latn),
+:lang(sa-Latn),
+:lang(mis-Latn) {
+  font-family: $lang-font;
+  font-style: italic;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #COLUMNS
+\*------------------------------------*/
+
+.col-1 {
+  max-width: 8.33%;
+  width: 8.33%;
+}
+
+.col-2 {
+  max-width: 16.67%;
+  width: 16.67%;
+}
+
+.col-3 {
+  max-width: 25%;
+  width: 25%;
+}
+
+.col-4 {
+  max-width: 33.33%;
+  width: 33.33%;
+}
+
+.col-5 {
+  max-width: 41.66%;
+  width: 41.66%;
+}
+
+.col-6 {
+  max-width: 50%;
+  width: 50%;
+}
+
+.col-7 {
+  max-width: 58.33%;
+  width: 58.33%;
+}
+
+.col-8 {
+  max-width: 66.66%;
+  width: 66.66%;
+}
+
+.col-9 {
+  max-width: 75%;
+  width: 75%;
+}
+
+.col-10 {
+  max-width: 88.33%;
+  width: 88.33%;
+}
+
+.col-11 {
+  max-width: 91.66%;
+  width: 91.66%;
+}
+
+.col-12 {
+  max-width: 100%;
+  width: 100%;
+}
+
+
+/* DEPRECATED */
+
+.width-10 {
+  max-width: 10%;
+  width: 10%;
+}
+
+.width-20 {
+  max-width: 20%;
+  width: 20%;
+}
+
+.width-30 {
+  max-width: 30%;
+  width: 30%;
+}
+
+.width-40 {
+  max-width: 40%;
+  width: 40%;
+}
+
+.width-50 {
+  max-width: 50%;
+  width: 50%;
+}
+
+.width-60 {
+  max-width: 60%;
+  width: 60%;
+}
+
+.width-70 {
+  max-width: 70%;
+  width: 70%;
+}
+
+.width-80 {
+  max-width: 80%;
+  width: 80%;
+}
+
+.width-90 {
+  max-width: 90%;
+  width: 90%;
+}
+
+.wksheet {
+  width: 85%;
+  border-collapse: collapse;
+  .lines {
+    border-bottom: 1px solid #000;
+    padding: 0.938em 0.313em 0 0.938em;
+  }
+  .number {
+    padding: 0.938em 0.313em 0 0;
+    width: 1.250em;
+    text-align: right;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  #OVERRIDES
+\*------------------------------------*/
+
+/* Media queries */
+
+@media only screen and (max-width: 600px) {
+  /* Display left and right pull quotes
+     as centered in smaller viewports. */
+  .pullquotel,
+  .pullquoter {
+    display: block;
+    float: none;
+    margin: 2em 15%;
+    width: 70%;
+    p {
+      text-align: center;
+    }
+  }
+
+  /* Display left and right figure floats
+     as centered in smaller viewports. */
+  .float-left,
+  .float-right {
+    @include figure-full();
+  }
+}
+
+
+/* <dfn> font override */
+
+dfn span[lang] {
+  font: inherit;
+}

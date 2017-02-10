@@ -612,20 +612,14 @@ li {
 
 .paren,
 .right-paren {
-  list-style-type: none;
-
-  > li > ol {
-    padding-left: 2.25em;
-  }
-}
-
-.paren,
-.right-paren {
   counter-reset: list;
 
   > li {
     left: -1em;
     position: relative;
+    > ol {
+      padding-left: 2.25em;
+    }
   }
 
   &:before {

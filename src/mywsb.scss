@@ -195,6 +195,8 @@ nav {
 $lower-level-margin: 1.3em 0 0.5em 0;
 $subheading-margin: -0.4em 0 0.5em 0;
 
+$subheading-color: #4c4e4f;
+
 $level-1-font: normal 500 1.5em $sans-font;
 $level-2-font: normal 500 1.3em $sans-font;
 $level-3-font: normal 500 1.2em $sans-font;
@@ -218,7 +220,7 @@ $level-6-font: italic bold 0.9em $sans-font;
 }
 
 @mixin subheading() {
-  color: #4c4e4f;
+  color: $subheading-color;
   margin: $subheading-margin;
 }
 
@@ -1134,72 +1136,55 @@ div {
   @include lang-normal();
 }
 
-.wsextra {
+.wsextra { /* WS proprietary font; use for some symbols */
   font: 1.1em "WS Extra";
   @include lang-normal();
 }
 
-/*
- * pronunciation
- */
-
-:lang(x-phonetic) {
+:lang(x-phonetic) { /* pronunciation */
   font: 1.1em $lang-font;
   @include lang-normal();
 }
 
-/*
- * Ancient Hebrew
- */
-
-:lang(hbo) {
+:lang(hbo) { /* Ancient Hebrew */
   font-family: "Ezra SIL";
   @include lang-normal();
 }
 
-/*
- * Ancient Greek
- */
-
-span[lang=grc] {
+span[lang=grc] { /* Ancient Greek */
   font: italic normal 1.05em/1.55em $lang-font;
 }
 
-/*
- * Greek - Uncial Script
- */
-
-:lang(grc-x-Uncl) {
+:lang(grc-x-Uncl) { /* Greek - Uncial Script */
   font-family: "GFS Decker", "New Athena Unicode";
 }
 
-:lang(cop),
-:lang(xmk) {
+
+:lang(cop), /* Coptic */
+:lang(xmk) { /* Ancient Macedonian */
   @include new-athena();
 }
 
-.symbols {
-  font-size: 1.1em;
-  @include new-athena();
-}
-
-:lang(la),
-:lang(fr),
-:lang(de),
-:lang(it),
-:lang(es),
-:lang(hbo-Latn),
-:lang(grc-Latn),
-:lang(aii-Latn),
-:lang(akk-Latn),
-:lang(am-Latn),
-:lang(ar-Latn),
-:lang(arc-Latn),
-:lang(hy-Latn),
-:lang(egy-Latn),
-:lang(peo-Latn),
-:lang(sa-Latn),
-:lang(mis-Latn) {
+:lang(la), /* Latin */
+:lang(fr), /* French */
+:lang(de), /* German */
+:lang(it), /* Italian */
+:lang(es), /* Spanish */
+/*
+ * Transliterations
+ */
+:lang(hbo-Latn), /* Ancient Hebrew */
+:lang(grc-Latn), /* Ancient Greek */
+:lang(aii-Latn), /* Assyrian */
+:lang(akk-Latn), /* Akkadian */
+:lang(am-Latn),  /* Amharic */
+:lang(ar-Latn),  /* Arabic */
+:lang(arc-Latn), /* Imperial Aramaic */
+:lang(hy-Latn),  /* Armenian */
+:lang(egy-Latn), /* Ancient Egyptian */
+:lang(peo-Latn), /* Old Persian */
+:lang(sa-Latn),  /* Sanskrit */
+:lang(x-mis-Latn) { /* Uncoded Language */
   font-family: $lang-font;
   font-style: italic;
 }

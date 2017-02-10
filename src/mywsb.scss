@@ -613,19 +613,22 @@ li {
 .paren,
 .right-paren {
   counter-reset: list;
+  list-style-type: none;
 
   > li {
-    left: -1em;
     position: relative;
-    > ol {
+    text-indent: -0.75em;
+
+    > ol,
+    > ul {
       padding-left: 2.25em;
     }
-  }
 
-  &:before {
-    left: -0.4em;
-    counter-increment: list;
-    position: relative;
+    &:before {
+      left: -0.4em;
+      counter-increment: list;
+      position: relative;
+    }
   }
 }
 

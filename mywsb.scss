@@ -1,10 +1,12 @@
+/*!*
+ * FILE:     mywsb.css
+ * VERSION:  2017-02-10
+ * AUTHOR:   Weston Littrell
+ */
 /**
- * FILE: mywsb.css
- * VERSION: 2017-02-10
- * AUTHOR: Weston Littrell
- *
  * A refactor of legacy WORDsearch CSS for myWSB EPUBs, mywsb.css
- * is (mostly) written to this standard: http://cssguidelin.es/.
+ * is (mostly) written to this standard: http://cssguidelin.es/
+ * but with EPUB-specific uses cases in mind.
  *
  * mywsb.css acts as the default stylesheet for all EPUBs developed
  * by the B&H Direct eBook Development team and can be tweaked or
@@ -22,9 +24,10 @@
   #CONTENTS
 \*------------------------------------*/
 /**
-// IMPORTS..............Import fonts and the epub namespace.
-// GLOBAL...............Globally-available variables.
-//
+ * EPUB-NAMESPACE.......Add the EPUB namespace.
+ * GLOBAL...............Globally-available variables.
+ *
+ * FONTS................Add font-families.
  * MAIN.................Set up our document defaults.
  * EPUB-SECTIONS........Epub section styling.
  * EPUB-NAVIGATION......Epub navigation document styling.
@@ -39,8 +42,8 @@
  * QUOTES...............Block quotes and pull quotes.
  * BLOCKS...............Other type-associated blocks.
  *
- * TEXT-GENERAL.........Classes for formatting elements containing text.
- * TEXT-TYPES...........Classes for specific types of textual content.
+ * TEXT-GENERAL.........Classes for basic formatting of text.
+ * TEXT-TYPES...........Classes for specific types of content.
  * LANGUAGES............Styling for language elements and classes.
  *
  * WIDTHS..............Simple grid-like width classes.
@@ -51,24 +54,33 @@
 
 
 
-///*------------------------------------*\
-// #IMPORTS
-//\*------------------------------------*/
+/*------------------------------------*\
+ #EPUB-NAMESPACE
+\*------------------------------------*/
 
-@import "fonts.css";
 @namespace epub "http://www.idpf.org/2007/ops";
 
 
 
 
 
-///*------------------------------------*\
-// #GLOBAL
-//\*------------------------------------*/
+/*------------------------------------*\
+ #GLOBAL
+\*------------------------------------*/
 
 $serif-font: "Alegreya", serif;
 $sans-font: "Alegreya Sans", sans-serif;
 $lang-font: "Gentium Plus", serif;
+
+
+
+
+
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+@import "fonts";
 
 
 
@@ -210,7 +222,9 @@ $level-6-font: italic bold 0.9em $sans-font;
   margin: $subheading-margin;
 }
 
-/* h1-6 */
+/*
+ * h1-6
+ */
 
 h1 {
   font: $level-1-font;
@@ -249,7 +263,9 @@ h6 {
 }
 
 
-/* Levels 1-3 subheadings for use with <p> */
+/*
+ * Levels 1-3 subheadings for use with <p>
+ */
 
 .h1sub {
   font: $level-2-font;
@@ -270,7 +286,9 @@ h6 {
 }
 
 
-/* epub:type=bridgehead for use with <p> */
+/*
+ * epub:type=bridgehead for use with <p>
+ */
 
 p {
   &[epub|type~=bridgehead],
@@ -407,9 +425,11 @@ figcaption {
   text-indent: 0;
 }
 
-/* Classes for use with <figure> */
+/*
+ * Classes for use with <figure>
+ */
 
-// Do not remove - mixin also used in media query below
+// Mixin also used in media query below
 @mixin figure-full() {
   margin: 1.2em auto;
   max-width: 555px;
@@ -476,7 +496,9 @@ figcaption {
   }
 }
 
-/* List containers */
+/*
+ * List containers
+ */
 
 ol {
   @include list-layout();
@@ -544,7 +566,9 @@ ul {
   }
 }
 
-/* List items */
+/*
+ * List items
+ */
 
 li {
   font-size: 1.05em;
@@ -608,7 +632,9 @@ ol:not(.none) li {
 }
 
 
-/* Definition lists */
+/*
+ * Definition lists
+ */
 
 dt {
   clear: both;
@@ -669,13 +695,17 @@ dd {
 $offset-color: #d3d3d3;
 
 
-/* Table container */
+/*
+ * Table container
+ */
 
 div[data-cross-tour*=table] {
   overflow: auto;
 }
 
-/* Tables */
+/*
+ * Tables
+ */
 
 table, tr {
   page-break-inside: avoid !important;
@@ -706,7 +736,9 @@ td {
   vertical-align: top;
 }
 
-/* bdr class for use with <table> */
+/*
+ * bdr class for use with <table>
+ */
 
 @mixin table-border() {
   border: 1px solid $offset-color;
@@ -720,7 +752,9 @@ td {
   }
 }
 
-/* offset class for use with any <tr>, <th>, or <td> element */
+/*
+ * offset class for use with any <tr>, <th>, or <td> element
+ */
 
 .offset {
   background-color: $offset-color;
@@ -833,7 +867,9 @@ blockquote {
   #OTHER
 \*------------------------------------*/
 
-/* Index terms */
+/*
+ * Index terms
+ */
 
 span {
   &[epub|type~=index-term],
@@ -843,7 +879,9 @@ span {
 }
 
 
-/* Footnote divs */
+/*
+ * Footnote divs
+ */
 
 div {
   &[epub|type~=footnote] p,
@@ -862,7 +900,9 @@ div {
   #TEXT-GENERAL
 \*------------------------------------*/
 
-/* With block elements */
+/*
+ * With block elements
+ */
 
 .br-before {
   padding: 1.3em 0 0 0;
@@ -892,7 +932,9 @@ div {
 }
 
 
-/* With inline or block elements */
+/*
+ * With inline or block elements
+ */
 
 .bold {
   font-weight: bold;
@@ -926,7 +968,9 @@ div {
   #TEXT-TYPES
 \*------------------------------------*/
 
-/* Chapter author's name, for use with <p> */
+/*
+ * Chapter author's name, for use with <p>
+ */
 
 .auth {
   font-size: 1em;
@@ -936,7 +980,9 @@ div {
 }
 
 
-/* Dedication lines, for use with <p> */
+/*
+ * Dedication lines, for use with <p>
+ */
 
 .ded1 {
   font-size: 0.9em;
@@ -952,7 +998,9 @@ div {
 }
 
 
-/* Footnote indicator, for use with <sup> */
+/*
+ * Footnote indicator, for use with <sup>
+ */
 
 .fn {
   color: #ff0000;
@@ -962,7 +1010,9 @@ div {
 }
 
 
-/* Poetry lines, for use with <p> */
+/*
+ * Poetry lines, for use with <p>
+ */
 
 @mixin poetry() {
   text-indent: -0.5em;
@@ -1019,7 +1069,9 @@ div {
 }
 
 
-/* Quote or section 'signature', for use with <p> */
+/*
+ * Quote or section 'signature', for use with <p>
+ */
 
 .sig {
   margin-bottom: 1em;
@@ -1029,7 +1081,9 @@ div {
 }
 
 
-/* Verse number in Scripture quote, for use with <sup> */
+/*
+ * Verse number in Scripture quote, for use with <sup>
+ */
 
 .verse {
   font-size: 0.85em;
@@ -1059,27 +1113,35 @@ div {
   @include lang-normal();
 }
 
-/* pronunciation */
+/*
+ * pronunciation
+ */
 
 :lang(x-phonetic) {
   font: 1.1em $lang-font;
   @include lang-normal();
 }
 
-/* Ancient Hebrew */
+/*
+ * Ancient Hebrew
+ */
 
 :lang(hbo) {
   font-family: "Ezra SIL";
   @include lang-normal();
 }
 
-/* Ancient Greek */
+/*
+ * Ancient Greek
+ */
 
 span[lang=grc] {
   font: italic normal 1.05em/1.55em $lang-font;
 }
 
-/* Greek - Uncial Script */
+/*
+ * Greek - Uncial Script
+ */
 
 :lang(grc-x-Uncl) {
   font-family: "GFS Decker", "New Athena Unicode";
@@ -1185,7 +1247,9 @@ span[lang=grc] {
 }
 
 
-/* DEPRECATED */
+/*
+ * DEPRECATED
+ */
 
 .width-10 {
   max-width: 10%;
@@ -1254,7 +1318,9 @@ span[lang=grc] {
   #OVERRIDES
 \*------------------------------------*/
 
-/* Media queries */
+/*
+ * Media queries
+ */
 
 @media only screen and (max-width: 600px) {
   /* Display left and right pull quotes
@@ -1279,7 +1345,9 @@ span[lang=grc] {
 }
 
 
-/* <dfn> font override */
+/*
+ * <dfn> font override
+ */
 
 dfn span[lang] {
   font: inherit;

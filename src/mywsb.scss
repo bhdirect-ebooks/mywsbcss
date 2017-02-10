@@ -509,11 +509,6 @@ figcaption {
     position: relative;
     text-indent: $indentation;
 
-    > ol,
-    > ul {
-      padding-left: 2.25em;
-    }
-
     &:before {
       left: -0.4em;
       counter-increment: list;

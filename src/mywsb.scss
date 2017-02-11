@@ -636,7 +636,7 @@ ol:not(.none) li {
 }
 
 .upper-roman.paren > li:before {
-  content: "(" coutner(list, upper-roman) ")";
+  content: "(" counter(list, upper-roman) ")";
 }
 
 .digit.right-paren > li:before {

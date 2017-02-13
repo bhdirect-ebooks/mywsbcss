@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mywsb.css Test Page</title>
+    <link href="styles/mywsb.css" rel="stylesheet" type="text/css" />
+    <style>
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .row {
+        max-width: 100%;
+        width: 100%;
+      }
+      span[class*="col"] {
+        background-color: #777;
+        border: 1px solid #333;
+        display: inline-block;
+        color: #fff;
+        float: left;
+        height: 3em;
+        margin: 5px 0;
+        padding: 0.75em 0;
+        position: relative;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body role="document">
+    <header id="top" role="banner">
+      <h1>Test Page</h1>
+    </header>
+    <nav role="navigation">
+      <h1>Example</h1>
+      <ul>
+        <li><a href="#text">Text</a>
+          <ul>
+            <li><a href="#text__headings">Headings</a></li>
+            <li><a href="#text__paragraphs">Paragraphs</a></li>
+            <li><a href="#text__inline">Inline Elements</a></li>
+            <li><a href="#text__classes">General Classes</a></li>
+            <li><a href="#text__types">Type Classes</a></li>
+            <li><a href="#text__languages">Languages</a></li>
+          </ul>
+        </li>
+        <li><a href="#objects">Objects and Text Blocks</a>
+          <ul>
+            <li><a href="#objects__asides">Asides</a></li>
+            <li><a href="#objects__figures">Images &amp; Figures</a></li>
+            <li><a href="#objects__lists">Lists</a></li>
+            <li><a href="#objects__tables">Tables</a></li>
+            <li><a href="#objects__videos">Videos</a></li>
+            <li><a href="#objects__quotes">Quotes</a></li>
+            <li><a href="#objects__blocks">Blocks</a></li>
+          </ul>
+        </li>
+        <li><a href="#layout">Layout</a>
+          <ul>
+            <li><a href="#layout__width">Width</a></li>
+            <li><a href="#layout__overrides">Overrides</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main role="main">
+      <section id="text">
+        <h2>Text</h2>
+
+        <section id="text__headings">
+          <h3>Headings</h3>
+          <h1><span class="label">Label</span>Heading 1 with Label</h1>
+          <h1><span class="ordinal">1</span>Heading 1 with Ordinal</h1>
+          <h1>Heading 1</h1>
+          <p class="h1sub">Subheading 1</p>
+
+          <h2>Heading 2</h2>
+          <p class="h2sub">Subheading 2</p>
+
+          <h3>Heading 3</h3>
+          <p class="h3sub">Subheading 3</p>
+          <p epub:type="bridgehead">Bridgehead</p>
+
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+          <p class="br-before"><a href="#top">[Top]</a></p>
+        </section>
+
+        <section id="text__paragraphs">
+          <h2>Paragraphs</h2>
+          <p class="noind">This paragraph has no indent. A paragraph (from the Greek <span xml:lang="grc-Latn" lang="grc-Latn">paragraphos</span>, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.</p>
+          <p>This paragraph has is normal. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose. The first way to divide sentences into groups was the original <span xml:lang="grc-Latn" lang="grc-Latn">paragraphos</span>, similar to an underscore at the beginning of the new group.</p>
+          <p class="br-before">This paragraph has additional top padding. The Greek <span xml:lang="grc-Latn" lang="grc-Latn">paragraphos</span> evolved into the pilcrow (¶), which in English manuscripts in the Middle Ages can be seen inserted inline between sentences.</p>
+          <p class="br-before"><a href="#top">[Top]</a></p>
+        </section>
+
+        <section id="text__inline">
+          <h2>Inline Elements</h2>
+          <p><a href="#!">A text link looks like this</a>.</p>
+          <p><a data-cross-ref='{"scripture":""}'>A Scripture reference link looks different.</a></p>
+          <p class="br-before">Superscript is <sup>superduper</sup>.</p>
+          <p>Use <code>sup.fn</code> for all <sup class="fn"><a href="#!">[footnote indicators]</a></sup> in the text.</p>
+          <p>Use <code>sup.verse</code> for all <sup class="verse">verse numbers</sup> in Scripture blockquotes.</p>
+          <p class="br-before">Subscript is <sub>subtastic</sub>.</p>
+          <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+          <p class="br-before"><a href="#top">[Top]</a></p>
+        </section>
+
+        <section id="text__classes">
+          <h2>General Classes</h2>
+          <p class="bold">This text is emboldened.</p>
+          <p class="italic">This text is italicized.</p>
+          <p class="bold-italic">This text is both.</p>
+          <p class="left">This text is left-aligned.</p>
+          <p class="center">This text is centered.</p>
+          <p class="right">This text is right-aligned.</p>
+          <p class="br-before"><a href="#top">[Top]</a></p>
+        </section>
+
+        <section id="text__types">
+          <h2>Type Classes</h2>
+          <h3>.auth</h3>
+          <p class="auth">Chapter Author's Name</p>
+          <h3>
+          <p class="italic">This text is italicized.</p>
+          <p class="bold-italic">This text is both.</p>
+          <p class="left">This text is left-aligned.</p>
+          <p class="center">This text is centered.</p>
+          <p class="right">This text is right-aligned.</p>
+          <p class="br-before"><a href="#top">[Top]</a></p>
+        </section>
+
+        <section id="text__blockquotes">
+          <h2>Blockquotes</h2>
+          <h3>Non-Sacred Quote</h3>
+          <blockquote>
+            <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
+            <p>It is typically distinguished visually using indentation and a different typeface or smaller size quotation. It may or may not include a citation, usually placed at the bottom.</p>
+          </blockquote>
+
+          <h3>Scripture Quote (Protestant Canon)</h3>
+          <blockquote class="scriptext">
+            <p>Jesus told him, “I am the way, the truth, and the life. No one comes to the Father except through me. If you know me, you will also know my Father.”</p>
+            <p class="scrip">&#8212;John 14:6-7a CSB</p>
+          </blockquote>
+          <p class="br-before"><a href="#top">[Top]</a></p>
+        </section>
+
+        <section id="text__lists">
+          <h2>Lists</h2>
+          <h3>Definition Lists</h3>
+
+          <section epub:type="glossary">
+            <h4>.abbr-list</h4>
+            <dl class="abbr-list">
+              <dt epub:type="glossterm">
+                <dfn>abbr</dfn>
+              </dt>
+              <dd epub:type="glossdef">abbreviation</dd>
+            </dl>
+          </section>
+
+          <section epub:type="glossary">
+            <h4>Glossary</h4>
+            <dl>
+              <dt epub:type="glossterm">
+                <dfn>Glossary Term</dfn>
+              </dt>
+              <dd epub:type="glossdef">Glossary term definition text.</dd>
+            </dl>
+          </section>
+
+          <h3>Ordered Lists</h3>
+          <table>
+            <tr>
+              <th class="left">.digit</th>
+              <th class="left">.upper-roman</th>
+              <th class="left">.lower-roman</th>
+            </tr>
+            <tr>
+              <td>
+                <ol class="digit">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+              <td>
+                <ol class="upper-roman">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+              <td>
+                <ol class="lower-roman">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <th class="left">.upper-alpha</th>
+              <th class="left">.lower-alpha</th>
+              <th>&#160;</th>
+            </tr>
+            <tr>
+              <td>
+                <ol class="upper-alpha">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+              <td>
+                <ol class="lower-alpha">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+              <td>&#160;</td>
+            </tr>
+          </table>
+
+          <h4>... with Right Parenthesis</h4>
+          <table>
+            <tr>
+              <th class="left">.digit.right-paren</th>
+              <th class="left">.upper-roman.right-paren</th>
+              <th class="left">.lower-roman.right-paren</th>
+            </tr>
+            <tr>
+              <td>
+                <ol class="digit right-paren">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+              <td>
+                <ol class="upper-roman right-paren">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+              <td>
+                <ol class="lower-roman right-paren">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <th class="left">.upper-alpha.right-paren</th>
+              <th class="left">.lower-alpha.right-paren</th>
+              <th>&#160;</th>
+            </tr>
+            <tr>
+              <td>
+                <ol class="upper-alpha right-paren">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+              <td>
+                <ol class="lower-alpha right-paren">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+              <td>&#160;</td>
+            </tr>
+          </table>
+
+          <h4>... with Parentheses</h4>
+          <table>
+            <tr>
+              <th class="left">.digit.paren</th>
+              <th class="left">.upper-roman.paren</th>
+              <th class="left">.lower-roman.paren</th>
+            </tr>
+            <tr>
+              <td>
+                <ol class="digit paren">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+              <td>
+                <ol class="upper-roman paren">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+              <td>
+                <ol class="lower-roman paren">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <th class="left">.upper-alpha.paren</th>
+              <th class="left">.lower-alpha.paren</th>
+              <th>&#160;</th>
+            </tr>
+            <tr>
+              <td>
+                <ol class="upper-alpha paren">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+              <td>
+                <ol class="lower-alpha paren">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ol>
+              </td>
+              <td>&#160;</td>
+            </tr>
+          </table>
+
+          <h3>Unordered Lists</h3>
+          <table>
+            <tr>
+              <th class="left">.disc</th>
+              <th class="left">.circle</th>
+              <th class="left">.square</th>
+            </tr>
+            <tr>
+              <td>
+                <ul class="disc">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="circle">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="square">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th class="left">.none</th>
+              <th>&#160;</th>
+              <th>&#160;</th>
+            </tr>
+            <tr>
+              <td>
+                <ul class="none">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                  <li>List Item 3</li>
+                </ul>
+              </td>
+              <td>&#160;</td>
+              <td>&#160;</td>
+            </tr>
+          </table>
+          <p class="br-before"><a href="#top">[Top]</a></p>
+        </section>
+
+        <section id="text__tables">
+          <h2>Tabular Data</h2>
+          <h3>Table with Borders</h3>
+          <div data-cross-tour='{"table":""}'>
+            <table class="bdr">
+              <caption>Table Caption</caption>
+              <thead>
+                <tr>
+                  <th>Table Heading 1</th>
+                  <th>Table Heading 2</th>
+                  <th>Table Heading 3</th>
+                  <th>Table Heading 4</th>
+                  <th>Table Heading 5</th>
+                </tr>
+              </thead>
+              <tfoot>
+              <tr>
+                <th>Table Footer 1</th>
+                <th>Table Footer 2</th>
+                <th>Table Footer 3</th>
+                <th>Table Footer 4</th>
+                <th>Table Footer 5</th>
+              </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Table without Borders</h3>
+          <div data-cross-tour='{"table":""}'>
+            <table>
+              <caption>Table Caption</caption>
+              <thead>
+                <tr>
+                  <th>Table Heading 1</th>
+                  <th>Table Heading 2</th>
+                  <th>Table Heading 3</th>
+                  <th>Table Heading 4</th>
+                  <th>Table Heading 5</th>
+                </tr>
+              </thead>
+              <tfoot>
+              <tr>
+                <th>Table Footer 1</th>
+                <th>Table Footer 2</th>
+                <th>Table Footer 3</th>
+                <th>Table Footer 4</th>
+                <th>Table Footer 5</th>
+              </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="br-before"><a href="#top">[Top]</a></p>
+        </section>
+      </section>
+
+      <section id="helper">
+        <h2>Helper Classes</h2>
+
+        <section id="width">
+          <h3>Widths</h3>
+          <div class="row">
+						<span class="col-1">.col-1</span>
+						<span class="col-1">.col-1</span>
+						<span class="col-1">.col-1</span>
+						<span class="col-1">.col-1</span>
+						<span class="col-1">.col-1</span>
+						<span class="col-1">.col-1</span>
+						<span class="col-1">.col-1</span>
+						<span class="col-1">.col-1</span>
+						<span class="col-1">.col-1</span>
+						<span class="col-1">.col-1</span>
+						<span class="col-1">.col-1</span>
+						<span class="col-1">.col-1</span>
+          </div>
+          <div class="row">
+						<span class="col-2">.col-2</span>
+						<span class="col-2">.col-2</span>
+						<span class="col-2">.col-2</span>
+						<span class="col-2">.col-2</span>
+						<span class="col-2">.col-2</span>
+						<span class="col-2">.col-2</span>
+          </div>
+          <div class="row">
+						<span class="col-3">.col-3</span>
+						<span class="col-3">.col-3</span>
+						<span class="col-3">.col-3</span>
+						<span class="col-3">.col-3</span>
+          </div>
+          <div class="row">
+						<span class="col-4">.col-4</span>
+						<span class="col-4">.col-4</span>
+						<span class="col-4">.col-4</span>
+          </div>
+          <div class="row">
+						<span class="col-5">.col-5</span>
+						<span class="col-7">.col-7</span>
+          </div>
+          <div class="row">
+						<span class="col-6">.col-6</span>
+						<span class="col-6">.col-6</span>
+          </div>
+          <div class="row">
+            <span class="col-7">.col-7</span>
+						<span class="col-5">.col-5</span>
+          </div>
+          <div class="row">
+						<span class="col-8">.col-8</span>
+						<span class="col-4">.col-4</span>
+          </div>
+          <div class="row">
+						<span class="col-9">.col-9</span>
+						<span class="col-3">.col-3</span>
+          </div>
+          <div class="row">
+						<span class="col-10">.col-10</span>
+						<span class="col-2">.col-2</span>
+          </div>
+          <div class="row">
+						<span class="col-11">.col-11</span>
+						<span class="col-1">.col-1</span>
+          </div>
+          <div class="row">
+						<span class="col-12">.col-12</span>
+          </div>
+        </section>
+      </section>
+
+      <section id="embedded">
+        <h2 class="br-before">Embedded Content</h2>
+
+        <section id="embedded__images">
+          <h3>Images</h3>
+          <h4>No <code>&lt;figure&gt;</code> element</h4>
+          <p><img src="http://placehold.it/400x200?text=+" alt="Image alt text" /></p>
+
+          <h4>Wrapped in a <code>&lt;figure&gt;</code> element, no <code>&lt;figcaption&gt;</code></h4>
+          <figure>
+            <img src="http://placehold.it/200?text=+" alt="Image alt text" />
+          </figure>
+
+          <h4>Wrapped in a <code>&lt;figure&gt;</code> element, with a <code>&lt;figcaption&gt;</code></h4>
+          <figure>
+            <img src="http://placehold.it/300?text=+" alt="Image alt text" />
+            <figcaption>Here is a caption for this image.</figcaption>
+          </figure>
+          <p class="br-before"><a href="#top">[Top]</a></p>
+        </section>
+
+        <section id="embedded__video">
+          <h3>Video</h3>
+          <video controls="">video
+          </video>
+          <p class="br-before"><a href="#top">[Top]</a></p>
+        </section>
+      </section>
+    </main>
+    <footer role="contentinfo">
+      <p>Based on HTML5 Test Page, made by <a href="http://twitter.com/cbracco">@cbracco</a>. Code on <a href="http://github.com/cbracco/html5-test-page">GitHub</a>.</p>
+    </footer>
+  </body>
+</html>

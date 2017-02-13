@@ -4,10 +4,10 @@
   padding: 0 0 0 1em;
 }
 
-@mixin list-items($fs, $lh, $pad) {
+@mixin list-items($pad) {
   li {
-    font-size: $fs;
-    line-height: $lh;
+    font-size: $def-font;
+    line-height: $def-line;
     padding: $pad;
 
     > {

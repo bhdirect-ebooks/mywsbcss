@@ -1,5 +1,5 @@
 /*
-Error: Invalid CSS after "@include ": expected identifier, was ""includes/mywsb..."
+Error: Invalid CSS after "@import ": expected identifier, was ""includes/mywsb..."
         on line 111 of src/mywsb.scss
 
 106: 
@@ -7,7 +7,7 @@ Error: Invalid CSS after "@include ": expected identifier, was ""includes/mywsb.
 108:   #EPUB-SECTIONS
 109: \*------------------------------------*\/
 110: 
-111: @include "includes/mywsb/sections";
+111: @import "includes/mywsb/sections";
 112: 
 113: 
 114: 

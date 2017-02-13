@@ -106,7 +106,7 @@ $level-4-font: italic bold 1em $sans-font;
 $level-5-font: normal bold 0.95em $sans-font;
 $level-6-font: italic bold 0.9em $sans-font;
 
-@include "includes/shared/headings";
+@import "includes/shared/headings";
 
 
 /**
@@ -147,7 +147,7 @@ $level-6-font: italic bold 0.9em $sans-font;
  * elements in CROSS, but they remain here for consistency.
  */
 
-@include "includes/shared/inline";
+@import "includes/shared/inline";
 
 .dictterm {
   @include dictionary-term();
@@ -165,7 +165,7 @@ $level-6-font: italic bold 0.9em $sans-font;
   #ASIDES
 \*------------------------------------*/
 
-@include "includes/shared/asides";
+@import "includes/shared/asides";
 
 aside {
   .bridgehead {
@@ -181,7 +181,7 @@ aside {
   #FIGURES
 \*------------------------------------*/
 
-@include "includes/shared/figures";
+@import "includes/shared/figures";
 
 .figure {
   @include figure-decs();
@@ -204,13 +204,13 @@ aside {
   margin-bottom: 1em;
 }
 
-@include "includes/shared/lists";
+@import "includes/shared/lists";
 
-@include list-items(1em, 1.5em, 0.2em 0);
+@include list-items(0.2em 0);
 @include none-list-items(2em, -1em);
 
-@include "includes/shared/list-helpers";
-@include "includes/shared/def-lists";
+@import "includes/shared/list-helpers";
+@import "includes/shared/def-lists";
 
 
 
@@ -234,7 +234,7 @@ $offset-color: #d3d3d3;
  * Tables
  */
 
-@include "includes/shared/tables";
+@import "includes/shared/tables";
 
 table {
   @include def-table();
@@ -268,7 +268,7 @@ td {
   #VIDEOS
 \*------------------------------------*/
 
-@include "includes/shared/video";
+@import "includes/shared/video";
 
 .poster {
   @include video-def();
@@ -287,7 +287,7 @@ td {
   #QUOTES
 \*------------------------------------*/
 
-@include "includes/shared/quotes";
+@import "includes/shared/quotes";
 
 
 
@@ -297,7 +297,7 @@ td {
   #BLOCKS
 \*------------------------------------*/
 
-@include "includes/ws/blocks";
+@import "includes/ws/blocks";
 
 
 
@@ -307,7 +307,7 @@ td {
   #TEXT-GENERAL
 \*------------------------------------*/
 
-@include "includes/shared/text-general";
+@import "includes/shared/text-general";
 
 
 
@@ -319,7 +319,7 @@ td {
 
 $fn-size: 0.75em;
 
-@include "includes/shared/text-types";
+@import "includes/shared/text-types";
 
 
 
@@ -329,8 +329,8 @@ $fn-size: 0.75em;
   #LANGUAGES
 \*------------------------------------*/
 
-@include "includes/shared/languages";
-@include "includes/ws/lang";
+@import "includes/shared/languages";
+@import "includes/ws/lang";
 
 
 
@@ -340,7 +340,7 @@ $fn-size: 0.75em;
   #WIDTHS
 \*------------------------------------*/
 
-@include "includes/shared/widths";
+@import "includes/shared/widths";
 
 
 
@@ -350,4 +350,4 @@ $fn-size: 0.75em;
   #OVERRIDES
 \*------------------------------------*/
 
-@include "includes/shared/overrides";
+@import "includes/shared/overrides";

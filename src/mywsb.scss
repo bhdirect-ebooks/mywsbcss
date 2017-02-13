@@ -108,7 +108,7 @@ img {
   #EPUB-SECTIONS
 \*------------------------------------*/
 
-@include "includes/mywsb/sections";
+@import "includes/mywsb/sections";
 
 
 
@@ -118,7 +118,7 @@ img {
   #EPUB-NAVIGATION
 \*------------------------------------*/
 
-@include "includes/mywsb/nav";
+@import "includes/mywsb/nav";
 
 
 
@@ -142,7 +142,7 @@ $level-4-font: italic 500 1.1em $sans-font;
 $level-5-font: normal bold 1em $sans-font;
 $level-6-font: italic bold 0.9em $sans-font;
 
-@include "includes/shared/headings";
+@import "includes/shared/headings";
 
 
 /*
@@ -191,7 +191,7 @@ p {
   #INLINE-ELEMENTS
 \*------------------------------------*/
 
-@include "includes/shared/inline";
+@import "includes/shared/inline";
 
 
 
@@ -201,7 +201,7 @@ p {
   #ASIDES
 \*------------------------------------*/
 
-@include "includes/shared/asides";
+@import "includes/shared/asides";
 
 aside {
   &[epub|type~=bridgehead],
@@ -231,7 +231,7 @@ aside {
   #FIGURES
 \*------------------------------------*/
 
-@include "includes/shared/figures";
+@import "includes/shared/figures";
 
 figure {
   @include figure-decs();
@@ -254,13 +254,13 @@ figcaption {
   padding: 0 0 0 calc(1em + 7%);
 }
 
-@include "includes/shared/lists";
+@import "includes/shared/lists";
 
-@include list-items(1.05em, 1.5em, 0.1em 0 0 0);
+@include list-items(0.1em 0 0 0);
 @include none-list-items(1em, -1.5em);
 
-@include "includes/shared/list-helpers";
-@include "includes/shared/def-lists";
+@import "includes/shared/list-helpers";
+@import "includes/shared/def-lists";
 
 
 
@@ -284,7 +284,7 @@ div[data-cross-tour*=table] {
  * Tables
  */
 
-@include "includes/shared/tables";
+@import "includes/shared/tables";
 
 table {
   @include def-table();
@@ -314,7 +314,7 @@ td {
   #VIDEOS
 \*------------------------------------*/
 
-@include "includes/shared/video";
+@import "includes/shared/video";
 
 .poster {
   @include video-def();
@@ -334,7 +334,7 @@ td {
   #QUOTES
 \*------------------------------------*/
 
-@include "includes/shared/quotes";
+@import "includes/shared/quotes";
 
 
 
@@ -344,7 +344,7 @@ td {
   #BLOCKS
 \*------------------------------------*/
 
-@include "includes/mywsb/blocks";
+@import "includes/mywsb/blocks";
 
 
 
@@ -354,7 +354,7 @@ td {
   #TEXT-GENERAL
 \*------------------------------------*/
 
-@include "includes/shared/text-general";
+@import "includes/shared/text-general";
 
 
 
@@ -366,7 +366,7 @@ td {
 
 $fn-size: 0.75em;
 
-@include "includes/shared/text-types";
+@import "includes/shared/text-types";
 
 
 
@@ -376,8 +376,8 @@ $fn-size: 0.75em;
   #LANGUAGES
 \*------------------------------------*/
 
-@include "includes/shared/languages";
-@include "includes/mywsb/lang";
+@import "includes/shared/languages";
+@import "includes/mywsb/lang";
 
 
 
@@ -387,7 +387,7 @@ $fn-size: 0.75em;
   #WIDTHS
 \*------------------------------------*/
 
-@include "includes/shared/widths";
+@import "includes/shared/widths";
 
 
 
@@ -397,4 +397,4 @@ $fn-size: 0.75em;
   #OVERRIDES
 \*------------------------------------*/
 
-@include "includes/shared/widths";
+@import "includes/shared/widths";

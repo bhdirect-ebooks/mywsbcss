@@ -1,0 +1,65 @@
+$margin-lg: 1.5em;
+$margin-sm: 0.5em;
+
+@mixin title-basic() {
+  text-align: center;
+  text-indent: 0;
+}
+
+@mixin title-bold($fs, $tm) {
+  font: bold $fs $sans-font;
+  margin: $tm 0 0 0;
+  @include $title-basic();
+}
+
+.volumetitlehidden {
+  display: none;
+  visibility: hidden;
+}
+
+.settitle {
+  @include title-bold(1.4em, $margin-lg);
+}
+
+.volumetitle,
+.booktitle {
+  @include title-bold(2.1em, $margin-lg);
+}
+
+.subtitle {
+  @include title-bold(1.4em, $margin-sm);
+}
+
+.byline {
+  @include title-bold(1.1em, $margin-sm);
+}
+
+.author {
+  @include title-bold(1.3em, $margin-sm);
+}
+
+.coverimg {
+  margin: 1em 0;
+  @include $title-basic();
+  img {
+    border: 1px solid #000;
+  }
+}
+
+.copyright {
+  font-size: 0.8em;
+  margin: 1em 0 0 0;
+  @include $title-basic();
+}
+
+.wslogo,
+.publogo {
+  margin: 1.5em 0;
+  @include $title-basic();
+  img {
+    border: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}

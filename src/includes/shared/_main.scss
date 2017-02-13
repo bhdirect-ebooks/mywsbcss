@@ -1,0 +1,17 @@
+body {
+  font: normal normal 100% $serif-font;
+  margin: 0 5%;
+}
+
+p {
+  line-height: $def-line;
+  font-size: $def-font;
+  margin: 0;
+  text-align: justify;
+  text-indent: $def-ind;
+}
+
+a {
+  color: #0099ff;
+  text-decoration: none;
+}

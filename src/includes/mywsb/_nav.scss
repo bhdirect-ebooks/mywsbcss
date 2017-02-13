@@ -1,0 +1,20 @@
+nav {
+  ol {
+    list-style-type: none;
+    margin-bottom: 0.3em;
+
+    > li:first-child {
+      margin-top: 0.3em;
+    }
+  }
+
+  &[epub|type~=toc] > ol > li > ol > li,
+  &[epub\:type~=toc] > ol > li > ol > li {
+    margin-top: 0.3em;
+  }
+
+  &[epub|type~="page-list"],
+  &[epub\:type~="page-list"] {
+    display: none;
+  }
+}

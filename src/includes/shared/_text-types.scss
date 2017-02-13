@@ -1,0 +1,134 @@
+/**
+ * Chapter author's name, for use with <p>
+ */
+
+.auth {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0.5em 0;
+  text-indent: 0;
+}
+
+
+/**
+ * Dedication lines, for use with <p>
+ */
+
+@mixin dedications() {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.ded1 {
+  @include dedications();
+  margin: 1em 25% 0 25%;
+}
+
+.ded2 {
+  @include dedications();
+  margin: 0 25%;
+}
+
+
+/**
+ * Footnote indicator, for use with <sup>
+ */
+
+.fn {
+  color: #ff0000;
+  font: normal normal $fn-size $sans-font;
+  position: relative;
+  vertical-align: 0.7em;
+}
+
+/**
+ * Footnote text
+ */
+
+.fntext {
+  color: #0000ff;
+  display: none;
+  font-size: 0.8em;
+  font-variant: normal;
+}
+
+
+/**
+ * Poetry lines, for use with <p>
+ */
+
+@mixin poetry() {
+  text-indent: -0.5em;
+}
+
+.poem1 {
+  margin: 0 0 0 2em;
+  @include poetry();
+}
+
+.poem2 {
+  margin: 0 0 0 3em;
+  @include poetry();
+}
+
+.poem3 {
+  margin: 0 0 0 4em;
+  @include poetry();
+}
+
+.poem4 {
+  margin: 0 0 0 5em;
+  @include poetry();
+}
+
+.poem5 {
+  margin: 0 0 0 6em;
+  @include poetry();
+}
+
+.poem6 {
+  margin: 0 0 0 7em;
+  @include poetry();
+}
+
+.poem7 {
+  margin: 0 0 0 8em;
+  @include poetry();
+}
+
+.poem8 {
+  margin: 0 0 0 9em;
+  @include poetry();
+}
+
+.poem9 {
+  margin: 0 0 0 10em;
+  @include poetry();
+}
+
+.poem10 {
+  margin: 0 0 0 11em;
+  @include poetry();
+}
+
+
+/**
+ * Quote or section 'signature', for use with <p>
+ */
+
+.sig {
+  margin-bottom: 1em;
+  margin-left: 60%;
+  text-align: left;
+  text-indent: 0;
+}
+
+
+/**
+ * Verse number in Scripture quote, for use with <sup>
+ */
+
+.verse {
+  font-size: 0.85em;
+  font-weight: bold;
+}

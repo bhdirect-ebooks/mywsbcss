@@ -1,0 +1,90 @@
+// Mixins
+@mixin heading() {
+  clear: both;
+  text-indent: 0;
+}
+
+@mixin heading-center() {
+  @include heading();
+  text-align: center;
+}
+
+@mixin heading-left() {
+  @include heading();
+  text-align: left;
+}
+
+@mixin subheading() {
+  color: $subheading-color;
+  margin: $subheading-margin;
+}
+
+@mixin bridgehead() {
+  font: $level-3-font;
+  margin: $bridgehead-margin;
+  @include heading-center();
+}
+
+
+/*
+ * h1-6
+ */
+
+h1 {
+  font: $level-1-font;
+  margin: $h1-margin;
+  @include heading-center();
+}
+
+h2 {
+  font: $level-2-font;
+  margin: $h2-margin;
+  @include heading-center();
+}
+
+h3 {
+  font: $level-3-font;
+  margin: $lower-level-margin;
+  @include heading-left();
+}
+
+h4 {
+  font: $level-4-font;
+  margin: $lower-level-margin;
+  @include heading-left();
+}
+
+h5 {
+  font: $level-5-font;
+  margin: $lower-level-margin;
+  @include heading-left();
+}
+
+h6 {
+  font: $level-6-font;
+  margin: $lower-level-margin;
+  @include heading-left();
+}
+
+
+/*
+ * Levels 1-3 subheadings for use with <p>
+ */
+
+.h1sub {
+  font: $level-2-font;
+  @include subheading();
+  @include heading-center();
+}
+
+.h2sub {
+  font: $level-3-font;
+  @include subheading();
+  @include heading-center();
+}
+
+.h3sub {
+  font: $level-4-font;
+  @include subheading();
+  @include heading-left();
+}

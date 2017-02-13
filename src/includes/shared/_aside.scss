@@ -1,0 +1,24 @@
+@mixin aside-bridge() {
+  border-bottom: 1px solid #999b9d;
+  margin: 0 0 1.5% 0;
+  padding: 0 0 1% 0;
+}
+
+aside {
+  border: 1px solid #808285;
+  margin: 1.5em 0;
+  padding: 3% 5%;
+
+  p {
+    margin: 1% 0 0 0;
+    text-indent: 0;
+  }
+
+  blockquote {
+    border: none;
+  }
+
+  ol, ul {
+    padding-left: 5%;
+  }
+}

@@ -1,0 +1,45 @@
+:lang(x-phonetic) { /* pronunciation */
+  font: 1.1em $lang-font;
+  @include lang-normal();
+}
+
+:lang(hbo) { /* Ancient Hebrew */
+  font-family: "Ezra SIL";
+  @include lang-normal();
+}
+
+span[lang=grc] { /* Ancient Greek */
+  font: italic normal $def-font/$def-line $lang-font;
+}
+
+:lang(grc-x-Uncl) { /* Greek - Uncial Script */
+  font-family: "GFS Decker", "New Athena Unicode";
+}
+
+:lang(cop), /* Coptic */
+:lang(xmk) { /* Ancient Macedonian */
+  @include new-athena();
+}
+
+:lang(la), /* Latin */
+:lang(fr), /* French */
+:lang(de), /* German */
+:lang(it), /* Italian */
+:lang(es), /* Spanish */
+/*
+ * Transliterations
+ */
+:lang(hbo-Latn), /* Ancient Hebrew */
+:lang(grc-Latn), /* Ancient Greek */
+:lang(aii-Latn), /* Assyrian */
+:lang(akk-Latn), /* Akkadian */
+:lang(am-Latn),  /* Amharic */
+:lang(ar-Latn),  /* Arabic */
+:lang(arc-Latn), /* Imperial Aramaic */
+:lang(hy-Latn),  /* Armenian */
+:lang(egy-Latn), /* Ancient Egyptian */
+:lang(peo-Latn), /* Old Persian */
+:lang(sa-Latn),  /* Sanskrit */
+:lang(x-mis-Latn) { /* Uncoded Language */
+  @include lang-def();
+}

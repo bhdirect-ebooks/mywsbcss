@@ -1,0 +1,19 @@
+@mixin lang-normal() {
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin lang-def() {
+  font-family: $lang-font;
+  font-style: italic;
+}
+
+@mixin new-athena() {
+  font-family: "New Athena Unicode", $lang-font;
+  @include lang-normal();
+}
+
+.wsextra { /* WS proprietary font; use for some symbols */
+  font: 1.1em "WS Extra";
+  @include lang-normal();
+}

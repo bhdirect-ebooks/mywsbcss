@@ -1,0 +1,59 @@
+/*
+ * Block quotes
+ */
+
+blockquote {
+  border-left: 1px dotted #000;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  padding-left: 1em;
+  p {
+    margin: 0.5em 0;
+    text-indent: 0;
+  }
+}
+
+.scriptext {
+  border: none;
+  font-size: 1em;
+  font-style: italic;
+  margin: 1em 10%;
+  padding: 0;
+}
+
+
+/*
+ * Pull quotes
+ */
+
+@mixin pullquotes($fs, $marg) {
+  font-size: 0.8em;
+  letter-spacing: 0.063em;
+  margin: 2em;
+  width: 30%;
+  text-transform: uppercase;
+
+  p {
+    text-indent: 0;
+    text-align: left;
+  }
+
+  .sig {
+    margin-left: 0;
+    text-align: right;
+  }
+}
+
+.pullquotec {
+  @include pullquotes(0.9em, 2em 15%);
+}
+
+.pullquotel {
+  @include pullquotes(0.8em, 2em);
+  float: left;
+}
+
+.pullquoter {
+  @include pullquotes(0.8em, 2em);
+  float: right;
+}

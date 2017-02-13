@@ -1,0 +1,50 @@
+/*
+ * Definition lists
+ */
+
+dt {
+  clear: both;
+  padding: 0 0 0.8em 0;
+  text-align: center;
+
+  dfn {
+    font: normal bold 1em/1.5em $sans-font;
+  }
+}
+
+dd {
+  margin: 0;
+  padding: 0 0 2em 0;
+
+  p {
+    text-indent: 0;
+  }
+}
+
+.abbr-list {
+  padding: 0 0 0 1.5em;
+
+  dt {
+    clear: left;
+    float: left;
+    padding: 0;
+    text-align: left;
+    width: 20%;
+    dfn {
+      font-family: $serif-font;
+      font-weight: normal;
+    }
+  }
+
+  dd {
+    float: left;
+    padding: 0 1%;
+    width: 78%;
+  }
+
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}

@@ -1,0 +1,20 @@
+// Video mixins
+@mixin video-def() {
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  box-shadow: 0 0 3px rgba(1, 1, 1, 0.2), inset 0 0 100px rgba(1, 1, 1, 0.1);
+  height: auto;
+  margin: 1.5em auto 1.25em auto;
+  text-align: center;
+  text-indent: 0;
+}
+
+@mixin glyph-def() {
+  display: block;
+  float: left;
+  height: 50px;
+  margin: 0 0.75em 2em 0;
+  min-height: 50px;
+  padding: 0;
+  width: 50px;
+}

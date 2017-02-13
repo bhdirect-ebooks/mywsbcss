@@ -1,0 +1,116 @@
+// Mixins
+@mixin sublist-layout() {
+  margin: 0;
+  padding: 0 0 0 1em;
+}
+
+@mixin list-items($fs, $lh, $pad) {
+  li {
+    font-size: $fs;
+    line-height: $lh;
+    padding: $pad;
+
+    > {
+      ul > li,
+      ol > li {
+        font-size: inherit;
+      }
+    }
+
+    p {
+      text-indent: 0;
+    }
+  }
+}
+
+@mixin none-list-items($ml, $ti) {
+  .none {
+    > li {
+    margin-left: $ml;
+    text-indent: $ti;
+
+      > {
+        ul:not(.none),
+        ol:not(.none) {
+          text-indent: 0;
+        }
+      }
+    }
+  }
+}
+
+@mixin parenthetical($leftness, $indentation) {
+  counter-reset: list;
+  list-style-type: none;
+
+  > li {
+    left: $leftness;
+    position: relative;
+    text-indent: $indentation;
+
+    &:before {
+      left: -0.4em;
+      counter-increment: list;
+      position: relative;
+    }
+  }
+}
+
+
+/*
+ * Ordered and unordered lists
+ */
+
+ol {
+  @include list-layout();
+
+  ul,
+  ol {
+    @include sublist-layout();
+  }
+}
+
+ul {
+  @include list-layout();
+
+  ul,
+  ol {
+    @include sublist-layout();
+  }
+}
+
+.upper-roman {
+  list-style-type: upper-roman;
+}
+
+.lower-roman {
+  list-style-type: lower-roman;
+}
+
+.upper-alpha {
+  list-style-type: upper-alpha;
+}
+
+.lower-alpha {
+  list-style-type: lower-alpha;
+}
+
+.digit {
+  list-style-type: decimal;
+}
+
+.disc {
+  list-style-type: disc;
+}
+
+.circle {
+  list-style-type: circle;
+}
+
+.square {
+  list-style-type: square;
+}
+
+.none {
+  list-style-type: none;
+}

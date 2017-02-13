@@ -1,0 +1,35 @@
+section {
+  &[epub|type~=copyright-page],
+  &[epub\:type~=copyright-page] {
+    margin: 2.5% 10%;
+  }
+
+  &[epub|type~=copyright-page] p,
+  &[epub\:type~=copyright-page] p {
+    text-indent: 0;
+  }
+
+  &[epub|type~=cover] img,
+  &[epub\:type~=cover] img,
+  &[epub|type~=titlepage] img,
+  &[epub\:type~=titlepage] img {
+    display: block;
+    margin: 0 auto 2em auto;
+    max-width: 555px;
+  }
+
+  &[epub|type~=titlepage],
+  &[epub\:type~=titlepage],
+  &[epub|type~=dedication] p,
+  &[epub\:type~=dedication] p {
+    text-align: center;
+    text-indent: 0;
+  }
+
+  &[epub|type~=index-group] ul,
+  &[epub\:type~=index-group] ul {
+    list-style-type: none;
+    padding: 0 10%;
+    text-indent: -5%;
+  }
+}

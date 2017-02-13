@@ -1,0 +1,36 @@
+@mixin def-table() {
+  border-collapse: collapse;
+  font-size: 100%;
+  margin: 1.5em auto;
+  text-align: left;
+}
+
+@mixin def-cell() {
+  line-height: $def-line;
+  font-size: $def-font;
+  padding: 0.5em;
+}
+
+/*
+ * bdr class for use with <table>
+ */
+
+@mixin table-border() {
+  border: 1px solid $offset-color;
+}
+
+.bdr {
+  @include table-border();
+  td,
+  th {
+    @include table-border();
+  }
+}
+
+/*
+ * offset class for use with any <tr>, <th>, or <td> element
+ */
+
+.offset {
+  background-color: $offset-color;
+}

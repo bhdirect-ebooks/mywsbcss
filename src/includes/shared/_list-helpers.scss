@@ -1,0 +1,55 @@
+/*
+ * List helpers
+ */
+
+ol:not(.none) li {
+  padding-left: 0.25em;
+}
+
+.paren {
+  @include parenthetical(0.15em, -1.15em);
+}
+
+.right-paren {
+  @include parenthetical(0, -0.75em);
+}
+
+.digit.paren > li:before {
+  content: "(" counter(list, decimal) ")";
+}
+
+.lower-alpha.paren > li:before {
+  content: "(" counter(list, lower-alpha) ")";
+}
+
+.lower-roman.paren > li:before {
+  content: "(" counter(list, lower-roman) ")";
+}
+
+.upper-alpha.paren > li:before {
+  content: "(" counter(list, upper-alpha) ")";
+}
+
+.upper-roman.paren > li:before {
+  content: "(" counter(list, upper-roman) ")";
+}
+
+.digit.right-paren > li:before {
+  content: counter(list, decimal) ")";
+}
+
+.lower-alpha.right-paren > li:before {
+  content: counter(list, lower-alpha) ")";
+}
+
+.lower-roman.right-paren > li:before {
+  content: counter(list, lower-roman) ")";
+}
+
+.upper-alpha.right-paren > li:before {
+  content: counter(list, upper-alpha) ")";
+}
+
+.upper-roman.right-paren > li:before {
+  content: counter(list, upper-roman) ")";
+}

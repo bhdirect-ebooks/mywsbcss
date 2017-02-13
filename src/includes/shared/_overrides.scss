@@ -1,0 +1,35 @@
+/*
+ * Media queries
+ */
+
+@media only screen and (max-width: 600px) {
+  /* Display left and right pull quotes
+     as centered in smaller viewports. */
+  .pullquotel,
+  .pullquoter {
+    display: block;
+    float: none;
+    margin: 2em 15%;
+    width: 70%;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  /* Display left and right figure floats
+     as centered in smaller viewports. */
+  .float-left,
+  .float-right {
+    @include figure-full();
+  }
+}
+
+
+/*
+ * <dfn> font override
+ */
+
+dfn span[lang] {
+  font: inherit;
+}

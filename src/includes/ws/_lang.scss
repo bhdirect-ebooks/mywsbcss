@@ -1,0 +1,45 @@
+.pro { /* pronunciation */
+  font: 1.1em $lang-font;
+  @include lang-normal();
+}
+
+.lang-hbo { /* Ancient Hebrew */
+  font-family: "Ezra SIL";
+  @include lang-normal();
+}
+
+.lang-grc { /* Ancient Greek */
+  font-family: "SBL Greek", "Galatia SIL";
+}
+
+.lang-grc-x-Uncl { /* Greek - Uncial Script */
+  font-family: "GFS Decker", "New Athena Unicode";
+}
+
+.lang-cop, /* Coptic */
+.lang-xmk { /* Ancient Macedonian */
+  @include new-athena();
+}
+
+.lang-la, /* Latin */
+.lang-fr, /* French */
+.lang-de, /* German */
+.lang-it, /* Italian */
+.lang-es, /* Spanish */
+/*
+ * Transliterations
+ */
+.trans-hbo, /* Ancient Hebrew */
+.trans-grc, /* Ancient Greek */
+.trans-aii, /* Assyrian */
+.trans-akk, /* Akkadian */
+.trans-am,  /* Amharic */
+.trans-ar,  /* Arabic */
+.trans-arc, /* Imperial Aramaic */
+.trans-hy,  /* Armenian */
+.trans-egy, /* Ancient Egyptian */
+.trans-peo, /* Old Persian */
+.trans-sa,  /* Sanskrit */
+.trans-x-mis { /* Uncoded Language */
+  @include lang-def();
+}

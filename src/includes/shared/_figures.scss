@@ -1,0 +1,41 @@
+@mixin figure-decs() {
+  text-align: center;
+}
+
+@mixin figcap-decs() {
+  font-size: 0.85em;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  text-indent: 0;
+}
+
+/*
+ * Classes for use with figure
+ */
+
+// Mixin also used in media query
+@mixin figure-full() {
+  margin: 1.2em auto;
+  max-width: 555px;
+  width: 90%;
+}
+
+.full-width {
+  @include figure-full();
+}
+
+@mixin figure-float() {
+  margin: 0.7em 1.1em;
+  max-width: 19em;
+}
+
+.float-right {
+  float: right;
+  @include figure-float();
+}
+
+.float-left {
+  float: left;
+  @include figure-float();
+}

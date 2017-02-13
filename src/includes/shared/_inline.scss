@@ -1,0 +1,43 @@
+// mixins
+@mixin sup-sub() {
+  position: relative;
+  vertical-align: baseline;
+}
+
+@mixin strongs() {
+  color: #006400;
+  font: 0.9em $sans-font;
+}
+
+@mixin no-display() {
+  display: none !important;
+  visibility: hidden;
+}
+
+@mixin mywsb-scripture-ref() {
+  border-bottom: 1px dashed #000;
+  color: #000;
+  margin-bottom: -1px;
+}
+
+@mixin dictionary-term() {
+  color: #000080;
+  font: bold 1.15em $sans-font;
+  text-align: left;
+  text-indent: 0;
+}
+
+
+/*
+ * <sub> and <sup> styles
+ */
+
+sub {
+  top: 0.2em;
+  @include sup-sub();
+}
+
+sup {
+  top: -0.2em;
+  @include sup-sub();
+}

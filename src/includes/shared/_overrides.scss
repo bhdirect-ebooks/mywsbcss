@@ -30,6 +30,7 @@
  * <dfn> font override
  */
 
-dfn span[lang] {
+dfn span[lang],
+dfn span[trans] {
   font: inherit;
 }

@@ -1,6 +1,6 @@
 /*!*
  * FILE:     wordsearch.css
- * VERSION:  2017-02-13
+ * VERSION:  2017-02-14
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -53,9 +53,9 @@
  #GLOBAL
 \*------------------------------------*/
 
-$def-line: 1.5em;
-$def-font: 1em;
-$def-ind:  2em;
+$def-line: 1.5em; // Default line height
+$def-font: 1em;   // Default font size
+$def-ind:  2em;   // Default text indent
 $serif-font: "Georgia", "Times New Roman", serif;
 $sans-font:  "Verdana", "Arial", "Helvetica", sans-serif;
 $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;

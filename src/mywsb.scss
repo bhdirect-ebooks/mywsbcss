@@ -1,6 +1,6 @@
 /*!*
  * FILE:     mywsb.css
- * VERSION:  2017-02-13
+ * VERSION:  2017-02-14
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -68,9 +68,9 @@
  #GLOBAL
 \*------------------------------------*/
 
-$def-line: 1.55em;
-$def-font: 1.05em;
-$def-ind:  1.5em;
+$def-line: 1.55em; // Default line height
+$def-font: 1.05em; // Default font size
+$def-ind:  1.5em;  // Default text indent
 $serif-font: "Alegreya", "Gentium Plus", serif;
 $sans-font:  "Alegreya Sans", sans-serif;
 $lang-font:  "Gentium Plus", serif;
@@ -192,6 +192,12 @@ p {
 \*------------------------------------*/
 
 @import "includes/shared/inline";
+
+a[data-cross-ref] {
+  border-bottom: 1px dashed #000;
+  color: #000;
+  margin-bottom: -1px;
+}
 
 
 

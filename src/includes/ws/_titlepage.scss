@@ -9,7 +9,7 @@ $margin-sm: 0.5em;
 @mixin title-bold($fs, $tm) {
   font: bold $fs $sans-font;
   margin: $tm 0 0 0;
-  @include $title-basic();
+  @include title-basic();
 }
 
 .volumetitlehidden {
@@ -40,7 +40,7 @@ $margin-sm: 0.5em;
 
 .coverimg {
   margin: 1em 0;
-  @include $title-basic();
+  @include title-basic();
   img {
     border: 1px solid #000;
   }
@@ -49,13 +49,13 @@ $margin-sm: 0.5em;
 .copyright {
   font-size: 0.8em;
   margin: 1em 0 0 0;
-  @include $title-basic();
+  @include title-basic();
 }
 
 .wslogo,
 .publogo {
   margin: 1.5em 0;
-  @include $title-basic();
+  @include title-basic();
   img {
     border: 0;
   }

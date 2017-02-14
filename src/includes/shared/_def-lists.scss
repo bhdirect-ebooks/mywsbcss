@@ -8,7 +8,7 @@ dt {
   text-align: center;
 
   dfn {
-    font: normal bold 1em/1.5em $sans-font;
+    font: normal bold $def-font/$def-line $sans-font;
   }
 }
 
@@ -22,7 +22,7 @@ dd {
 }
 
 .abbr-list {
-  padding: 0 0 0 1.5em;
+  padding: 0 0 0 $def-ind;
 
   dt {
     clear: left;

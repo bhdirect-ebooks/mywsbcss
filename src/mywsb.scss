@@ -12,8 +12,8 @@
  * by the B&H Direct eBook Development team and can be tweaked or
  * extended with a separate stylesheet.
  *
- * This version is a developer document and should be concatenated
- * and minified for production environments.
+ * This version is a developer document and should be compiled and
+ * minified for production environments.
  */
 
 
@@ -322,7 +322,7 @@ td {
 
 @import "includes/shared/video";
 
-.poster {
+video {
   @include video-def();
   width: 100%;
 }

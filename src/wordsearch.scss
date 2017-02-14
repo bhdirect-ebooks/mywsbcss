@@ -123,15 +123,15 @@ $level-6-font: italic bold 0.9em $sans-font;
  */
 
 .part {
-	background: #333;
-	color: #fff;
-	font-size: 1.5em;
-	font-weight: bold;
-	letter-spacing: 0.2em;
-	margin: -1em -5.5% 1em -5.5%;
-	padding: 1.4em 0 1em 0;
-	text-align: center;
-	text-indent: 0;
+  background: #333;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin: -1em -5.5% 1em -5.5%;
+  padding: 1.4em 0 1em 0;
+  text-align: center;
+  text-indent: 0;
 }
 
 
@@ -317,7 +317,7 @@ td {
   #TEXT-TYPES
 \*------------------------------------*/
 
-$fn-size: 0.75em;
+$fn-size: 0.6em;
 
 @import "includes/shared/text-types";
 

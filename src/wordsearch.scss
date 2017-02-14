@@ -70,10 +70,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 
 @import "includes/shared/main";
 
-img {
-  max-width: 100%;
-}
-
 
 
 
@@ -189,6 +185,19 @@ aside {
 
 .figcaption {
   @include figcap-decs();
+}
+
+.full-width {
+  img {
+    width: $full-width;
+  }
+}
+
+.float-left,
+.float-right {
+  img {
+    width: $float-width;
+  }
 }
 
 

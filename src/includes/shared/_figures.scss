@@ -10,24 +10,27 @@
   text-indent: 0;
 }
 
-/*
- * Classes for use with figure
- */
+$full-width:  90%;
+$float-width: 19em;
 
-// Mixin also used in media query
-@mixin figure-full() {
+@mixin figure-full() { // Mixin also used in media query
   margin: 1.2em 5%;
   max-width: 555px;
-  width: 90%;
-}
-
-.full-width {
-  @include figure-full();
+  width: $full-width;
 }
 
 @mixin figure-float() {
   margin: 0.7em 1.1em;
-  max-width: 19em;
+  max-width: $float-width;
+  width: $float-width;
+}
+
+/*
+ * Classes for use with figure
+ */
+
+.full-width {
+  @include figure-full();
 }
 
 .float-right {

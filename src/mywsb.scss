@@ -1,6 +1,6 @@
 /*!*
  * FILE:     mywsb.css
- * VERSION:  2017-02-14
+ * VERSION:  2017-02-20
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -94,6 +94,11 @@ $lang-font:  "Gentium Plus", serif;
 \*------------------------------------*/
 
 @import "includes/shared/main";
+
+img {
+  border-style: none;
+  width: 100%;
+}
 
 
 

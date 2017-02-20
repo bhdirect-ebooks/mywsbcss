@@ -12,6 +12,10 @@ $margin-sm: 0.5em;
   @include title-basic();
 }
 
+img {
+  border-style: none;
+}
+
 .volumetitlehidden {
   display: none;
   visibility: hidden;

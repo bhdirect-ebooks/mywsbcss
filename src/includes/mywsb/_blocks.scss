@@ -1,4 +1,30 @@
 /**
+ * Hidden
+ */
+
+.nd {
+  @include no-display();
+}
+
+
+/**
+ * Dictionary Article
+ */
+
+article {
+  margin: 1.5em 0;
+
+  dfn {
+    color: #00568F;
+    display: inline-block;
+    font: $level-1-font;
+    padding: 0 0 1em 0;
+    @include heading-left();
+  }
+}
+
+
+/**
  * Footer (for footnotes)
  */
 

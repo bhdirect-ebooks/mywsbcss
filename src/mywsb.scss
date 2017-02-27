@@ -247,6 +247,15 @@ figcaption {
   @include figcap-decs();
 }
 
+.full-width {
+  @include figure-full();
+  margin: $auto-margin;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
 
 
 

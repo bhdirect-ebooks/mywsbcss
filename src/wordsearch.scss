@@ -188,15 +188,11 @@ aside {
 }
 
 .full-width {
-  img {
-    width: $full-width;
-  }
-}
+  @include figure-full();
+  margin: $fallback-margin;
 
-.float-left,
-.float-right {
   img {
-    width: $float-width;
+    margin: 0 auto;
   }
 }
 

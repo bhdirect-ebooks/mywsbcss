@@ -47,12 +47,20 @@
   @extend .italic;
 }
 
-.smcaps {
-  font-variant: small-caps;
+.large {
+  font-size: 3em;
 }
 
 .small {
   font-size: 0.8em;
+}
+
+.smcaps {
+  font-variant: small-caps;
+}
+
+.strikeout {
+  text-decoration: line-through;
 }
 
 .underline {

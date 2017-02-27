@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!*
 * FILE:     wordsearch.css
-* VERSION:  2017-02-23
+* VERSION:  2017-02-27
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
@@ -41,6 +41,7 @@ aside blockquote { border: none; }
 aside ol, aside ul { padding-left: 5%; }
 aside .bridgehead { border-bottom: 1px solid #999b9d; margin: 0 0 1.5% 0; padding: 0 0 1% 0; }
 .full-width { margin: 1.2em 5%; max-width: 555px; width: 90%; }
+.full-width img { margin: 0 auto; }
 .float-right { float: right; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
 .float-left { float: left; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
 .figure { text-align: center; }
@@ -94,6 +95,7 @@ dd p { text-indent: 0; }
 .container { overflow: auto; }
 .bdr { border: 1px solid #d3d3d3; }
 .bdr td, .bdr th { border: 1px solid #d3d3d3; }
+.middle { vertical-align: middle; }
 .offset { background-color: #d3d3d3; }
 table { border-collapse: collapse; font-size: 100%; margin: 1.5em auto; text-align: left; page-break-inside: avoid !important; width: 100%; }
 tr { page-break-inside: avoid !important; }
@@ -130,8 +132,10 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .right { text-align: right !important; text-indent: 0; }
 .bold, .bold-italic { font-weight: bold; }
 .italic, .bold-italic { font-style: italic; }
-.smcaps { font-variant: small-caps; }
+.large { font-size: 3em; }
 .small { font-size: 0.8em; }
+.smcaps { font-variant: small-caps; }
+.strikeout { text-decoration: line-through; }
 .underline { text-decoration: underline; }
 .auth { font-size: 1em; font-weight: bold; margin: 0.5em 0; text-indent: 0; }
 .ded1 { font-size: 0.9em; font-style: italic; margin: 1em 25% 0 25%; }
@@ -169,6 +173,7 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .col-10 { max-width: 83.33%; width: 83.33%; }
 .col-11 { max-width: 91.66%; width: 91.66%; }
 .col-12 { max-width: 100%; width: 100%; }
+.src-width { width: initial; max-width: 100%; }
 .width-10 { max-width: 10%; width: 10%; }
 .width-20 { max-width: 20%; width: 20%; }
 .width-30 { max-width: 30%; width: 30%; }
@@ -181,5 +186,6 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 @media only screen and (max-width: 600px) {
 .pullquotel, .pullquoter { display: block; float: none; margin: 2em 15%; width: 70%; }
 .pullquotel p, .pullquoter p { text-align: center; }
-.float-left, .float-right { margin: 1.2em 5%; max-width: 555px; width: 90%; } }
-dfn span[lang], dfn span[trans] { font: inherit; }
+.float-left, .float-right { margin: 1.2em 5%; max-width: 555px; width: 90%; }
+}
+dl:not(.abbr-list) dfn span[lang], dl:not(.abbr-list) dfn span[trans] { font: inherit; }

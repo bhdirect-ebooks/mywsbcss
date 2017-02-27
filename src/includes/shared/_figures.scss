@@ -31,6 +31,10 @@ $float-width: 19em;
 
 .full-width {
   @include figure-full();
+
+  img {
+    margin: 0 auto;
+  }
 }
 
 .float-right {

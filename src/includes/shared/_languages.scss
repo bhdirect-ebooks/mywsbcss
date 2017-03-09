@@ -17,3 +17,14 @@
   font: 1.1em "WS Extra";
   @include lang-normal();
 }
+
+.lang,      /* All languages other than Hebrew and Greek */
+.lang-grc,  /* Ancient Greek */
+.translit { /* All transliterations */
+  @include lang-def();
+}
+
+.lang-hbo { /* Ancient Hebrew */
+  font-family: "Ezra SIL";
+  @include lang-normal();
+}

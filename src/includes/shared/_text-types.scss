@@ -1,3 +1,5 @@
+@import "fn";
+
 /**
  * Chapter author's name, for use with <p>
  */
@@ -31,31 +33,26 @@
 
 
 /**
- * Footnote indicator, for use with <sup>
- */
-
-.fn {
-  color: #ff0000;
-  font: normal normal $fn-size $sans-font;
-  position: relative;
-  vertical-align: 0.7em;
-}
-
-/**
- * Footnote text
- */
-
-.fntext {
-  color: #0000ff;
-  display: none;
-  font-size: 0.8em;
-  font-variant: normal;
-}
-
-
-/**
  * Poetry lines, for use with <p>
  */
+
+.poetry {
+  margin: 1em 0 1em $def-ind;
+}
+
+.poetry.noind {
+  margin: 1em 0 0 0;
+}
+
+.poetry .poetry {
+  margin: 0;
+  padding-left: $def-ind;
+}
+
+.poetry p {
+  margin-left: $def-ind;
+  text-indent: -$def-ind;
+}
 
 @mixin poetry() {
   text-indent: -0.5em;

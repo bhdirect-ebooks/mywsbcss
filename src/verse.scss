@@ -1,13 +1,13 @@
 /*!*
- * FILE:     wordsearch.css
- * VERSION:  2017-03-09
+ * FILE:     verse.css
+ * VERSION:  2017-03-28
  * AUTHOR:   Weston Littrell
  */
 /**
  * A refactor of legacy WORDsearch CSS, based on mywsb.css,
  * written (mostly) to this standard: http://cssguidelin.es/.
  *
- * wordsearch.css acts as the default stylesheet for all CROSS files
+ * verse.css acts as the verse mode stylesheet for CROSS Bibles
  * converted from EPUB by the B&H Direct eBook Development team.
  *
  * This version is a developer document and should be compiled and
@@ -29,20 +29,13 @@
  * HEADINGS.............h1–h6 and other headings styles.
  * INLINE-ELEMENTS......HTML inline element styles.
  *
- * ASIDES...............Aside styles.
  * FIGURES..............Figures and related helper classes.
- * LISTS................List styles.
- * TABLES...............Table styles.
- * VIDEOS...............Video and video glyph styles.
  * QUOTES...............Block quotes and pull quotes.
  * BLOCKS...............Other type-associated blocks.
  *
  * TEXT-GENERAL.........Classes for basic formatting of text.
  * TEXT-TYPES...........Classes for specific types of content.
  * LANGUAGES............Styling for language elements and classes.
- *
- * WIDTHS...............Simple grid-like width classes.
- * OVERRIDES............Media queries and other overrides.
  */
 
 
@@ -55,7 +48,7 @@
 
 $def-line: 1.5em; // Default line height
 $def-font: 1em;   // Default font size
-$def-ind:  2em;   // Default text indent
+$def-ind:  25px;   // Default text indent
 $serif-font: "Georgia", "Times New Roman", serif;
 $sans-font:  "Verdana", "Arial", "Helvetica", sans-serif;
 $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
@@ -69,6 +62,13 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 \*------------------------------------*/
 
 @import "includes/shared/main";
+
+p {
+  display: inline !important;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
 
 
 
@@ -158,22 +158,6 @@ $level-6-font: italic bold 0.9em $sans-font;
 
 
 /*------------------------------------*\
-  #ASIDES
-\*------------------------------------*/
-
-@import "includes/shared/asides";
-
-aside {
-  .bridgehead {
-    @include aside-bridge();
-  }
-}
-
-
-
-
-
-/*------------------------------------*\
   #FIGURES
 \*------------------------------------*/
 
@@ -194,94 +178,6 @@ aside {
   img {
     margin: 0 5%;
   }
-}
-
-
-
-
-
-/*------------------------------------*\
-  #LISTS
-\*------------------------------------*/
-
-@mixin list-layout() {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-@import "includes/shared/lists";
-
-@include list-items(0.2em 0);
-@include none-list-items(2em, -1em);
-
-@import "includes/shared/list-helpers";
-@import "includes/shared/def-lists";
-
-
-
-
-/*------------------------------------*\
-  #TABLES
-\*------------------------------------*/
-
-$offset-color: #d3d3d3;
-
-
-/*
- * Table container
- */
-
-.container {
-  overflow: auto;
-}
-
-/*
- * Tables
- */
-
-@import "includes/shared/tables";
-
-table {
-  @include def-table();
-  page-break-inside: avoid !important;
-  width: 100%;
-}
-
-tr {
-  page-break-inside: avoid !important;
-}
-
-th {
-  @include def-cell();
-  text-align: center;
-}
-
-td {
-  @include def-cell();
-  vertical-align: top;
-}
-
-.center table {
-  margin: 1em auto;
-}
-
-
-
-
-
-/*------------------------------------*\
-  #VIDEOS
-\*------------------------------------*/
-
-@import "includes/shared/video";
-
-.poster {
-  @include video-def();
-  width: 80%;
-}
-
-.video-glyph {
-  @include glyph-def();
 }
 
 
@@ -312,7 +208,6 @@ td {
   #TEXT-GENERAL
 \*------------------------------------*/
 
-@import "includes/shared/text-block";
 @import "includes/shared/text-inline";
 
 
@@ -325,7 +220,18 @@ td {
 
 $fn-size: 0.6em;
 
-@import "includes/shared/text-types";
+@import "includes/shared/fn";
+@import "includes/shared/bibles";
+
+hr[data-cross-context] {
+  display: block !important;
+  margin: 0;
+  border: 0;
+}
+
+.versemode {
+  display: inline;
+}
 
 
 
@@ -336,23 +242,3 @@ $fn-size: 0.6em;
 \*------------------------------------*/
 
 @import "includes/shared/languages";
-
-
-
-
-
-/*------------------------------------*\
-  #WIDTHS
-\*------------------------------------*/
-
-@import "includes/shared/widths";
-
-
-
-
-
-/*------------------------------------*\
-  #OVERRIDES
-\*------------------------------------*/
-
-@import "includes/shared/overrides";

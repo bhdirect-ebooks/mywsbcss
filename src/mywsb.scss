@@ -1,6 +1,6 @@
 /*!*
  * FILE:     mywsb.css
- * VERSION:  2017-03-09
+ * VERSION:  2017-03-28
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -199,6 +199,11 @@ a[data-cross-ref] {
   margin-bottom: -1px;
 }
 
+hr[data-cross-context],
+.versemode {
+  @include no-display();
+}
+
 
 
 
@@ -369,7 +374,8 @@ video {
   #TEXT-GENERAL
 \*------------------------------------*/
 
-@import "includes/shared/text-general";
+@import "includes/shared/text-block";
+@import "includes/shared/text-inline";
 
 
 
@@ -382,6 +388,11 @@ video {
 $fn-size: 0.75em;
 
 @import "includes/shared/text-types";
+@import "includes/shared/bibles";
+
+.versenum::after {
+  content: "\00a0";
+}
 
 
 

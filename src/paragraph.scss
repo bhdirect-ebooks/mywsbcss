@@ -1,13 +1,13 @@
 /*!*
- * FILE:     wordsearch.css
- * VERSION:  2017-03-09
+ * FILE:     paragraph.css
+ * VERSION:  2017-03-28
  * AUTHOR:   Weston Littrell
  */
 /**
  * A refactor of legacy WORDsearch CSS, based on mywsb.css,
  * written (mostly) to this standard: http://cssguidelin.es/.
  *
- * wordsearch.css acts as the default stylesheet for all CROSS files
+ * paragraph.css acts as the paragraph mode stylesheet for CROSS Bibles
  * converted from EPUB by the B&H Direct eBook Development team.
  *
  * This version is a developer document and should be compiled and
@@ -55,7 +55,7 @@
 
 $def-line: 1.5em; // Default line height
 $def-font: 1em;   // Default font size
-$def-ind:  2em;   // Default text indent
+$def-ind:  25px;   // Default text indent
 $serif-font: "Georgia", "Times New Roman", serif;
 $sans-font:  "Verdana", "Arial", "Helvetica", sans-serif;
 $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
@@ -326,6 +326,7 @@ td {
 $fn-size: 0.6em;
 
 @import "includes/shared/text-types";
+@import "includes/shared/bibles";
 
 
 

@@ -1,36 +1,4 @@
 /**
- * With block elements
- */
-
-.br-before {
-  padding: 1.3em 0 0 0;
-}
-
-.center {
-  text-align: center !important;
-  text-indent: 0;
-}
-
-.hang {
-  margin-left: $def-ind;
-  text-indent: (-$def-ind);
-}
-
-.left {
-  text-align: left !important;
-}
-
-.noind {
-  text-indent: 0;
-}
-
-.right {
-  text-align: right !important;
-  text-indent: 0;
-}
-
-
-/**
  * With inline or block elements
  */
 

@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*!*
-* FILE:     wordsearch.css
-* VERSION:  2017-03-09
+* FILE:     paragraph.css
+* VERSION:  2017-03-28
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
-p { line-height: 1.5em; font-size: 1em; margin: 0; text-align: justify; text-indent: 2em; }
+p { line-height: 1.5em; font-size: 1em; margin: 0; text-align: justify; text-indent: 25px; }
 a { color: #0099ff; text-decoration: none; }
 img { border-style: none; }
 .volumetitlehidden { display: none; visibility: hidden; }
@@ -85,7 +85,7 @@ dt { clear: both; padding: 0 0 0.8em 0; text-align: center; }
 dt dfn { font: normal bold 0.66667 "Verdana", "Arial", "Helvetica", sans-serif; }
 dd { margin: 0; padding: 0 0 2em 0; }
 dd p { text-indent: 0; }
-.abbr-list { padding: 0 0 0 2em; }
+.abbr-list { padding: 0 0 0 25px; }
 .abbr-list dt { clear: left; float: left; padding: 0; text-align: left; width: 20%; }
 .abbr-list dt dfn { font-family: "Georgia", "Times New Roman", serif; font-weight: normal; }
 .abbr-list dd { float: left; padding: 0 1%; width: 78%; }
@@ -124,7 +124,7 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .glosstext { background-color: #ffff99; border: 1px #000 solid; color: #0000FF; font: 0.8em "Georgia", "Times New Roman", serif; padding: 0.125em; position: absolute; visibility: hidden; }
 .br-before { padding: 1.3em 0 0 0; }
 .center { text-align: center !important; text-indent: 0; }
-.hang { margin-left: 2em; text-indent: -2em; }
+.hang { margin-left: 25px; text-indent: -25px; }
 .left { text-align: left !important; }
 .noind { text-indent: 0; }
 .right { text-align: right !important; text-indent: 0; }
@@ -140,10 +140,10 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .auth { font-size: 1em; font-weight: bold; margin: 0.5em 0; text-indent: 0; }
 .ded1 { font-size: 0.9em; font-style: italic; margin: 1em 25% 0 25%; }
 .ded2 { font-size: 0.9em; font-style: italic; margin: 0 25%; }
-.poetry { margin: 1em 0 1em 2em; }
+.poetry { margin: 1em 0 1em 25px; }
 .poetry.noind { margin: 1em 0 0 0; }
-.poetry .poetry { margin: 0; padding-left: 2em; }
-.poetry p { margin-left: 2em; text-indent: -2em; }
+.poetry .poetry { margin: 0; padding-left: 25px; }
+.poetry p { margin-left: 25px; text-indent: -25px; }
 .poem1 { margin: 0 0 0 2em; text-indent: -0.5em; }
 .poem2 { margin: 0 0 0 3em; text-indent: -0.5em; }
 .poem3 { margin: 0 0 0 4em; text-indent: -0.5em; }
@@ -156,6 +156,8 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .poem10 { margin: 0 0 0 11em; text-indent: -0.5em; }
 .sig { margin-bottom: 1em; margin-left: 60%; text-align: left; text-indent: 0; }
 .verse { font-size: 0.85em; font-weight: bold; }
+.versenum { margin-right: .15em; vertical-align: super; font-size: .80em; font-weight: bold; }
+.selah { padding-left: 10em; font-style: italic; }
 .wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
 .lang, .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
 .lang-hbo {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }

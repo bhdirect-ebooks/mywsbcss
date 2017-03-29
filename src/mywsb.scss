@@ -199,7 +199,7 @@ a[data-cross-ref] {
   margin-bottom: -1px;
 }
 
-hr[data-cross-context],
+span[data-cross-context],
 .versemode {
   @include no-display();
 }

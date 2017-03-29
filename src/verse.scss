@@ -223,7 +223,7 @@ $fn-size: 0.6em;
 @import "includes/shared/fn";
 @import "includes/shared/bibles";
 
-hr[data-cross-context] {
+span[data-cross-context] {
   display: block !important;
   margin: 0;
   border: 0;

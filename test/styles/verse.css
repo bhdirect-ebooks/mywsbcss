@@ -7,7 +7,7 @@
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
 p { line-height: 1.5em; font-size: 1em; margin: 0; text-align: justify; text-indent: 25px; }
 a { color: #0099ff; text-decoration: none; }
-p { display: inline !important; margin: 0; padding: 0; text-indent: 0; }
+body * { display: inline; margin: 0; padding: 0; text-indent: 0; }
 img { border-style: none; }
 .volumetitlehidden { display: none; visibility: hidden; }
 .settitle { font: bold 1.4em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1.5em 0 0 0; text-align: center; text-indent: 0; }
@@ -21,16 +21,16 @@ img { border-style: none; }
 .wslogo, .publogo { margin: 1.5em 0; text-align: center; text-indent: 0; }
 .wslogo img, .publogo img { border: 0; }
 .wslogo a, .publogo a { text-decoration: none; }
-h1 { font: normal bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0; clear: both; text-indent: 0; text-align: center; }
-h2, .h2 { font: normal bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; text-indent: 0; text-align: center; }
-h3, .h3 { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; text-indent: 0; text-align: left; }
-h4, .h4 { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; text-indent: 0; text-align: left; }
-h5, .h5 { font: normal bold 0.95em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; text-indent: 0; text-align: left; }
-h6, .h6 { font: italic bold 0.9em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; text-indent: 0; text-align: left; }
-.h1sub { font: normal bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; text-indent: 0; text-align: center; }
-.h2sub { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; text-indent: 0; text-align: center; }
-.h3sub { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; text-indent: 0; text-align: left; }
-.bridgehead { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 0.75em 0; clear: both; text-indent: 0; text-align: center; }
+h1 { font: normal bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
+h2, .h2 { font: normal bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
+h3, .h3 { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
+h4, .h4 { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
+h5, .h5 { font: normal bold 0.95em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
+h6, .h6 { font: italic bold 0.9em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
+.h1sub { font: normal bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
+.h2sub { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
+.h3sub { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
+.bridgehead { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 0.75em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .part { background: #333; color: #fff; font-size: 1.5em; font-weight: bold; letter-spacing: 0.2em; margin: -1em -5.5% 1em -5.5%; padding: 1.4em 0 1em 0; text-align: center; text-indent: 0; }
 sub { top: 0.2em; position: relative; vertical-align: baseline; }
 sup { top: -0.2em; position: relative; vertical-align: baseline; }

@@ -7,7 +7,7 @@
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
 p { line-height: 1.5em; font-size: 1em; margin: 0; text-align: justify; text-indent: 25px; }
 a { color: #0099ff; text-decoration: none; }
-body * { display: inline; margin: 0; padding: 0; text-indent: 0; }
+body *, tr { display: inline; margin: 0; padding: 0; text-indent: 0; }
 img { border-style: none; }
 .volumetitlehidden { display: none; visibility: hidden; }
 .settitle { display: block; font: bold 1.4em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1.5em 0 0 0; display: block; text-align: center; text-indent: 0; }

@@ -329,6 +329,11 @@ $fn-color: #000;
 @import "includes/shared/text-types";
 @import "includes/shared/bibles";
 
+.scripture,
+.versemode {
+  @include no-display();
+}
+
 
 
 

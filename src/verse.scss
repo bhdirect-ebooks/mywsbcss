@@ -63,7 +63,8 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 
 @import "includes/shared/main";
 
-body * {
+body *,
+tr {
   display: inline;
   margin: 0;
   padding: 0;

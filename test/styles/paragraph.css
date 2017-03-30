@@ -159,6 +159,7 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .verse { font-size: 0.85em; font-weight: bold; }
 .versenum { margin-right: .15em; vertical-align: super; font-size: .80em; font-weight: bold; }
 .selah { padding-left: 10em; font-style: italic; }
+.scripture, .versemode { display: none !important; visibility: hidden; }
 .wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
 .lang, .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
 .lang-hbo {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }

@@ -224,7 +224,7 @@ $fn-color: #000;
 @import "includes/shared/fn";
 @import "includes/shared/bibles";
 
-span[data-cross-context] {
+.scripture {
   display: block !important;
   margin: 0;
   border: 0;

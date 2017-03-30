@@ -3,7 +3,7 @@
  */
 
 .fn {
-  color: #ff0000;
+  color: $fn-color;
   font: normal normal $fn-size $sans-font;
   position: relative;
   vertical-align: 0.7em;

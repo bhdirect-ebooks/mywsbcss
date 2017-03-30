@@ -1,184 +1,81 @@
 @charset "UTF-8";
 /*!*
- * FILE:     verse.css
- * VERSION:  2017-03-28
- * AUTHOR:   Weston Littrell
- */
-/** A refactor of legacy WORDsearch CSS, based on mywsb.css, written (mostly) to this standard: http://cssguidelin.es/.  verse.css acts as the verse mode stylesheet for CROSS Bibles converted from EPUB by the B&H Direct eBook Development team.  This version is a developer document and should be compiled and minified for production environments. */
-/*------------------------------------*\ #CONTENTS
-\*------------------------------------*/
-/** GLOBAL...............Globally-available variables.  MAIN.................Set up our document defaults. TITLE-PAGE...........Title page styles. HEADINGS.............h1–h6 and other headings styles. INLINE-ELEMENTS......HTML inline element styles.  FIGURES..............Figures and related helper classes. QUOTES...............Block quotes and pull quotes. BLOCKS...............Other type-associated blocks.  TEXT-GENERAL.........Classes for basic formatting of text. TEXT-TYPES...........Classes for specific types of content. LANGUAGES............Styling for language elements and classes. */
-/*------------------------------------*\ #GLOBAL
-\*------------------------------------*/
-/*------------------------------------*\ #MAIN
-\*------------------------------------*/
+* FILE:     verse.css
+* VERSION:  2017-03-28
+* AUTHOR:   Weston Littrell
+*/
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
-
 p { line-height: 1.5em; font-size: 1em; margin: 0; text-align: justify; text-indent: 25px; }
-
 a { color: #0099ff; text-decoration: none; }
-
 body * { display: inline; margin: 0; padding: 0; text-indent: 0; }
-
-/*------------------------------------*\ #TITLE-PAGE
-\*------------------------------------*/
 img { border-style: none; }
-
 .volumetitlehidden { display: none; visibility: hidden; }
-
 .settitle { font: bold 1.4em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1.5em 0 0 0; text-align: center; text-indent: 0; }
-
 .volumetitle, .booktitle { font: bold 2.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1.5em 0 0 0; text-align: center; text-indent: 0; }
-
 .subtitle { font: bold 1.4em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.5em 0 0 0; text-align: center; text-indent: 0; }
-
 .byline { font: bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.5em 0 0 0; text-align: center; text-indent: 0; }
-
 .author { font: bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.5em 0 0 0; text-align: center; text-indent: 0; }
-
 .coverimg { margin: 1em 0; text-align: center; text-indent: 0; }
 .coverimg img { border: 1px solid #000; }
-
 .copyright { font-size: 0.8em; margin: 1em 0 0 0; text-align: center; text-indent: 0; }
-
 .wslogo, .publogo { margin: 1.5em 0; text-align: center; text-indent: 0; }
 .wslogo img, .publogo img { border: 0; }
 .wslogo a, .publogo a { text-decoration: none; }
-
-/*------------------------------------*\ #HEADINGS
-\*------------------------------------*/
-/* h1-6 */
 h1 { font: normal bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-
 h2, .h2 { font: normal bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-
 h3, .h3 { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
-
 h4, .h4 { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
-
 h5, .h5 { font: normal bold 0.95em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
-
 h6, .h6 { font: italic bold 0.9em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
-
-/* Levels 1-3 subheadings for use with <p> */
 .h1sub { font: normal bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-
 .h2sub { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-
 .h3sub { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
-
-/** .bridgehead for use with <p> */
 .bridgehead { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 0.75em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-
-/** Part title, for use with <p> */
 .part { background: #333; color: #fff; font-size: 1.5em; font-weight: bold; letter-spacing: 0.2em; margin: -1em -5.5% 1em -5.5%; padding: 1.4em 0 1em 0; text-align: center; text-indent: 0; }
-
-/*------------------------------------*\ #INLINE-ELEMENTS
-\*------------------------------------*/
-/** Not all inline elements from mywsb.css translate to inline elements in CROSS, but they remain here for consistency. */
-/* <sub> and <sup> styles */
 sub { top: 0.2em; position: relative; vertical-align: baseline; }
-
 sup { top: -0.2em; position: relative; vertical-align: baseline; }
-
 hr { display: none !important; visibility: hidden; }
-
 .dictterm { color: #000080; font: bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; text-align: left; text-indent: 0; }
-
 .esstrongs { color: #006400; font: 0.9em "Verdana", "Arial", "Helvetica", sans-serif; }
-
-/*------------------------------------*\ #FIGURES
-\*------------------------------------*/
-/* Classes for use with figure */
 .float-right { float: right; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
-
 .float-left { float: left; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
-
 .figure { text-align: center; }
-
 .figcaption { font-size: 0.85em; font-style: italic; font-weight: normal; text-align: center; text-indent: 0; }
-
 .full-width { max-width: 555px; width: 90%; margin: 1.2em 5%; }
 .full-width img { margin: 0 5%; }
-
-/*------------------------------------*\ #QUOTES
-\*------------------------------------*/
-/* Block quotes */
 blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5em; padding-left: 1em; }
 blockquote p { margin: 0.5em 0; text-indent: 0; }
-
 .scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 10%; padding: 0; }
-
-/* Pull quotes */
 .pullquotec { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; }
 .pullquotec p { text-indent: 0; text-align: left; }
 .pullquotec .sig { margin-left: 0; text-align: right; }
-
 .pullquotel { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: left; }
 .pullquotel p { text-indent: 0; text-align: left; }
 .pullquotel .sig { margin-left: 0; text-align: right; }
-
 .pullquoter { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: right; }
 .pullquoter p { text-indent: 0; text-align: left; }
 .pullquoter .sig { margin-left: 0; text-align: right; }
-
-/*------------------------------------*\ #BLOCKS
-\*------------------------------------*/
-/** Hidden */
 hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle, .espagenumber, .nd { display: none !important; visibility: hidden; }
-
-/** LESSONmaker styles */
 .topiclist { background-color: #f0f8ff; border: solid #000080 1px; color: #000080; font: 0.9em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.625em 25%; padding: 0.313em; text-align: center; }
 .topiclist a, .topiclist a:link, .topiclist a:active, .topiclist a:visited { color: #0000cd; text-decoration: none; }
 .topiclist a:hover { text-decoration: underline; }
-
 .star { font-size: 1em; position: absolute; left: 0.313em; color: #000080; }
-
-/** Footer (for footnotes) */
 .footer { border-top: 1px solid #cfcfcf; margin: 1.5em 0 0 0; padding: 1em 0 0 0; }
-
-/** Glossary terms */
 .gloss { color: #800000; }
-
 .glosstext { background-color: #ffff99; border: 1px #000 solid; color: #0000FF; font: 0.8em "Georgia", "Times New Roman", serif; padding: 0.125em; position: absolute; visibility: hidden; }
-
-/*------------------------------------*\ #TEXT-GENERAL
-\*------------------------------------*/
-/** With inline or block elements */
 .bold, .bold-italic { font-weight: bold; }
-
 .italic, .bold-italic { font-style: italic; }
-
 .large { font-size: 3em; }
-
 .small { font-size: 0.8em; }
-
 .smcaps { font-variant: small-caps; }
-
 .strikeout { text-decoration: line-through; }
-
 .underline { text-decoration: underline; }
-
-/*------------------------------------*\ #TEXT-TYPES
-\*------------------------------------*/
-/** Footnote indicator, for use with <sup> */
-.fn { color: #ff0000; font: normal normal 0.6em "Verdana", "Arial", "Helvetica", sans-serif; position: relative; vertical-align: 0.7em; }
-
-/** Footnote text */
+.fn { color: #000; font: normal normal 0.6em "Verdana", "Arial", "Helvetica", sans-serif; position: relative; vertical-align: 0.7em; }
 .fntext { color: #0000ff; display: none; font-size: 0.8em; font-variant: normal; }
-
 .versenum { margin-right: .15em; vertical-align: super; font-size: .80em; font-weight: bold; }
-
 .selah { padding-left: 10em; font-style: italic; }
-
 span[data-cross-context] { display: block !important; margin: 0; border: 0; }
-
 .versemode { display: inline; }
-
-/*------------------------------------*\ #LANGUAGES
-\*------------------------------------*/
-.wsextra { /* WS proprietary font; use for some symbols */ font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
-
-.lang, .lang-grc, .translit { /* All transliterations */ font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
-
-.lang-hbo { /* Ancient Hebrew */ font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }
+.wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
+.lang, .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
+.lang-hbo {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!*
 * FILE:     verse.css
-* VERSION:  2017-03-30
+* VERSION:  2017-03-31
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
@@ -31,7 +31,6 @@ h6, .h6 { font: italic bold 0.9em "Verdana", "Arial", "Helvetica", sans-serif; m
 .h2sub { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .h3sub { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
 .bridgehead { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 0.75em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-.part { background: #333; color: #fff; font-size: 1.5em; font-weight: bold; letter-spacing: 0.2em; margin: -1em -5.5% 1em -5.5%; padding: 1.4em 0 1em 0; text-align: center; text-indent: 0; }
 sub { top: 0.2em; position: relative; vertical-align: baseline; }
 sup { top: -0.2em; position: relative; vertical-align: baseline; }
 hr { display: none !important; visibility: hidden; }
@@ -63,6 +62,7 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .footer { border-top: 1px solid #cfcfcf; margin: 1.5em 0 0 0; padding: 1em 0 0 0; }
 .gloss { color: #800000; }
 .glosstext { background-color: #ffff99; border: 1px #000 solid; color: #0000FF; font: 0.8em "Georgia", "Times New Roman", serif; padding: 0.125em; position: absolute; visibility: hidden; }
+ol, ul { list-style-type: none; }
 .bold, .bold-italic { font-weight: bold; }
 .italic, .bold-italic { font-style: italic; }
 .large { font-size: 3em; }
@@ -74,6 +74,7 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .fntext { color: #0000ff; display: none; font-size: 0.8em; font-variant: normal; }
 .versenum { margin-right: .15em; vertical-align: super; font-size: .80em; font-weight: bold; }
 .selah { padding-left: 10em; font-style: italic; }
+.bookname { font: normal bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .scripture { display: block !important; margin: 0; border: 0; }
 .versemode { display: inline; }
 .wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }

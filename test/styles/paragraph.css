@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!*
 * FILE:     paragraph.css
-* VERSION:  2017-03-30
+* VERSION:  2017-03-31
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
@@ -30,7 +30,6 @@ h6, .h6 { font: italic bold 0.9em "Verdana", "Arial", "Helvetica", sans-serif; m
 .h2sub { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .h3sub { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
 .bridgehead { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 0.75em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-.part { background: #333; color: #fff; font-size: 1.5em; font-weight: bold; letter-spacing: 0.2em; margin: -1em -5.5% 1em -5.5%; padding: 1.4em 0 1em 0; text-align: center; text-indent: 0; }
 sub { top: 0.2em; position: relative; vertical-align: baseline; }
 sup { top: -0.2em; position: relative; vertical-align: baseline; }
 hr { display: none !important; visibility: hidden; }
@@ -47,50 +46,7 @@ aside .bridgehead { border-bottom: 1px solid #999b9d; margin: 0 0 1.5% 0; paddin
 .figcaption { font-size: 0.85em; font-style: italic; font-weight: normal; text-align: center; text-indent: 0; }
 .full-width { max-width: 555px; width: 90%; margin: 1.2em 5%; }
 .full-width img { margin: 0 5%; }
-ol { margin-top: 1em; margin-bottom: 1em; }
-ol ul, ol ol { margin: 0; padding: 0 0 0 1em; }
-ul { margin-top: 1em; margin-bottom: 1em; }
-ul ul, ul ol { margin: 0; padding: 0 0 0 1em; }
-.upper-roman { list-style-type: upper-roman; }
-.lower-roman { list-style-type: lower-roman; }
-.upper-alpha { list-style-type: upper-alpha; }
-.lower-alpha { list-style-type: lower-alpha; }
-.digit { list-style-type: decimal; }
-.disc { list-style-type: disc; }
-.circle { list-style-type: circle; }
-.square { list-style-type: square; }
-.none { list-style-type: none; }
-li { font-size: 1em; line-height: 1.5em; padding: 0.2em 0; }
-li > ul > li, li > ol > li { font-size: inherit; }
-li p { text-indent: 0; }
-.none > li { margin-left: 2em; text-indent: -1em; }
-.none > li > ul:not(.none), .none > li > ol:not(.none) { text-indent: 0; }
-ol:not(.none) li { padding-left: 0.25em; }
-.paren { counter-reset: list; list-style-type: none; }
-.paren > li { left: 0.15em; position: relative; text-indent: -1.15em; }
-.paren > li:before { left: -0.4em; counter-increment: list; position: relative; }
-.right-paren { counter-reset: list; list-style-type: none; }
-.right-paren > li { left: 0; position: relative; text-indent: -0.75em; }
-.right-paren > li:before { left: -0.4em; counter-increment: list; position: relative; }
-.digit.paren > li:before { content: "(" counter(list,decimal) ")"; }
-.lower-alpha.paren > li:before { content: "(" counter(list,lower-alpha) ")"; }
-.lower-roman.paren > li:before { content: "(" counter(list,lower-roman) ")"; }
-.upper-alpha.paren > li:before { content: "(" counter(list,upper-alpha) ")"; }
-.upper-roman.paren > li:before { content: "(" counter(list,upper-roman) ")"; }
-.digit.right-paren > li:before { content: counter(list,decimal) ")"; }
-.lower-alpha.right-paren > li:before { content: counter(list,lower-alpha) ")"; }
-.lower-roman.right-paren > li:before { content: counter(list,lower-roman) ")"; }
-.upper-alpha.right-paren > li:before { content: counter(list,upper-alpha) ")"; }
-.upper-roman.right-paren > li:before { content: counter(list,upper-roman) ")"; }
-dt { clear: both; padding: 0 0 0.8em 0; text-align: center; }
-dt dfn { font: normal bold 0.66667 "Verdana", "Arial", "Helvetica", sans-serif; }
-dd { margin: 0; padding: 0 0 2em 0; }
-dd p { text-indent: 0; }
-.abbr-list { padding: 0 0 0 25px; }
-.abbr-list dt { clear: left; float: left; padding: 0; text-align: left; width: 20%; }
-.abbr-list dt dfn { font-family: "Georgia", "Times New Roman", serif; font-weight: normal; }
-.abbr-list dd { float: left; padding: 0 1%; width: 78%; }
-.abbr-list:after { clear: both; content: ""; display: table; }
+ol, ul { list-style-type: none; margin-top: 1em; margin-bottom: 1em; }
 .container { overflow: auto; }
 .bdr { border: 1px solid #d3d3d3; }
 .bdr td, .bdr th { border: 1px solid #d3d3d3; }
@@ -159,6 +115,7 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .verse { font-size: 0.85em; font-weight: bold; }
 .versenum { margin-right: .15em; vertical-align: super; font-size: .80em; font-weight: bold; }
 .selah { padding-left: 10em; font-style: italic; }
+.bookname { font: normal bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .scripture, .versemode { display: none !important; visibility: hidden; }
 .wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
 .lang, .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }

@@ -9,3 +9,9 @@
   padding-left: 10em;
   font-style: italic;
 }
+
+.bookname {
+  font: $level-1-font;
+  margin: $h1-margin;
+  @include heading-center();
+}

@@ -42,18 +42,7 @@ hr { display: none !important; visibility: hidden; }
 .figcaption { font-size: 0.85em; font-style: italic; font-weight: normal; text-align: center; text-indent: 0; }
 .full-width { max-width: 555px; width: 90%; margin: 1.2em 5%; }
 .full-width img { margin: 0 5%; }
-blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5em; padding-left: 1em; }
-blockquote p { margin: 0.5em 0; text-indent: 0; }
-.scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 10%; padding: 0; }
-.pullquotec { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; }
-.pullquotec p { text-indent: 0; text-align: left; }
-.pullquotec .sig { margin-left: 0; text-align: right; }
-.pullquotel { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: left; }
-.pullquotel p { text-indent: 0; text-align: left; }
-.pullquotel .sig { margin-left: 0; text-align: right; }
-.pullquoter { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: right; }
-.pullquoter p { text-indent: 0; text-align: left; }
-.pullquoter .sig { margin-left: 0; text-align: right; }
+.scriptext { border: none; font-size: 1em; font-style: italic; margin: 0; padding: 0; }
 hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle, .espagenumber, .nd { display: none !important; visibility: hidden; }
 .topiclist { background-color: #f0f8ff; border: solid #000080 1px; color: #000080; font: 0.9em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.625em 25%; padding: 0.313em; text-align: center; }
 .topiclist a, .topiclist a:link, .topiclist a:active, .topiclist a:visited { color: #0000cd; text-decoration: none; }
@@ -77,6 +66,7 @@ ol, ul { list-style-type: none; }
 .bookname { font: normal bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .scripture { display: block !important; margin: 0; border: 0; }
 .versemode { display: inline; }
+.JesusWords { color: red; }
 .wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
 .lang, .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
 .lang-hbo {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }

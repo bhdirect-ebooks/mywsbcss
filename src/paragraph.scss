@@ -273,7 +273,13 @@ td {
   #QUOTES
 \*------------------------------------*/
 
-@import "includes/shared/quotes";
+.scriptext {
+  border: none;
+  font-size: 1em;
+  font-style: italic;
+  margin: 1em 10%;
+  padding: 0;
+}
 
 
 
@@ -313,6 +319,10 @@ $fn-color: #000;
 .scripture,
 .versemode {
   @include no-display();
+}
+
+span.JesusWords {
+	color: red;
 }
 
 

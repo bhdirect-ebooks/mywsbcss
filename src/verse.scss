@@ -172,7 +172,13 @@ $level-6-font: italic bold 0.9em $sans-font;
   #QUOTES
 \*------------------------------------*/
 
-@import "includes/shared/quotes";
+.scriptext {
+  border: none;
+  font-size: 1em;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
 
 
 
@@ -221,6 +227,10 @@ $fn-color: #000;
 
 .versemode {
   display: inline;
+}
+
+.JesusWords {
+	color: red;
 }
 
 

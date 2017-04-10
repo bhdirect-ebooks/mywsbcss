@@ -30,7 +30,11 @@
  * <dfn> font override
  */
 
-dfn span[lang],
-dfn span[trans] {
-  font: inherit;
+dl:not(.abbr-list) {
+  dfn {
+    span[lang],
+    span[trans] {
+      font: inherit;
+    }
+  }
 }

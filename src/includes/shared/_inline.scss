@@ -41,3 +41,8 @@ sup {
   top: -0.2em;
   @include sup-sub();
 }
+
+
+hr {
+  @include no-display();
+}

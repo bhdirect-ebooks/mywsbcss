@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*!*
-* FILE:     wordsearch.css
+* FILE:     paragraph.css
 * VERSION:  2017-03-31
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
-p { line-height: 1.5em; font-size: 1em; margin: 0; text-align: justify; text-indent: 2em; }
+p { line-height: 1.5em; font-size: 1em; margin: 0; text-align: justify; text-indent: 25px; }
 a { color: #0099ff; text-decoration: none; }
 img { border-style: none; }
 .volumetitlehidden { display: none; visibility: hidden; }
@@ -30,7 +30,6 @@ h6, .h6 { font: italic bold 0.9em "Verdana", "Arial", "Helvetica", sans-serif; m
 .h2sub { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .h3sub { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
 .bridgehead { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 0.75em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-.part { background: #333; color: #fff; display: block; font-size: 1.5em; font-weight: bold; letter-spacing: 0.2em; margin: -1em -5.5% 1em -5.5%; padding: 1.4em 0 1em 0; text-align: center; text-indent: 0; }
 sub { top: 0.2em; position: relative; vertical-align: baseline; }
 sup { top: -0.2em; position: relative; vertical-align: baseline; }
 hr { display: none !important; visibility: hidden; }
@@ -47,50 +46,7 @@ aside .bridgehead { border-bottom: 1px solid #999b9d; margin: 0 0 1.5% 0; paddin
 .figcaption { font-size: 0.85em; font-style: italic; font-weight: normal; text-align: center; text-indent: 0; }
 .full-width { max-width: 555px; width: 90%; margin: 1.2em 5%; }
 .full-width img { margin: 0 5%; }
-ol { margin-top: 1em; margin-bottom: 1em; }
-ol ul, ol ol { margin: 0; padding: 0 0 0 1em; }
-ul { margin-top: 1em; margin-bottom: 1em; }
-ul ul, ul ol { margin: 0; padding: 0 0 0 1em; }
-.upper-roman { list-style-type: upper-roman; }
-.lower-roman { list-style-type: lower-roman; }
-.upper-alpha { list-style-type: upper-alpha; }
-.lower-alpha { list-style-type: lower-alpha; }
-.digit { list-style-type: decimal; }
-.disc { list-style-type: disc; }
-.circle { list-style-type: circle; }
-.square { list-style-type: square; }
-.none { list-style-type: none; }
-li { font-size: 1em; line-height: 1.5em; padding: 0.2em 0; }
-li > ul > li, li > ol > li { font-size: inherit; }
-li p { text-indent: 0; }
-.none > li { margin-left: 2em; text-indent: -1em; }
-.none > li > ul:not(.none), .none > li > ol:not(.none) { text-indent: 0; }
-ol:not(.none) li { padding-left: 0.25em; }
-.paren { counter-reset: list; list-style-type: none; }
-.paren > li { left: 0.15em; position: relative; text-indent: -1.15em; }
-.paren > li:before { left: -0.4em; counter-increment: list; position: relative; }
-.right-paren { counter-reset: list; list-style-type: none; }
-.right-paren > li { left: 0; position: relative; text-indent: -0.75em; }
-.right-paren > li:before { left: -0.4em; counter-increment: list; position: relative; }
-.digit.paren > li:before { content: "(" counter(list,decimal) ")"; }
-.lower-alpha.paren > li:before { content: "(" counter(list,lower-alpha) ")"; }
-.lower-roman.paren > li:before { content: "(" counter(list,lower-roman) ")"; }
-.upper-alpha.paren > li:before { content: "(" counter(list,upper-alpha) ")"; }
-.upper-roman.paren > li:before { content: "(" counter(list,upper-roman) ")"; }
-.digit.right-paren > li:before { content: counter(list,decimal) ")"; }
-.lower-alpha.right-paren > li:before { content: counter(list,lower-alpha) ")"; }
-.lower-roman.right-paren > li:before { content: counter(list,lower-roman) ")"; }
-.upper-alpha.right-paren > li:before { content: counter(list,upper-alpha) ")"; }
-.upper-roman.right-paren > li:before { content: counter(list,upper-roman) ")"; }
-dt { clear: both; padding: 0 0 0.8em 0; text-align: center; }
-dt dfn { font: normal bold 0.66667 "Verdana", "Arial", "Helvetica", sans-serif; }
-dd { margin: 0; padding: 0 0 2em 0; }
-dd p { text-indent: 0; }
-.abbr-list { padding: 0 0 0 2em; }
-.abbr-list dt { clear: left; float: left; padding: 0; text-align: left; width: 20%; }
-.abbr-list dt dfn { font-family: "Georgia", "Times New Roman", serif; font-weight: normal; }
-.abbr-list dd { float: left; padding: 0 1%; width: 78%; }
-.abbr-list:after { clear: both; content: ""; display: table; }
+ol, ul { list-style-type: none; margin-top: 1em; margin-bottom: 1em; }
 .container { overflow: auto; }
 .bdr { border: 1px solid #d3d3d3; }
 .bdr td, .bdr th { border: 1px solid #d3d3d3; }
@@ -103,18 +59,7 @@ td { line-height: 1.5em; font-size: 1em; padding: 0.5em; vertical-align: top; }
 .center table { margin: 1em auto; }
 .poster { background: #fff; border: 1px solid #cfcfcf; box-shadow: 0 0 3px rgba(1, 1, 1, 0.2), inset 0 0 100px rgba(1, 1, 1, 0.1); height: auto; margin: 1.5em auto 1.25em auto; text-align: center; text-indent: 0; width: 80%; }
 .video-glyph { display: block; float: left; height: 50px; margin: 0 0.75em 2em 0; min-height: 50px; padding: 0; width: 50px; }
-blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5em; padding-left: 1em; }
-blockquote p { margin: 0.5em 0; text-indent: 0; }
 .scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 10%; padding: 0; }
-.pullquotec { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; }
-.pullquotec p { text-indent: 0; text-align: left; }
-.pullquotec .sig { margin-left: 0; text-align: right; }
-.pullquotel { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: left; }
-.pullquotel p { text-indent: 0; text-align: left; }
-.pullquotel .sig { margin-left: 0; text-align: right; }
-.pullquoter { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: right; }
-.pullquoter p { text-indent: 0; text-align: left; }
-.pullquoter .sig { margin-left: 0; text-align: right; }
 hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle, .espagenumber, .nd { display: none !important; visibility: hidden; }
 .topiclist { background-color: #f0f8ff; border: solid #000080 1px; color: #000080; font: 0.9em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.625em 25%; padding: 0.313em; text-align: center; }
 .topiclist a, .topiclist a:link, .topiclist a:active, .topiclist a:visited { color: #0000cd; text-decoration: none; }
@@ -125,7 +70,7 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .glosstext { background-color: #ffff99; border: 1px #000 solid; color: #0000FF; font: 0.8em "Georgia", "Times New Roman", serif; padding: 0.125em; position: absolute; visibility: hidden; }
 .br-before { padding: 1.3em 0 0 0; }
 .center { text-align: center !important; text-indent: 0; }
-.hang { margin-left: 2em; text-indent: -2em; }
+.hang { margin-left: 25px; text-indent: -25px; }
 .left { text-align: left !important; }
 .noind { text-indent: 0; }
 .right { text-align: right !important; text-indent: 0; }
@@ -136,15 +81,15 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .smcaps { font-variant: small-caps; }
 .strikeout { text-decoration: line-through; }
 .underline { text-decoration: underline; }
-.fn { color: #ff0000; font: normal normal 0.6em "Verdana", "Arial", "Helvetica", sans-serif; position: relative; vertical-align: 0.7em; }
+.fn { color: #000; font: normal normal 0.6em "Verdana", "Arial", "Helvetica", sans-serif; position: relative; vertical-align: 0.7em; }
 .fntext { color: #0000ff; display: none; font-size: 0.8em; font-variant: normal; }
 .auth { font-size: 1em; font-weight: bold; margin: 0.5em 0; text-indent: 0; }
 .ded1 { font-size: 0.9em; font-style: italic; margin: 1em 25% 0 25%; }
 .ded2 { font-size: 0.9em; font-style: italic; margin: 0 25%; }
-.poetry { margin: 1em 0 1em 2em; }
+.poetry { margin: 1em 0 1em 25px; }
 .poetry.noind { margin: 1em 0 0 0; }
-.poetry .poetry { margin: 0; padding-left: 2em; }
-.poetry p { margin-left: 2em; text-indent: -2em; }
+.poetry .poetry { margin: 0; padding-left: 25px; }
+.poetry p { margin-left: 25px; text-indent: -25px; }
 .poem1 { margin: 0 0 0 2em; text-indent: -0.5em; }
 .poem2 { margin: 0 0 0 3em; text-indent: -0.5em; }
 .poem3 { margin: 0 0 0 4em; text-indent: -0.5em; }
@@ -157,6 +102,11 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .poem10 { margin: 0 0 0 11em; text-indent: -0.5em; }
 .sig { margin-bottom: 1em; margin-left: 60%; text-align: left; text-indent: 0; }
 .verse { font-size: 0.85em; font-weight: bold; }
+.versenum { margin-right: .15em; vertical-align: super; font-size: .80em; font-weight: bold; }
+.selah { padding-left: 10em; font-style: italic; }
+.bookname { font: normal bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
+.scripture, .versemode { display: none !important; visibility: hidden; }
+span.JesusWords { color: red; }
 .wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
 .lang, .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
 .lang-hbo {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }

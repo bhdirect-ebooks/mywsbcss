@@ -1,0 +1,17 @@
+.versenum {
+  margin-right: .15em;
+  vertical-align: super;
+  font-size: .80em;
+  font-weight: bold;
+}
+
+.selah {
+  padding-left: 10em;
+  font-style: italic;
+}
+
+.bookname {
+  font: $level-1-font;
+  margin: $h1-margin;
+  @include heading-center();
+}

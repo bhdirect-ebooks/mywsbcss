@@ -28,8 +28,12 @@
 }
 
 /*
- * offset class for use with any <tr>, <th>, or <td> element
+ * for use with any <tr>, <th>, or <td> element
  */
+
+.middle {
+  vertical-align: middle;
+}
 
 .offset {
   background-color: $offset-color;

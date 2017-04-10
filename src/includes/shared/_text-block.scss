@@ -28,33 +28,3 @@
   text-align: right !important;
   text-indent: 0;
 }
-
-
-/**
- * With inline or block elements
- */
-
-.bold {
-  font-weight: bold;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.bold-italic {
-  @extend .bold;
-  @extend .italic;
-}
-
-.smcaps {
-  font-variant: small-caps;
-}
-
-.small {
-  font-size: 0.8em;
-}
-
-.underline {
-  text-decoration: underline;
-}

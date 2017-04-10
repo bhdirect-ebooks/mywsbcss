@@ -1,0 +1,36 @@
+/**
+ * With inline or block elements
+ */
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold-italic {
+  @extend .bold;
+  @extend .italic;
+}
+
+.large {
+  font-size: 3em;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.smcaps {
+  font-variant: small-caps;
+}
+
+.strikeout {
+  text-decoration: line-through;
+}
+
+.underline {
+  text-decoration: underline;
+}

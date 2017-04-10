@@ -2,11 +2,13 @@ $margin-lg: 1.5em;
 $margin-sm: 0.5em;
 
 @mixin title-basic() {
+  display: block;
   text-align: center;
   text-indent: 0;
 }
 
 @mixin title-bold($fs, $tm) {
+  display: block;
   font: bold $fs $sans-font;
   margin: $tm 0 0 0;
   @include title-basic();

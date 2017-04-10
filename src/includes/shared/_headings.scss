@@ -1,6 +1,7 @@
 // Mixins
 @mixin heading() {
   clear: both;
+  display: block;
   text-indent: 0;
 }
 

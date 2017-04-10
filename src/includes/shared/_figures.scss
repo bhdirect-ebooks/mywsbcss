@@ -12,9 +12,10 @@
 
 $full-width:  90%;
 $float-width: 19em;
+$auto-margin: 1.2em auto;
+$fallback-margin: 1.2em 5%; // margin for WORDsearch
 
 @mixin figure-full() { // Mixin also used in media query
-  margin: 1.2em 5%;
   max-width: 555px;
   width: $full-width;
 }
@@ -28,10 +29,6 @@ $float-width: 19em;
 /*
  * Classes for use with figure
  */
-
-.full-width {
-  @include figure-full();
-}
 
 .float-right {
   float: right;

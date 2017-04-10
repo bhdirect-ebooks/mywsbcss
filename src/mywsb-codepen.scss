@@ -4,7 +4,8 @@
  * AUTHOR:   Weston Littrell
  */
 /**
- * A version of mywsb.css for codepen.io (fonts removed)
+ * A version of mywsb.css for codepen.io
+ * (fonts and image removed)
  */
 
 
@@ -319,11 +320,6 @@ td {
 video {
   @include video-def();
   width: 100%;
-}
-
-.video-glyph {
-  background: url("../images/video.svg") (center / contain) no-repeat;
-  @include glyph-def();
 }
 
 

@@ -1,6 +1,6 @@
 /*!*
  * FILE:     verse.css
- * VERSION:  2017-03-31
+ * VERSION:  2017-04-19
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -178,6 +178,9 @@ $level-6-font: italic bold 0.9em $sans-font;
   font-style: italic;
   margin: 0;
   padding: 0;
+  .italic {
+    font-style: normal;
+  }
 }
 
 

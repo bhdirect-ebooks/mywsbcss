@@ -6,6 +6,9 @@
 @mixin lang-def() {
   font-family: $lang-font;
   font-style: italic;
+  .italic {
+    font-style: normal;
+  }
 }
 
 @mixin new-athena() {

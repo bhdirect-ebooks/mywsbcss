@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!*
 * FILE:     wordsearch.css
-* VERSION:  2017-03-31
+* VERSION:  2017-04-19
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
@@ -45,6 +45,7 @@ aside .bridgehead { border-bottom: 1px solid #999b9d; margin: 0 0 1.5% 0; paddin
 .float-left { float: left; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
 .figure { text-align: center; }
 .figcaption { font-size: 0.85em; font-style: italic; font-weight: normal; text-align: center; text-indent: 0; }
+.figcaption .italic, .figcaption .bold-italic { font-style: normal; }
 .full-width { max-width: 555px; width: 90%; margin: 1.2em 5%; }
 .full-width img { margin: 0 5%; }
 ol { margin-top: 1em; margin-bottom: 1em; }
@@ -106,6 +107,7 @@ td { line-height: 1.5em; font-size: 1em; padding: 0.5em; vertical-align: top; }
 blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5em; padding-left: 1em; }
 blockquote p { margin: 0.5em 0; text-indent: 0; }
 .scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 10%; padding: 0; }
+.scriptext .italic, .scriptext .bold-italic { font-style: normal; }
 .pullquotec { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; }
 .pullquotec p { text-indent: 0; text-align: left; }
 .pullquotec .sig { margin-left: 0; text-align: right; }
@@ -130,7 +132,9 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .noind { text-indent: 0; }
 .right { text-align: right !important; text-indent: 0; }
 .bold, .bold-italic { font-weight: bold; }
+.bold .bold, .bold-italic .bold, .bold .bold-italic, .bold-italic .bold-italic { font-weight: bold; }
 .italic, .bold-italic { font-style: italic; }
+.italic .italic, .bold-italic .italic, .italic .bold-italic, .bold-italic .bold-italic { font-style: normal; }
 .large { font-size: 3em; }
 .small { font-size: 0.8em; }
 .smcaps { font-variant: small-caps; }
@@ -140,7 +144,9 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .fntext { color: #0000ff; display: none; font-size: 0.8em; font-variant: normal; }
 .auth { font-size: 1em; font-weight: bold; margin: 0.5em 0; text-indent: 0; }
 .ded1 { font-size: 0.9em; font-style: italic; margin: 1em 25% 0 25%; }
+.ded1 .italic, .ded1 .bold-italic { font-style: normal; }
 .ded2 { font-size: 0.9em; font-style: italic; margin: 0 25%; }
+.ded2 .italic, .ded2 .bold-italic { font-style: normal; }
 .poetry { margin: 1em 0 1em 2em; }
 .poetry.noind { margin: 1em 0 0 0; }
 .poetry .poetry { margin: 0; padding-left: 2em; }
@@ -159,6 +165,7 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .verse { font-size: 0.85em; font-weight: bold; }
 .wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
 .lang, .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
+.lang .italic, .lang .bold-italic, .lang-grc .italic, .lang-grc .bold-italic, .translit .italic, .translit .bold-italic { font-style: normal; }
 .lang-hbo {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }
 .col-1 { max-width: 8.33%; width: 8.33%; }
 .col-2 { max-width: 16.66%; width: 16.66%; }
@@ -185,5 +192,6 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 @media only screen and (max-width: 600px) {
 .pullquotel, .pullquoter { display: block; float: none; margin: 2em 15%; width: 70%; }
 .pullquotel p, .pullquoter p { text-align: center; }
-.float-left, .float-right { max-width: 555px; width: 90%; } }
+.float-left, .float-right { max-width: 555px; width: 90%; }
+p { text-align: left; } }
 dl:not(.abbr-list) dfn span[lang], dl:not(.abbr-list) dfn span[trans] { font: inherit; }

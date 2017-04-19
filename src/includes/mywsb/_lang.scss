@@ -10,6 +10,9 @@
 
 span[lang=grc] { /* Ancient Greek */
   font: italic normal $def-font/$def-line $lang-font;
+  .italic {
+    font-style: normal;
+  }
 }
 
 :lang(grc-x-Uncl) { /* Greek - Uncial Script */

@@ -1,6 +1,6 @@
 /*!*
  * FILE:     mywsb.css
- * VERSION:  2017-03-31
+ * VERSION:  2017-04-19
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -165,7 +165,9 @@ $level-6-font: italic bold 0.9em $sans-font;
   font-style: italic;
   font-weight: 300;
   padding: 0 0.25em 0 0;
-
+  .italic {
+    font-style: normal;
+  }
   &::after {
     content: ".";
   }

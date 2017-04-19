@@ -19,6 +19,9 @@
 @mixin dedications() {
   font-size: 0.9em;
   font-style: italic;
+  .italic {
+    font-style: normal;
+  }
 }
 
 .ded1 {

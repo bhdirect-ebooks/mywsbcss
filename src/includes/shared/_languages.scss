@@ -22,12 +22,14 @@
 }
 
 .lang,      /* All languages other than Hebrew and Greek */
+:lang(grc),
 .lang-grc,  /* Ancient Greek */
 .translit { /* All transliterations */
   @include lang-def();
 }
 
-.lang-hbo { /* Ancient Hebrew */
+.lang-hbo,
+:lang(hbo) { /* Ancient Hebrew */
   font-family: "Ezra SIL";
   @include lang-normal();
 }

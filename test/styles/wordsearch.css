@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!*
 * FILE:     wordsearch.css
-* VERSION:  2017-04-19
+* VERSION:  2017-04-22
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
@@ -34,6 +34,7 @@ h6, .h6 { font: italic bold 0.9em "Verdana", "Arial", "Helvetica", sans-serif; m
 sub { top: 0.2em; position: relative; vertical-align: baseline; }
 sup { top: -0.2em; position: relative; vertical-align: baseline; }
 hr { display: none !important; visibility: hidden; }
+abbr { color: #b26900; cursor: help; }
 .dictterm { color: #000080; font: bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; text-align: left; text-indent: 0; }
 .esstrongs { color: #006400; font: 0.9em "Verdana", "Arial", "Helvetica", sans-serif; }
 aside { border: 1px solid #808285; margin: 1.5em 0; padding: 3% 5%; }
@@ -65,7 +66,7 @@ li { font-size: 1em; line-height: 1.5em; padding: 0.2em 0; }
 li > ul > li, li > ol > li { font-size: inherit; }
 li p { text-indent: 0; }
 .none > li { margin-left: 2em; text-indent: -1em; }
-.none > li > ul:not(.none), .none > li > ol:not(.none) { text-indent: 0; }
+.none ul:not(.none) li, .none ol:not(.none) li { text-indent: 0; }
 ol:not(.none) li { padding-left: 0.25em; }
 .paren { counter-reset: list; list-style-type: none; }
 .paren > li { left: 0.15em; position: relative; text-indent: -1.15em; }
@@ -164,9 +165,9 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .sig { margin-bottom: 1em; margin-left: 60%; text-align: left; text-indent: 0; }
 .verse { font-size: 0.85em; font-weight: bold; }
 .wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
-.lang, .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
-.lang .italic, .lang .bold-italic, .lang-grc .italic, .lang-grc .bold-italic, .translit .italic, .translit .bold-italic { font-style: normal; }
-.lang-hbo {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }
+.lang, :lang(grc), .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
+.lang .italic, .lang .bold-italic, :lang(grc) .italic, :lang(grc) .bold-italic, .lang-grc .italic, .lang-grc .bold-italic, .translit .italic, .translit .bold-italic { font-style: normal; }
+.lang-hbo, :lang(hbo) {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }
 .col-1 { max-width: 8.33%; width: 8.33%; }
 .col-2 { max-width: 16.66%; width: 16.66%; }
 .col-3 { max-width: 25%; width: 25%; }
@@ -193,5 +194,5 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .pullquotel, .pullquoter { display: block; float: none; margin: 2em 15%; width: 70%; }
 .pullquotel p, .pullquoter p { text-align: center; }
 .float-left, .float-right { max-width: 555px; width: 90%; }
-p { text-align: left; } }
+p, li { text-align: left; } }
 dl:not(.abbr-list) dfn span[lang], dl:not(.abbr-list) dfn span[trans] { font: inherit; }

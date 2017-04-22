@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!*
 * FILE:     verse.css
-* VERSION:  2017-04-19
+* VERSION:  2017-04-22
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
@@ -34,6 +34,7 @@ h6, .h6 { font: italic bold 0.9em "Verdana", "Arial", "Helvetica", sans-serif; m
 sub { top: 0.2em; position: relative; vertical-align: baseline; }
 sup { top: -0.2em; position: relative; vertical-align: baseline; }
 hr { display: none !important; visibility: hidden; }
+abbr { color: #b26900; cursor: help; }
 .dictterm { color: #000080; font: bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; text-align: left; text-indent: 0; }
 .esstrongs { color: #006400; font: 0.9em "Verdana", "Arial", "Helvetica", sans-serif; }
 .float-right { float: right; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
@@ -72,6 +73,6 @@ ol, ul { list-style-type: none; }
 .versemode { display: inline; }
 .JesusWords { color: red; }
 .wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
-.lang, .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
-.lang .italic, .lang .bold-italic, .lang-grc .italic, .lang-grc .bold-italic, .translit .italic, .translit .bold-italic { font-style: normal; }
-.lang-hbo {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }
+.lang, :lang(grc), .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
+.lang .italic, .lang .bold-italic, :lang(grc) .italic, :lang(grc) .bold-italic, .lang-grc .italic, .lang-grc .bold-italic, .translit .italic, .translit .bold-italic { font-style: normal; }
+.lang-hbo, :lang(hbo) {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }

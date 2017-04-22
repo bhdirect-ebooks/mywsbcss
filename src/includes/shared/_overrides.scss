@@ -26,7 +26,8 @@
 
   /* Display paragraphs as left-aligned
      in smaller viewports. */
-  p {
+  p,
+  li {
     text-align: left;
   }
 }

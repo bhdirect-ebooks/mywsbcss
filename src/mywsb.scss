@@ -1,6 +1,6 @@
 /*!*
  * FILE:     mywsb.css
- * VERSION:  2017-04-22
+ * VERSION:  2017-05-22
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -345,11 +345,6 @@ td {
 video {
   @include video-def();
   width: 100%;
-}
-
-.video-glyph {
-  background: url("../images/video.svg") (center / contain) no-repeat;
-  @include glyph-def();
 }
 
 

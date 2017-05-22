@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!*
 * FILE:     wordsearch.css
-* VERSION:  2017-04-22
+* VERSION:  2017-05-22
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
@@ -104,7 +104,6 @@ th { line-height: 1.5em; font-size: 1em; padding: 0.5em; text-align: center; }
 td { line-height: 1.5em; font-size: 1em; padding: 0.5em; vertical-align: top; }
 .center table { margin: 1em auto; }
 .poster { background: #fff; border: 1px solid #cfcfcf; box-shadow: 0 0 3px rgba(1, 1, 1, 0.2), inset 0 0 100px rgba(1, 1, 1, 0.1); height: auto; margin: 1.5em auto 1.25em auto; text-align: center; text-indent: 0; width: 80%; }
-.video-glyph { display: block; float: left; height: 50px; margin: 0 0.75em 2em 0; min-height: 50px; padding: 0; width: 50px; }
 blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5em; padding-left: 1em; }
 blockquote p { margin: 0.5em 0; text-indent: 0; }
 .scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 10%; padding: 0; }

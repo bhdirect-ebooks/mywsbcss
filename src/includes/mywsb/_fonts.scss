@@ -1,6 +1,6 @@
 /**
  * FILE:     _fonts.scss
- * VERSION:  2017-02-10
+ * VERSION:  2017-04-27
  * AUTHOR:   Weston Littrell
  */
 /*!*
@@ -10,9 +10,8 @@
 
 @font-face {
   font-family: "WS Extra";
-  src: url("../fonts/wsextra-webfont.woff2");
-  src: url("../fonts/wsextra-webfont.woff2?#iefix") format("woff2"),
-       url("../fonts/wsextra-webfont.woff") format("woff");
+  src: url("../fonts/wsextra.otf");
+  src: url("../fonts/wsextra.otf?#iefix") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
@@ -37,14 +36,6 @@
   font-family: "Ezra SIL";
   src: url("../fonts/SILEOT.woff");
   src: url("../fonts/SILEOT.woff?#iefix") format("woff");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "New Athena Unicode";
-  src: url("../fonts/newathu5.woff");
-  src: url("../fonts/newathu5.woff?#iefix") format("woff");
   font-style: normal;
   font-weight: normal;
 }

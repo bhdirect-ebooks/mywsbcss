@@ -1,6 +1,6 @@
 /*!*
  * FILE:     paragraph.css
- * VERSION:  2017-04-22
+ * VERSION:  2017-05-22
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -259,10 +259,6 @@ td {
 .poster {
   @include video-def();
   width: 80%;
-}
-
-.video-glyph {
-  @include glyph-def();
 }
 
 

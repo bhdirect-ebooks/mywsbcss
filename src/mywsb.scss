@@ -1,6 +1,6 @@
 /*!*
  * FILE:     mywsb.css
- * VERSION:  2017-05-22
+ * VERSION:  2017-06-02
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -265,6 +265,20 @@ figcaption {
   img {
     margin: 0 auto;
   }
+}
+
+/*
+ * Classes for use with figure
+ */
+
+.float-right {
+  float: right;
+  @include figure-float();
+}
+
+.float-left {
+  float: left;
+  @include figure-float();
 }
 
 

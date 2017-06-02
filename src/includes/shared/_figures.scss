@@ -28,17 +28,3 @@ $fallback-margin: 1.2em 5%; // margin for WORDsearch
   max-width: $float-width;
   width: $float-width;
 }
-
-/*
- * Classes for use with figure
- */
-
-.float-right {
-  float: right;
-  @include figure-float();
-}
-
-.float-left {
-  float: left;
-  @include figure-float();
-}

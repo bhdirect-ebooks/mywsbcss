@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!*
 * FILE:     paragraph.css
-* VERSION:  2017-05-22
+* VERSION:  2017-06-02
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
@@ -41,13 +41,15 @@ aside p { margin: 1% 0 0 0; text-indent: 0; }
 aside blockquote { border: none; }
 aside ol, aside ul { padding-left: 5%; }
 aside .bridgehead { border-bottom: 1px solid #999b9d; margin: 0 0 1.5% 0; padding: 0 0 1% 0; }
-.float-right { float: right; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
-.float-left { float: left; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
 .figure { text-align: center; }
 .figcaption { font-size: 0.85em; font-style: italic; font-weight: normal; text-align: center; text-indent: 0; }
 .figcaption .italic, .figcaption .bold-italic { font-style: normal; }
 .full-width { max-width: 555px; width: 90%; margin: 1.2em 5%; }
-.full-width img { margin: 0 5%; }
+.full-width img { margin: 0 5%; width: 100%; }
+.float-right { float: right; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
+.float-right img { width: 100%; }
+.float-left { float: left; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
+.float-left img { width: 100%; }
 ol, ul { list-style-type: none; margin-top: 1em; margin-bottom: 1em; }
 .container { overflow: auto; }
 .bdr { border: 1px solid #d3d3d3; }

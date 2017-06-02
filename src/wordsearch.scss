@@ -1,6 +1,6 @@
 /*!*
  * FILE:     wordsearch.css
- * VERSION:  2017-05-22
+ * VERSION:  2017-06-02
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -194,6 +194,29 @@ aside {
 
   img {
     margin: 0 5%;
+    width: 100%;
+  }
+}
+
+/*
+ * Classes for use with figure
+ */
+
+.float-right {
+  float: right;
+  @include figure-float();
+
+  img {
+    width: 100%;
+  }
+}
+
+.float-left {
+  float: left;
+  @include figure-float();
+
+  img {
+    width: 100%;
   }
 }
 

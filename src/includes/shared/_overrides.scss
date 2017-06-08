@@ -23,6 +23,13 @@
   .float-right {
     @include figure-full();
   }
+
+  /* Display paragraphs as left-aligned
+     in smaller viewports. */
+  p,
+  li {
+    text-align: left;
+  }
 }
 
 

@@ -26,14 +26,13 @@
 @mixin none-list-items($ml, $ti) {
   .none {
     > li {
-    margin-left: $ml;
-    text-indent: $ti;
-
-      > {
-        ul:not(.none),
-        ol:not(.none) {
-          text-indent: 0;
-        }
+      margin-left: $ml;
+      text-indent: $ti;
+    }
+    ul:not(.none),
+    ol:not(.none) {
+      li {
+        text-indent: 0;
       }
     }
   }

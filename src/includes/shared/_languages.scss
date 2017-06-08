@@ -6,6 +6,9 @@
 @mixin lang-def() {
   font-family: $lang-font;
   font-style: italic;
+  .italic {
+    font-style: normal;
+  }
 }
 
 @mixin new-athena() {
@@ -19,12 +22,18 @@
 }
 
 .lang,      /* All languages other than Hebrew and Greek */
-.lang-grc,  /* Ancient Greek */
 .translit { /* All transliterations */
   @include lang-def();
 }
 
-.lang-hbo { /* Ancient Hebrew */
+:lang(grc),
+.lang-grc {  /* Ancient Greek */
+  font-family: $lang-font;
+  @include lang-normal();
+}
+
+.lang-hbo,
+:lang(hbo) { /* Ancient Hebrew */
   font-family: "Ezra SIL";
   @include lang-normal();
 }

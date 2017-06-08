@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!*
 * FILE:     wordsearch.css
-* VERSION:  2017-03-31
+* VERSION:  2017-06-08
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
@@ -34,6 +34,7 @@ h6, .h6 { font: italic bold 0.9em "Verdana", "Arial", "Helvetica", sans-serif; m
 sub { top: 0.2em; position: relative; vertical-align: baseline; }
 sup { top: -0.2em; position: relative; vertical-align: baseline; }
 hr { display: none !important; visibility: hidden; }
+abbr { color: #b26900; cursor: help; }
 .dictterm { color: #000080; font: bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; text-align: left; text-indent: 0; }
 .esstrongs { color: #006400; font: 0.9em "Verdana", "Arial", "Helvetica", sans-serif; }
 aside { border: 1px solid #808285; margin: 1.5em 0; padding: 3% 5%; }
@@ -41,12 +42,15 @@ aside p { margin: 1% 0 0 0; text-indent: 0; }
 aside blockquote { border: none; }
 aside ol, aside ul { padding-left: 5%; }
 aside .bridgehead { border-bottom: 1px solid #999b9d; margin: 0 0 1.5% 0; padding: 0 0 1% 0; }
-.float-right { float: right; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
-.float-left { float: left; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
 .figure { text-align: center; }
 .figcaption { font-size: 0.85em; font-style: italic; font-weight: normal; text-align: center; text-indent: 0; }
+.figcaption .italic, .figcaption .bold-italic { font-style: normal; }
 .full-width { max-width: 555px; width: 90%; margin: 1.2em 5%; }
-.full-width img { margin: 0 5%; }
+.full-width img { margin: 0 5%; width: 100%; }
+.float-right { float: right; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
+.float-right img { width: 100%; }
+.float-left { float: left; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
+.float-left img { width: 100%; }
 ol { margin-top: 1em; margin-bottom: 1em; }
 ol ul, ol ol { margin: 0; padding: 0 0 0 1em; }
 ul { margin-top: 1em; margin-bottom: 1em; }
@@ -64,7 +68,7 @@ li { font-size: 1em; line-height: 1.5em; padding: 0.2em 0; }
 li > ul > li, li > ol > li { font-size: inherit; }
 li p { text-indent: 0; }
 .none > li { margin-left: 2em; text-indent: -1em; }
-.none > li > ul:not(.none), .none > li > ol:not(.none) { text-indent: 0; }
+.none ul:not(.none) li, .none ol:not(.none) li { text-indent: 0; }
 ol:not(.none) li { padding-left: 0.25em; }
 .paren { counter-reset: list; list-style-type: none; }
 .paren > li { left: 0.15em; position: relative; text-indent: -1.15em; }
@@ -102,11 +106,11 @@ th { line-height: 1.5em; font-size: 1em; padding: 0.5em; text-align: center; }
 td { line-height: 1.5em; font-size: 1em; padding: 0.5em; vertical-align: top; }
 .center table { margin: 1em auto; }
 .poster { background: #fff; border: 1px solid #cfcfcf; box-shadow: 0 0 3px rgba(1, 1, 1, 0.2), inset 0 0 100px rgba(1, 1, 1, 0.1); height: auto; margin: 1.5em auto 1.25em auto; text-align: center; text-indent: 0; width: 80%; }
-.video-glyph { display: block; float: left; height: 50px; margin: 0 0.75em 2em 0; min-height: 50px; padding: 0; width: 50px; }
 blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5em; padding-left: 1em; }
 blockquote p { margin: 0.5em 0; text-indent: 0; }
 .scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 10%; padding: 0; }
-.pullquotec { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; }
+.scriptext .italic, .scriptext .bold-italic { font-style: normal; }
+.pullquotec { font-size: 0.9em; letter-spacing: 0.063em; margin: 2em 15%; width: 70%; text-transform: uppercase; }
 .pullquotec p { text-indent: 0; text-align: left; }
 .pullquotec .sig { margin-left: 0; text-align: right; }
 .pullquotel { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: left; }
@@ -130,7 +134,9 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .noind { text-indent: 0; }
 .right { text-align: right !important; text-indent: 0; }
 .bold, .bold-italic { font-weight: bold; }
+.bold .bold, .bold-italic .bold, .bold .bold-italic, .bold-italic .bold-italic { font-weight: bold; }
 .italic, .bold-italic { font-style: italic; }
+.italic .italic, .bold-italic .italic, .italic .bold-italic, .bold-italic .bold-italic { font-style: normal; }
 .large { font-size: 3em; }
 .small { font-size: 0.8em; }
 .smcaps { font-variant: small-caps; }
@@ -140,7 +146,9 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .fntext { color: #0000ff; display: none; font-size: 0.8em; font-variant: normal; }
 .auth { font-size: 1em; font-weight: bold; margin: 0.5em 0; text-indent: 0; }
 .ded1 { font-size: 0.9em; font-style: italic; margin: 1em 25% 0 25%; }
+.ded1 .italic, .ded1 .bold-italic { font-style: normal; }
 .ded2 { font-size: 0.9em; font-style: italic; margin: 0 25%; }
+.ded2 .italic, .ded2 .bold-italic { font-style: normal; }
 .poetry { margin: 1em 0 1em 2em; }
 .poetry.noind { margin: 1em 0 0 0; }
 .poetry .poetry { margin: 0; padding-left: 2em; }
@@ -158,8 +166,10 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .sig { margin-bottom: 1em; margin-left: 60%; text-align: left; text-indent: 0; }
 .verse { font-size: 0.85em; font-weight: bold; }
 .wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
-.lang, .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
-.lang-hbo {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }
+.lang, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
+.lang .italic, .lang .bold-italic, .translit .italic, .translit .bold-italic { font-style: normal; }
+:lang(grc), .lang-grc {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: normal; font-weight: normal; }
+.lang-hbo, :lang(hbo) {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }
 .col-1 { max-width: 8.33%; width: 8.33%; }
 .col-2 { max-width: 16.66%; width: 16.66%; }
 .col-3 { max-width: 25%; width: 25%; }
@@ -185,5 +195,6 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 @media only screen and (max-width: 600px) {
 .pullquotel, .pullquoter { display: block; float: none; margin: 2em 15%; width: 70%; }
 .pullquotel p, .pullquoter p { text-align: center; }
-.float-left, .float-right { max-width: 555px; width: 90%; } }
+.float-left, .float-right { max-width: 555px; width: 90%; }
+p, li { text-align: left; } }
 dl:not(.abbr-list) dfn span[lang], dl:not(.abbr-list) dfn span[trans] { font: inherit; }

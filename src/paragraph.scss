@@ -1,6 +1,6 @@
 /*!*
  * FILE:     paragraph.css
- * VERSION:  2017-03-31
+ * VERSION:  2017-06-08
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -176,6 +176,29 @@ aside {
 
   img {
     margin: 0 5%;
+    width: 100%;
+  }
+}
+
+/*
+ * Classes for use with figure
+ */
+
+.float-right {
+  float: right;
+  @include figure-float();
+
+  img {
+    width: 100%;
+  }
+}
+
+.float-left {
+  float: left;
+  @include figure-float();
+
+  img {
+    width: 100%;
   }
 }
 
@@ -261,10 +284,6 @@ td {
   width: 80%;
 }
 
-.video-glyph {
-  @include glyph-def();
-}
-
 
 
 
@@ -279,6 +298,9 @@ td {
   font-style: italic;
   margin: 1em 10%;
   padding: 0;
+  .italic {
+    font-style: normal;
+  }
 }
 
 

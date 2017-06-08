@@ -46,3 +46,8 @@ sup {
 hr {
   @include no-display();
 }
+
+abbr {
+  color: #b26900;
+  cursor: help;
+}

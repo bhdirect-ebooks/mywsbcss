@@ -8,6 +8,9 @@
   font-weight: normal;
   text-align: center;
   text-indent: 0;
+  .italic {
+    font-style: normal;
+  }
 }
 
 $full-width:  90%;
@@ -24,18 +27,4 @@ $fallback-margin: 1.2em 5%; // margin for WORDsearch
   margin: 0.7em 1.1em;
   max-width: $float-width;
   width: $float-width;
-}
-
-/*
- * Classes for use with figure
- */
-
-.float-right {
-  float: right;
-  @include figure-float();
-}
-
-.float-left {
-  float: left;
-  @include figure-float();
 }

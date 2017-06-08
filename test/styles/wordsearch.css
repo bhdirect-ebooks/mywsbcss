@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!*
 * FILE:     wordsearch.css
-* VERSION:  2017-06-02
+* VERSION:  2017-06-08
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
@@ -110,7 +110,7 @@ blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5
 blockquote p { margin: 0.5em 0; text-indent: 0; }
 .scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 10%; padding: 0; }
 .scriptext .italic, .scriptext .bold-italic { font-style: normal; }
-.pullquotec { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; }
+.pullquotec { font-size: 0.9em; letter-spacing: 0.063em; margin: 2em 15%; width: 70%; text-transform: uppercase; }
 .pullquotec p { text-indent: 0; text-align: left; }
 .pullquotec .sig { margin-left: 0; text-align: right; }
 .pullquotel { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: left; }
@@ -166,8 +166,9 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .sig { margin-bottom: 1em; margin-left: 60%; text-align: left; text-indent: 0; }
 .verse { font-size: 0.85em; font-weight: bold; }
 .wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
-.lang, :lang(grc), .lang-grc, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
-.lang .italic, .lang .bold-italic, :lang(grc) .italic, :lang(grc) .bold-italic, .lang-grc .italic, .lang-grc .bold-italic, .translit .italic, .translit .bold-italic { font-style: normal; }
+.lang, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
+.lang .italic, .lang .bold-italic, .translit .italic, .translit .bold-italic { font-style: normal; }
+:lang(grc), .lang-grc {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: normal; font-weight: normal; }
 .lang-hbo, :lang(hbo) {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }
 .col-1 { max-width: 8.33%; width: 8.33%; }
 .col-2 { max-width: 16.66%; width: 16.66%; }

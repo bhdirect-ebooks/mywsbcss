@@ -22,10 +22,14 @@
 }
 
 .lang,      /* All languages other than Hebrew and Greek */
-:lang(grc),
-.lang-grc,  /* Ancient Greek */
 .translit { /* All transliterations */
   @include lang-def();
+}
+
+:lang(grc),
+.lang-grc {  /* Ancient Greek */
+  font-family: $lang-font;
+  @include lang-normal();
 }
 
 .lang-hbo,

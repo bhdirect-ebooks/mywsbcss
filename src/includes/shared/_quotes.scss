@@ -29,11 +29,11 @@ blockquote {
  * Pull quotes
  */
 
-@mixin pullquotes($fs, $marg) {
-  font-size: 0.8em;
+@mixin pullquotes($fs, $marg, $wd) {
+  font-size: $fs;
   letter-spacing: 0.063em;
-  margin: 2em;
-  width: 30%;
+  margin: $marg;
+  width: $wd;
   text-transform: uppercase;
 
   p {
@@ -48,15 +48,15 @@ blockquote {
 }
 
 .pullquotec {
-  @include pullquotes(0.9em, 2em 15%);
+  @include pullquotes(0.9em, 2em 15%, 70%);
 }
 
 .pullquotel {
-  @include pullquotes(0.8em, 2em);
+  @include pullquotes(0.8em, 2em, 30%);
   float: left;
 }
 
 .pullquoter {
-  @include pullquotes(0.8em, 2em);
+  @include pullquotes(0.8em, 2em, 30%);
   float: right;
 }

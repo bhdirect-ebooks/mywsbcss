@@ -29,8 +29,8 @@ blockquote {
  * Pull quotes
  */
 
-@mixin pullquotes($fs, $marg, $wd) {
-  font-size: $fs;
+@mixin pullquotes($marg, $wd) {
+  font-size: 0.8em;
   letter-spacing: 0.063em;
   margin: $marg;
   width: $wd;
@@ -47,16 +47,23 @@ blockquote {
   }
 }
 
+@mixin pullquote-center() {
+  @include pullquotes(2em 15%, 70%);
+  display: block;
+  float: none;
+  text-align: center;
+}
+
 .pullquotec {
-  @include pullquotes(0.9em, 2em 15%, 70%);
+  @include pullquote-center();
 }
 
 .pullquotel {
-  @include pullquotes(0.8em, 2em, 30%);
+  @include pullquotes(2em, 30%);
   float: left;
 }
 
 .pullquoter {
-  @include pullquotes(0.8em, 2em, 30%);
+  @include pullquotes(2em, 30%);
   float: right;
 }

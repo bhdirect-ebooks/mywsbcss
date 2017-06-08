@@ -110,7 +110,7 @@ blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5
 blockquote p { margin: 0.5em 0; text-indent: 0; }
 .scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 10%; padding: 0; }
 .scriptext .italic, .scriptext .bold-italic { font-style: normal; }
-.pullquotec { font-size: 0.9em; letter-spacing: 0.063em; margin: 2em 15%; width: 70%; text-transform: uppercase; }
+.pullquotec { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em 15%; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
 .pullquotec p { text-indent: 0; text-align: left; }
 .pullquotec .sig { margin-left: 0; text-align: right; }
 .pullquotel { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: left; }
@@ -192,9 +192,23 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .width-70 { max-width: 70%; width: 70%; }
 .width-80 { max-width: 80%; width: 80%; }
 .width-90 { max-width: 90%; width: 90%; }
+blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5em; padding-left: 1em; }
+blockquote p { margin: 0.5em 0; text-indent: 0; }
+.scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 10%; padding: 0; }
+.scriptext .italic, .scriptext .bold-italic { font-style: normal; }
+.pullquotec { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em 15%; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
+.pullquotec p { text-indent: 0; text-align: left; }
+.pullquotec .sig { margin-left: 0; text-align: right; }
+.pullquotel { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: left; }
+.pullquotel p { text-indent: 0; text-align: left; }
+.pullquotel .sig { margin-left: 0; text-align: right; }
+.pullquoter { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: right; }
+.pullquoter p { text-indent: 0; text-align: left; }
+.pullquoter .sig { margin-left: 0; text-align: right; }
 @media only screen and (max-width: 600px) {
-.pullquotel, .pullquoter { display: block; float: none; margin: 2em 15%; width: 70%; }
-.pullquotel p, .pullquoter p { text-align: center; }
+.pullquotel, .pullquoter { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em 15%; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
+.pullquotel p, .pullquoter p { text-indent: 0; text-align: left; }
+.pullquotel .sig, .pullquoter .sig { margin-left: 0; text-align: right; }
 .float-left, .float-right { max-width: 555px; width: 90%; }
 p, li { text-align: left; } }
 dl:not(.abbr-list) dfn span[lang], dl:not(.abbr-list) dfn span[trans] { font: inherit; }

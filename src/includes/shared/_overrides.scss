@@ -1,3 +1,4 @@
+@import "quotes";
 /*
  * Media queries
  */
@@ -7,14 +8,7 @@
      as centered in smaller viewports. */
   .pullquotel,
   .pullquoter {
-    display: block;
-    float: none;
-    margin: 2em 15%;
-    width: 70%;
-
-    p {
-      text-align: center;
-    }
+    @include pullquote-center();
   }
 
   /* Display left and right figure floats

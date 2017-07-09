@@ -1,6 +1,6 @@
 /*!*
  * FILE:     mywsb.css
- * VERSION:  2017-06-08
+ * VERSION:  2017-07-09
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -205,7 +205,7 @@ a[data-cross-ref] {
   margin-bottom: -1px;
 }
 
-span[data-cross-context],
+span[data-cross-context~="scripture"],
 .versemode {
   @include no-display();
 }

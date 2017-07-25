@@ -1,6 +1,6 @@
 /*!*
  * FILE:     wordsearch.css
- * VERSION:  2017-07-09
+ * VERSION:  2017-07-25
  * AUTHOR:   Weston Littrell
  */
 /**
@@ -118,7 +118,13 @@ $level-6-font: italic bold 0.9em $sans-font;
  * Part title, for use with <p>
  */
 
-.part {
+.part,
+.part-1,
+.part-2,
+.part-3,
+.part-4,
+.part-5,
+.part-6 {
   background: #333;
   color: #fff;
   display: block;

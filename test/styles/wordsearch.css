@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!*
 * FILE:     wordsearch.css
-* VERSION:  2017-07-09
+* VERSION:  2017-07-25
 * AUTHOR:   Weston Littrell
 */
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
@@ -30,7 +30,7 @@ h6, .h6 { font: italic bold 0.9em "Verdana", "Arial", "Helvetica", sans-serif; m
 .h2sub { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .h3sub { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
 .bridgehead { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 0.75em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-.part { background: #333; color: #fff; display: block; font-size: 1.5em; font-weight: bold; letter-spacing: 0.2em; margin: -1em -5.5% 1em -5.5%; padding: 1.4em 0 1em 0; text-align: center; text-indent: 0; }
+.part, .part-1, .part-2, .part-3, .part-4, .part-5, .part-6 { background: #333; color: #fff; display: block; font-size: 1.5em; font-weight: bold; letter-spacing: 0.2em; margin: -1em -5.5% 1em -5.5%; padding: 1.4em 0 1em 0; text-align: center; text-indent: 0; }
 sub { top: 0.2em; position: relative; vertical-align: baseline; }
 sup { top: -0.2em; position: relative; vertical-align: baseline; }
 hr { display: none !important; visibility: hidden; }

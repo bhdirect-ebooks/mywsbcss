@@ -1,214 +1,406 @@
 @charset "UTF-8";
 /*!*
-* FILE:     wordsearch.css
-* VERSION:  2017-07-25
-* AUTHOR:   Weston Littrell
-*/
+ * FILE:     wordsearch.css
+ * VERSION:  2017-07-25
+ * AUTHOR:   Weston Littrell
+ */
+/** A refactor of legacy WORDsearch CSS, based on mywsb.css, written (mostly) to this standard: http://cssguidelin.es/.  wordsearch.css acts as the default stylesheet for all CROSS files converted from EPUB by the B&H Direct eBook Development team.  This version is a developer document and should be compiled and minified for production environments. */
+/*------------------------------------*\ #CONTENTS
+\*------------------------------------*/
+/** GLOBAL...............Globally-available variables.  MAIN.................Set up our document defaults. TITLE-PAGE...........Title page styles. HEADINGS.............h1–h6 and other headings styles. INLINE-ELEMENTS......HTML inline element styles.  ASIDES...............Aside styles. FIGURES..............Figures and related helper classes. LISTS................List styles. TABLES...............Table styles. VIDEOS...............Video and video glyph styles. QUOTES...............Block quotes and pull quotes. BLOCKS...............Other type-associated blocks.  TEXT-GENERAL.........Classes for basic formatting of text. TEXT-TYPES...........Classes for specific types of content. LANGUAGES............Styling for language elements and classes.  WIDTHS...............Simple grid-like width classes. */
+/*------------------------------------*\ #GLOBAL
+\*------------------------------------*/
+/*------------------------------------*\ #MAIN
+\*------------------------------------*/
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
+
 p { line-height: 1.5em; font-size: 1em; margin: 0; text-align: justify; text-indent: 2em; }
+
 a { color: #0099ff; text-decoration: none; }
+
+/*------------------------------------*\ #TITLE-PAGE
+\*------------------------------------*/
 img { border-style: none; }
+
 .volumetitlehidden { display: none; visibility: hidden; }
+
 .settitle { display: block; font: bold 1.4em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1.5em 0 0 0; display: block; text-align: center; text-indent: 0; }
+
 .volumetitle, .booktitle { display: block; font: bold 2.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1.5em 0 0 0; display: block; text-align: center; text-indent: 0; }
+
 .subtitle { display: block; font: bold 1.4em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.5em 0 0 0; display: block; text-align: center; text-indent: 0; }
+
 .byline { display: block; font: bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.5em 0 0 0; display: block; text-align: center; text-indent: 0; }
+
 .author { display: block; font: bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.5em 0 0 0; display: block; text-align: center; text-indent: 0; }
+
 .coverimg { margin: 1em 0; display: block; text-align: center; text-indent: 0; }
 .coverimg img { border: 1px solid #000; }
+
 .copyright { font-size: 0.8em; margin: 1em 0 0 0; display: block; text-align: center; text-indent: 0; }
+
 .wslogo, .publogo { margin: 1.5em 0; display: block; text-align: center; text-indent: 0; }
 .wslogo img, .publogo img { border: 0; }
 .wslogo a, .publogo a { text-decoration: none; }
+
+/*------------------------------------*\ #HEADINGS
+\*------------------------------------*/
+/* h1-6 */
 h1 { font: normal bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
+
 h2, .h2 { font: normal bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
+
 h3, .h3 { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
+
 h4, .h4 { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
+
 h5, .h5 { font: normal bold 0.95em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
+
 h6, .h6 { font: italic bold 0.9em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
+
+/* Levels 1-3 subheadings for use with <p> */
 .h1sub { font: normal bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
+
 .h2sub { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
+
 .h3sub { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
+
+/** .bridgehead for use with <p> */
 .bridgehead { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 0.75em 0; clear: both; display: block; text-indent: 0; text-align: center; }
+
+/** Part title, for use with <p> */
 .part, .part-1, .part-2, .part-3, .part-4, .part-5, .part-6 { background: #333; color: #fff; display: block; font-size: 1.5em; font-weight: bold; letter-spacing: 0.2em; margin: -1em -5.5% 1em -5.5%; padding: 1.4em 0 1em 0; text-align: center; text-indent: 0; }
+
+/*------------------------------------*\ #INLINE-ELEMENTS
+\*------------------------------------*/
+/** Not all inline elements from mywsb.css translate to inline elements in CROSS, but they remain here for consistency. */
+/* <sub> and <sup> styles */
 sub { top: 0.2em; position: relative; vertical-align: baseline; }
+
 sup { top: -0.2em; position: relative; vertical-align: baseline; }
+
 hr { display: none !important; visibility: hidden; }
+
 abbr { color: #332400; cursor: help; text-decoration: none; }
+
 .dictterm { color: #000080; font: bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; text-align: left; text-indent: 0; }
+
 .esstrongs { color: #006400; font: 0.9em "Verdana", "Arial", "Helvetica", sans-serif; }
+
+/*------------------------------------*\ #ASIDES
+\*------------------------------------*/
 aside { border: 1px solid #808285; margin: 1.5em 0; padding: 3% 5%; }
 aside p { margin: 1% 0 0 0; text-indent: 0; }
 aside blockquote { border: none; }
 aside ol, aside ul { padding-left: 5%; }
+
 aside .bridgehead { border-bottom: 1px solid #999b9d; margin: 0 0 1.5% 0; padding: 0 0 1% 0; }
+
+/*------------------------------------*\ #FIGURES
+\*------------------------------------*/
 .figure { text-align: center; }
+
 .figcaption { font-size: 0.85em; font-style: italic; font-weight: normal; text-align: center; text-indent: 0; }
 .figcaption .italic, .figcaption .bold-italic { font-style: normal; }
+
 .full-width { max-width: 555px; width: 90%; margin: 1.2em 5%; }
 .full-width img { margin: 0 5%; width: 100%; }
+
+/* Classes for use with figure */
 .float-right { float: right; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
 .float-right img { width: 100%; }
+
 .float-left { float: left; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
 .float-left img { width: 100%; }
+
+/*------------------------------------*\ #LISTS
+\*------------------------------------*/
+/* Ordered and unordered lists */
 ol { margin-top: 1em; margin-bottom: 1em; }
 ol ul, ol ol { margin: 0; padding: 0 0 0 1em; }
+
 ul { margin-top: 1em; margin-bottom: 1em; }
 ul ul, ul ol { margin: 0; padding: 0 0 0 1em; }
+
 .upper-roman { list-style-type: upper-roman; }
+
 .lower-roman { list-style-type: lower-roman; }
+
 .upper-alpha { list-style-type: upper-alpha; }
+
 .lower-alpha { list-style-type: lower-alpha; }
+
 .digit { list-style-type: decimal; }
+
 .disc { list-style-type: disc; }
+
 .circle { list-style-type: circle; }
+
 .square { list-style-type: square; }
+
 .none { list-style-type: none; }
+
 li { font-size: 1em; line-height: 1.5em; padding: 0.2em 0; }
 li > ul > li, li > ol > li { font-size: inherit; }
 li p { text-indent: 0; }
+
 .none > li { margin-left: 2em; text-indent: -1em; }
 .none ul:not(.none) li, .none ol:not(.none) li { text-indent: 0; }
+
+/* List helpers */
 ol:not(.none) li { padding-left: 0.25em; }
+
 .paren { counter-reset: list; list-style-type: none; }
 .paren > li { left: 0.15em; position: relative; text-indent: -1.15em; }
 .paren > li:before { left: -0.4em; counter-increment: list; position: relative; }
+
 .right-paren { counter-reset: list; list-style-type: none; }
 .right-paren > li { left: 0; position: relative; text-indent: -0.75em; }
 .right-paren > li:before { left: -0.4em; counter-increment: list; position: relative; }
+
 .digit.paren > li:before { content: "(" counter(list,decimal) ")"; }
+
 .lower-alpha.paren > li:before { content: "(" counter(list,lower-alpha) ")"; }
+
 .lower-roman.paren > li:before { content: "(" counter(list,lower-roman) ")"; }
+
 .upper-alpha.paren > li:before { content: "(" counter(list,upper-alpha) ")"; }
+
 .upper-roman.paren > li:before { content: "(" counter(list,upper-roman) ")"; }
+
 .digit.right-paren > li:before { content: counter(list,decimal) ")"; }
+
 .lower-alpha.right-paren > li:before { content: counter(list,lower-alpha) ")"; }
+
 .lower-roman.right-paren > li:before { content: counter(list,lower-roman) ")"; }
+
 .upper-alpha.right-paren > li:before { content: counter(list,upper-alpha) ")"; }
+
 .upper-roman.right-paren > li:before { content: counter(list,upper-roman) ")"; }
+
+/* Definition lists */
 dt { clear: both; padding: 0 0 0.8em 0; text-align: center; }
-dt dfn { font: normal bold 0.66667 "Verdana", "Arial", "Helvetica", sans-serif; }
+dt dfn { font: normal bold 0.6666666667 "Verdana", "Arial", "Helvetica", sans-serif; }
+
 dd { margin: 0; padding: 0 0 2em 0; }
 dd p { text-indent: 0; }
+
 .abbr-list { padding: 0 0 0 2em; }
 .abbr-list dt { clear: left; float: left; padding: 0; text-align: left; width: 20%; }
 .abbr-list dt dfn { font-family: "Georgia", "Times New Roman", serif; font-weight: normal; }
 .abbr-list dd { float: left; padding: 0 1%; width: 78%; }
 .abbr-list:after { clear: both; content: ""; display: table; }
+
+/*------------------------------------*\ #TABLES
+\*------------------------------------*/
+/* Table container */
 .container { overflow: auto; }
+
+/* Tables */
+/* bdr class for use with <table> */
 .bdr { border: 1px solid #d3d3d3; }
 .bdr td, .bdr th { border: 1px solid #d3d3d3; }
+
+/* for use with any <tr>, <th>, or <td> element */
 .middle { vertical-align: middle; }
+
 .offset { background-color: #d3d3d3; }
+
 table { border-collapse: collapse; font-size: 100%; margin: 1.5em auto; text-align: left; page-break-inside: avoid !important; width: 100%; }
+
 tr { page-break-inside: avoid !important; }
+
 th { line-height: 1.5em; font-size: 1em; padding: 0.5em; text-align: center; }
+
 td { line-height: 1.5em; font-size: 1em; padding: 0.5em; vertical-align: top; }
+
 .center table { margin: 1em auto; }
+
+/*------------------------------------*\ #VIDEOS
+\*------------------------------------*/
 .poster { background: #fff; border: 1px solid #cfcfcf; box-shadow: 0 0 3px rgba(1, 1, 1, 0.2), inset 0 0 100px rgba(1, 1, 1, 0.1); height: auto; margin: 1.5em auto 1.25em auto; text-align: center; text-indent: 0; width: 80%; }
+
+/*------------------------------------*\ #QUOTES
+\*------------------------------------*/
+/* Block quotes */
 blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5em; padding-left: 1em; }
 blockquote p { margin: 0.5em 0; text-indent: 0; }
+
 .scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 10%; padding: 0; }
 .scriptext .italic, .scriptext .bold-italic { font-style: normal; }
+
+/* Pull quotes */
 .pullquotec { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em 15%; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
 .pullquotec p { text-indent: 0; text-align: left; }
 .pullquotec .sig { margin-left: 0; text-align: right; }
+
 .pullquotel { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: left; }
 .pullquotel p { text-indent: 0; text-align: left; }
 .pullquotel .sig { margin-left: 0; text-align: right; }
+
 .pullquoter { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: right; }
 .pullquoter p { text-indent: 0; text-align: left; }
 .pullquoter .sig { margin-left: 0; text-align: right; }
+
+/*------------------------------------*\ #BLOCKS
+\*------------------------------------*/
+/** Hidden */
 hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle, .espagenumber, .nd { display: none !important; visibility: hidden; }
+
+/** LESSONmaker styles */
 .topiclist { background-color: #f0f8ff; border: solid #000080 1px; color: #000080; font: 0.9em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.625em 25%; padding: 0.313em; text-align: center; }
 .topiclist a, .topiclist a:link, .topiclist a:active, .topiclist a:visited { color: #0000cd; text-decoration: none; }
 .topiclist a:hover { text-decoration: underline; }
+
 .star { font-size: 1em; position: absolute; left: 0.313em; color: #000080; }
+
+/** Footer (for footnotes) */
 .footer { border-top: 1px solid #cfcfcf; margin: 1.5em 0 0 0; padding: 1em 0 0 0; }
+
+/** Glossary terms */
 .gloss { color: #800000; }
+
 .glosstext { background-color: #ffff99; border: 1px #000 solid; color: #0000FF; font: 0.8em "Georgia", "Times New Roman", serif; padding: 0.125em; position: absolute; visibility: hidden; }
+
+/*------------------------------------*\ #TEXT-GENERAL
+\*------------------------------------*/
+/** With block elements */
 .br-before { padding: 1.3em 0 0 0; }
+
 .center { text-align: center !important; text-indent: 0; }
+
 .hang { margin-left: 2em; text-indent: -2em; }
+
 .left { text-align: left !important; }
+
 .noind { text-indent: 0; }
+
 .right { text-align: right !important; text-indent: 0; }
+
+/** With inline or block elements */
 .bold, .bold-italic { font-weight: bold; }
-.bold .bold, .bold-italic .bold, .bold .bold-italic, .bold-italic .bold-italic { font-weight: bold; }
+.bold .bold, .bold-italic .bold, .bold .bold-italic, .bold-italic .bold-italic { font-weight: normal; }
+
 .italic, .bold-italic { font-style: italic; }
 .italic .italic, .bold-italic .italic, .italic .bold-italic, .bold-italic .bold-italic { font-style: normal; }
+
 .large { font-size: 3em; }
+
 .small { font-size: 0.8em; }
+
 .smcaps { font-variant: small-caps; }
+
 .strikeout { text-decoration: line-through; }
+
 .underline { text-decoration: underline; }
+
+/*------------------------------------*\ #TEXT-TYPES
+\*------------------------------------*/
+/** Footnote indicator, for use with <sup> */
 .fn { color: #ff0000; font: normal normal 0.6em "Verdana", "Arial", "Helvetica", sans-serif; position: relative; vertical-align: 0.7em; }
+
+/** Footnote text */
 .fntext { color: #0000ff; display: none; font-size: 0.8em; font-variant: normal; }
+
+/** Chapter author's name, for use with <p> */
 .auth { font-size: 1em; font-weight: bold; margin: 0.5em 0; text-indent: 0; }
+
+/** Dedication lines, for use with <p> */
 .ded1 { font-size: 0.9em; font-style: italic; margin: 1em 25% 0 25%; }
 .ded1 .italic, .ded1 .bold-italic { font-style: normal; }
+
 .ded2 { font-size: 0.9em; font-style: italic; margin: 0 25%; }
 .ded2 .italic, .ded2 .bold-italic { font-style: normal; }
+
+/** Poetry lines, for use with <p> */
 .poetry { margin: 1em 0 1em 2em; }
+
 .poetry.noind { margin: 1em 0 0 0; }
+
 .poetry .poetry { margin: 0; padding-left: 2em; }
+
 .poetry p { margin-left: 2em; text-indent: -2em; }
+
 .poem1 { margin: 0 0 0 2em; text-indent: -0.5em; }
+
 .poem2 { margin: 0 0 0 3em; text-indent: -0.5em; }
+
 .poem3 { margin: 0 0 0 4em; text-indent: -0.5em; }
+
 .poem4 { margin: 0 0 0 5em; text-indent: -0.5em; }
+
 .poem5 { margin: 0 0 0 6em; text-indent: -0.5em; }
+
 .poem6 { margin: 0 0 0 7em; text-indent: -0.5em; }
+
 .poem7 { margin: 0 0 0 8em; text-indent: -0.5em; }
+
 .poem8 { margin: 0 0 0 9em; text-indent: -0.5em; }
+
 .poem9 { margin: 0 0 0 10em; text-indent: -0.5em; }
+
 .poem10 { margin: 0 0 0 11em; text-indent: -0.5em; }
+
+/** Quote or section 'signature', for use with <p> */
 .sig { margin-bottom: 1em; margin-left: 60%; text-align: left; text-indent: 0; }
+
+/** Verse number in Scripture quote, for use with <sup> */
 .verse { font-size: 0.85em; font-weight: bold; }
-.wsextra {  font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
-.lang, .translit {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
+
+/*------------------------------------*\ #LANGUAGES
+\*------------------------------------*/
+.wsextra { /* WS proprietary font; use for some symbols */ font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
+
+.lang, .translit { /* All transliterations */ font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
 .lang .italic, .lang .bold-italic, .translit .italic, .translit .bold-italic { font-style: normal; }
-:lang(grc), .lang-grc {  font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: normal; font-weight: normal; }
-.lang-hbo, :lang(hbo) {  font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }
+
+:lang(grc), .lang-grc { /* Ancient Greek */ font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: normal; font-weight: normal; }
+
+.lang-hbo, :lang(hbo) { /* Ancient Hebrew */ font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }
+
+/*------------------------------------*\ #WIDTHS
+\*------------------------------------*/
 .col-1 { max-width: 8.33%; width: 8.33%; }
+
 .col-2 { max-width: 16.66%; width: 16.66%; }
+
 .col-3 { max-width: 25%; width: 25%; }
+
 .col-4 { max-width: 33.33%; width: 33.33%; }
+
 .col-5 { max-width: 41.66%; width: 41.66%; }
+
 .col-6 { max-width: 50%; width: 50%; }
+
 .col-7 { max-width: 58.33%; width: 58.33%; }
+
 .col-8 { max-width: 66.66%; width: 66.66%; }
+
 .col-9 { max-width: 75%; width: 75%; }
+
 .col-10 { max-width: 83.33%; width: 83.33%; }
+
 .col-11 { max-width: 91.66%; width: 91.66%; }
+
 .col-12 { max-width: 100%; width: 100%; }
+
 .src-width { width: initial; max-width: 100%; }
+
+/* DEPRECATED */
 .width-10 { max-width: 10%; width: 10%; }
+
 .width-20 { max-width: 20%; width: 20%; }
+
 .width-30 { max-width: 30%; width: 30%; }
+
 .width-40 { max-width: 40%; width: 40%; }
+
 .width-50 { max-width: 50%; width: 50%; }
+
 .width-60 { max-width: 60%; width: 60%; }
+
 .width-70 { max-width: 70%; width: 70%; }
+
 .width-80 { max-width: 80%; width: 80%; }
+
 .width-90 { max-width: 90%; width: 90%; }
-blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5em; padding-left: 1em; }
-blockquote p { margin: 0.5em 0; text-indent: 0; }
-.scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 10%; padding: 0; }
-.scriptext .italic, .scriptext .bold-italic { font-style: normal; }
-.pullquotec { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em 15%; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
-.pullquotec p { text-indent: 0; text-align: left; }
-.pullquotec .sig { margin-left: 0; text-align: right; }
-.pullquotel { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: left; }
-.pullquotel p { text-indent: 0; text-align: left; }
-.pullquotel .sig { margin-left: 0; text-align: right; }
-.pullquoter { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em; width: 30%; text-transform: uppercase; float: right; }
-.pullquoter p { text-indent: 0; text-align: left; }
-.pullquoter .sig { margin-left: 0; text-align: right; }
-@media only screen and (max-width: 600px) {
-.pullquotel, .pullquoter { font-size: 0.8em; letter-spacing: 0.063em; margin: 2em 15%; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
-.pullquotel p, .pullquoter p { text-indent: 0; text-align: left; }
-.pullquotel .sig, .pullquoter .sig { margin-left: 0; text-align: right; }
-.float-left, .float-right { max-width: 555px; width: 90%; }
-p, li { text-align: left; } }
-dl:not(.abbr-list) dfn span[lang], dl:not(.abbr-list) dfn span[trans] { font: inherit; }

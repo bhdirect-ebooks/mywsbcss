@@ -42,7 +42,6 @@
  * LANGUAGES............Styling for language elements and classes.
  *
  * WIDTHS...............Simple grid-like width classes.
- * OVERRIDES............Media queries and other overrides.
  */
 
 
@@ -373,13 +372,3 @@ $fn-color: #ff0000;
 \*------------------------------------*/
 
 @import "includes/shared/widths";
-
-
-
-
-
-/*------------------------------------*\
-  #OVERRIDES
-\*------------------------------------*/
-
-@import "includes/shared/overrides";

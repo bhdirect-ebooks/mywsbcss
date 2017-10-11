@@ -1,0 +1,73 @@
+/**
+ * Poetry
+ */
+
+ $def-ind:  1.5rem;
+
+.poetry {
+  margin: 1rem 0 1rem $def-ind;
+}
+
+.poetry .poetry {
+  margin: 0;
+  padding-left: $def-ind;
+}
+
+.poetry p {
+  margin-left: $def-ind;
+  text-indent: -$def-ind;
+}
+
+@mixin poetry() {
+  text-indent: -0.5rem;
+}
+
+.poem1 {
+  margin: 0 0 0 2rem;
+  @include poetry();
+}
+
+.poem2 {
+  margin: 0 0 0 3rem;
+  @include poetry();
+}
+
+.poem3 {
+  margin: 0 0 0 4rem;
+  @include poetry();
+}
+
+.poem4 {
+  margin: 0 0 0 5rem;
+  @include poetry();
+}
+
+.poem5 {
+  margin: 0 0 0 6rem;
+  @include poetry();
+}
+
+.poem6 {
+  margin: 0 0 0 7rem;
+  @include poetry();
+}
+
+.poem7 {
+  margin: 0 0 0 8rem;
+  @include poetry();
+}
+
+.poem8 {
+  margin: 0 0 0 9rem;
+  @include poetry();
+}
+
+.poem9 {
+  margin: 0 0 0 10rem;
+  @include poetry();
+}
+
+.poem10 {
+  margin: 0 0 0 11rem;
+  @include poetry();
+}

@@ -122,22 +122,6 @@ ol ul, ol ol { margin: 0; padding: 0 0 0 1em; }
 ul { margin-top: 1em; margin-bottom: 1em; }
 ul ul, ul ol { margin: 0; padding: 0 0 0 1em; }
 
-.upper-roman { list-style-type: upper-roman; }
-
-.lower-roman { list-style-type: lower-roman; }
-
-.upper-alpha { list-style-type: upper-alpha; }
-
-.lower-alpha { list-style-type: lower-alpha; }
-
-.digit { list-style-type: decimal; }
-
-.disc { list-style-type: disc; }
-
-.circle { list-style-type: circle; }
-
-.square { list-style-type: square; }
-
 .none { list-style-type: none; }
 
 li { font-size: 1em; line-height: 1.5em; padding: 0.2em 0; }
@@ -146,37 +130,6 @@ li p { text-indent: 0; }
 
 .none > li { margin-left: 2em; text-indent: -1em; }
 .none ul:not(.none) li, .none ol:not(.none) li { text-indent: 0; }
-
-/* List helpers */
-ol:not(.none) li { padding-left: 0.25em; }
-
-.paren { counter-reset: list; list-style-type: none; }
-.paren > li { left: 0.15em; position: relative; text-indent: -1.15em; }
-.paren > li:before { left: -0.4em; counter-increment: list; position: relative; }
-
-.right-paren { counter-reset: list; list-style-type: none; }
-.right-paren > li { left: 0; position: relative; text-indent: -0.75em; }
-.right-paren > li:before { left: -0.4em; counter-increment: list; position: relative; }
-
-.digit.paren > li:before { content: "(" counter(list,decimal) ")"; }
-
-.lower-alpha.paren > li:before { content: "(" counter(list,lower-alpha) ")"; }
-
-.lower-roman.paren > li:before { content: "(" counter(list,lower-roman) ")"; }
-
-.upper-alpha.paren > li:before { content: "(" counter(list,upper-alpha) ")"; }
-
-.upper-roman.paren > li:before { content: "(" counter(list,upper-roman) ")"; }
-
-.digit.right-paren > li:before { content: counter(list,decimal) ")"; }
-
-.lower-alpha.right-paren > li:before { content: counter(list,lower-alpha) ")"; }
-
-.lower-roman.right-paren > li:before { content: counter(list,lower-roman) ")"; }
-
-.upper-alpha.right-paren > li:before { content: counter(list,upper-alpha) ")"; }
-
-.upper-roman.right-paren > li:before { content: counter(list,upper-roman) ")"; }
 
 /* Definition lists */
 dt { clear: both; padding: 0 0 0.8em 0; text-align: center; }
@@ -311,35 +264,6 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 
 .ded2 { font-size: 0.9em; font-style: italic; margin: 0 25%; }
 .ded2 .italic, .ded2 .bold-italic { font-style: normal; }
-
-/** Poetry lines, for use with <p> */
-.poetry { margin: 1em 0 1em 2em; }
-
-.poetry.noind { margin: 1em 0 0 0; }
-
-.poetry .poetry { margin: 0; padding-left: 2em; }
-
-.poetry p { margin-left: 2em; text-indent: -2em; }
-
-.poem1 { margin: 0 0 0 2em; text-indent: -0.5em; }
-
-.poem2 { margin: 0 0 0 3em; text-indent: -0.5em; }
-
-.poem3 { margin: 0 0 0 4em; text-indent: -0.5em; }
-
-.poem4 { margin: 0 0 0 5em; text-indent: -0.5em; }
-
-.poem5 { margin: 0 0 0 6em; text-indent: -0.5em; }
-
-.poem6 { margin: 0 0 0 7em; text-indent: -0.5em; }
-
-.poem7 { margin: 0 0 0 8em; text-indent: -0.5em; }
-
-.poem8 { margin: 0 0 0 9em; text-indent: -0.5em; }
-
-.poem9 { margin: 0 0 0 10em; text-indent: -0.5em; }
-
-.poem10 { margin: 0 0 0 11em; text-indent: -0.5em; }
 
 /** Quote or section 'signature', for use with <p> */
 .sig { margin-bottom: 1em; margin-left: 60%; text-align: left; text-indent: 0; }

@@ -1,18 +1,16 @@
 /*!*
  * FILE:     mywsb.css
- * VERSION:  2017-07-09
+ * VERSION:  2017-10-11
  * AUTHOR:   Weston Littrell
  */
 /**
- * A refactor of legacy WORDsearch CSS for myWSB EPUBs, mywsb.css
- * is (mostly) written to this standard: http://cssguidelin.es/
- * but with EPUB-specific uses cases in mind.
+ * A transitional stylesheet for myWSB EPUBs, combining
+ * familiar styles for the B&H Direct eBook Development team
+ * with functional CSS from Tachyons.
  *
- * mywsb.css acts as the default stylesheet for all EPUBs developed
- * by the B&H Direct eBook Development team and can be tweaked or
- * extended with a separate stylesheet.
+ * Tachyons is copyright (c) 2015 @mrmrs <hi@mrmrs.css> (mrmrs.io)
  *
- * This version is a developer document and should be compiled and
+ * This scss version is a developer document and should be compiled and
  * minified for production environments.
  */
 
@@ -26,6 +24,7 @@
 /**
  * EPUB-NAMESPACE.......Add the EPUB namespace.
  * GLOBAL...............Globally-available variables.
+ * NORMALIZE............Import Normalize library.
  *
  * FONTS................Add font-families.
  * MAIN.................Set up our document defaults.
@@ -47,6 +46,7 @@
  * LANGUAGES............Styling for language elements and classes.
  *
  * WIDTHS...............Simple grid-like width classes.
+ * TACHYONS.............Import most of the Tachyons library.
  * OVERRIDES............Media queries and other overrides.
  */
 
@@ -71,9 +71,23 @@
 $def-line: 1.55em; // Default line height
 $def-font: 1.05em; // Default font size
 $def-ind:  1.5em;  // Default text indent
-$serif-font: "Alegreya", "Gentium Plus", serif;
-$sans-font:  "Alegreya Sans", sans-serif;
+
+$sans-font:  -apple-system, BlinkMacSystemFont,
+              'avenir next', avenir,
+              'helvetica neue', helvetica,
+              ubuntu,
+              roboto, noto,
+              'segoe ui', arial,
+              sans-serif;
+
+$serif-font:  georgia,
+              times,
+              serif;
+
 $lang-font:  "Gentium Plus", serif;
+
+@import 'includes/tachyons/colors';
+@import 'includes/tachyons/media-queries';
 
 
 
@@ -90,20 +104,21 @@ $lang-font:  "Gentium Plus", serif;
 
 
 /*------------------------------------*\
+  #NORMALIZE
+\*------------------------------------*/
+
+@import 'includes/tachyons/normalize';
+
+
+
+
+
+/*------------------------------------*\
   #MAIN
 \*------------------------------------*/
 
 @import "includes/shared/main";
 
-img {
-  border-style: none;
-  width: 100%;
-}
-
-ol,
-ul {
-  -webkit-padding-start: 0;
-}
 
 
 
@@ -299,7 +314,6 @@ figcaption {
 @include list-items(0.1em 0 0 0);
 @include none-list-items(1em, -1.5em);
 
-@import "includes/shared/list-helpers";
 @import "includes/shared/def-lists";
 
 
@@ -429,6 +443,68 @@ $fn-color: #ff0000;
 \*------------------------------------*/
 
 @import "includes/shared/widths";
+
+
+
+
+
+/*------------------------------------*\
+  #TACHYONS
+\*------------------------------------*/
+
+@import 'includes/tachyons/box-sizing';
+//@import 'includes/tachyons/aspect-ratios';
+@import 'includes/tachyons/images';
+@import 'includes/tachyons/background-size';
+@import 'includes/tachyons/background-position';
+@import 'includes/tachyons/outlines';
+@import 'includes/tachyons/borders';
+@import 'includes/tachyons/border-colors';
+@import 'includes/tachyons/border-radius';
+@import 'includes/tachyons/border-style';
+@import 'includes/tachyons/border-widths';
+@import 'includes/tachyons/box-shadow';
+@import 'includes/tachyons/code';
+@import 'includes/tachyons/coordinates';
+@import 'includes/tachyons/clears';
+@import 'includes/tachyons/display';
+@import 'includes/tachyons/flexbox';
+@import 'includes/tachyons/floats';
+@import 'includes/tachyons/font-family';
+@import 'includes/tachyons/font-style';
+@import 'includes/tachyons/font-weight';
+//@import 'includes/tachyons/forms';
+@import 'includes/tachyons/heights';
+@import 'includes/tachyons/letter-spacing';
+@import 'includes/tachyons/line-height';
+@import 'includes/tachyons/links';
+@import 'includes/tachyons/lists';
+@import 'includes/tachyons/list-helpers';
+@import 'includes/tachyons/max-widths';
+@import 'includes/tachyons/widths';
+@import 'includes/tachyons/overflow';
+@import 'includes/tachyons/position';
+@import 'includes/tachyons/opacity';
+@import 'includes/tachyons/rotations';
+@import 'includes/tachyons/skins';
+@import 'includes/tachyons/skins-pseudo';
+@import 'includes/tachyons/spacing';
+@import 'includes/tachyons/negative-margins';
+@import 'includes/tachyons/tables';
+@import 'includes/tachyons/text-decoration';
+@import 'includes/tachyons/text-align';
+@import 'includes/tachyons/text-transform';
+@import 'includes/tachyons/type-scale';
+@import 'includes/tachyons/typography';
+@import 'includes/tachyons/poetry';
+@import 'includes/tachyons/utilities';
+@import 'includes/tachyons/visibility';
+@import 'includes/tachyons/white-space';
+@import 'includes/tachyons/vertical-align';
+@import 'includes/tachyons/hovers';
+//@import 'includes/tachyons/z-index';
+//@import 'includes/tachyons/nested';
+@import 'includes/tachyons/styles';
 
 
 

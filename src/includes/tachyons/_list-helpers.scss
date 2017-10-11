@@ -1,0 +1,138 @@
+/*
+ * List helpers
+ */
+
+.upper-roman {
+  list-style-type: upper-roman;
+}
+
+.lower-roman {
+  list-style-type: lower-roman;
+}
+
+.upper-alpha {
+  list-style-type: upper-alpha;
+}
+
+.lower-alpha {
+  list-style-type: lower-alpha;
+}
+
+.lower-greek {
+  list-style-type: lower-greek;
+}
+
+.hebrew {
+  list-style-type: hebrew;
+}
+
+.digit {
+  list-style-type: decimal;
+}
+
+.disc {
+  list-style-type: disc;
+}
+
+.circle {
+  list-style-type: circle;
+}
+
+.square {
+  list-style-type: square;
+}
+
+ol:not(.list) li {
+  padding-left: 0.25rem;
+}
+
+// parenthetical style list indicators
+
+@mixin parenthetical($leftness, $indentation) {
+  counter-reset: list;
+  list-style-type: none;
+
+  > li {
+    left: $leftness;
+    position: relative;
+    text-indent: $indentation;
+
+    &:before {
+      left: -0.4rem;
+      counter-increment: list;
+      position: relative;
+    }
+  }
+}
+
+@mixin paren($type) {
+  content: "(" counter(list, $type) ")";
+}
+
+@mixin right-paren($type) {
+  content: counter(list, $type) ")";
+}
+
+.paren {
+  @include parenthetical(0.15rem, -1.15rem);
+}
+
+.right-paren {
+  @include parenthetical(0, -0.75rem);
+}
+
+.hebrew.paren > li:before {
+  @include paren(hebrew);
+}
+
+.digit.paren > li:before {
+  @include paren(decimal);
+}
+
+.lower-greek.paren > li:before {
+  @include paren(lower-greek);
+}
+
+.lower-alpha.paren > li:before {
+  @include paren(lower-alpha);
+}
+
+.lower-roman.paren > li:before {
+  @include paren(lower-roman);
+}
+
+.upper-alpha.paren > li:before {
+  @include paren(upper-alpha);
+}
+
+.upper-roman.paren > li:before {
+  @include paren(upper-roman);
+}
+
+.hebrew.right-paren > li:before {
+  @include right-paren(hebrew);
+}
+
+.digit.right-paren > li:before {
+  @include right-paren(decimal);
+}
+
+.lower-greek.right-paren > li:before {
+  @include right-paren(lower-greek);
+}
+
+.lower-alpha.right-paren > li:before {
+  @include right-paren(lower-alpha);
+}
+
+.lower-roman.right-paren > li:before {
+  @include right-paren(lower-roman);
+}
+
+.upper-alpha.right-paren > li:before {
+  @include right-paren(upper-alpha);
+}
+
+.upper-roman.right-paren > li:before {
+  @include right-paren(upper-roman);
+}

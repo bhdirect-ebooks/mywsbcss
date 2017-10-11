@@ -1,15 +1,10 @@
-/**
- * FILE:     _fonts.scss
- * VERSION:  2017-04-27
- * AUTHOR:   Weston Littrell
- */
 /*!*
  * See META-INF/FONT_LICENSES in this EPUB package
  * for Font Software license information.
  */
 
 @font-face {
-  font-family: "WS Extra";
+  font-family: "wsextra";
   src: url("../fonts/wsextra.otf");
   src: url("../fonts/wsextra.otf?#iefix") format("opentype");
   font-style: normal;
@@ -17,7 +12,7 @@
 }
 
 @font-face {
-  font-family: "Gentium Plus";
+  font-family: "gentiumplus";
   src: url("../fonts/GentiumPlus-R.woff");
   src: url("../fonts/GentiumPlus-R.woff?#iefix") format("woff");
   font-style: normal;
@@ -25,7 +20,7 @@
 }
 
 @font-face {
-  font-family: "Gentium Plus";
+  font-family: "gentiumplus";
   src: url("../fonts/GentiumPlus-I.woff");
   src: url("../fonts/GentiumPlus-I.woff?#iefix") format("woff");
   font-style: italic;
@@ -33,7 +28,7 @@
 }
 
 @font-face {
-  font-family: "Ezra SIL";
+  font-family: "ezrasil";
   src: url("../fonts/SILEOT.woff");
   src: url("../fonts/SILEOT.woff?#iefix") format("woff");
   font-style: normal;

@@ -218,35 +218,6 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .ded2 { font-size: 0.9em; font-style: italic; margin: 0 25%; }
 .ded2 .italic, .ded2 .bold-italic { font-style: normal; }
 
-/** Poetry lines, for use with <p> */
-.poetry { margin: 1em 0 1em 25px; }
-
-.poetry.noind { margin: 1em 0 0 0; }
-
-.poetry .poetry { margin: 0; padding-left: 25px; }
-
-.poetry p { margin-left: 25px; text-indent: -25px; }
-
-.poem1 { margin: 0 0 0 2em; text-indent: -0.5em; }
-
-.poem2 { margin: 0 0 0 3em; text-indent: -0.5em; }
-
-.poem3 { margin: 0 0 0 4em; text-indent: -0.5em; }
-
-.poem4 { margin: 0 0 0 5em; text-indent: -0.5em; }
-
-.poem5 { margin: 0 0 0 6em; text-indent: -0.5em; }
-
-.poem6 { margin: 0 0 0 7em; text-indent: -0.5em; }
-
-.poem7 { margin: 0 0 0 8em; text-indent: -0.5em; }
-
-.poem8 { margin: 0 0 0 9em; text-indent: -0.5em; }
-
-.poem9 { margin: 0 0 0 10em; text-indent: -0.5em; }
-
-.poem10 { margin: 0 0 0 11em; text-indent: -0.5em; }
-
 /** Quote or section 'signature', for use with <p> */
 .sig { margin-bottom: 1em; margin-left: 60%; text-align: left; text-indent: 0; }
 

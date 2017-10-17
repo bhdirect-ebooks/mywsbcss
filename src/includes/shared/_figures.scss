@@ -1,30 +1,58 @@
-@mixin figure-decs() {
-  text-align: center;
-}
-
 @mixin figcap-decs() {
-  font-size: 0.85em;
+  font-size: $type-scale-7;
   font-style: italic;
   font-weight: normal;
   text-align: center;
   text-indent: 0;
-  .italic {
+  .italic,
+  .i {
     font-style: normal;
   }
 }
 
-$full-width:  90%;
-$float-width: 19em;
-$auto-margin: 1.2em auto;
-$fallback-margin: 1.2em 5%; // margin for WORDsearch
+$full-width:  100%;
+$full-width-ns:  90%;
+$float-width: $spacing-extra-extra-extra-large;
+$auto-margin: $spacing-large auto;
 
-@mixin figure-full() { // Mixin also used in media query
-  max-width: 555px;
+@mixin figure-full() {
+  float: none;
+  margin: $auto-margin;
+  max-width: $full-width;
   width: $full-width;
 }
 
-@mixin figure-float() {
-  margin: 0.7em 1.1em;
+@mixin figure-float($side) {
+  float: $side;
+  margin: $spacing-small $spacing-medium;
   max-width: $float-width;
   width: $float-width;
+}
+
+/*
+ * Classes for use with <figure>
+ */
+
+.full-width,
+.float-right,
+.float-left {
+  @include figure-full();
+  img {
+    margin: 0 auto;
+  }
+}
+
+@media #{$breakpoint-not-small} {
+  .full-width {
+    max-width: $full-width-ns;
+    width: $full-width-ns;
+  }
+
+  .float-right {
+    @include figure-float(right);
+  }
+
+  .float-left {
+    @include figure-float(left);
+  }
 }

@@ -94,3 +94,12 @@ h6,
   @include subheading();
   @include heading-left();
 }
+
+
+/*
+ * Bridgehead
+ */
+
+.bh {
+  @include bridgehead();
+}

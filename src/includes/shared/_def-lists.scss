@@ -4,7 +4,7 @@
 
 dt {
   clear: both;
-  padding: 0 0 0.8em 0;
+  padding: 0 0 $spacing-medium 0;
   text-align: center;
 
   dfn {
@@ -14,7 +14,7 @@ dt {
 
 dd {
   margin: 0;
-  padding: 0 0 2em 0;
+  padding: 0 0 $spacing-large 0;
 
   p {
     text-indent: 0;
@@ -31,15 +31,14 @@ dd {
     text-align: left;
     width: 20%;
     dfn {
-      font-family: $serif-font;
-      font-weight: normal;
+      font: normal normal $def-font/$def-line $sans-font;
     }
   }
 
   dd {
     float: left;
-    padding: 0 1%;
-    width: 78%;
+    padding: 0 $spacing-extra-small;
+    width: 75%;
   }
 
   &:after {

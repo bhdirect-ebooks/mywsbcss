@@ -14,7 +14,7 @@
       Setting floats to display inline will fix the double margin bug in
       ie6. You know... just in case.
 
-   2. Don't forget to clearfix your floats with .cf
+   2. Don"t forget to clearfix your floats with .cf
 
    Base:
      f = float
@@ -35,22 +35,22 @@
 
 .fl { float: left;  _display: inline; }
 .fr { float: right; _display: inline; }
-.fn { float: none; }
+.fnon { float: none; }
 
 @media #{$breakpoint-not-small} {
   .fl-ns { float: left; _display: inline; }
   .fr-ns { float: right; _display: inline; }
-  .fn-ns { float: none; }
+  .fnon-ns { float: none; }
 }
 
 @media #{$breakpoint-medium} {
   .fl-m { float: left; _display: inline; }
   .fr-m { float: right; _display: inline; }
-  .fn-m { float: none; }
+  .fnon-m { float: none; }
 }
 
 @media #{$breakpoint-large} {
   .fl-l { float: left; _display: inline; }
   .fr-l { float: right; _display: inline; }
-  .fn-l { float: none; }
+  .fnon-l { float: none; }
 }

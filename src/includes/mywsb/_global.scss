@@ -1,0 +1,58 @@
+/**
+ * Globally-available variables
+ * pulled from Tachyons
+ */
+
+// Type scale
+
+$type-scale-1: 3rem !default;
+$type-scale-2: 2.25rem !default;
+$type-scale-3: 1.5rem !default;
+$type-scale-4: 1.25rem !default;
+$type-scale-5: 1rem !default;
+$type-scale-6: 0.875rem !default;
+$type-scale-7: 0.75rem !default;
+$type-scale-8: 0.6rem !default;
+
+
+// Spacing
+
+/* 0 */
+$spacing-none: 0 !default;
+/* 1 */
+$spacing-extra-small: 0.25rem !default;
+/* 2 */
+$spacing-small: 0.5rem !default;
+/* 3 */
+$spacing-medium: 1rem !default;
+/* 4 */
+$spacing-large: 2rem !default;
+/* 5 */
+$spacing-extra-large: 4rem !default;
+/* 6 */
+$spacing-extra-extra-large: 8rem !default;
+/* 7 */
+$spacing-extra-extra-extra-large: 16rem !default;
+
+
+// Line height
+
+$lh-solid: 1 !default;
+$lh-title: 1.25 !default;
+$lh-copy:  1.5 !default;
+
+
+// Letter spacing
+
+$letter-spacing-tracked: 0.1em !default;
+$letter-spacing-half:    0.05em !default;
+$letter-spacing-tight:  -0.05em !default;
+$letter-spacing-mega:    0.25em !default;
+
+
+// Defaults
+
+$def-line: $lh-copy; // Default line height
+$def-font: $type-scale-5; // Default font size
+$def-ind:  $spacing-large;  // Default text indent
+$def-neg-ind: -$def-ind; // Default negative indent

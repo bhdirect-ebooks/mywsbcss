@@ -5,7 +5,9 @@
 // Custom Media Query Variables
 
 
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! Heavily-modified version of normalize.css v7.0.0
+ * | MIT License | github.com/necolas/normalize.css
+ */
 
 /* Document
    ========================================================================== */
@@ -25,13 +27,32 @@ html {
 /* Sections
    ========================================================================== */
 
-/**
- * Remove the margin in all browsers (opinionated).
- */
+body {
+  font: normal normal 100% $serif-font;
+  margin: 0 $spacing-large;
+}
 
-body,
 p {
+  line-height: $def-line;
+  font-size: $def-font;
   margin: 0;
+  text-align: left;
+  text-indent: $def-ind;
+}
+
+li {
+  line-height: $def-line;
+  font-size: $def-font;
+  margin: 0;
+  text-align: left;
+  text-indent: 0;
+}
+
+@media #{$breakpoint-not-small} {
+  p,
+  li {
+    text-align: justify;
+  }
 }
 
 /**
@@ -77,17 +98,17 @@ main { /* 1 */
 
 figure {
   margin: 1em 40px;
+  text-align: center;
 }
 
 /**
  * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
  */
 
 hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  display: none;
 }
 
 /**
@@ -110,20 +131,19 @@ pre {
 
 a {
   background-color: transparent; /* 1 */
-  color: #0099ff;
+  color: $blue;
   -webkit-text-decoration-skip: objects; /* 2 */
   text-decoration: none;
 }
 
 /**
  * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  border-bottom: none;
+  cursor: help;
+  text-decoration: none;
 }
 
 /**
@@ -186,20 +206,20 @@ small {
  * all browsers.
  */
 
-sub,
-sup {
-  font-size: 75%;
+@mixin sub-sup($top) {
+  font-size: $type-scale-8;
   line-height: 0;
   position: relative;
+  top: $top;
   vertical-align: baseline;
 }
 
 sub {
-  top: 0.2em;
+  @include sub-sup(0.3em);
 }
 
 sup {
-  top: -0.2em;
+  @include sub-sup(-0.3em);
 }
 
 /* Embedded content
@@ -291,7 +311,7 @@ select { /* 1 */
  */
 
 button,
-html [type="button"], /* 1 */
+[type="button"], /* 1 */
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; /* 2 */

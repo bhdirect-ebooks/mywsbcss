@@ -14,18 +14,21 @@
 
 
 .sans-serif {
-  font-family: -apple-system, BlinkMacSystemFont,
-               'avenir next', avenir,
-               'helvetica neue', helvetica,
-               ubuntu,
-               roboto, noto,
-               'segoe ui', arial,
-               sans-serif;
+  font-family: $sans-font;
 }
 
 .serif {
-  font-family: georgia,
-               times,
-               serif;
+  font-family: $serif-font;
 }
 
+.wsextra {
+  font-family: "wsextra";
+}
+
+.gentiumplus {
+  font-family: "gentium plus";
+}
+
+.ezra {
+  font-family: "ezra sil";
+}

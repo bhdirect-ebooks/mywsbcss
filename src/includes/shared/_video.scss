@@ -1,10 +1,10 @@
 // Video mixins
 @mixin video-def() {
-  background: #fff;
-  border: 1px solid #cfcfcf;
+  background: $white;
+  border: 1px solid $moon-gray;
   box-shadow: 0 0 3px rgba(1, 1, 1, 0.2), inset 0 0 100px rgba(1, 1, 1, 0.1);
   height: auto;
-  margin: 1.5em auto 1.25em auto;
+  margin: $spacing-large auto $spacing-medium auto;
   text-align: center;
   text-indent: 0;
 }

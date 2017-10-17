@@ -1,13 +1,14 @@
 @import "fn";
 
 /**
- * Chapter author's name, for use with <p>
+ * Chapter author"s name, for use with <p>
  */
 
 .auth {
-  font-size: 1em;
+  font-size: $type-scale-4;
   font-weight: bold;
-  margin: 0.5em 0;
+  margin: $spacing-small 0;
+  text-align: center;
   text-indent: 0;
 }
 
@@ -17,31 +18,32 @@
  */
 
 @mixin dedications() {
-  font-size: 0.9em;
+  font-size: $type-scale-6;
   font-style: italic;
-  .italic {
+  .italic,
+  .i {
     font-style: normal;
   }
 }
 
 .ded1 {
   @include dedications();
-  margin: 1em 25% 0 25%;
+  margin: $spacing-medium $spacing-extra-extra-large 0 $spacing-extra-extra-large;
 }
 
 .ded2 {
   @include dedications();
-  margin: 0 25%;
+  margin: 0 $spacing-extra-extra-large;
 }
 
 
 /**
- * Quote or section 'signature', for use with <p>
+ * Quote or section "signature", for use with <p>
  */
 
 .sig {
-  margin-bottom: 1em;
-  margin-left: 60%;
+  margin-bottom: $spacing-medium;
+  margin-left: $spacing-extra-extra-extra-large;
   text-align: left;
   text-indent: 0;
 }
@@ -52,6 +54,6 @@
  */
 
 .verse {
-  font-size: 0.85em;
+  font-size: $type-scale-6;
   font-weight: bold;
 }

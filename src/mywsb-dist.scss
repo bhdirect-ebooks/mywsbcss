@@ -1,0 +1,344 @@
+/*!*
+ * MyWSB CSS VERSION: 2017-10-13
+ * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
+ * used in accordance with an MIT License (OSI).
+ */
+/**
+ * A transitional stylesheet for myWSB EPUBs, combining
+ * familiar styles for the B&H Direct eBook Development
+ * team with functional CSS from Tachyons.
+ *
+ * This scss version is a developer document and should
+ * be compiled and minified for production environments.
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #CONTENTS
+\*------------------------------------*/
+/**
+ * FONTS................Add font-families and variables.
+ * GLOBAL...............Other globally-available variables.
+ * NORMALIZATION........Box sizing and modified Normalize CSS
+ *                      (http://normalize.css.github.io)
+ *
+ * HEADINGS.............h1–h6 and other headings styles.
+ * INLINE-ELEMENTS......HTML inline element styles.
+ *
+ * ASIDES...............Aside styles.
+ * FIGURES..............Figures and related helper classes.
+ * LISTS................List styles.
+ * TABLES...............Table styles.
+ * VIDEOS...............Video and video glyph styles.
+ * QUOTES...............Block quotes and pull quotes.
+ * BLOCKS...............Other type-associated blocks.
+ *
+ * TEXT-GENERAL.........Classes for basic formatting of text.
+ * TEXT-TYPES...........Classes for specific types of content.
+ * LANGUAGES............Styling for language elements and classes.
+ *
+ * TACHYONS.............TACHYONS (modified) | http://tachyons.io
+ * OVERRIDES............Media queries and other overrides.
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+$sans-font: -apple-system, BlinkMacSystemFont,
+            "avenir next", avenir,
+            "helvetica neue", helvetica,
+            ubuntu,
+            roboto, noto,
+            "segoe ui", arial,
+            sans-serif;
+
+$serif-font:  georgia,
+              times,
+              serif;
+
+$lang-font:  "gentium plus", serif;
+
+@import "includes/mywsb/font-faces";
+@import "includes/tachyons/font-family";
+
+
+
+
+
+/*------------------------------------*\
+ #GLOBAL VARIABLES
+\*------------------------------------*/
+
+@import "includes/tachyons/colors";
+@import "includes/tachyons/media-queries";
+@import "includes/mywsb/global";
+
+
+
+
+
+/*------------------------------------*\
+  #NORMALIZATION
+\*------------------------------------*/
+
+@import "includes/tachyons/normalize";
+@import "includes/tachyons/images";
+@import "includes/tachyons/box-sizing";
+
+
+
+
+
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+
+$h1-margin: $spacing-large 0 $spacing-medium 0;
+$h2-margin: $h1-margin;
+$lower-level-margin: $spacing-large 0 $spacing-small 0;
+$subheading-margin: -$spacing-extra-small 0 $spacing-small 0;
+$bridgehead-margin:  0 0 $spacing-medium 0;
+$subheading-color: $mid-gray;
+
+$level-1-font: normal 500 $type-scale-2 $sans-font;
+$level-2-font: normal 500 $type-scale-3 $sans-font;
+$level-3-font: normal 500 $type-scale-4 $sans-font;
+$level-4-font: italic 500 $type-scale-4 $sans-font;
+$level-5-font: normal bold $type-scale-5 $sans-font;
+$level-6-font: italic bold $type-scale-6 $sans-font;
+
+@import "includes/shared/headings";
+
+
+/*
+ * Label class for use with <span> in <h1>
+ */
+
+/* Use for any <h1> label */
+.label {
+  display: block;
+  color: gray;
+  font-variant: small-caps;
+  font-weight: 300;
+  font-size: $type-scale-3;
+  margin: $spacing-medium 0 $spacing-small 0;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #INLINE-ELEMENTS
+\*------------------------------------*/
+
+@import "includes/shared/inline";
+
+
+
+
+
+/*------------------------------------*\
+  #ASIDES
+\*------------------------------------*/
+
+@import "includes/shared/asides";
+
+
+
+
+
+/*------------------------------------*\
+  #FIGURES
+\*------------------------------------*/
+
+@import "includes/shared/figures";
+
+figcaption {
+  @include figcap-decs();
+}
+
+
+
+
+
+/*------------------------------------*\
+  #LISTS
+\*------------------------------------*/
+
+@import "includes/shared/lists";
+@import "includes/shared/list-helpers";
+@import "includes/shared/def-lists";
+
+
+
+
+
+/*------------------------------------*\
+  #TABLES
+\*------------------------------------*/
+
+$offset-color: $moon-gray;
+@import "includes/shared/tables";
+
+
+
+
+
+/*------------------------------------*\
+  #VIDEOS
+\*------------------------------------*/
+
+@import "includes/shared/video";
+
+video {
+  @include video-def();
+  max-width: 100%;
+  width: 100%;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #QUOTES
+\*------------------------------------*/
+
+@import "includes/shared/quotes";
+
+
+
+
+
+/*------------------------------------*\
+  #BLOCKS
+\*------------------------------------*/
+
+@import "includes/mywsb/blocks";
+@import "includes/shared/poetry";
+
+
+
+
+
+/*------------------------------------*\
+  #TEXT-GENERAL
+\*------------------------------------*/
+
+@import "includes/shared/text-block";
+@import "includes/shared/text-inline";
+
+
+
+
+
+/*------------------------------------*\
+  #TEXT-TYPES
+\*------------------------------------*/
+
+$fn-size: $type-scale-8;
+$fn-color: $red;
+
+@import "includes/shared/text-types";
+@import "includes/shared/bibles";
+
+.versenum::after {
+  content: "\00a0";
+}
+
+
+
+
+
+/*------------------------------------*\
+  #LANGUAGES
+\*------------------------------------*/
+
+@import "includes/shared/languages";
+
+
+
+
+
+/*------------------------------------*\
+  #TACHYONS (modified)
+\*------------------------------------*/
+
+//@import "includes/tachyons/background-size";
+//@import "includes/tachyons/background-position";
+//@import "includes/tachyons/outlines";
+@import "includes/tachyons/borders";
+@import "includes/tachyons/border-colors";
+//@import "includes/tachyons/border-radius";
+@import "includes/tachyons/border-style";
+@import "includes/tachyons/border-widths";
+@import "includes/tachyons/box-shadow";
+//@import "includes/tachyons/code";
+//@import "includes/tachyons/coordinates";
+@import "includes/tachyons/clears";
+@import "includes/tachyons/display";
+//@import "includes/tachyons/flexbox";
+@import "includes/tachyons/floats";
+@import "includes/tachyons/font-family";
+@import "includes/tachyons/font-style";
+@import "includes/tachyons/font-weight";
+//@import "includes/tachyons/forms";
+@import "includes/tachyons/heights";
+@import "includes/tachyons/letter-spacing";
+@import "includes/tachyons/line-height";
+//@import "includes/tachyons/links";
+//@import "includes/tachyons/lists";
+@import "includes/tachyons/max-widths";
+@import "includes/tachyons/widths";
+@import "includes/tachyons/overflow";
+@import "includes/tachyons/position";
+@import "includes/tachyons/opacity";
+//@import "includes/tachyons/rotations";
+@import "includes/tachyons/skins";
+@import "includes/tachyons/skins-pseudo";
+@import "includes/tachyons/spacing";
+@import "includes/tachyons/negative-margins";
+@import "includes/tachyons/tables";
+@import "includes/tachyons/text-decoration";
+@import "includes/tachyons/text-align";
+@import "includes/tachyons/text-transform";
+@import "includes/tachyons/type-scale";
+@import "includes/tachyons/typography";
+@import "includes/tachyons/utilities";
+//@import "includes/tachyons/visibility";
+@import "includes/tachyons/white-space";
+@import "includes/tachyons/vertical-align";
+//@import "includes/tachyons/hovers";
+//@import "includes/tachyons/z-index";
+//@import "includes/tachyons/nested";
+@import "includes/tachyons/styles";
+
+
+
+
+
+/*------------------------------------*\
+  #OVERRIDES
+\*------------------------------------*/
+
+/*
+ * <dfn> font override
+ */
+
+dl:not(.abbr-list) {
+  dfn {
+    span[lang],
+    span[trans] {
+      font: inherit;
+    }
+  }
+}

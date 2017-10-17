@@ -1,54 +1,23 @@
 // mixins
-@mixin sup-sub() {
-  position: relative;
-  vertical-align: baseline;
-}
 
 @mixin strongs() {
-  color: #006400;
-  font: 0.9em $sans-font;
+  color: $green;
+  font: $type-scale-6 $sans-font;
 }
 
 @mixin no-display() {
   display: none !important;
-  visibility: hidden;
 }
 
 @mixin mywsb-scripture-ref() {
-  border-bottom: 1px dashed #000;
-  color: #000;
+  border-bottom: 1px dashed $black;
+  color: $black;
   margin-bottom: -1px;
 }
 
 @mixin dictionary-term() {
-  color: #000080;
-  font: bold 1.15em $sans-font;
+  color: $blue;
+  font: bold $def-font $sans-font;
   text-align: left;
   text-indent: 0;
-}
-
-
-/*
- * <sub> and <sup> styles
- */
-
-sub {
-  top: 0.2em;
-  @include sup-sub();
-}
-
-sup {
-  top: -0.2em;
-  @include sup-sub();
-}
-
-
-hr {
-  @include no-display();
-}
-
-abbr {
-	color: #332400;
-	cursor: help;
-	text-decoration: none;
 }

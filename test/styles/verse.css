@@ -1,181 +1,88 @@
-@charset "UTF-8";
-/*!*
- * FILE:     verse.css
- * VERSION:  2017-07-09
- * AUTHOR:   Weston Littrell
- */
-/** A refactor of legacy WORDsearch CSS, based on mywsb.css, written (mostly) to this standard: http://cssguidelin.es/.  verse.css acts as the verse mode stylesheet for CROSS Bibles converted from EPUB by the B&H Direct eBook Development team.  This version is a developer document and should be compiled and minified for production environments. */
-/*------------------------------------*\ #CONTENTS
-\*------------------------------------*/
-/** GLOBAL...............Globally-available variables.  MAIN.................Set up our document defaults. TITLE-PAGE...........Title page styles. HEADINGS.............h1–h6 and other headings styles. INLINE-ELEMENTS......HTML inline element styles.  FIGURES..............Figures and related helper classes. QUOTES...............Block quotes and pull quotes. BLOCKS...............Other type-associated blocks.  TEXT-GENERAL.........Classes for basic formatting of text. TEXT-TYPES...........Classes for specific types of content. LANGUAGES............Styling for language elements and classes. */
-/*------------------------------------*\ #GLOBAL
-\*------------------------------------*/
-/*------------------------------------*\ #MAIN
-\*------------------------------------*/
-body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 5%; }
+/*
+Error: Undefined variable: "$blue".
+        on line 19 of src/includes/shared/_inline.scss, in `dictionary-term'
+        from line 133 of src/verse.scss
 
-p { line-height: 1.5em; font-size: 1em; margin: 0; text-align: justify; text-indent: 25px; }
+14:  * minified for production environments.
+15:  *\/
+16: 
+17: 
+18: 
+19: 
+20: 
+21: /*------------------------------------*\
+22:   #CONTENTS
+23: \*------------------------------------*\/
+24: /**
 
-a { color: #0099ff; text-decoration: none; }
-
-body *, tr { display: inline; margin: 0; padding: 0; text-indent: 0; }
-
-/*------------------------------------*\ #TITLE-PAGE
-\*------------------------------------*/
-img { border-style: none; }
-
-.volumetitlehidden { display: none; visibility: hidden; }
-
-.settitle { display: block; font: bold 1.4em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1.5em 0 0 0; display: block; text-align: center; text-indent: 0; }
-
-.volumetitle, .booktitle { display: block; font: bold 2.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1.5em 0 0 0; display: block; text-align: center; text-indent: 0; }
-
-.subtitle { display: block; font: bold 1.4em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.5em 0 0 0; display: block; text-align: center; text-indent: 0; }
-
-.byline { display: block; font: bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.5em 0 0 0; display: block; text-align: center; text-indent: 0; }
-
-.author { display: block; font: bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.5em 0 0 0; display: block; text-align: center; text-indent: 0; }
-
-.coverimg { margin: 1em 0; display: block; text-align: center; text-indent: 0; }
-.coverimg img { border: 1px solid #000; }
-
-.copyright { font-size: 0.8em; margin: 1em 0 0 0; display: block; text-align: center; text-indent: 0; }
-
-.wslogo, .publogo { margin: 1.5em 0; display: block; text-align: center; text-indent: 0; }
-.wslogo img, .publogo img { border: 0; }
-.wslogo a, .publogo a { text-decoration: none; }
-
-/*------------------------------------*\ #HEADINGS
-\*------------------------------------*/
-/* h1-6 */
-h1 { font: normal bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-
-h2, .h2 { font: normal bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-
-h3, .h3 { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
-
-h4, .h4 { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
-
-h5, .h5 { font: normal bold 0.95em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
-
-h6, .h6 { font: italic bold 0.9em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
-
-/* Levels 1-3 subheadings for use with <p> */
-.h1sub { font: normal bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-
-.h2sub { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-
-.h3sub { font: italic bold 1em "Verdana", "Arial", "Helvetica", sans-serif; color: #4c4e4f; margin: -0.3em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
-
-/** .bridgehead for use with <p> */
-.bridgehead { font: normal bold 1.1em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 0.75em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-
-/*------------------------------------*\ #INLINE-ELEMENTS
-\*------------------------------------*/
-/** Not all inline elements from mywsb.css translate to inline elements in CROSS, but they remain here for consistency. */
-/* <sub> and <sup> styles */
-sub { top: 0.2em; position: relative; vertical-align: baseline; }
-
-sup { top: -0.2em; position: relative; vertical-align: baseline; }
-
-hr { display: none !important; visibility: hidden; }
-
-abbr { color: #332400; cursor: help; text-decoration: none; }
-
-.dictterm { color: #000080; font: bold 1.15em "Verdana", "Arial", "Helvetica", sans-serif; text-align: left; text-indent: 0; }
-
-.esstrongs { color: #006400; font: 0.9em "Verdana", "Arial", "Helvetica", sans-serif; }
-
-/*------------------------------------*\ #FIGURES
-\*------------------------------------*/
-.figure { text-align: center; }
-
-.figcaption { font-size: 0.85em; font-style: italic; font-weight: normal; text-align: center; text-indent: 0; }
-.figcaption .italic, .figcaption .bold-italic { font-style: normal; }
-
-.full-width { max-width: 555px; width: 90%; margin: 1.2em 5%; }
-.full-width img { margin: 0 5%; width: 100%; }
-
-/* Classes for use with figure */
-.float-right { float: right; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
-.float-right img { width: 100%; }
-
-.float-left { float: left; margin: 0.7em 1.1em; max-width: 19em; width: 19em; }
-.float-left img { width: 100%; }
-
-/*------------------------------------*\ #QUOTES
-\*------------------------------------*/
-.scriptext { border: none; font-size: 1em; font-style: italic; margin: 0; padding: 0; }
-.scriptext .italic, .scriptext .bold-italic { font-style: normal; }
-
-/*------------------------------------*\ #BLOCKS
-\*------------------------------------*/
-/** Hidden */
-hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle, .espagenumber, .nd { display: none !important; visibility: hidden; }
-
-/** LESSONmaker styles */
-.topiclist { background-color: #f0f8ff; border: solid #000080 1px; color: #000080; font: 0.9em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0.625em 25%; padding: 0.313em; text-align: center; }
-.topiclist a, .topiclist a:link, .topiclist a:active, .topiclist a:visited { color: #0000cd; text-decoration: none; }
-.topiclist a:hover { text-decoration: underline; }
-
-.star { font-size: 1em; position: absolute; left: 0.313em; color: #000080; }
-
-/** Footer (for footnotes) */
-.footer { border-top: 1px solid #cfcfcf; margin: 1.5em 0 0 0; padding: 1em 0 0 0; }
-
-/** Glossary terms */
-.gloss { color: #800000; }
-
-.glosstext { background-color: #ffff99; border: 1px #000 solid; color: #0000FF; font: 0.8em "Georgia", "Times New Roman", serif; padding: 0.125em; position: absolute; visibility: hidden; }
-
-ol, ul { list-style-type: none; }
-
-/*------------------------------------*\ #TEXT-GENERAL
-\*------------------------------------*/
-/** With inline or block elements */
-.bold, .bold-italic { font-weight: bold; }
-.bold .bold, .bold-italic .bold, .bold .bold-italic, .bold-italic .bold-italic { font-weight: normal; }
-
-.italic, .bold-italic { font-style: italic; }
-.italic .italic, .bold-italic .italic, .italic .bold-italic, .bold-italic .bold-italic { font-style: normal; }
-
-.large { font-size: 3em; }
-
-.small { font-size: 0.8em; }
-
-.smcaps { font-variant: small-caps; }
-
-.strikeout { text-decoration: line-through; }
-
-.underline { text-decoration: underline; }
-
-/*------------------------------------*\ #TEXT-TYPES
-\*------------------------------------*/
-/** Footnote indicator, for use with <sup> */
-.fn { color: #000; font: normal normal 0.6em "Verdana", "Arial", "Helvetica", sans-serif; position: relative; vertical-align: 0.7em; }
-
-/** Footnote text */
-.fntext { color: #0000ff; display: none; font-size: 0.8em; font-variant: normal; }
-
-.versenum { margin-right: .15em; vertical-align: super; font-size: .80em; font-weight: bold; }
-
-.selah { padding-left: 10em; font-style: italic; }
-
-.bookname { font: normal bold 1.3em "Verdana", "Arial", "Helvetica", sans-serif; margin: 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
-
-.scripture { display: block !important; margin: 0; border: 0; }
-
-.versemode { display: inline; }
-
-.JesusWords { color: red; }
-
-/*------------------------------------*\ #LANGUAGES
-\*------------------------------------*/
-.wsextra { /* WS proprietary font; use for some symbols */ font: 1.1em "WS Extra"; font-style: normal; font-weight: normal; }
-
-.lang, .translit { /* All transliterations */ font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: italic; }
-.lang .italic, .lang .bold-italic, .translit .italic, .translit .bold-italic { font-style: normal; }
-
-:lang(grc), .lang-grc { /* Ancient Greek */ font-family: "Gentium Plus", "Gentium", "Charis SIL", serif; font-style: normal; font-weight: normal; }
-
-.lang-hbo, :lang(hbo) { /* Ancient Hebrew */ font-family: "Ezra SIL"; font-style: normal; font-weight: normal; }
+Backtrace:
+src/includes/shared/_inline.scss:19:in `dictionary-term'
+src/verse.scss:133
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:367:in `block (4 levels) in visit_mixin'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:367:in `map'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:367:in `block (3 levels) in visit_mixin'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:367:in `block (2 levels) in visit_mixin'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:86:in `perform_arguments'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:362:in `block in visit_mixin'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/stack.rb:98:in `with_mixin'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/tree/root_node.rb:20:in `render'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:464:in `update_stylesheet'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/plugin.rb:82:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:22:in `load'
+/usr/local/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$blue\".\A         on line 19 of src/includes/shared/_inline.scss, in `dictionary-term'\A         from line 133 of src/verse.scss\A \A 14:  * minified for production environments.\A 15:  */\A 16: \A 17: \A 18: \A 19: \A 20: \A 21: /*------------------------------------*\\A 22:   #CONTENTS\A 23: \*------------------------------------*/\A 24: /**"; }

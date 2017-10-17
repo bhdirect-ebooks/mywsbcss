@@ -36,9 +36,20 @@
 
 /* Book paragraph style - paragraphs are indented with no vertical spacing. */
 .indent {
-  text-indent: 1em;
-  margin-top: 0;
-  margin-bottom: 0;
+  text-indent: $def-ind;
+}
+
+.indent-neg {
+  text-indent: $def-neg-ind;
+}
+
+.indent-0 {
+  text-indent: 0;
+}
+
+.indent-hanging {
+  margin-left: $def-ind;
+  text-indent: $def-neg-ind;
 }
 
 .small-caps {

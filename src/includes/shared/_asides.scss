@@ -1,24 +1,24 @@
-@mixin aside-bridge() {
-  border-bottom: 1px solid #999b9d;
-  margin: 0 0 1.5% 0;
-  padding: 0 0 1% 0;
-}
-
 aside {
-  border: 1px solid #808285;
-  margin: 1.5em 0;
-  padding: 3% 5%;
+  border:  1px solid $gray;
+  margin:  $spacing-large 0;
+  padding: $spacing-medium $spacing-large;
 
   p {
-    margin: 1% 0 0 0;
+    margin: $spacing-extra-small 0 0 0;
     text-indent: 0;
   }
 
   blockquote {
-    border: none;
+    border: none !important;
   }
 
   ol, ul {
-    padding-left: 5%;
+    padding-left: $spacing-large;
+  }
+
+  .bh {
+    border-bottom: 1px solid $silver;
+    margin: 0 0 $spacing-small 0;
+    padding: 0 0 $spacing-extra-small 0;
   }
 }

@@ -1,24 +1,15 @@
 /**
- * Hidden
- */
-
-.nd {
-  @include no-display();
-}
-
-
-/**
  * Dictionary Article
  */
 
 article {
-  margin: 1.5em 0;
+  margin: $spacing-large 0;
 
   dfn {
-    color: #00568F;
+    color: $dark-blue;
     display: inline-block;
-    font: $level-2-font;
-    padding: 0 0 1em 0;
+    font: $type-scale-3;
+    padding: 0 0 $spacing-medium 0;
     @include heading-left();
   }
 }
@@ -29,33 +20,7 @@ article {
  */
 
 footer {
-  border-top: 1px solid #cfcfcf;
-  margin: 1.5em 0 0 0;
-  padding: 1em 0 0 0;
-}
-
-
-/**
- * Index terms
- */
-
-span {
-  &[epub|type~=index-term],
-  &[epub\:type~=index-term] {
-    padding: 0 0.3em 0 0;
-  }
-}
-
-
-/**
- * Footnote divs
- */
-
-div {
-  &[epub|type~=footnote] p,
-  &[epub\:type~=footnote] p {
-    margin-left: 2em;
-    text-align: left;
-    text-indent: -2em;
-  }
+  border-top: 1px solid $moon-gray;
+  margin: $spacing-large 0 0 0;
+  padding: $spacing-medium 0 0 0;
 }

@@ -1,42 +1,14 @@
 // Mixins
+@mixin list-layout() {
+  margin: $spacing-medium 0 $spacing-medium 0;
+  padding: 0 0 0 $spacing-extra-large;
+}
+
 @mixin sublist-layout() {
   margin: 0;
-  padding: 0 0 0 1em;
+  padding: 0 0 0 $spacing-large;
 }
 
-@mixin list-items($pad) {
-  li {
-    font-size: $def-font;
-    line-height: $def-line;
-    padding: $pad;
-
-    > {
-      ul > li,
-      ol > li {
-        font-size: inherit;
-      }
-    }
-
-    p {
-      text-indent: 0;
-    }
-  }
-}
-
-@mixin none-list-items($ml, $ti) {
-  .none {
-    > li {
-      margin-left: $ml;
-      text-indent: $ti;
-    }
-    ul:not(.none),
-    ol:not(.none) {
-      li {
-        text-indent: 0;
-      }
-    }
-  }
-}
 
 /*
  * Ordered and unordered lists
@@ -60,6 +32,10 @@ ul {
   }
 }
 
-.none {
-  list-style-type: none;
+li {
+  padding: $spacing-small 0 0 0;
+
+  p {
+    text-indent: 0;
+  }
 }

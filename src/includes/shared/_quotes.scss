@@ -3,23 +3,24 @@
  */
 
 blockquote {
-  border-left: 1px dotted #000;
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
-  padding-left: 1em;
+  border-left: 1px dotted $black;
+  margin-bottom: $spacing-small;
+  margin-top: $spacing-small;
+  padding-left: $spacing-medium;
   p {
-    margin: 0.5em 0;
+    margin: $spacing-small 0;
     text-indent: 0;
   }
 }
 
 .scriptext {
   border: none;
-  font-size: 1em;
+  font-size: $type-scale-5;
   font-style: italic;
-  margin: 1em 10%;
+  margin: $spacing-medium $spacing-large;
   padding: 0;
-  .italic {
+  .italic,
+  .i {
     font-style: normal;
   }
 }
@@ -29,11 +30,14 @@ blockquote {
  * Pull quotes
  */
 
-@mixin pullquotes($marg, $wd) {
-  font-size: 0.8em;
-  letter-spacing: 0.063em;
+@mixin pullquotes($marg, $wid) {
+  border: none;
+  font-size: $type-scale-6;
+  letter-spacing: $type-scale-8;
   margin: $marg;
-  width: $wd;
+  max-width: $wid;
+  padding: 0;
+  width: $wid;
   text-transform: uppercase;
 
   p {
@@ -48,22 +52,31 @@ blockquote {
 }
 
 @mixin pullquote-center() {
-  @include pullquotes(2em 15%, 70%);
+  @include pullquotes($spacing-large $spacing-extra-large, 70%);
   display: block;
   float: none;
   text-align: center;
 }
 
-.pullquotec {
+@mixin pullquote-float-ns($side) {
+  float: $side;
+  margin: $spacing-large;
+  max-width: 30%;
+  width: 30%;
+}
+
+.pull-center,
+.pull-left,
+.pull-right {
   @include pullquote-center();
 }
 
-.pullquotel {
-  @include pullquotes(2em, 30%);
-  float: left;
-}
+@media #{$breakpoint-not-small} {
+  .pull-left {
+    @include pullquote-float-ns(left);
+  }
 
-.pullquoter {
-  @include pullquotes(2em, 30%);
-  float: right;
+  .pull-right {
+    @include pullquote-float-ns(right);
+  }
 }

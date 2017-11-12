@@ -1,5 +1,5 @@
 /*!*
- * MyWSB CSS VERSION: 2017-10-13
+ * VERSION: 2017-11-12 | EPUB | Development
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -138,20 +138,6 @@ nav[epub\:type~="page-list"] {
   #HEADINGS
 \*------------------------------------*/
 
-$h1-margin: $spacing-large 0 $spacing-medium 0;
-$h2-margin: $h1-margin;
-$lower-level-margin: $spacing-large 0 $spacing-small 0;
-$subheading-margin: -$spacing-extra-small 0 $spacing-small 0;
-$bridgehead-margin:  0 0 $spacing-medium 0;
-$subheading-color: $mid-gray;
-
-$level-1-font: normal 500 $type-scale-2 $sans-font;
-$level-2-font: normal 500 $type-scale-3 $sans-font;
-$level-3-font: normal 500 $type-scale-4 $sans-font;
-$level-4-font: italic 500 $type-scale-4 $sans-font;
-$level-5-font: normal bold $type-scale-5 $sans-font;
-$level-6-font: italic bold $type-scale-6 $sans-font;
-
 @import "includes/shared/headings";
 
 
@@ -207,6 +193,10 @@ span[data-cross-context~="scripture"],
 \*------------------------------------*/
 
 @import "includes/shared/asides";
+
+aside {
+  @include asides();
+}
 
 
 

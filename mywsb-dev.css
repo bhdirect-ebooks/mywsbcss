@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
- * MyWSB CSS VERSION: 2017-10-13
+ * VERSION: 2017-11-12 | EPUB | Development
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -102,7 +102,7 @@ pre { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
 a { background-color: transparent; /* 1 */ color: #357edd; -webkit-text-decoration-skip: objects; /* 2 */ text-decoration: none; }
 
 /** 1. Remove the bottom border in Chrome 57- and Firefox 39-. */
-abbr[title] { border-bottom: none; cursor: help; text-decoration: none; }
+abbr[title] { border-bottom: none; color: #3b1b07; cursor: help; text-decoration: none; }
 
 /** Prevent the duplicate application of `bolder` by the next rule in Safari 6. */
 b, strong { font-weight: inherit; }

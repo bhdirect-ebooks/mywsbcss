@@ -1,8 +1,7 @@
-aside {
-  border:  1px solid $gray;
-  margin:  $spacing-large 0;
+@mixin asides() {
+  border : 1px solid $gray;
+  margin : $spacing-large 0;
   padding: $spacing-medium $spacing-large;
-
   p {
     margin: $spacing-extra-small 0 0 0;
     text-indent: 0;
@@ -12,7 +11,8 @@ aside {
     border: none !important;
   }
 
-  ol, ul {
+  ol,
+  ul {
     padding-left: $spacing-large;
   }
 

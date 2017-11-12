@@ -1,0 +1,50 @@
+/**
+ * Globally-available variables
+ * pulled from Tachyons
+ */
+
+// Type scale
+
+$type-scale-1: 2.66em !default;
+$type-scale-2: 2em !default;
+$type-scale-3: 1.33em !default;
+$type-scale-4: 1.11em !default;
+$type-scale-5: 1em !default;
+$type-scale-6: 0.875em !default;
+$type-scale-7: 0.75em !default;
+$type-scale-8: 0.6em !default;
+
+
+// Spacing
+
+/* 0 */
+$spacing-none: 0 !default;
+/* 1 */
+$spacing-extra-small: 0.25em !default;
+/* 2 */
+$spacing-small: 0.5em !default;
+/* 3 */
+$spacing-medium: 1em !default;
+/* 4 */
+$spacing-large: 2em !default;
+/* 5 */
+$spacing-extra-large: 4em !default;
+/* 6 */
+$spacing-extra-extra-large: 8em !default;
+/* 7 */
+$spacing-extra-extra-extra-large: 16em !default;
+
+
+// Line height
+
+$lh-solid: 1 !default;
+$lh-title: 1.25 !default;
+$lh-copy:  1.5 !default;
+
+
+// Letter spacing
+
+$letter-spacing-tracked: 0.1em !default;
+$letter-spacing-half:    0.05em !default;
+$letter-spacing-tight:  -0.05em !default;
+$letter-spacing-mega:    0.2em !default;

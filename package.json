@@ -1,0 +1,20 @@
+{
+  "name": "@bhdirect/mywsbcss",
+  "version": "1.0.0",
+  "description": "Shared stylesheets for myWSB EPUBs and WORDsearch CROSS files, combining familiar styles with functional CSS from Tachyons.",
+  "main": "mywsb.scss",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/bhdirect-ebooks/mywsbcss.git",
+  "author": "Weston Littrell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bhdirect-ebooks/mywsbcss/issues"
+  },
+  "homepage": "https://github.com/bhdirect-ebooks/mywsbcss#readme",
+  "private": true
+}

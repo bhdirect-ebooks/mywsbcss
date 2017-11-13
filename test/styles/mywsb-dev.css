@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
-* VERSION: 2017-11-12 | EPUB | Development
+* VERSION: 2017-11-13 | EPUB | Development
 * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
 * used in accordance with an MIT License (OSI).
 */
@@ -35,8 +35,8 @@ figcaption, figure, main {  display: block; }
 figure { margin: 1em 40px; text-align: center; }
 hr { box-sizing: content-box;  height: 0;  display: none; }
 pre { font-family: monospace, monospace;  font-size: 1em;  }
-a { background-color: transparent;  color: #357edd; -webkit-text-decoration-skip: objects;  text-decoration: none; }
-abbr[title] { border-bottom: none; color: #3b1b07; cursor: help; text-decoration: none; }
+a { background-color: transparent;  color: #005994; -webkit-text-decoration-skip: objects;  text-decoration: none; font-weight: bold; }
+abbr[title] { border-bottom: none; color: #754500; cursor: help; text-decoration: none; }
 b, strong { font-weight: inherit; }
 b, strong { font-weight: bolder; }
 code, kbd, samp { font-family: monospace, monospace;  font-size: 1em;  }
@@ -93,7 +93,7 @@ h6, .h6 { font: italic bold 0.875rem -apple-system, BlinkMacSystemFont, "avenir 
 .bh { font: normal 500 1.25rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 0 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .label { display: block; color: gray; font-variant: small-caps; font-weight: 300; font-size: 1.5rem; margin: 1rem 0 0.5rem 0; }
 p[epub|type~="bridgehead"], p[epub\:type~="bridgehead"] { font: normal 500 1.25rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 0 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
-a[data-cross-ref] { border-bottom: 1px dashed #000; color: #000; margin-bottom: -1px; }
+a[data-cross-ref] { border-bottom: 1px dashed #000; color: #000; font-weight: normal; margin-bottom: -1px; }
 span[data-cross-context~="scripture"], .versemode { display: none !important; }
 aside { border: 1px solid #777; margin: 2rem 0; padding: 1rem 2rem; }
 aside p { margin: 0.25rem 0 0 0; text-indent: 0; }

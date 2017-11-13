@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
- * VERSION: 2017-11-12 | EPUB | Development
+ * VERSION: 2017-11-13 | EPUB | Development
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -99,10 +99,10 @@ pre { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
 
 /* Text-level semantics ========================================================================== */
 /** 1. Remove the gray background on active links in IE 10. 2. Remove gaps in links underline in iOS 8+ and Safari 8+. */
-a { background-color: transparent; /* 1 */ color: #357edd; -webkit-text-decoration-skip: objects; /* 2 */ text-decoration: none; }
+a { background-color: transparent; /* 1 */ color: #005994; -webkit-text-decoration-skip: objects; /* 2 */ text-decoration: none; font-weight: bold; }
 
 /** 1. Remove the bottom border in Chrome 57- and Firefox 39-. */
-abbr[title] { border-bottom: none; color: #3b1b07; cursor: help; text-decoration: none; }
+abbr[title] { border-bottom: none; color: #754500; cursor: help; text-decoration: none; }
 
 /** Prevent the duplicate application of `bolder` by the next rule in Safari 6. */
 b, strong { font-weight: inherit; }
@@ -266,7 +266,7 @@ p[epub|type~="bridgehead"], p[epub\:type~="bridgehead"] { font: normal 500 1.25r
 
 /*------------------------------------*\ #INLINE-ELEMENTS
 \*------------------------------------*/
-a[data-cross-ref] { border-bottom: 1px dashed #000; color: #000; margin-bottom: -1px; }
+a[data-cross-ref] { border-bottom: 1px dashed #000; color: #000; font-weight: normal; margin-bottom: -1px; }
 
 span[data-cross-context~="scripture"], .versemode { display: none !important; }
 

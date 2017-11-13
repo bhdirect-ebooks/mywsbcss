@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
-* VERSION: 2017-11-12 | CROSS | Verse Mode
+* VERSION: 2017-11-13 | CROSS | Verse Mode
 * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
 * used in accordance with an MIT License (OSI).
 */
@@ -26,8 +26,8 @@ figcaption, figure, main {  display: block; }
 figure { margin: 1em 40px; text-align: center; }
 hr { box-sizing: content-box;  height: 0;  display: none; }
 pre { font-family: monospace, monospace;  font-size: 1em;  }
-a { background-color: transparent;  color: #357edd; -webkit-text-decoration-skip: objects;  text-decoration: none; }
-abbr[title] { border-bottom: none; color: #3b1b07; cursor: help; text-decoration: none; }
+a { background-color: transparent;  color: #005994; -webkit-text-decoration-skip: objects;  text-decoration: none; font-weight: bold; }
+abbr[title] { border-bottom: none; color: #754500; cursor: help; text-decoration: none; }
 b, strong { font-weight: inherit; }
 b, strong { font-weight: bolder; }
 code, kbd, samp { font-family: monospace, monospace;  font-size: 1em;  }

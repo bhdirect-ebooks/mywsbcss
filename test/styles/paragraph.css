@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
-* VERSION: 2017-11-12 | CROSS | Paragraph Mode
+* VERSION: 2017-11-13 | CROSS | Paragraph Mode
 * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
 * used in accordance with an MIT License (OSI).
 */
@@ -26,8 +26,8 @@ figcaption, figure, main {  display: block; }
 figure { margin: 1em 40px; text-align: center; }
 hr { box-sizing: content-box;  height: 0;  display: none; }
 pre { font-family: monospace, monospace;  font-size: 1em;  }
-a { background-color: transparent;  color: #357edd; -webkit-text-decoration-skip: objects;  text-decoration: none; }
-abbr[title] { border-bottom: none; color: #3b1b07; cursor: help; text-decoration: none; }
+a { background-color: transparent;  color: #005994; -webkit-text-decoration-skip: objects;  text-decoration: none; font-weight: bold; }
+abbr[title] { border-bottom: none; color: #754500; cursor: help; text-decoration: none; }
 b, strong { font-weight: inherit; }
 b, strong { font-weight: bolder; }
 code, kbd, samp { font-family: monospace, monospace;  font-size: 1em;  }
@@ -111,6 +111,8 @@ ol, ul { list-style-type: none; margin-top: 1em; margin-bottom: 1em; }
 table { border-collapse: collapse; font-size: 1em; margin: 2em auto; text-align: left; width: 100%; }
 th { line-height: 1.5; font-size: 1em; padding: 0.5em; text-align: center; }
 td { line-height: 1.5; font-size: 1em; padding: 0.5em; vertical-align: top; }
+.middle { vertical-align: middle; }
+.offset { background-color: #ccc; }
 .center table { margin: 1em auto; }
 .poster { background: #fff; border: 1px solid #ccc; box-shadow: 0 0 3px rgba(1, 1, 1, 0.2), inset 0 0 100px rgba(1, 1, 1, 0.1); height: auto; margin: 2em auto 1em auto; text-align: center; text-indent: 0; width: 80%; }
 .scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 10%; padding: 0; }

@@ -78,7 +78,7 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
   #NORMALIZATION
 \*------------------------------------*/
 
-@import "includes/tachyons/normalize";
+@import "includes/shared/normalize";
 @import "includes/tachyons/images";
 @import "includes/tachyons/box-sizing";
 
@@ -204,6 +204,18 @@ $offset-color: $moon-gray;
  */
 
 @import "includes/shared/tables";
+
+/*
+ * for use with any <tr>, <th>, or <td> element
+ */
+
+.middle {
+  vertical-align: middle;
+}
+
+.offset {
+  background-color: $offset-color;
+}
 
 .center table {
   margin: 1em auto;

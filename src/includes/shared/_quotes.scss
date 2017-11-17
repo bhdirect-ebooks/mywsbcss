@@ -14,7 +14,7 @@ blockquote {
 }
 
 .scriptext {
-  border: none;
+  border: none !important;
   font-size: $type-scale-5;
   font-style: italic;
   margin: $spacing-medium $spacing-large;
@@ -31,7 +31,7 @@ blockquote {
  */
 
 @mixin pullquotes($marg, $wid) {
-  border: none;
+  border: none !important;
   font-size: $type-scale-6;
   letter-spacing: $type-scale-8;
   margin: $marg;

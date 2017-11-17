@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
-* VERSION: 2017-11-13 | CROSS | General
+* VERSION: 2017-11-17 | CROSS | General
 * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
 * used in accordance with an MIT License (OSI).
 */
@@ -165,9 +165,9 @@ td { line-height: 1.5; font-size: 1em; padding: 0.5em; vertical-align: top; }
 .poster { background: #fff; border: 1px solid #ccc; box-shadow: 0 0 3px rgba(1, 1, 1, 0.2), inset 0 0 100px rgba(1, 1, 1, 0.1); height: auto; margin: 2em auto 1em auto; text-align: center; text-indent: 0; width: 80%; }
 blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5em; padding-left: 1em; }
 blockquote p { margin: 0.5em 0; text-indent: 0; }
-.scriptext { border: none; font-size: 1em; font-style: italic; margin: 1em 2em; padding: 0; }
+.scriptext { border: none !important; font-size: 1em; font-style: italic; margin: 1em 2em; padding: 0; }
 .scriptext .italic, .scriptext .i { font-style: normal; }
-.pull-center, .pull-left, .pull-right { border: none; font-size: 0.875em; letter-spacing: 0.6em; margin: 2em 4em; max-width: 70%; padding: 0; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
+.pull-center, .pull-left, .pull-right { border: none !important; font-size: 0.875em; letter-spacing: 0.6em; margin: 2em 4em; max-width: 70%; padding: 0; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
 .pull-center p, .pull-left p, .pull-right p { text-indent: 0; text-align: left; }
 .pull-center .sig, .pull-left .sig, .pull-right .sig { margin-left: 0; text-align: right; }
 @media screen and (min-width: 30em) { .pull-left { float: left; margin: 2em; max-width: 30%; width: 30%; }

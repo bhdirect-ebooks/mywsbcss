@@ -1,13 +1,14 @@
 @import "fn";
 
 /**
- * Chapter author's name, for use with <p>
+ * Chapter author"s name, for use with <p>
  */
 
 .auth {
-  font-size: 1em;
+  font-size: $type-scale-4;
   font-weight: bold;
-  margin: 0.5em 0;
+  margin: $spacing-small 0;
+  text-align: center;
   text-indent: 0;
 }
 
@@ -17,108 +18,32 @@
  */
 
 @mixin dedications() {
-  font-size: 0.9em;
+  font-size: $type-scale-6;
   font-style: italic;
-  .italic {
+  .italic,
+  .i {
     font-style: normal;
   }
 }
 
 .ded1 {
   @include dedications();
-  margin: 1em 25% 0 25%;
+  margin: $spacing-medium $spacing-extra-extra-large 0 $spacing-extra-extra-large;
 }
 
 .ded2 {
   @include dedications();
-  margin: 0 25%;
+  margin: 0 $spacing-extra-extra-large;
 }
 
 
 /**
- * Poetry lines, for use with <p>
- */
-
-.poetry {
-  margin: 1em 0 1em $def-ind;
-}
-
-.poetry.noind {
-  margin: 1em 0 0 0;
-}
-
-.poetry .poetry {
-  margin: 0;
-  padding-left: $def-ind;
-}
-
-.poetry p {
-  margin-left: $def-ind;
-  text-indent: -$def-ind;
-}
-
-@mixin poetry() {
-  text-indent: -0.5em;
-}
-
-.poem1 {
-  margin: 0 0 0 2em;
-  @include poetry();
-}
-
-.poem2 {
-  margin: 0 0 0 3em;
-  @include poetry();
-}
-
-.poem3 {
-  margin: 0 0 0 4em;
-  @include poetry();
-}
-
-.poem4 {
-  margin: 0 0 0 5em;
-  @include poetry();
-}
-
-.poem5 {
-  margin: 0 0 0 6em;
-  @include poetry();
-}
-
-.poem6 {
-  margin: 0 0 0 7em;
-  @include poetry();
-}
-
-.poem7 {
-  margin: 0 0 0 8em;
-  @include poetry();
-}
-
-.poem8 {
-  margin: 0 0 0 9em;
-  @include poetry();
-}
-
-.poem9 {
-  margin: 0 0 0 10em;
-  @include poetry();
-}
-
-.poem10 {
-  margin: 0 0 0 11em;
-  @include poetry();
-}
-
-
-/**
- * Quote or section 'signature', for use with <p>
+ * Quote or section "signature", for use with <p>
  */
 
 .sig {
-  margin-bottom: 1em;
-  margin-left: 60%;
+  margin-bottom: $spacing-medium;
+  margin-left: $spacing-extra-extra-extra-large;
   text-align: left;
   text-indent: 0;
 }
@@ -129,6 +54,6 @@
  */
 
 .verse {
-  font-size: 0.85em;
+  font-size: $type-scale-6;
   font-weight: bold;
 }

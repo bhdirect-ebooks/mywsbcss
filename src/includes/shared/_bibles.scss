@@ -1,12 +1,10 @@
 .versenum {
-  margin-right: .15em;
-  vertical-align: super;
-  font-size: .80em;
+  margin-right: $spacing-extra-small;
   font-weight: bold;
 }
 
 .selah {
-  padding-left: 10em;
+  padding-left: $spacing-extra-extra-extra-large;
   font-style: italic;
 }
 

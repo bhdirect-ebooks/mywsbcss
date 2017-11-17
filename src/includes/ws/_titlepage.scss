@@ -1,6 +1,3 @@
-$margin-lg: 1.5em;
-$margin-sm: 0.5em;
-
 @mixin title-basic() {
   display: block;
   text-align: center;
@@ -24,28 +21,28 @@ img {
 }
 
 .settitle {
-  @include title-bold(1.4em, $margin-lg);
+  @include title-bold($type-scale-3, $spacing-large);
 }
 
 .volumetitle,
 .booktitle {
-  @include title-bold(2.1em, $margin-lg);
+  @include title-bold($type-scale-2, $spacing-large);
 }
 
 .subtitle {
-  @include title-bold(1.4em, $margin-sm);
+  @include title-bold($type-scale-3, $spacing-small);
 }
 
 .byline {
-  @include title-bold(1.1em, $margin-sm);
+  @include title-bold($type-scale-5, $spacing-small);
 }
 
 .author {
-  @include title-bold(1.3em, $margin-sm);
+  @include title-bold($type-scale-4, $spacing-small);
 }
 
 .coverimg {
-  margin: 1em 0;
+  margin: $spacing-medium 0;
   @include title-basic();
   img {
     border: 1px solid #000;
@@ -53,14 +50,14 @@ img {
 }
 
 .copyright {
-  font-size: 0.8em;
-  margin: 1em 0 0 0;
+  font-size: $type-scale-6;
+  margin: $spacing-medium 0 0 0;
   @include title-basic();
 }
 
 .wslogo,
 .publogo {
-  margin: 1.5em 0;
+  margin: $spacing-large 0;
   @include title-basic();
   img {
     border: 0;

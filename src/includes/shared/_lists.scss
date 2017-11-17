@@ -1,58 +1,12 @@
 // Mixins
+@mixin list-layout() {
+  margin: $spacing-medium 0 $spacing-medium 0;
+  padding: 0 0 0 $spacing-extra-large;
+}
+
 @mixin sublist-layout() {
   margin: 0;
-  padding: 0 0 0 1em;
-}
-
-@mixin list-items($pad) {
-  li {
-    font-size: $def-font;
-    line-height: $def-line;
-    padding: $pad;
-
-    > {
-      ul > li,
-      ol > li {
-        font-size: inherit;
-      }
-    }
-
-    p {
-      text-indent: 0;
-    }
-  }
-}
-
-@mixin none-list-items($ml, $ti) {
-  .none {
-    > li {
-      margin-left: $ml;
-      text-indent: $ti;
-    }
-    ul:not(.none),
-    ol:not(.none) {
-      li {
-        text-indent: 0;
-      }
-    }
-  }
-}
-
-@mixin parenthetical($leftness, $indentation) {
-  counter-reset: list;
-  list-style-type: none;
-
-  > li {
-    left: $leftness;
-    position: relative;
-    text-indent: $indentation;
-
-    &:before {
-      left: -0.4em;
-      counter-increment: list;
-      position: relative;
-    }
-  }
+  padding: 0 0 0 $spacing-large;
 }
 
 
@@ -78,38 +32,10 @@ ul {
   }
 }
 
-.upper-roman {
-  list-style-type: upper-roman;
-}
+li {
+  padding: $spacing-small 0 0 0;
 
-.lower-roman {
-  list-style-type: lower-roman;
-}
-
-.upper-alpha {
-  list-style-type: upper-alpha;
-}
-
-.lower-alpha {
-  list-style-type: lower-alpha;
-}
-
-.digit {
-  list-style-type: decimal;
-}
-
-.disc {
-  list-style-type: disc;
-}
-
-.circle {
-  list-style-type: circle;
-}
-
-.square {
-  list-style-type: square;
-}
-
-.none {
-  list-style-type: none;
+  p {
+    text-indent: 0;
+  }
 }

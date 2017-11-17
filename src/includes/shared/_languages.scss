@@ -1,39 +1,17 @@
-@mixin lang-normal() {
-  font-style: normal;
-  font-weight: normal;
-}
-
-@mixin lang-def() {
+.lang,      /* All languages other than Hebrew and Greek */
+.translit { /* All transliterations */
   font-family: $lang-font;
   font-style: italic;
-  .italic {
+  .italic,
+  .i {
     font-style: normal;
   }
 }
 
-@mixin new-athena() {
-  font-family: "New Athena Unicode", $lang-font;
-  @include lang-normal();
-}
-
-.wsextra { /* WS proprietary font; use for some symbols */
-  font: 1.1em "WS Extra";
-  @include lang-normal();
-}
-
-.lang,      /* All languages other than Hebrew and Greek */
-.translit { /* All transliterations */
-  @include lang-def();
-}
-
-:lang(grc),
 .lang-grc {  /* Ancient Greek */
   font-family: $lang-font;
-  @include lang-normal();
 }
 
-.lang-hbo,
-:lang(hbo) { /* Ancient Hebrew */
-  font-family: "Ezra SIL";
-  @include lang-normal();
+.lang-hbo { /* Ancient Hebrew */
+  font-family: "ezra sil";
 }

@@ -1,0 +1,41 @@
+
+// Converted Variables
+
+
+// Custom Media Query Variables
+
+
+/*
+
+   LINE HEIGHT / LEADING
+   Docs: http://tachyons.io/docs/typography/line-height
+
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+
+*/
+
+  .lh-solid { line-height: $lh-solid; }
+  .lh-title { line-height: $lh-title; }
+  .lh-copy  { line-height: $lh-copy; }
+
+@media #{$breakpoint-not-small} {
+  .lh-solid-ns { line-height: $lh-solid; }
+  .lh-title-ns { line-height: $lh-title; }
+  .lh-copy-ns  { line-height: $lh-copy; }
+}
+
+@media #{$breakpoint-medium} {
+  .lh-solid-m { line-height: $lh-solid; }
+  .lh-title-m { line-height: $lh-title; }
+  .lh-copy-m  { line-height: $lh-copy; }
+}
+
+@media #{$breakpoint-large} {
+  .lh-solid-l { line-height: $lh-solid; }
+  .lh-title-l { line-height: $lh-title; }
+  .lh-copy-l  { line-height: $lh-copy; }
+}
+

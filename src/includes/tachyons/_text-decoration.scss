@@ -1,0 +1,46 @@
+
+// Converted Variables
+
+
+// Custom Media Query Variables
+
+
+/*
+
+   TEXT DECORATION
+   Docs: http://tachyons.io/docs/typography/text-decoration/
+
+
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+
+*/
+
+.strike       { text-decoration: line-through; }
+.overline     { text-decoration: overline; }
+.underline    { text-decoration: underline; }
+.no-underline { text-decoration: none; }
+
+
+@media #{$breakpoint-not-small} {
+  .strike-ns       { text-decoration: line-through; }
+  .overline-ns     { text-decoration: overline; }
+  .underline-ns    { text-decoration: underline; }
+  .no-underline-ns { text-decoration: none; }
+}
+
+@media #{$breakpoint-medium} {
+  .strike-m       { text-decoration: line-through; }
+  .overline-m     { text-decoration: overline; }
+  .underline-m    { text-decoration: underline; }
+  .no-underline-m { text-decoration: none; }
+}
+
+@media #{$breakpoint-large} {
+  .strike-l       { text-decoration: line-through; }
+  .overline-l     { text-decoration: overline; }
+  .underline-l    { text-decoration: underline; }
+  .no-underline-l { text-decoration: none; }
+}

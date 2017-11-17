@@ -1,17 +1,14 @@
 /*!*
- * FILE:     paragraph.css
- * VERSION:  2017-07-09
- * AUTHOR:   Weston Littrell
+ * VERSION: 2017-11-17 | CROSS | Paragraph Mode
+ * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
+ * used in accordance with an MIT License (OSI).
  */
 /**
- * A refactor of legacy WORDsearch CSS, based on mywsb.css,
- * written (mostly) to this standard: http://cssguidelin.es/.
+ * A paragraph mode stylesheet for CROSS Bibles with
+ * functional CSS from Tachyons.
  *
- * paragraph.css acts as the paragraph mode stylesheet for CROSS Bibles
- * converted from EPUB by the B&H Direct eBook Development team.
- *
- * This version is a developer document and should be compiled and
- * minified for production environments.
+ * This scss version is a developer document and should
+ * be compiled and minified for production environments.
  */
 
 
@@ -22,9 +19,11 @@
   #CONTENTS
 \*------------------------------------*/
 /**
- * GLOBAL...............Globally-available variables.
+ * FONTS................Add font-families and variables.
+ * GLOBAL...............Other globally-available variables.
+ * NORMALIZATION........Box sizing and modified Normalize CSS
+ *                      (http: //normalize.css.github.io)
  *
- * MAIN.................Set up our document defaults.
  * TITLE-PAGE...........Title page styles.
  * HEADINGS.............h1–h6 and other headings styles.
  * INLINE-ELEMENTS......HTML inline element styles.
@@ -41,8 +40,7 @@
  * TEXT-TYPES...........Classes for specific types of content.
  * LANGUAGES............Styling for language elements and classes.
  *
- * WIDTHS...............Simple grid-like width classes.
- * OVERRIDES............Media queries and other overrides.
+ * TACHYONS.............TACHYONS (modified) | http: //tachyons.io
  */
 
 
@@ -53,22 +51,36 @@
  #GLOBAL
 \*------------------------------------*/
 
-$def-line: 1.5em; // Default line height
-$def-font: 1em;   // Default font size
-$def-ind:  25px;   // Default text indent
 $serif-font: "Georgia", "Times New Roman", serif;
 $sans-font:  "Verdana", "Arial", "Helvetica", sans-serif;
 $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
+
+@import "includes/tachyons/font-family";
 
 
 
 
 
 /*------------------------------------*\
-  #MAIN
+  #GLOBAL VARIABLES
 \*------------------------------------*/
 
-@import "includes/shared/main";
+@import "includes/tachyons/colors";
+@import "includes/tachyons/media-queries";
+@import "includes/ws/global";
+@import "includes/ws/defaults-bible";
+
+
+
+
+
+/*------------------------------------*\
+  #NORMALIZATION
+\*------------------------------------*/
+
+@import "includes/shared/normalize";
+@import "includes/tachyons/images";
+@import "includes/tachyons/box-sizing";
 
 
 
@@ -87,20 +99,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 /*------------------------------------*\
   #HEADINGS
 \*------------------------------------*/
-
-$h1-margin: 1em 0;
-$h2-margin: 1em 0 0.5em 0;
-$lower-level-margin: $h2-margin;
-$subheading-margin: -0.3em 0 0.5em 0;
-$bridgehead-margin:  0 0 0.75em 0;
-$subheading-color: #4c4e4f;
-
-$level-1-font: normal bold 1.3em $sans-font;
-$level-2-font: normal bold 1.15em $sans-font;
-$level-3-font: normal bold 1.1em $sans-font;
-$level-4-font: italic bold 1em $sans-font;
-$level-5-font: normal bold 0.95em $sans-font;
-$level-6-font: italic bold 0.9em $sans-font;
 
 @import "includes/shared/headings";
 
@@ -146,10 +144,8 @@ $level-6-font: italic bold 0.9em $sans-font;
 
 @import "includes/shared/asides";
 
-aside {
-  .bridgehead {
-    @include aside-bridge();
-  }
+.aside {
+  @include asides();
 }
 
 
@@ -162,44 +158,8 @@ aside {
 
 @import "includes/shared/figures";
 
-.figure {
-  @include figure-decs();
-}
-
 .figcaption {
   @include figcap-decs();
-}
-
-.full-width {
-  @include figure-full();
-  margin: $fallback-margin;
-
-  img {
-    margin: 0 5%;
-    width: 100%;
-  }
-}
-
-/*
- * Classes for use with figure
- */
-
-.float-right {
-  float: right;
-  @include figure-float();
-
-  img {
-    width: 100%;
-  }
-}
-
-.float-left {
-  float: left;
-  @include figure-float();
-
-  img {
-    width: 100%;
-  }
 }
 
 
@@ -211,8 +171,8 @@ aside {
 \*------------------------------------*/
 
 @mixin list-layout() {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: $spacing-medium;
+  margin-bottom: $spacing-medium;
 }
 
 ol,
@@ -228,14 +188,14 @@ ul {
   #TABLES
 \*------------------------------------*/
 
-$offset-color: #d3d3d3;
-
+$offset-color: $moon-gray;
 
 /*
  * Table container
  */
 
 .container {
+  width: 100%;
   overflow: auto;
 }
 
@@ -245,24 +205,16 @@ $offset-color: #d3d3d3;
 
 @import "includes/shared/tables";
 
-table {
-  @include def-table();
-  page-break-inside: avoid !important;
-  width: 100%;
+/*
+ * for use with any <tr>, <th>, or <td> element
+ */
+
+.middle {
+  vertical-align: middle;
 }
 
-tr {
-  page-break-inside: avoid !important;
-}
-
-th {
-  @include def-cell();
-  text-align: center;
-}
-
-td {
-  @include def-cell();
-  vertical-align: top;
+.offset {
+  background-color: $offset-color;
 }
 
 .center table {
@@ -312,6 +264,7 @@ td {
 \*------------------------------------*/
 
 @import "includes/ws/blocks";
+@import "includes/shared/poetry";
 
 
 
@@ -332,8 +285,8 @@ td {
   #TEXT-TYPES
 \*------------------------------------*/
 
-$fn-size: 0.6em;
-$fn-color: #000;
+$fn-size: $type-scale-8;
+$fn-color: $black;
 
 @import "includes/shared/text-types";
 @import "includes/shared/bibles";
@@ -344,7 +297,7 @@ $fn-color: #000;
 }
 
 span.JesusWords {
-	color: red;
+	color: $red;
 }
 
 
@@ -362,17 +315,54 @@ span.JesusWords {
 
 
 /*------------------------------------*\
-  #WIDTHS
+  #TACHYONS (modified)
 \*------------------------------------*/
 
-@import "includes/shared/widths";
-
-
-
-
-
-/*------------------------------------*\
-  #OVERRIDES
-\*------------------------------------*/
-
-@import "includes/shared/overrides";
+//@import "includes/tachyons/background-size";
+//@import "includes/tachyons/background-position";
+//@import "includes/tachyons/outlines";
+@import "includes/tachyons/borders";
+@import "includes/tachyons/border-colors";
+//@import "includes/tachyons/border-radius";
+@import "includes/tachyons/border-style";
+@import "includes/tachyons/border-widths";
+@import "includes/tachyons/box-shadow";
+//@import "includes/tachyons/code";
+//@import "includes/tachyons/coordinates";
+@import "includes/tachyons/clears";
+@import "includes/tachyons/display";
+//@import "includes/tachyons/flexbox";
+@import "includes/tachyons/floats";
+@import "includes/tachyons/font-family";
+@import "includes/tachyons/font-style";
+@import "includes/tachyons/font-weight";
+//@import "includes/tachyons/forms";
+@import "includes/tachyons/heights";
+@import "includes/tachyons/letter-spacing";
+@import "includes/tachyons/line-height";
+//@import "includes/tachyons/links";
+//@import "includes/tachyons/lists";
+@import "includes/tachyons/max-widths";
+@import "includes/tachyons/widths";
+@import "includes/tachyons/overflow";
+@import "includes/tachyons/position";
+@import "includes/tachyons/opacity";
+//@import "includes/tachyons/rotations";
+@import "includes/tachyons/skins";
+@import "includes/tachyons/skins-pseudo";
+@import "includes/tachyons/spacing";
+@import "includes/tachyons/negative-margins";
+@import "includes/tachyons/tables";
+@import "includes/tachyons/text-decoration";
+@import "includes/tachyons/text-align";
+@import "includes/tachyons/text-transform";
+@import "includes/tachyons/type-scale";
+@import "includes/tachyons/typography";
+@import "includes/tachyons/utilities";
+//@import "includes/tachyons/visibility";
+@import "includes/tachyons/white-space";
+@import "includes/tachyons/vertical-align";
+//@import "includes/tachyons/hovers";
+//@import "includes/tachyons/z-index";
+//@import "includes/tachyons/nested";
+@import "includes/tachyons/styles";

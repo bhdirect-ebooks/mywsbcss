@@ -5,7 +5,7 @@
 .bold {
   font-weight: bold;
   .bold {
-    font-weight: bold;
+    font-weight: normal;
   }
 }
 
@@ -16,17 +16,12 @@
   }
 }
 
-.bold-italic {
-  @extend .bold;
-  @extend .italic;
-}
-
 .large {
-  font-size: 3em;
+  font-size: $type-scale-1;
 }
 
 .small {
-  font-size: 0.8em;
+  font-size: $type-scale-7;
 }
 
 .smcaps {
@@ -35,8 +30,4 @@
 
 .strikeout {
   text-decoration: line-through;
-}
-
-.underline {
-  text-decoration: underline;
 }

@@ -1,14 +1,14 @@
 @mixin def-table() {
   border-collapse: collapse;
-  font-size: 100%;
-  margin: 1.5em auto;
+  font-size: $type-scale-5;
+  margin: $spacing-large auto;
   text-align: left;
 }
 
 @mixin def-cell() {
   line-height: $def-line;
   font-size: $def-font;
-  padding: 0.5em;
+  padding: $spacing-small;
 }
 
 /*
@@ -27,14 +27,17 @@
   }
 }
 
-/*
- * for use with any <tr>, <th>, or <td> element
- */
-
-.middle {
-  vertical-align: middle;
+table {
+  @include def-table();
+  width: 100%;
 }
 
-.offset {
-  background-color: $offset-color;
+th {
+  @include def-cell();
+  text-align: center;
+}
+
+td {
+  @include def-cell();
+  vertical-align: top;
 }

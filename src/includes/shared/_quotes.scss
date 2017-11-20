@@ -32,8 +32,7 @@ blockquote {
 
 @mixin pullquotes($marg, $wid) {
   border: none !important;
-  font-size: $type-scale-6;
-  letter-spacing: $type-scale-8;
+  letter-spacing: 0.15rem;
   margin: $marg;
   max-width: $wid;
   padding: 0;
@@ -41,6 +40,7 @@ blockquote {
   text-transform: uppercase;
 
   p {
+    font-size: $type-scale-7;
     text-indent: 0;
     text-align: left;
   }

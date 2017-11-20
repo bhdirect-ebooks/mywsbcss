@@ -5,10 +5,10 @@
 dt {
   clear: both;
   padding: 0 0 $spacing-medium 0;
-  text-align: center;
+  text-align: left;
 
   dfn {
-    font: normal bold $def-font/$def-line $sans-font;
+    font: normal bold 0.95em/$def-line $sans-font;
   }
 }
 
@@ -31,7 +31,7 @@ dd {
     text-align: left;
     width: 20%;
     dfn {
-      font: normal normal $def-font/$def-line $sans-font;
+      font: normal normal 0.95em/$def-line $sans-font;
     }
   }
 

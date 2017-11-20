@@ -48,3 +48,11 @@ $letter-spacing-tracked: 0.1em !default;
 $letter-spacing-half:    0.05em !default;
 $letter-spacing-tight:  -0.05em !default;
 $letter-spacing-mega:    0.2em !default;
+
+
+// Defaults
+
+$def-line: $lh-copy; // Default line height
+$def-font: $type-scale-5; // Default font size
+$def-ind:  1.5rem;  // Default text indent
+$def-neg-ind: -$def-ind; // Default negative indent

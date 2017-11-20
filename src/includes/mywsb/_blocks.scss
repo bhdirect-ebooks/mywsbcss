@@ -8,7 +8,7 @@ article {
   dfn {
     color: $dark-blue;
     display: inline-block;
-    font: $type-scale-3;
+    font: normal bold $type-scale-3 $sans-font;
     padding: 0 0 $spacing-medium 0;
     @include heading-left();
   }

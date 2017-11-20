@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
-* VERSION: 2017-11-17 | EPUB | Development
+* VERSION: 2017-11-20 | EPUB | Development
 * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
 * used in accordance with an MIT License (OSI).
 */
@@ -26,7 +26,7 @@ FONT FAMILY GROUPS Docs: http://tachyons.io/docs/typography/font-family/
 */
 html { line-height: 1.15;  -ms-text-size-adjust: 100%;  -webkit-text-size-adjust: 100%;  }
 body { font: normal normal 100% georgia, times, serif; margin: 0 2rem; }
-p { line-height: 1.5; font-size: 1rem; margin: 0; text-align: left; text-indent: 2rem; }
+p { line-height: 1.5; font-size: 1rem; margin: 0; text-align: left; text-indent: 1.5rem; }
 li { line-height: 1.5; font-size: 1rem; margin: 0; text-align: left; text-indent: 0; }
 @media screen and (min-width: 30em) { p, li { text-align: justify; } }
 article, aside, footer, header, nav, section { display: block; }
@@ -40,7 +40,6 @@ abbr[title] { border-bottom: none; color: #754500; cursor: help; text-decoration
 b, strong { font-weight: inherit; }
 b, strong { font-weight: bolder; }
 code, kbd, samp { font-family: monospace, monospace;  font-size: 1em;  }
-dfn { font-style: italic; }
 mark { background-color: #ff0; color: #000; }
 small { font-size: 80%; }
 sub { font-size: 0.6rem; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; }
@@ -77,7 +76,7 @@ img { max-width: 100%; }
 html, body, div, article, section, main, footer, header, form, fieldset, legend, pre, code, a, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, textarea, table, td, th, tr, input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="text"], input[type="url"], .border-box { box-sizing: border-box; }
 section[epub|type~=copyright-page], section[epub\:type~=copyright-page] { margin: 1rem 4rem; }
 section[epub|type~=cover] img, section[epub\:type~=cover] img, section[epub|type~=titlepage] img, section[epub\:type~=titlepage] img { display: block; margin: 0 auto 2rem auto; max-width: 555px; }
-section[epub|type~=index-group] ul, section[epub\:type~=index-group] ul { list-style-type: none; padding: 0 4rem; text-indent: -2rem; }
+section[epub|type~=index-group] ul, section[epub\:type~=index-group] ul { list-style-type: none; padding: 0 4rem; text-indent: -1.5rem; }
 nav ol { list-style-type: none; margin-bottom: 0.5rem; }
 nav ol > li:first-child { margin-top: 0.5rem; }
 nav[epub|type~="page-list"], nav[epub\:type~="page-list"] { display: none; }
@@ -146,13 +145,13 @@ ol:not(.none) li { padding-left: 0.25rem; }
 .lower-roman.right-paren > li:before { content: counter(list,lower-roman) ")"; }
 .upper-alpha.right-paren > li:before { content: counter(list,upper-alpha) ")"; }
 .upper-roman.right-paren > li:before { content: counter(list,upper-roman) ")"; }
-dt { clear: both; padding: 0 0 1rem 0; text-align: center; }
-dt dfn { font: normal bold 0.6666666667rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
+dt { clear: both; padding: 0 0 1rem 0; text-align: left; }
+dt dfn { font: normal bold 0.6333333333em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
 dd { margin: 0; padding: 0 0 2rem 0; }
 dd p { text-indent: 0; }
-.abbr-list { padding: 0 0 0 2rem; }
+.abbr-list { padding: 0 0 0 1.5rem; }
 .abbr-list dt { clear: left; float: left; padding: 0; text-align: left; width: 20%; }
-.abbr-list dt dfn { font: normal normal 0.6666666667rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
+.abbr-list dt dfn { font: normal normal 0.6333333333em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
 .abbr-list dd { float: left; padding: 0 0.25rem; width: 75%; }
 .abbr-list:after { clear: both; content: ""; display: table; }
 .table { max-width: 100%; width: 100%; overflow: auto; }
@@ -168,13 +167,13 @@ blockquote { border-left: 1px dotted #000; margin-bottom: 0.5rem; margin-top: 0.
 blockquote p { margin: 0.5rem 0; text-indent: 0; }
 .scriptext { border: none !important; font-size: 1rem; font-style: italic; margin: 1rem 2rem; padding: 0; }
 .scriptext .italic, .scriptext .i { font-style: normal; }
-.pull-center, .pull-left, .pull-right { border: none !important; font-size: 0.875rem; letter-spacing: 0.6rem; margin: 2rem 4rem; max-width: 70%; padding: 0; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
-.pull-center p, .pull-left p, .pull-right p { text-indent: 0; text-align: left; }
+.pull-center, .pull-left, .pull-right { border: none !important; letter-spacing: 0.15rem; margin: 2rem 4rem; max-width: 70%; padding: 0; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
+.pull-center p, .pull-left p, .pull-right p { font-size: 0.75rem; text-indent: 0; text-align: left; }
 .pull-center .sig, .pull-left .sig, .pull-right .sig { margin-left: 0; text-align: right; }
 @media screen and (min-width: 30em) { .pull-left { float: left; margin: 2rem; max-width: 30%; width: 30%; }
 .pull-right { float: right; margin: 2rem; max-width: 30%; width: 30%; } }
 article { margin: 2rem 0; }
-article dfn { color: #00449e; display: inline-block; font: 1.5rem; padding: 0 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
+article dfn { color: #00449e; display: inline-block; font: normal bold 1.5rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; padding: 0 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
 footer { border-top: 1px solid #ccc; margin: 2rem 0 0 0; padding: 1rem 0 0 0; }
 .poetry { margin: 1rem 0 1rem 1.5rem; }
 .poetry .poetry { margin: 0; padding-left: 1.5rem; }
@@ -194,7 +193,7 @@ div[epub|type~=footnote] p, div[epub\:type~=footnote] p { margin-left: 2rem; tex
 .br-before { padding: 1rem 0 0 0; }
 .center { text-align: center !important; text-indent: 0; }
 .left { text-align: left !important; }
-.hang { margin-left: 1.5rem; text-indent: -2rem; }
+.hang { margin-left: 1.5rem; text-indent: -1.5rem; }
 .noind { text-indent: 0; }
 .right { text-align: right !important; text-indent: 0; }
 .bold { font-weight: bold; }
@@ -1938,9 +1937,9 @@ Media Query Extensions: -ns = not-small -m  = medium -l  = large
 .measure-wide { max-width: 34em; }
 .measure-narrow { max-width: 20em; }
 .indent { text-indent: 1.5rem; }
-.indent-neg { text-indent: -2rem; }
+.indent-neg { text-indent: -1.5rem; }
 .indent-0 { text-indent: 0; }
-.indent-hanging { margin-left: 1.5rem; text-indent: -2rem; }
+.indent-hanging { margin-left: 1.5rem; text-indent: -1.5rem; }
 .small-caps { font-variant: small-caps; }
 .truncate { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 @media screen and (min-width: 30em) { .measure-ns { max-width: 30em; }

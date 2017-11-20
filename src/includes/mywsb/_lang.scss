@@ -9,7 +9,8 @@
 }
 
 span[lang=grc] { /* Ancient Greek */
-  font: italic normal $def-font/$def-line $lang-font;
+  font: italic normal $def-font $lang-font;
+  line-height: $def-line;
   .italic {
     font-style: normal;
   }

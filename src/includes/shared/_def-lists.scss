@@ -8,7 +8,8 @@ dt {
   text-align: left;
 
   dfn {
-    font: normal bold 0.95em/$def-line $sans-font;
+    font: normal bold 0.95em $sans-font;
+    line-height: $def-line;
   }
 }
 
@@ -31,7 +32,8 @@ dd {
     text-align: left;
     width: 20%;
     dfn {
-      font: normal normal 0.95em/$def-line $sans-font;
+      font: normal normal 0.95em $sans-font;
+      line-height: $def-line;
     }
   }
 

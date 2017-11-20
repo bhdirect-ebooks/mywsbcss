@@ -31,7 +31,6 @@ abbr[title] { border-bottom: none; color: #754500; cursor: help; text-decoration
 b, strong { font-weight: inherit; }
 b, strong { font-weight: bolder; }
 code, kbd, samp { font-family: monospace, monospace;  font-size: 1em;  }
-dfn { font-style: italic; }
 mark { background-color: #ff0; color: #000; }
 small { font-size: 80%; }
 sub { font-size: 0.6em; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; }

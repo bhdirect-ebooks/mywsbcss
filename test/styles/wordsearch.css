@@ -31,7 +31,6 @@ abbr[title] { border-bottom: none; color: #754500; cursor: help; text-decoration
 b, strong { font-weight: inherit; }
 b, strong { font-weight: bolder; }
 code, kbd, samp { font-family: monospace, monospace;  font-size: 1em;  }
-dfn { font-style: italic; }
 mark { background-color: #ff0; color: #000; }
 small { font-size: 80%; }
 sub { font-size: 0.6em; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; }
@@ -144,13 +143,13 @@ ol:not(.none) li { padding-left: 0.25em; }
 .lower-roman.right-paren > li:before { content: counter(list,lower-roman) ")"; }
 .upper-alpha.right-paren > li:before { content: counter(list,upper-alpha) ")"; }
 .upper-roman.right-paren > li:before { content: counter(list,upper-roman) ")"; }
-dt { clear: both; padding: 0 0 1em 0; text-align: center; }
-dt dfn { font: normal bold 0.6666666667em "Verdana", "Arial", "Helvetica", sans-serif; }
+dt { clear: both; padding: 0 0 1em 0; text-align: left; }
+dt dfn { font: normal bold 0.6333333333em "Verdana", "Arial", "Helvetica", sans-serif; }
 dd { margin: 0; padding: 0 0 2em 0; }
 dd p { text-indent: 0; }
 .abbr-list { padding: 0 0 0 2em; }
 .abbr-list dt { clear: left; float: left; padding: 0; text-align: left; width: 20%; }
-.abbr-list dt dfn { font: normal normal 0.6666666667em "Verdana", "Arial", "Helvetica", sans-serif; }
+.abbr-list dt dfn { font: normal normal 0.6333333333em "Verdana", "Arial", "Helvetica", sans-serif; }
 .abbr-list dd { float: left; padding: 0 0.25em; width: 75%; }
 .abbr-list:after { clear: both; content: ""; display: table; }
 .container { width: 100%; overflow: auto; }
@@ -167,8 +166,8 @@ blockquote { border-left: 1px dotted #000; margin-bottom: 0.5em; margin-top: 0.5
 blockquote p { margin: 0.5em 0; text-indent: 0; }
 .scriptext { border: none !important; font-size: 1em; font-style: italic; margin: 1em 2em; padding: 0; }
 .scriptext .italic, .scriptext .i { font-style: normal; }
-.pull-center, .pull-left, .pull-right { border: none !important; font-size: 0.875em; letter-spacing: 0.6em; margin: 2em 4em; max-width: 70%; padding: 0; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
-.pull-center p, .pull-left p, .pull-right p { text-indent: 0; text-align: left; }
+.pull-center, .pull-left, .pull-right { border: none !important; letter-spacing: 0.15rem; margin: 2em 4em; max-width: 70%; padding: 0; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
+.pull-center p, .pull-left p, .pull-right p { font-size: 0.75em; text-indent: 0; text-align: left; }
 .pull-center .sig, .pull-left .sig, .pull-right .sig { margin-left: 0; text-align: right; }
 @media screen and (min-width: 30em) { .pull-left { float: left; margin: 2em; max-width: 30%; width: 30%; }
 .pull-right { float: right; margin: 2em; max-width: 30%; width: 30%; } }

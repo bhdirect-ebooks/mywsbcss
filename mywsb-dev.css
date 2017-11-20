@@ -146,12 +146,12 @@ ol:not(.none) li { padding-left: 0.25rem; }
 .upper-alpha.right-paren > li:before { content: counter(list,upper-alpha) ")"; }
 .upper-roman.right-paren > li:before { content: counter(list,upper-roman) ")"; }
 dt { clear: both; padding: 0 0 1rem 0; text-align: left; }
-dt dfn { font: normal bold 0.6333333333em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
+dt dfn { font: normal bold 0.95em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; line-height: 1.5; }
 dd { margin: 0; padding: 0 0 2rem 0; }
 dd p { text-indent: 0; }
 .abbr-list { padding: 0 0 0 1.5rem; }
 .abbr-list dt { clear: left; float: left; padding: 0; text-align: left; width: 20%; }
-.abbr-list dt dfn { font: normal normal 0.6333333333em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; }
+.abbr-list dt dfn { font: normal normal 0.95em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; line-height: 1.5; }
 .abbr-list dd { float: left; padding: 0 0.25rem; width: 75%; }
 .abbr-list:after { clear: both; content: ""; display: table; }
 .table { max-width: 100%; width: 100%; overflow: auto; }

@@ -144,12 +144,12 @@ ol:not(.none) li { padding-left: 0.25em; }
 .upper-alpha.right-paren > li:before { content: counter(list,upper-alpha) ")"; }
 .upper-roman.right-paren > li:before { content: counter(list,upper-roman) ")"; }
 dt { clear: both; padding: 0 0 1em 0; text-align: left; }
-dt dfn { font: normal bold 0.6333333333em "Verdana", "Arial", "Helvetica", sans-serif; }
+dt dfn { font: normal bold 0.95em "Verdana", "Arial", "Helvetica", sans-serif; line-height: 1.5; }
 dd { margin: 0; padding: 0 0 2em 0; }
 dd p { text-indent: 0; }
 .abbr-list { padding: 0 0 0 2em; }
 .abbr-list dt { clear: left; float: left; padding: 0; text-align: left; width: 20%; }
-.abbr-list dt dfn { font: normal normal 0.6333333333em "Verdana", "Arial", "Helvetica", sans-serif; }
+.abbr-list dt dfn { font: normal normal 0.95em "Verdana", "Arial", "Helvetica", sans-serif; line-height: 1.5; }
 .abbr-list dd { float: left; padding: 0 0.25em; width: 75%; }
 .abbr-list:after { clear: both; content: ""; display: table; }
 .container { width: 100%; overflow: auto; }

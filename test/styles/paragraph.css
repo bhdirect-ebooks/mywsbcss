@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
-* VERSION: 2017-11-20 | CROSS | Paragraph Mode
+* VERSION: 2017-11-27 | CROSS | Paragraph Mode
 * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
 * used in accordance with an MIT License (OSI).
 */
@@ -12,6 +12,7 @@ FONT FAMILY GROUPS Docs: http://tachyons.io/docs/typography/font-family/
 .wsextra { font-family: "wsextra"; }
 .gentiumplus { font-family: "gentium plus"; }
 .ezra { font-family: "ezra sil"; }
+img { border-style: none; max-width: 100%; }
 /*! Heavily-modified version of normalize.css v7.0.0
 * | MIT License | github.com/necolas/normalize.css
 */
@@ -37,7 +38,6 @@ sub { font-size: 0.6em; line-height: 0; position: relative; top: 0.3em; vertical
 sup { font-size: 0.6em; line-height: 0; position: relative; top: -0.3em; vertical-align: baseline; }
 audio, video { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
-img { border-style: none; width: 100%; }
 svg:not(:root) { overflow: hidden; }
 ol, ul { -webkit-padding-start: 0; }
 button, input, optgroup, select, textarea { font-family: sans-serif;  font-size: 100%;  line-height: 1.15;  margin: 0;  }
@@ -60,10 +60,6 @@ summary { display: list-item; }
 canvas { display: inline-block; }
 template { display: none; }
 [hidden] { display: none; }
-/*
-IMAGES Docs: http://tachyons.io/docs/elements/images/
-*/
-img { max-width: 100%; }
 html, body, div, article, section, main, footer, header, form, fieldset, legend, pre, code, a, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, textarea, table, td, th, tr, input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="text"], input[type="url"], .border-box { box-sizing: border-box; }
 img { border-style: none; }
 .volumetitlehidden { display: none; visibility: hidden; }

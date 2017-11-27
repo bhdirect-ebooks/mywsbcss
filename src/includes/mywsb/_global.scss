@@ -56,3 +56,9 @@ $def-line: $lh-copy; // Default line height
 $def-font: $type-scale-5; // Default font size
 $def-ind:  1.5rem;  // Default text indent
 $def-neg-ind: -$def-ind; // Default negative indent
+
+img {
+  border-style: none;
+  max-width: 100%;
+  width: 100%;
+}

@@ -157,6 +157,19 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 
 @import "includes/shared/figures";
 
+.full-width {
+  max-width: $full-width-ns;
+  width: $full-width-ns;
+}
+
+.float-right {
+  @include figure-float(right);
+}
+
+.float-left {
+  @include figure-float(left);
+}
+
 .figcaption {
   @include figcap-decs();
 }

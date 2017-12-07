@@ -1,5 +1,5 @@
 /*!*
- * VERSION: 2017-11-27 | CROSS | General
+ * VERSION: 2017-12-07 | CROSS | General
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -129,7 +129,10 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
   font-size : $type-scale-2;
   font-weight: bold;
   letter-spacing: $letter-spacing-mega;
-  margin: -$spacing-medium $def-neg-ind $spacing-medium $def-neg-ind;
+  margin-top: -$spacing-medium;
+  margin-right: $def-neg-ind;
+  margin-bottom: $spacing-medium;
+  margin-left: $def-neg-ind;
   padding: $spacing-large 0 $spacing-medium 0;
   text-align: center;
   text-indent: 0;

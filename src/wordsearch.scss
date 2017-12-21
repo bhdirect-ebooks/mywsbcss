@@ -101,6 +101,7 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 \*------------------------------------*/
 
 @import "includes/shared/headings";
+@import "includes/ws/parts";
 
 
 /**
@@ -109,33 +110,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 
 .bridgehead {
   @include bridgehead(); //from shared/headings
-}
-
-
-/**
- * Part title, for use with <p>
- */
-
-.part,
-.part-1,
-.part-2,
-.part-3,
-.part-4,
-.part-5,
-.part-6 {
-  background: #333;
-  color: #fff;
-  display: block;
-  font-size : $type-scale-2;
-  font-weight: bold;
-  letter-spacing: $letter-spacing-mega;
-  margin-top: -$spacing-medium;
-  margin-right: $def-neg-ind;
-  margin-bottom: $spacing-medium;
-  margin-left: $def-neg-ind;
-  padding: $spacing-large 0 $spacing-medium 0;
-  text-align: center;
-  text-indent: 0;
 }
 
 

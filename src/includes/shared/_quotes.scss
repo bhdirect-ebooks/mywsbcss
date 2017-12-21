@@ -52,7 +52,7 @@ blockquote {
 }
 
 @mixin pullquote-center() {
-  @include pullquotes($spacing-large $spacing-extra-large, 70%);
+  @include pullquotes($spacing-large auto, 70%);
   display: block;
   float: none;
   text-align: center;

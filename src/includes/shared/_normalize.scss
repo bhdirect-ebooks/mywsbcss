@@ -201,7 +201,7 @@ small {
  */
 
 @mixin sub-sup($top) {
-  font-size: $type-scale-8;
+  font-size: $type-scale-7;
   line-height: 0;
   position: relative;
   top: $top;

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
-* VERSION: 2017-11-27 | CROSS | Paragraph Mode
+* VERSION: 2017-12-21 | CROSS | Paragraph Mode
 * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
 * used in accordance with an MIT License (OSI).
 */
@@ -34,8 +34,8 @@ b, strong { font-weight: bolder; }
 code, kbd, samp { font-family: monospace, monospace;  font-size: 1em;  }
 mark { background-color: #ff0; color: #000; }
 small { font-size: 80%; }
-sub { font-size: 0.6em; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; }
-sup { font-size: 0.6em; line-height: 0; position: relative; top: -0.3em; vertical-align: baseline; }
+sub { font-size: 0.75em; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; }
+sup { font-size: 0.75em; line-height: 0; position: relative; top: -0.3em; vertical-align: baseline; }
 audio, video { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
 svg:not(:root) { overflow: hidden; }
@@ -84,6 +84,7 @@ h6, .h6 { font: italic bold 0.875em "Verdana", "Arial", "Helvetica", sans-serif;
 .h2sub { font: normal 500 1.11em "Verdana", "Arial", "Helvetica", sans-serif; color: #555; margin: -0.25em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .h3sub { font: italic 500 1.11em "Verdana", "Arial", "Helvetica", sans-serif; color: #555; margin: -0.25em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
 .bh { font: normal 500 1.11em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
+.part, .part-1, .part-2, .part-3, .part-4, .part-5, .part-6 { background: #333; color: #fff; display: block; font-size: 2em; font-weight: bold; letter-spacing: 0.2em; margin-top: -1em; margin-right: -25px; margin-bottom: 1em; margin-left: -25px; padding: 2em 0 1em 0; text-align: center; text-indent: 0; }
 .bridgehead { font: normal 500 1.11em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .dictterm { color: #357edd; font: bold 1em "Verdana", "Arial", "Helvetica", sans-serif; text-align: left; text-indent: 0; }
 .esstrongs { color: #19a974; font: 0.875em "Verdana", "Arial", "Helvetica", sans-serif; }
@@ -159,7 +160,7 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .ded2 .italic, .ded2 .i { font-style: normal; }
 .sig { margin-bottom: 1em; margin-left: 16em; text-align: left; text-indent: 0; }
 .verse { font-size: 0.875em; font-weight: bold; }
-.versenum { margin-right: 0.25em; font-weight: bold; }
+.versenum { font-size: 0.75em; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; margin-right: 0.25em; font-weight: bold; }
 .selah { padding-left: 16em; font-style: italic; }
 .bookname { font: normal 500 2em "Verdana", "Arial", "Helvetica", sans-serif; margin: 2em 0 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .scripture, .versemode { display: none !important; }
@@ -539,11 +540,6 @@ Modifiers 1 = 1st step in height scale 2 = 2nd step in height scale 3 = 3rd step
 -auto = string value of auto -inherit = string value of inherit
 Media Query Extensions: -ns = not-small -m  = medium -l  = large
 */
-.h1 { height: 1rem; }
-.h2 { height: 2rem; }
-.h3 { height: 4rem; }
-.h4 { height: 8rem; }
-.h5 { height: 16rem; }
 .h-25 { height: 25%; }
 .h-50 { height: 50%; }
 .h-75 { height: 75%; }

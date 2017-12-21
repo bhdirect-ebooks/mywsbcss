@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
-* VERSION: 2017-12-07 | EPUB | Development
+* VERSION: 2017-12-21 | EPUB | Development
 * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
 * used in accordance with an MIT License (OSI).
 */
@@ -43,8 +43,8 @@ b, strong { font-weight: bolder; }
 code, kbd, samp { font-family: monospace, monospace;  font-size: 1em;  }
 mark { background-color: #ff0; color: #000; }
 small { font-size: 80%; }
-sub { font-size: 0.6rem; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; }
-sup { font-size: 0.6rem; line-height: 0; position: relative; top: -0.3em; vertical-align: baseline; }
+sub { font-size: 0.75rem; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; }
+sup { font-size: 0.75rem; line-height: 0; position: relative; top: -0.3em; vertical-align: baseline; }
 audio, video { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
 svg:not(:root) { overflow: hidden; }
@@ -163,7 +163,7 @@ blockquote { border-left: 1px dotted #000; margin-bottom: 0.5rem; margin-top: 0.
 blockquote p { margin: 0.5rem 0; text-indent: 0; }
 .scriptext { border: none !important; font-size: 1rem; font-style: italic; margin: 1rem 2rem; padding: 0; }
 .scriptext .italic, .scriptext .i { font-style: normal; }
-.pull-center, .pull-left, .pull-right { border: none !important; letter-spacing: 0.15rem; margin: 2rem 4rem; max-width: 70%; padding: 0; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
+.pull-center, .pull-left, .pull-right { border: none !important; letter-spacing: 0.15rem; margin: 2rem auto; max-width: 70%; padding: 0; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
 .pull-center p, .pull-left p, .pull-right p { font-size: 0.75rem; text-indent: 0; text-align: left; }
 .pull-center .sig, .pull-left .sig, .pull-right .sig { margin-left: 0; text-align: right; }
 @media screen and (min-width: 30em) { .pull-left { float: left; margin: 2rem; max-width: 30%; width: 30%; }
@@ -209,7 +209,7 @@ div[epub|type~=footnote] p, div[epub\:type~=footnote] p { margin-left: 2rem; tex
 .ded2 .italic, .ded2 .i { font-style: normal; }
 .sig { margin-bottom: 1rem; margin-left: 16rem; text-align: left; text-indent: 0; }
 .verse { font-size: 0.875rem; font-weight: bold; }
-.versenum { margin-right: 0.25rem; font-weight: bold; }
+.versenum { font-size: 0.75rem; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; margin-right: 0.25rem; font-weight: bold; }
 .selah { padding-left: 16rem; font-style: italic; }
 .bookname { font: normal 500 2.25rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .versenum::after { content: "\00a0"; }
@@ -588,11 +588,6 @@ Modifiers 1 = 1st step in height scale 2 = 2nd step in height scale 3 = 3rd step
 -auto = string value of auto -inherit = string value of inherit
 Media Query Extensions: -ns = not-small -m  = medium -l  = large
 */
-.h1 { height: 1rem; }
-.h2 { height: 2rem; }
-.h3 { height: 4rem; }
-.h4 { height: 8rem; }
-.h5 { height: 16rem; }
 .h-25 { height: 25%; }
 .h-50 { height: 50%; }
 .h-75 { height: 75%; }

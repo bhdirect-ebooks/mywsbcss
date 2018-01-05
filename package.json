@@ -1,7 +1,7 @@
 {
   "name": "@bhdirect/mywsbcss",
-  "version": "1.1.0",
-  "description": "Shared stylesheets for myWSB EPUBs and WORDsearch CROSS files, combining familiar styles with functional CSS from Tachyons.",
+  "version": "1.1.1",
+  "description": "Shared stylesheets for Wordsearch Bible (EPUB and CROSS), combining familiar styles with functional CSS from Tachyons.",
   "main": "mywsb.scss",
   "directories": {
     "test": "test"

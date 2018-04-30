@@ -20,8 +20,8 @@
   text-indent: $def-neg-ind;
 }
 
-.noind {
-  text-indent: 0;
+.noind, .nopad {
+  padding-top: 0;
 }
 
 .right {

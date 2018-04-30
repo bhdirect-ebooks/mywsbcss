@@ -190,7 +190,7 @@ div[epub|type~=footnote] p, div[epub\:type~=footnote] p { margin-left: 2rem; tex
 .center { text-align: center !important; text-indent: 0; }
 .left { text-align: left !important; }
 .hang { margin-left: 1.5rem; text-indent: -1.5rem; }
-.noind { text-indent: 0; }
+.noind, .nopad { padding-top: 0; }
 .right { text-align: right !important; text-indent: 0; }
 .ind1 { padding-left: 1.5rem; }
 .ind2 { padding-left: 3rem; }

@@ -197,7 +197,7 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .center { text-align: center !important; text-indent: 0; }
 .left { text-align: left !important; }
 .hang { margin-left: 1.5em; text-indent: -1.5em; }
-.noind { text-indent: 0; }
+.noind, .nopad { padding-top: 0; }
 .right { text-align: right !important; text-indent: 0; }
 .ind1 { padding-left: 1.5em; }
 .ind2 { padding-left: 3em; }

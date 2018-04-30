@@ -1,5 +1,5 @@
 /*!*
- * VERSION: 2017-11-20 | EPUB | Production
+ * VERSION: 2017-04-30 | EPUB | Production
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -80,6 +80,7 @@ $lang-font:  "gentium plus", serif;
 @import "includes/tachyons/colors";
 @import "includes/tachyons/media-queries";
 @import "includes/mywsb/global";
+@import "includes/mywsb/defaults";
 
 
 
@@ -91,7 +92,6 @@ $lang-font:  "gentium plus", serif;
 \*------------------------------------*/
 
 @import "includes/shared/normalize";
-@import "includes/tachyons/images";
 @import "includes/tachyons/box-sizing";
 
 

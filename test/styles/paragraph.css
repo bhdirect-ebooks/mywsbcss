@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
-* VERSION: 2017-11-20 | CROSS | Paragraph Mode
+* VERSION: 2017-04-30 | CROSS | Paragraph Mode
 * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
 * used in accordance with an MIT License (OSI).
 */
@@ -12,12 +12,13 @@ FONT FAMILY GROUPS Docs: http://tachyons.io/docs/typography/font-family/
 .wsextra { font-family: "wsextra"; }
 .gentiumplus { font-family: "gentium plus"; }
 .ezra { font-family: "ezra sil"; }
+img { border-style: none; max-width: 100%; }
 /*! Heavily-modified version of normalize.css v7.0.0
 * | MIT License | github.com/necolas/normalize.css
 */
 html { line-height: 1.15;  -ms-text-size-adjust: 100%;  -webkit-text-size-adjust: 100%;  }
 body { font: normal normal 100% "Georgia", "Times New Roman", serif; margin: 0 2em; }
-p { line-height: 1.5; font-size: 1em; margin: 0; text-align: left; text-indent: 25px; }
+p { line-height: 1.5; font-size: 1em; margin: 0; text-align: left; text-indent: 0; padding-top: 0.5em; }
 li { line-height: 1.5; font-size: 1em; margin: 0; text-align: left; text-indent: 0; }
 @media screen and (min-width: 30em) { p, li { text-align: justify; } }
 article, aside, footer, header, nav, section { display: block; }
@@ -33,11 +34,10 @@ b, strong { font-weight: bolder; }
 code, kbd, samp { font-family: monospace, monospace;  font-size: 1em;  }
 mark { background-color: #ff0; color: #000; }
 small { font-size: 80%; }
-sub { font-size: 0.6em; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; }
-sup { font-size: 0.6em; line-height: 0; position: relative; top: -0.3em; vertical-align: baseline; }
+sub { font-size: 0.75em; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; }
+sup { font-size: 0.75em; line-height: 0; position: relative; top: -0.3em; vertical-align: baseline; }
 audio, video { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
-img { border-style: none; width: 100%; }
 svg:not(:root) { overflow: hidden; }
 ol, ul { -webkit-padding-start: 0; }
 button, input, optgroup, select, textarea { font-family: sans-serif;  font-size: 100%;  line-height: 1.15;  margin: 0;  }
@@ -60,10 +60,6 @@ summary { display: list-item; }
 canvas { display: inline-block; }
 template { display: none; }
 [hidden] { display: none; }
-/*
-IMAGES Docs: http://tachyons.io/docs/elements/images/
-*/
-img { max-width: 100%; }
 html, body, div, article, section, main, footer, header, form, fieldset, legend, pre, code, a, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, textarea, table, td, th, tr, input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="text"], input[type="url"], .border-box { box-sizing: border-box; }
 img { border-style: none; }
 .volumetitlehidden { display: none; visibility: hidden; }
@@ -88,6 +84,7 @@ h6, .h6 { font: italic bold 0.875em "Verdana", "Arial", "Helvetica", sans-serif;
 .h2sub { font: normal 500 1.11em "Verdana", "Arial", "Helvetica", sans-serif; color: #555; margin: -0.25em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .h3sub { font: italic 500 1.11em "Verdana", "Arial", "Helvetica", sans-serif; color: #555; margin: -0.25em 0 0.5em 0; clear: both; display: block; text-indent: 0; text-align: left; }
 .bh { font: normal 500 1.11em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
+.part, .part-1, .part-2, .part-3, .part-4, .part-5, .part-6 { background: #333; color: #fff; display: block; font-size: 2em; font-weight: bold; letter-spacing: 0.2em; margin-top: -1em; margin-right: -25px; margin-bottom: 1em; margin-left: -25px; padding: 2em 0 1em 0; text-align: center; text-indent: 0; }
 .bridgehead { font: normal 500 1.11em "Verdana", "Arial", "Helvetica", sans-serif; margin: 0 0 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .dictterm { color: #357edd; font: bold 1em "Verdana", "Arial", "Helvetica", sans-serif; text-align: left; text-indent: 0; }
 .esstrongs { color: #19a974; font: 0.875em "Verdana", "Arial", "Helvetica", sans-serif; }
@@ -101,6 +98,9 @@ h6, .h6 { font: italic bold 0.875em "Verdana", "Arial", "Helvetica", sans-serif;
 @media screen and (min-width: 30em) { .full-width { max-width: 90%; width: 90%; }
 .float-right { float: right; margin: 0.5em 1em; max-width: 16em; width: 16em; }
 .float-left { float: left; margin: 0.5em 1em; max-width: 16em; width: 16em; } }
+.full-width { max-width: 90%; width: 90%; }
+.float-right { float: right; margin: 0.5em 1em; max-width: 16em; width: 16em; }
+.float-left { float: left; margin: 0.5em 1em; max-width: 16em; width: 16em; }
 .figcaption { font-size: 0.75em; font-style: italic; font-weight: normal; text-align: center; text-indent: 0; }
 .figcaption .italic, .figcaption .i { font-style: normal; }
 ol, ul { list-style-type: none; margin-top: 1em; margin-bottom: 1em; }
@@ -124,25 +124,32 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .footer { border-top: 1px solid #cfcfcf; margin: 1.5em 0 0 0; padding: 1em 0 0 0; }
 .gloss { color: #800000; }
 .glosstext { background-color: #ffff99; border: 1px #000 solid; color: #0000FF; font: 0.8em "Georgia", "Times New Roman", serif; padding: 0.125em; position: absolute; visibility: hidden; }
-.poetry { margin: 1rem 0 1rem 1.5rem; }
-.poetry .poetry { margin: 0; padding-left: 1.5rem; }
-.poetry p { margin-left: 1.5rem; text-indent: -1.5rem; }
-.poem1 { margin: 0 0 0 2rem; text-indent: -0.5rem; }
-.poem2 { margin: 0 0 0 3rem; text-indent: -0.5rem; }
-.poem3 { margin: 0 0 0 4rem; text-indent: -0.5rem; }
-.poem4 { margin: 0 0 0 5rem; text-indent: -0.5rem; }
-.poem5 { margin: 0 0 0 6rem; text-indent: -0.5rem; }
-.poem6 { margin: 0 0 0 7rem; text-indent: -0.5rem; }
-.poem7 { margin: 0 0 0 8rem; text-indent: -0.5rem; }
-.poem8 { margin: 0 0 0 9rem; text-indent: -0.5rem; }
-.poem9 { margin: 0 0 0 10rem; text-indent: -0.5rem; }
-.poem10 { margin: 0 0 0 11rem; text-indent: -0.5rem; }
-.br-before { padding: 1em 0 0 0; }
+.poetry { margin: 1em 0 1em 25px; }
+.poetry .poetry { margin: 0; padding-left: 25px; }
+.poetry p { margin-left: 25px; text-indent: -25px; }
+.poem1 { margin: 0 0 0 2em; text-indent: -0.5em; }
+.poem2 { margin: 0 0 0 3em; text-indent: -0.5em; }
+.poem3 { margin: 0 0 0 4em; text-indent: -0.5em; }
+.poem4 { margin: 0 0 0 5em; text-indent: -0.5em; }
+.poem5 { margin: 0 0 0 6em; text-indent: -0.5em; }
+.poem6 { margin: 0 0 0 7em; text-indent: -0.5em; }
+.poem7 { margin: 0 0 0 8em; text-indent: -0.5em; }
+.poem8 { margin: 0 0 0 9em; text-indent: -0.5em; }
+.poem9 { margin: 0 0 0 10em; text-indent: -0.5em; }
+.poem10 { margin: 0 0 0 11em; text-indent: -0.5em; }
+.br-before { padding-top: 2em; }
 .center { text-align: center !important; text-indent: 0; }
 .left { text-align: left !important; }
-.hang { margin-left: 1.5rem; text-indent: -25px; }
+.hang { margin-left: 25px; text-indent: -25px; }
 .noind { text-indent: 0; }
 .right { text-align: right !important; text-indent: 0; }
+.ind1 { padding-left: 25px; }
+.ind2 { padding-left: 50px; }
+.ind3 { padding-left: 75px; }
+.ind4 { padding-left: 100px; }
+.ind5 { padding-left: 125px; }
+.ind6 { padding-left: 150px; }
+.ind7 { padding-left: 175px; }
 .bold { font-weight: bold; }
 .bold .bold { font-weight: normal; }
 .italic { font-style: italic; }
@@ -160,7 +167,7 @@ hr, .video, .map, .photo, .illustration, .chart, .table, .audio, .esarticletitle
 .ded2 .italic, .ded2 .i { font-style: normal; }
 .sig { margin-bottom: 1em; margin-left: 16em; text-align: left; text-indent: 0; }
 .verse { font-size: 0.875em; font-weight: bold; }
-.versenum { margin-right: 0.25em; font-weight: bold; }
+.versenum { font-size: 0.75em; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; margin-right: 0.25em; font-weight: bold; }
 .selah { padding-left: 16em; font-style: italic; }
 .bookname { font: normal 500 2em "Verdana", "Arial", "Helvetica", sans-serif; margin: 2em 0 1em 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .scripture, .versemode { display: none !important; }
@@ -298,41 +305,41 @@ Modifiers: 0 = 0 width border 1 = 1st step in border-width scale 2 = 2nd step in
 Media Query Extensions: -ns = not-small -m  = medium -l  = large
 */
 .bw0 { border-width: 0; }
-.bw1 { border-width: .125rem; }
-.bw2 { border-width: .25rem; }
-.bw3 { border-width: .5rem; }
-.bw4 { border-width: 1rem; }
-.bw5 { border-width: 2rem; }
+.bw1 { border-width: 0.125em; }
+.bw2 { border-width: 0.25em; }
+.bw3 { border-width: 0.5em; }
+.bw4 { border-width: 1em; }
+.bw5 { border-width: 2em; }
 .bt-0 { border-top-width: 0; }
 .br-0 { border-right-width: 0; }
 .bb-0 { border-bottom-width: 0; }
 .bl-0 { border-left-width: 0; }
 @media screen and (min-width: 30em) { .bw0-ns { border-width: 0; }
-.bw1-ns { border-width: .125rem; }
-.bw2-ns { border-width: .25rem; }
-.bw3-ns { border-width: .5rem; }
-.bw4-ns { border-width: 1rem; }
-.bw5-ns { border-width: 2rem; }
+.bw1-ns { border-width: 0.125em; }
+.bw2-ns { border-width: 0.25em; }
+.bw3-ns { border-width: 0.5em; }
+.bw4-ns { border-width: 1em; }
+.bw5-ns { border-width: 2em; }
 .bt-0-ns { border-top-width: 0; }
 .br-0-ns { border-right-width: 0; }
 .bb-0-ns { border-bottom-width: 0; }
 .bl-0-ns { border-left-width: 0; } }
 @media screen and (min-width: 30em) and (max-width: 60em) { .bw0-m { border-width: 0; }
-.bw1-m { border-width: .125rem; }
-.bw2-m { border-width: .25rem; }
-.bw3-m { border-width: .5rem; }
-.bw4-m { border-width: 1rem; }
-.bw5-m { border-width: 2rem; }
+.bw1-m { border-width: 0.125em; }
+.bw2-m { border-width: 0.25em; }
+.bw3-m { border-width: 0.5em; }
+.bw4-m { border-width: 1em; }
+.bw5-m { border-width: 2em; }
 .bt-0-m { border-top-width: 0; }
 .br-0-m { border-right-width: 0; }
 .bb-0-m { border-bottom-width: 0; }
 .bl-0-m { border-left-width: 0; } }
 @media screen and (min-width: 60em) { .bw0-l { border-width: 0; }
-.bw1-l { border-width: .125rem; }
-.bw2-l { border-width: .25rem; }
-.bw3-l { border-width: .5rem; }
-.bw4-l { border-width: 1rem; }
-.bw5-l { border-width: 2rem; }
+.bw1-l { border-width: 0.125em; }
+.bw2-l { border-width: 0.25em; }
+.bw3-l { border-width: 0.5em; }
+.bw4-l { border-width: 1em; }
+.bw5-l { border-width: 2em; }
 .bt-0-l { border-top-width: 0; }
 .br-0-l { border-right-width: 0; }
 .bb-0-l { border-bottom-width: 0; }
@@ -540,11 +547,6 @@ Modifiers 1 = 1st step in height scale 2 = 2nd step in height scale 3 = 3rd step
 -auto = string value of auto -inherit = string value of inherit
 Media Query Extensions: -ns = not-small -m  = medium -l  = large
 */
-.h1 { height: 1rem; }
-.h2 { height: 2rem; }
-.h3 { height: 4rem; }
-.h4 { height: 8rem; }
-.h5 { height: 16rem; }
 .h-25 { height: 25%; }
 .h-50 { height: 50%; }
 .h-75 { height: 75%; }
@@ -666,8 +668,8 @@ Media Query Extensions: -ns = not-small -m  = medium -l  = large
 .mw-80 { max-width: 80%; }
 .mw-90 { max-width: 90%; }
 .mw-100 { max-width: 100%; }
-.mw-third { max-width: 33.3333333333%; }
-.mw-two-thirds { max-width: 66.6666666667%; }
+.mw-third { max-width: 33.33333%; }
+.mw-two-thirds { max-width: 66.66667%; }
 .mw-auto { max-width: auto; }
 .mw-init { max-width: initial; }
 .mw-555 { max-width: 555px; }
@@ -695,8 +697,8 @@ Media Query Extensions: -ns = not-small -m  = medium -l  = large
 .mw-80-ns { max-width: 80%; }
 .mw-90-ns { max-width: 90%; }
 .mw-100-ns { max-width: 100%; }
-.mw-third-ns { max-width: 33.3333333333%; }
-.mw-two-thirds-ns { max-width: 66.6666666667%; }
+.mw-third-ns { max-width: 33.33333%; }
+.mw-two-thirds-ns { max-width: 66.66667%; }
 .mw-auto-ns { max-width: auto; }
 .mw-init-ns { max-width: initial; }
 .mw1-ns { max-width: 1rem; }
@@ -723,8 +725,8 @@ Media Query Extensions: -ns = not-small -m  = medium -l  = large
 .mw-80-m { max-width: 80%; }
 .mw-90-m { max-width: 90%; }
 .mw-100-m { max-width: 100%; }
-.mw-third-m { max-width: 33.3333333333%; }
-.mw-two-thirds-m { max-width: 66.6666666667%; }
+.mw-third-m { max-width: 33.33333%; }
+.mw-two-thirds-m { max-width: 66.66667%; }
 .mw-auto-m { max-width: auto; }
 .mw-init-m { max-width: initial; }
 .mw1-m { max-width: 1rem; }
@@ -751,8 +753,8 @@ Media Query Extensions: -ns = not-small -m  = medium -l  = large
 .mw-80-l { max-width: 80%; }
 .mw-90-l { max-width: 90%; }
 .mw-100-l { max-width: 100%; }
-.mw-third-l { max-width: 33.3333333333%; }
-.mw-two-thirds-l { max-width: 66.6666666667%; }
+.mw-third-l { max-width: 33.33333%; }
+.mw-two-thirds-l { max-width: 66.66667%; }
 .mw-auto-l { max-width: auto; }
 .mw-init-l { max-width: initial; }
 .mw1-l { max-width: 1rem; }
@@ -792,8 +794,8 @@ Media Query Extensions: -ns = not-small -m  = medium -l  = large
 .w-80 { width: 80%; }
 .w-90 { width: 90%; }
 .w-100 { width: 100%; }
-.w-third { width: 33.3333333333%; }
-.w-two-thirds { width: 66.6666666667%; }
+.w-third { width: 33.33333%; }
+.w-two-thirds { width: 66.66667%; }
 .w-auto { width: auto; }
 .w-init { width: initial; }
 @media screen and (min-width: 30em) { .w1-ns { width: 1em; }
@@ -815,8 +817,8 @@ Media Query Extensions: -ns = not-small -m  = medium -l  = large
 .w-80-ns { width: 80%; }
 .w-90-ns { width: 90%; }
 .w-100-ns { width: 100%; }
-.w-third-ns { width: 33.3333333333%; }
-.w-two-thirds-ns { width: 66.6666666667%; }
+.w-third-ns { width: 33.33333%; }
+.w-two-thirds-ns { width: 66.66667%; }
 .w-auto-ns { width: auto; }
 .w-init-ns { width: initial; } }
 @media screen and (min-width: 30em) and (max-width: 60em) { .w1-m { width: 1em; }
@@ -838,8 +840,8 @@ Media Query Extensions: -ns = not-small -m  = medium -l  = large
 .w-80-m { width: 80%; }
 .w-90-m { width: 90%; }
 .w-100-m { width: 100%; }
-.w-third-m { width: 33.3333333333%; }
-.w-two-thirds-m { width: 66.6666666667%; }
+.w-third-m { width: 33.33333%; }
+.w-two-thirds-m { width: 66.66667%; }
 .w-auto-m { width: auto; }
 .w-init-m { width: initial; } }
 @media screen and (min-width: 60em) { .w1-l { width: 1em; }
@@ -861,8 +863,8 @@ Media Query Extensions: -ns = not-small -m  = medium -l  = large
 .w-80-l { width: 80%; }
 .w-90-l { width: 90%; }
 .w-100-l { width: 100%; }
-.w-third-l { width: 33.3333333333%; }
-.w-two-thirds-l { width: 66.6666666667%; }
+.w-third-l { width: 33.33333%; }
+.w-two-thirds-l { width: 66.66667%; }
 .w-auto-l { width: auto; }
 .w-init-l { width: initial; } }
 .overflow-visible { overflow: visible; }
@@ -1884,10 +1886,10 @@ Media Query Extensions: -ns = not-small -m  = medium -l  = large
 .measure { max-width: 30em; }
 .measure-wide { max-width: 34em; }
 .measure-narrow { max-width: 20em; }
-.indent { text-indent: 1.5rem; }
+.indent { text-indent: 25px; }
 .indent-neg { text-indent: -25px; }
 .indent-0 { text-indent: 0; }
-.indent-hanging { margin-left: 1.5rem; text-indent: -25px; }
+.indent-hanging { margin-left: 25px; text-indent: -25px; }
 .small-caps { font-variant: small-caps; }
 .truncate { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 @media screen and (min-width: 30em) { .measure-ns { max-width: 30em; }

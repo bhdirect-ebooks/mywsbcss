@@ -37,7 +37,8 @@ p {
   font-size: $def-font;
   margin: 0;
   text-align: left;
-  text-indent: $def-ind;
+  text-indent: 0;
+  padding-top: $spacing-small;
 }
 
 li {
@@ -201,7 +202,7 @@ small {
  */
 
 @mixin sub-sup($top) {
-  font-size: $type-scale-8;
+  font-size: $type-scale-7;
   line-height: 0;
   position: relative;
   top: $top;
@@ -235,15 +236,6 @@ video {
 audio:not([controls]) {
   display: none;
   height: 0;
-}
-
-/**
- * Remove the border on images inside links in IE 10-.
- */
-
-img {
-  border-style: none;
-  width: 100%;
 }
 
 /**

@@ -1,5 +1,5 @@
 /*!*
- * VERSION: 2017-11-20 | CROSS | General
+ * VERSION: 2017-04-30 | CROSS | General
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -80,7 +80,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 \*------------------------------------*/
 
 @import "includes/shared/normalize";
-@import "includes/tachyons/images";
 @import "includes/tachyons/box-sizing";
 
 
@@ -102,6 +101,7 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 \*------------------------------------*/
 
 @import "includes/shared/headings";
+@import "includes/ws/parts";
 
 
 /**
@@ -110,30 +110,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 
 .bridgehead {
   @include bridgehead(); //from shared/headings
-}
-
-
-/**
- * Part title, for use with <p>
- */
-
-.part,
-.part-1,
-.part-2,
-.part-3,
-.part-4,
-.part-5,
-.part-6 {
-  background: #333;
-  color: #fff;
-  display: block;
-  font-size : $type-scale-2;
-  font-weight: bold;
-  letter-spacing: $letter-spacing-mega;
-  margin: -$spacing-medium $def-neg-ind $spacing-medium $def-neg-ind;
-  padding: $spacing-large 0 $spacing-medium 0;
-  text-align: center;
-  text-indent: 0;
 }
 
 
@@ -182,6 +158,19 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 \*------------------------------------*/
 
 @import "includes/shared/figures";
+
+.full-width {
+  max-width: $full-width-ns;
+  width: $full-width-ns;
+}
+
+.float-right {
+  @include figure-float(right);
+}
+
+.float-left {
+  @include figure-float(left);
+}
 
 .figcaption {
   @include figcap-decs();
@@ -263,6 +252,14 @@ $offset-color: $moon-gray;
 \*------------------------------------*/
 
 @import "includes/shared/quotes";
+
+.pull-left {
+  @include pullquote-float-ns(left);
+}
+
+.pull-right {
+  @include pullquote-float-ns(right);
+}
 
 
 

@@ -4,6 +4,8 @@ $def-line: $lh-copy; // Default line height
 $def-font: $type-scale-5; // Default font size
 $def-ind:  25px;  // Default text indent
 $def-neg-ind: -$def-ind; // Default negative indent
+$poetry-neg-ind: -0.5em;
+$base-poem-ind: 1em;
 
 img {
   border-style: none;

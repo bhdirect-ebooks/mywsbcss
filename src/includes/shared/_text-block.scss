@@ -3,7 +3,7 @@
  */
 
 .br-before {
-  padding: $spacing-medium 0 0 0;
+  padding-top: $spacing-large;
 }
 
 .center {
@@ -27,4 +27,36 @@
 .right {
   text-align: right !important;
   text-indent: 0;
+}
+
+@mixin pad-left($num) {
+  padding-left: $def-ind * $num
+}
+
+.ind1 {
+  padding-left: $def-ind;
+}
+
+.ind2 {
+  @include pad-left(2);
+}
+
+.ind3 {
+  @include pad-left(3);
+}
+
+.ind4 {
+  @include pad-left(4);
+}
+
+.ind5 {
+  @include pad-left(5);
+}
+
+.ind6 {
+  @include pad-left(6);
+}
+
+.ind7 {
+  @include pad-left(7);
 }

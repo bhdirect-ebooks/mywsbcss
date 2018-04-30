@@ -2,10 +2,8 @@
  * Poetry
  */
 
- $def-ind:  1.5rem;
-
 .poetry {
-  margin: 1rem 0 1rem $def-ind;
+  margin: $spacing-medium 0 $spacing-medium $def-ind;
 }
 
 .poetry .poetry {
@@ -19,55 +17,59 @@
 }
 
 @mixin poetry() {
-  text-indent: -0.5rem;
+  text-indent: $poetry-neg-ind;
+}
+
+@mixin poem-margin($num) {
+  margin: 0 0 0 ($base-poem-ind + $num);
 }
 
 .poem1 {
-  margin: 0 0 0 2rem;
+  @include poem-margin(1);
   @include poetry();
 }
 
 .poem2 {
-  margin: 0 0 0 3rem;
+  @include poem-margin(2);
   @include poetry();
 }
 
 .poem3 {
-  margin: 0 0 0 4rem;
+  @include poem-margin(3);
   @include poetry();
 }
 
 .poem4 {
-  margin: 0 0 0 5rem;
+  @include poem-margin(4);
   @include poetry();
 }
 
 .poem5 {
-  margin: 0 0 0 6rem;
+  @include poem-margin(5);
   @include poetry();
 }
 
 .poem6 {
-  margin: 0 0 0 7rem;
+  @include poem-margin(6);
   @include poetry();
 }
 
 .poem7 {
-  margin: 0 0 0 8rem;
+  @include poem-margin(7);
   @include poetry();
 }
 
 .poem8 {
-  margin: 0 0 0 9rem;
+  @include poem-margin(8);
   @include poetry();
 }
 
 .poem9 {
-  margin: 0 0 0 10rem;
+  @include poem-margin(9);
   @include poetry();
 }
 
 .poem10 {
-  margin: 0 0 0 11rem;
+  @include poem-margin(10);
   @include poetry();
 }

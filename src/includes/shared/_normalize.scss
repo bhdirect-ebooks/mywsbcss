@@ -37,7 +37,8 @@ p {
   font-size: $def-font;
   margin: 0;
   text-align: left;
-  text-indent: $def-ind;
+  text-indent: 0;
+  padding-top: $spacing-small;
 }
 
 li {

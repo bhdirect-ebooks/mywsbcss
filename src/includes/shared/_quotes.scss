@@ -32,7 +32,7 @@ blockquote {
 
 @mixin pullquotes($marg, $wid) {
   border: none !important;
-  letter-spacing: 0.15rem;
+  letter-spacing: $letter-spacing-pull;
   margin: $marg;
   max-width: $wid;
   padding: 0;

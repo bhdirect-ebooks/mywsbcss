@@ -70,7 +70,7 @@ ol:not(.none) li {
     text-indent: $indentation;
 
     &:before {
-      left: -0.4rem;
+      left: $paren-before-li;
       counter-increment: list;
       position: relative;
     }
@@ -86,11 +86,11 @@ ol:not(.none) li {
 }
 
 .paren {
-  @include parenthetical(0.15rem, -1.15rem);
+  @include parenthetical($paren-leftness, $paren-neg-ind);
 }
 
 .right-paren {
-  @include parenthetical(0, -0.75rem);
+  @include parenthetical(0, $right-paren-neg-ind);
 }
 
 .hebrew.paren > li:before {

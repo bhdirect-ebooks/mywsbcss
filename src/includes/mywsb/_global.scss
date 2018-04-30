@@ -47,18 +47,20 @@ $lh-copy:  1.5 !default;
 $letter-spacing-tracked: 0.1em !default;
 $letter-spacing-half:    0.05em !default;
 $letter-spacing-tight:  -0.05em !default;
+$letter-spacing-pull:    0.15rem !default;
 $letter-spacing-mega:    0.25em !default;
 
 
-// Defaults
+// border widths
 
-$def-line: $lh-copy; // Default line height
-$def-font: $type-scale-5; // Default font size
-$def-ind:  1.5rem;  // Default text indent
-$def-neg-ind: -$def-ind; // Default negative indent
-
-img {
-  border-style: none;
-  max-width: 100%;
-  width: 100%;
-}
+$border-width-none: 0 !default;
+/* 1 */
+$border-width-extra-small: 0.125rem !default;
+/* 2 */
+$border-width-small: 0.25rem !default;
+/* 3 */
+$border-width-medium: 0.5rem !default;
+/* 4 */
+$border-width-large: 1rem !default;
+/* 5 */
+$border-width-extra-large: 2rem !default;

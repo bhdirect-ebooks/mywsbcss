@@ -47,4 +47,20 @@ $lh-copy:  1.5 !default;
 $letter-spacing-tracked: 0.1em !default;
 $letter-spacing-half:    0.05em !default;
 $letter-spacing-tight:  -0.05em !default;
+$letter-spacing-pull:    0.15em !default;
 $letter-spacing-mega:    0.2em !default;
+
+
+// border widths
+
+$border-width-none: 0 !default;
+/* 1 */
+$border-width-extra-small: 0.125em !default;
+/* 2 */
+$border-width-small: 0.25em !default;
+/* 3 */
+$border-width-medium: 0.5em !default;
+/* 4 */
+$border-width-large: 1em !default;
+/* 5 */
+$border-width-extra-large: 2em !default;

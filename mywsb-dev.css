@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
-* VERSION: 2017-04-30 | EPUB | Development
+* VERSION: 2018-05-01 | EPUB | Development
 * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
 * used in accordance with an MIT License (OSI).
 */
@@ -27,8 +27,8 @@ img { border-style: none; max-width: 100%; width: 100%; }
 */
 html { line-height: 1.15;  -ms-text-size-adjust: 100%;  -webkit-text-size-adjust: 100%;  }
 body { font: normal normal 100% georgia, times, serif; margin: 0 2rem; }
-p { line-height: 1.5; font-size: 1rem; margin: 0; text-align: left; text-indent: 0; padding-top: 0.5rem; }
-li { line-height: 1.5; font-size: 1rem; margin: 0; text-align: left; text-indent: 0; }
+p { line-height: 1.5; font-size: 1em; margin: 0; text-align: left; text-indent: 0; padding-top: 0.5rem; }
+li { line-height: 1.5; font-size: 1em; margin: 0; text-align: left; text-indent: 0; }
 @media screen and (min-width: 30em) { p, li { text-align: justify; } }
 article, aside, footer, header, nav, section { display: block; }
 h1 { font-size: 2em; margin: 0.67em 0; }
@@ -43,8 +43,8 @@ b, strong { font-weight: bolder; }
 code, kbd, samp { font-family: monospace, monospace;  font-size: 1em;  }
 mark { background-color: #ff0; color: #000; }
 small { font-size: 80%; }
-sub { font-size: 0.75rem; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; }
-sup { font-size: 0.75rem; line-height: 0; position: relative; top: -0.3em; vertical-align: baseline; }
+sub { font-size: 0.75em; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; }
+sup { font-size: 0.75em; line-height: 0; position: relative; top: -0.3em; vertical-align: baseline; }
 audio, video { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
 svg:not(:root) { overflow: hidden; }
@@ -76,20 +76,20 @@ section[epub|type~=index-group] ul, section[epub\:type~=index-group] ul { list-s
 nav ol { list-style-type: none; margin-bottom: 0.5rem; }
 nav ol > li:first-child { margin-top: 0.5rem; }
 nav[epub|type~="page-list"], nav[epub\:type~="page-list"] { display: none; }
-h1 { font: normal 500 2.25rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
-h2, .h2 { font: normal 500 1.5rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
-h3, .h3 { font: normal 500 1.25rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
-h4, .h4 { font: italic 500 1.25rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
-h5, .h5 { font: normal bold 1rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
-h6, .h6 { font: italic bold 0.875rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
-.h1sub { font: normal 500 1.5rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; color: #555; margin: -0.25rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
-.h2sub { font: normal 500 1.25rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; color: #555; margin: -0.25rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
-.h3sub { font: italic 500 1.25rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; color: #555; margin: -0.25rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
-.bh { font: normal 500 1.25rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 0 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
-.label { display: block; color: gray; font-variant: small-caps; font-weight: 300; font-size: 1.5rem; margin: 1rem 0 0.5rem 0; }
-p[epub|type~="bridgehead"], p[epub\:type~="bridgehead"] { font: normal 500 1.25rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 0 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
-a[data-cross-ref] { border-bottom: 1px dashed #000; color: #000; margin-bottom: -1px; }
-span[data-cross-context~="scripture"], .versemode { display: none !important; }
+h1 { font: normal 500 2.25em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
+h2, .h2 { font: normal 500 1.5em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
+h3, .h3 { font: normal 500 1.25em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
+h4, .h4 { font: italic 500 1.25em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
+h5, .h5 { font: normal bold 1em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
+h6, .h6 { font: italic bold 0.875em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
+.h1sub { font: normal 500 1.5em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; color: #555; margin: -0.25rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
+.h2sub { font: normal 500 1.25em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; color: #555; margin: -0.25rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
+.h3sub { font: italic 500 1.25em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; color: #555; margin: -0.25rem 0 0.5rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
+.bh { font: normal 500 1.25em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 0 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
+.label { display: block; color: gray; font-variant: small-caps; font-weight: 300; font-size: 1.5em; margin: 1rem 0 0.5rem 0; }
+p[epub|type~="bridgehead"], p[epub\:type~="bridgehead"] { font: normal 500 1.25em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 0 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
+a[data-ref] { border-bottom: 1px dashed #000; color: #000; margin-bottom: -1px; }
+span[data-context~="scripture"], .versemode { display: none !important; }
 aside { border: 1px solid #777; margin: 2rem 0; padding: 1rem 2rem; }
 aside p { margin: 0.25rem 0 0 0; text-indent: 0; }
 aside blockquote { border: none !important; }
@@ -100,7 +100,7 @@ aside .bh { border-bottom: 1px solid #999; margin: 0 0 0.5rem 0; padding: 0 0 0.
 @media screen and (min-width: 30em) { .full-width { max-width: 90%; width: 90%; }
 .float-right { float: right; margin: 0.5rem 1rem; max-width: 16rem; width: 16rem; }
 .float-left { float: left; margin: 0.5rem 1rem; max-width: 16rem; width: 16rem; } }
-figcaption { font-size: 0.75rem; font-style: italic; font-weight: normal; text-align: center; text-indent: 0; }
+figcaption { font-size: 0.75em; font-style: italic; font-weight: normal; text-align: center; text-indent: 0; }
 figcaption .italic, figcaption .i { font-style: normal; }
 ol { margin: 1rem 0 1rem 0; padding: 0 0 0 4rem; }
 ol ul, ol ol { margin: 0; padding: 0 0 0 2rem; }
@@ -108,7 +108,7 @@ ul { margin: 1rem 0 1rem 0; padding: 0 0 0 4rem; }
 ul ul, ul ol { margin: 0; padding: 0 0 0 2rem; }
 li { padding: 0.5rem 0 0 0; }
 li p { text-indent: 0; }
-.none { list-style-type: none; padding: 0 0 0 3rem; }
+.none { list-style-type: none; padding: 0 0 0 3em; }
 .none ul:not(.none) li, .none ol:not(.none) li { text-indent: 0; }
 .upper-roman { list-style-type: upper-roman; }
 .lower-roman { list-style-type: lower-roman; }
@@ -153,23 +153,23 @@ dd p { text-indent: 0; }
 .table { max-width: 100%; width: 100%; overflow: auto; }
 .bdr { border: 1px solid #ccc; }
 .bdr td, .bdr th { border: 1px solid #ccc; }
-table { border-collapse: collapse; font-size: 1rem; margin: 2rem auto; text-align: left; width: 100%; }
-th { line-height: 1.5; font-size: 1rem; padding: 0.5rem; text-align: center; }
-td { line-height: 1.5; font-size: 1rem; padding: 0.5rem; vertical-align: top; }
+table { border-collapse: collapse; font-size: 1em; margin: 2rem auto; text-align: left; width: 100%; }
+th { line-height: 1.5; font-size: 1em; padding: 0.5rem; text-align: center; }
+td { line-height: 1.5; font-size: 1em; padding: 0.5rem; vertical-align: top; }
 .middle { vertical-align: middle; }
 .offset { background-color: #ccc; }
 video { background: #fff; border: 1px solid #ccc; box-shadow: 0 0 3px rgba(1, 1, 1, 0.2), inset 0 0 100px rgba(1, 1, 1, 0.1); height: auto; margin: 2rem auto 1rem auto; text-align: center; text-indent: 0; max-width: 100%; width: 100%; }
 blockquote { border-left: 1px dotted #000; margin-bottom: 0.5rem; margin-top: 0.5rem; padding-left: 1rem; }
 blockquote p { margin: 0.5rem 0; text-indent: 0; }
-.scriptext { border: none !important; font-size: 1rem; font-style: italic; margin: 1rem 2rem; padding: 0; }
+.scriptext { border: none !important; font-size: 1em; font-style: italic; margin: 1rem 2rem; padding: 0; }
 .scriptext .italic, .scriptext .i { font-style: normal; }
 .pull-center, .pull-left, .pull-right { border: none !important; letter-spacing: 0.15rem; margin: 2rem auto; max-width: 70%; padding: 0; width: 70%; text-transform: uppercase; display: block; float: none; text-align: center; }
-.pull-center p, .pull-left p, .pull-right p { font-size: 0.75rem; text-indent: 0; text-align: left; }
+.pull-center p, .pull-left p, .pull-right p { font-size: 0.75em; text-indent: 0; text-align: left; }
 .pull-center .sig, .pull-left .sig, .pull-right .sig { margin-left: 0; text-align: right; }
 @media screen and (min-width: 30em) { .pull-left { float: left; margin: 2rem; max-width: 30%; width: 30%; }
 .pull-right { float: right; margin: 2rem; max-width: 30%; width: 30%; } }
 article { margin: 2rem 0; }
-article dfn { color: #00449e; display: inline-block; font: normal bold 1.5rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; padding: 0 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
+article dfn { color: #00449e; display: inline-block; font: normal bold 1.5em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; padding: 0 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: left; }
 footer { border-top: 1px solid #ccc; margin: 2rem 0 0 0; padding: 1rem 0 0 0; }
 .poetry { margin: 1rem 0 1rem 1.5rem; }
 .poetry .poetry { margin: 0; padding-left: 1.5rem; }
@@ -203,22 +203,22 @@ div[epub|type~=footnote] p, div[epub\:type~=footnote] p { margin-left: 2rem; tex
 .bold .bold { font-weight: normal; }
 .italic { font-style: italic; }
 .italic .italic { font-style: normal; }
-.large { font-size: 3rem; }
-.small { font-size: 0.75rem; }
+.large { font-size: 3em; }
+.small { font-size: 0.75em; }
 .smcaps { font-variant: small-caps; }
 .strikeout { text-decoration: line-through; }
-.fn { color: #ff4136; font: normal normal 0.6rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; position: relative; vertical-align: 0.7em; }
+.fn { color: #ff4136; font: normal normal 0.6em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; position: relative; vertical-align: 0.7em; }
 .fntext { color: #0000ff; display: none; font-size: 0.8em; font-variant: normal; }
-.auth { font-size: 1.25rem; font-weight: bold; margin: 0.5rem 0; text-align: center; text-indent: 0; }
-.ded1 { font-size: 0.875rem; font-style: italic; margin: 1rem 8rem 0 8rem; }
+.auth { font-size: 1.25em; font-weight: bold; margin: 0.5rem 0; text-align: center; text-indent: 0; }
+.ded1 { font-size: 0.875em; font-style: italic; margin: 1rem 8rem 0 8rem; }
 .ded1 .italic, .ded1 .i { font-style: normal; }
-.ded2 { font-size: 0.875rem; font-style: italic; margin: 0 8rem; }
+.ded2 { font-size: 0.875em; font-style: italic; margin: 0 8rem; }
 .ded2 .italic, .ded2 .i { font-style: normal; }
 .sig { margin-bottom: 1rem; margin-left: 16rem; text-align: left; text-indent: 0; }
-.verse { font-size: 0.875rem; font-weight: bold; }
-.versenum { font-size: 0.75rem; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; margin-right: 0.25rem; font-weight: bold; }
+.verse { font-size: 0.875em; font-weight: bold; }
+.versenum { font-size: 0.75em; line-height: 0; position: relative; top: 0.3em; vertical-align: baseline; margin-right: 0.25rem; font-weight: bold; }
 .selah { padding-left: 16rem; font-style: italic; }
-.bookname { font: normal 500 2.25rem -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
+.bookname { font: normal 500 2.25em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif; margin: 2rem 0 1rem 0; clear: both; display: block; text-indent: 0; text-align: center; }
 .versenum::after { content: "\00a0"; }
 .lang, .translit {  font-family: "gentium plus", serif; font-style: italic; }
 .lang .italic, .lang .i, .translit .italic, .translit .i { font-style: normal; }
@@ -1893,40 +1893,40 @@ Media Query Extensions: -ns = not-small -m  = medium -l  = large
 /* For Hero/Marketing Titles  These generally are too large for mobile so be careful using them on smaller screens. */
 .f-6, .f-headline { font-size: 6rem; }
 .f-5, .f-subheadline { font-size: 5rem; }
-.f1 { font-size: 3rem; }
-.f2 { font-size: 2.25rem; }
-.f3 { font-size: 1.5rem; }
-.f4 { font-size: 1.25rem; }
-.f5 { font-size: 1rem; }
-.f6 { font-size: 0.875rem; }
-.f7 { font-size: 0.75rem; }
+.f1 { font-size: 3em; }
+.f2 { font-size: 2.25em; }
+.f3 { font-size: 1.5em; }
+.f4 { font-size: 1.25em; }
+.f5 { font-size: 1em; }
+.f6 { font-size: 0.875em; }
+.f7 { font-size: 0.75em; }
 @media screen and (min-width: 30em) { .f-6-ns, .f-headline-ns { font-size: 6rem; }
 .f-5-ns, .f-subheadline-ns { font-size: 5rem; }
-.f1-ns { font-size: 3rem; }
-.f2-ns { font-size: 2.25rem; }
-.f3-ns { font-size: 1.5rem; }
-.f4-ns { font-size: 1.25rem; }
-.f5-ns { font-size: 1rem; }
-.f6-ns { font-size: 0.875rem; }
-.f7-ns { font-size: 0.75rem; } }
+.f1-ns { font-size: 3em; }
+.f2-ns { font-size: 2.25em; }
+.f3-ns { font-size: 1.5em; }
+.f4-ns { font-size: 1.25em; }
+.f5-ns { font-size: 1em; }
+.f6-ns { font-size: 0.875em; }
+.f7-ns { font-size: 0.75em; } }
 @media screen and (min-width: 30em) and (max-width: 60em) { .f-6-m, .f-headline-m { font-size: 6rem; }
 .f-5-m, .f-subheadline-m { font-size: 5rem; }
-.f1-m { font-size: 3rem; }
-.f2-m { font-size: 2.25rem; }
-.f3-m { font-size: 1.5rem; }
-.f4-m { font-size: 1.25rem; }
-.f5-m { font-size: 1rem; }
-.f6-m { font-size: 0.875rem; }
-.f7-m { font-size: 0.75rem; } }
+.f1-m { font-size: 3em; }
+.f2-m { font-size: 2.25em; }
+.f3-m { font-size: 1.5em; }
+.f4-m { font-size: 1.25em; }
+.f5-m { font-size: 1em; }
+.f6-m { font-size: 0.875em; }
+.f7-m { font-size: 0.75em; } }
 @media screen and (min-width: 60em) { .f-6-l, .f-headline-l { font-size: 6rem; }
 .f-5-l, .f-subheadline-l { font-size: 5rem; }
-.f1-l { font-size: 3rem; }
-.f2-l { font-size: 2.25rem; }
-.f3-l { font-size: 1.5rem; }
-.f4-l { font-size: 1.25rem; }
-.f5-l { font-size: 1rem; }
-.f6-l { font-size: 0.875rem; }
-.f7-l { font-size: 0.75rem; } }
+.f1-l { font-size: 3em; }
+.f2-l { font-size: 2.25em; }
+.f3-l { font-size: 1.5em; }
+.f4-l { font-size: 1.25em; }
+.f5-l { font-size: 1em; }
+.f6-l { font-size: 0.875em; }
+.f7-l { font-size: 0.75em; } }
 /*
 TYPOGRAPHY http://tachyons.io/docs/typography/measure/
 Media Query Extensions: -ns = not-small -m  = medium -l  = large

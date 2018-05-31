@@ -1,5 +1,5 @@
 /*!*
- * VERSION: 2018-05-01 | CROSS | Verse Mode
+ * VERSION: 2018-05-31 | CROSS | Verse Mode
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -166,7 +166,24 @@ tr {
 \*------------------------------------*/
 
 @import "includes/ws/blocks";
-@import "includes/shared/poetry";
+
+/**
+ * Poetry
+ */
+.poetry p,
+.poem1,
+.poem2,
+.poem3,
+.poem4,
+.poem5,
+.poem6,
+.poem7,
+.poem8,
+.poem9,
+.poem10 {
+  margin-left: 0.25em;
+}
+
 
 ol,
 ul {

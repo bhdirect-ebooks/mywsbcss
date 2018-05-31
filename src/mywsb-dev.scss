@@ -1,5 +1,5 @@
 /*!*
- * VERSION: 2018-05-01 | EPUB | Development
+ * VERSION: 2018-05-31 | EPUB | Development
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -345,6 +345,7 @@ div {
 $fn-size: $type-scale-8;
 $fn-color: $red;
 
+@import "includes/shared/fn";
 @import "includes/shared/text-types";
 @import "includes/shared/bibles";
 

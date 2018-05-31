@@ -1,5 +1,5 @@
 /*!*
- * VERSION: 2018-05-01 | CROSS | Paragraph Mode
+ * VERSION: 2018-05-31 | CROSS | Paragraph Mode
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -301,6 +301,7 @@ $offset-color: $moon-gray;
 $fn-size: $type-scale-8;
 $fn-color: $black;
 
+@import "includes/shared/fn";
 @import "includes/shared/text-types";
 @import "includes/shared/bibles";
 

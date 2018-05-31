@@ -1060,7 +1060,8 @@ ul {
   font-variant: normal;
 }
 
-.versenum {
+.versenum,
+.nonversenum {
   font-size: 0.75em;
   line-height: 0;
   position: relative;

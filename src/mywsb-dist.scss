@@ -243,7 +243,8 @@ $fn-color: $red;
 @import "includes/shared/text-types";
 @import "includes/shared/bibles";
 
-.versenum::after {
+.versenum::after,
+.nonversenum::after {
   content: "\00a0";
 }
 

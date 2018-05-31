@@ -1393,7 +1393,8 @@ hr,
   font-weight: bold;
 }
 
-.versenum {
+.versenum,
+.nonversenum {
   font-size: 0.75em;
   line-height: 0;
   position: relative;

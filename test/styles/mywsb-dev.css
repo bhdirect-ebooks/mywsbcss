@@ -1578,7 +1578,8 @@ div[epub|type~=footnote] p, div[epub\:type~=footnote] p {
   font-weight: bold;
 }
 
-.versenum {
+.versenum,
+.nonversenum {
   font-size: 0.75em;
   line-height: 0;
   position: relative;
@@ -1602,7 +1603,8 @@ div[epub|type~=footnote] p, div[epub\:type~=footnote] p {
   text-align: center;
 }
 
-.versenum::after {
+.versenum::after,
+.nonversenum::after {
   content: " ";
 }
 

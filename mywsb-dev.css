@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
- * VERSION: 2018-05-31 | EPUB | Development
+ * VERSION: 2018-06-06 | EPUB | Development
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -210,7 +210,7 @@ p {
   margin: 0;
   text-align: left;
   text-indent: 0;
-  padding-top: 0.5rem;
+  padding-top: 0.75rem;
 }
 
 li {
@@ -856,11 +856,7 @@ span[data-context~=scripture],
 aside {
   border: 1px solid #777;
   margin: 2rem 0;
-  padding: 1rem 2rem;
-}
-aside p {
-  margin: 0.25rem 0 0 0;
-  text-indent: 0;
+  padding: 1rem 2rem 1.75rem 2rem;
 }
 aside blockquote {
   border: none !important;
@@ -954,10 +950,7 @@ ul ol {
 }
 
 li {
-  padding: 0.5rem 0 0 0;
-}
-li p {
-  text-indent: 0;
+  padding: 0.75rem 0 0 0;
 }
 
 /*
@@ -1119,9 +1112,6 @@ dd {
   margin: 0;
   padding: 0 0 2rem 0;
 }
-dd p {
-  text-indent: 0;
-}
 
 .abbr-list {
   padding: 0 0 0 1.5rem;
@@ -1230,12 +1220,13 @@ video {
  */
 blockquote {
   border-left: 1px dotted #000;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  margin-top: 1.25rem;
   padding-left: 1rem;
 }
 blockquote p {
   margin: 0.5rem 0;
+  padding-top: 0;
   text-indent: 0;
 }
 

@@ -1,11 +1,7 @@
 @mixin asides() {
   border : 1px solid $gray;
   margin : $spacing-large 0;
-  padding: $spacing-medium $spacing-large;
-  p {
-    margin: $spacing-extra-small 0 0 0;
-    text-indent: 0;
-  }
+  padding: $spacing-medium $spacing-large ($spacing-extra-small + $spacing-small + $spacing-medium) $spacing-large;
 
   blockquote {
     border: none !important;

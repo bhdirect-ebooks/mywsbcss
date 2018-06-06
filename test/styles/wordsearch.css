@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
- * VERSION: 2018-05-31 | CROSS | General
+ * VERSION: 2018-06-06 | CROSS | General
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -171,7 +171,7 @@ p {
   margin: 0;
   text-align: left;
   text-indent: 0;
-  padding-top: 0.5em;
+  padding-top: 0.75em;
 }
 
 li {
@@ -892,11 +892,7 @@ h6,
 .aside {
   border: 1px solid #777;
   margin: 2em 0;
-  padding: 1em 2em;
-}
-.aside p {
-  margin: 0.25em 0 0 0;
-  text-indent: 0;
+  padding: 1em 2em 1.75em 2em;
 }
 .aside blockquote {
   border: none !important;
@@ -1009,10 +1005,7 @@ ul ol {
 }
 
 li {
-  padding: 0.5em 0 0 0;
-}
-li p {
-  text-indent: 0;
+  padding: 0.75em 0 0 0;
 }
 
 /*
@@ -1174,9 +1167,6 @@ dd {
   margin: 0;
   padding: 0 0 2em 0;
 }
-dd p {
-  text-indent: 0;
-}
 
 .abbr-list {
   padding: 0 0 0 1.5em;
@@ -1287,12 +1277,13 @@ td {
  */
 blockquote {
   border-left: 1px dotted #000;
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
+  margin-bottom: 0.75em;
+  margin-top: 1.25em;
   padding-left: 1em;
 }
 blockquote p {
   margin: 0.5em 0;
+  padding-top: 0;
   text-indent: 0;
 }
 

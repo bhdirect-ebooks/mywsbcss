@@ -33,9 +33,5 @@ ul {
 }
 
 li {
-  padding: $spacing-small 0 0 0;
-
-  p {
-    text-indent: 0;
-  }
+  padding: ($spacing-small + $spacing-extra-small) 0 0 0;
 }

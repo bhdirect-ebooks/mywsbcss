@@ -1,5 +1,5 @@
 /*!*
- * VERSION: 2018-05-01 | CROSS | General
+ * VERSION: 2018-06-13 | CROSS | General
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -294,6 +294,7 @@ $offset-color: $moon-gray;
 $fn-size: $type-scale-8;
 $fn-color: $red;
 
+@import "includes/shared/fn";
 @import "includes/shared/text-types";
 
 

@@ -4,11 +4,12 @@
 
 blockquote {
   border-left: 1px dotted $black;
-  margin-bottom: $spacing-small;
-  margin-top: $spacing-small;
+  margin-bottom: ($spacing-small + $spacing-extra-small);
+  margin-top: ($spacing-medium + $spacing-extra-small);
   padding-left: $spacing-medium;
   p {
     margin: $spacing-small 0;
+    padding-top: 0;
     text-indent: 0;
   }
 }
@@ -22,6 +23,19 @@ blockquote {
   .italic,
   .i {
     font-style: normal;
+  }
+}
+
+.epigraph {
+  border: none !important;
+  font-size: $type-scale-5;
+  margin: $spacing-medium 0;
+  padding: 0;
+  
+  p,
+  .sig {
+    margin: $spacing-small 0;
+    text-align: center;
   }
 }
 

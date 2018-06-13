@@ -54,6 +54,22 @@
   list-style-type: square;
 }
 
+.ballot {
+  counter-reset: list;
+  list-style-type: none;
+  
+  > li {
+    position: relative;
+    text-indent: $ballot-neg-ind;
+    
+    &:before {
+      content: "\2610";
+      left: $paren-before-li;
+      position: relative;
+    }
+  }
+}
+
 ol:not(.none) li {
   padding-left: $spacing-extra-small;
 }

@@ -1,6 +1,7 @@
-.versenum {
-  @include sub-sup(0.3em);
-  margin-right: $spacing-extra-small;
+.versenum,
+.nonversenum {
+  @include sub-sup(-0.4em);
+  margin-right: 0.15em;
   font-weight: bold;
 }
 

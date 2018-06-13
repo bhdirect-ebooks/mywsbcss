@@ -1,14 +1,14 @@
 /*!*
- * VERSION: 2018-06-13 | EPUB | Development
+ * VERSION: 2018-06-13 | EPUB | Production
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
 /**
- * A stylesheet for myWSB EPUBs, combining classes and
- * styling familiar to the B&H Direct eBook Development
- * team with functional CSS from Tachyons.
+ * A verse mode stylesheet for myWSB EPUBs
+ * with functional CSS from Tachyons.
  *
- * This version is for development environments only.
+ * This scss version is a developer document and should
+ * be compiled and minified for production environments.
  */
 
 
@@ -19,22 +19,15 @@
   #CONTENTS
 \*------------------------------------*/
 /**
- * EPUB-NAMESPACE.......Add the EPUB namespace.
  * FONTS................Add font-families and variables.
  * GLOBAL...............Other globally-available variables.
  * NORMALIZATION........Box sizing and modified Normalize CSS
  *                      (http://normalize.css.github.io)
  *
- * EPUB-SECTIONS........Epub section styling.
- * EPUB-NAVIGATION......Epub navigation document styling.
  * HEADINGS.............h1–h6 and other headings styles.
  * INLINE-ELEMENTS......HTML inline element styles.
  *
- * ASIDES...............Aside styles.
  * FIGURES..............Figures and related helper classes.
- * LISTS................List styles.
- * TABLES...............Table styles.
- * VIDEOS...............Video and video glyph styles.
  * QUOTES...............Block quotes and pull quotes.
  * BLOCKS...............Other type-associated blocks.
  *
@@ -43,18 +36,7 @@
  * LANGUAGES............Styling for language elements and classes.
  *
  * TACHYONS.............TACHYONS (modified) | http://tachyons.io
- * OVERRIDES............Media queries and other overrides.
  */
-
-
-
-
-
-/*------------------------------------*\
- #EPUB-NAMESPACE
-\*------------------------------------*/
-
-@namespace epub "http://www.idpf.org/2007/ops";
 
 
 
@@ -98,6 +80,7 @@ $lang-font:  "gentium plus", serif;
 
 
 
+
 /*------------------------------------*\
   #NORMALIZATION
 \*------------------------------------*/
@@ -105,29 +88,12 @@ $lang-font:  "gentium plus", serif;
 @import "includes/shared/normalize";
 @import "includes/tachyons/box-sizing";
 
-
-
-
-
-/*------------------------------------*\
-  #EPUB-SECTIONS
-\*------------------------------------*/
-
-@import "includes/mywsb/sections";
-
-
-
-
-
-/*------------------------------------*\
-  #EPUB-NAVIGATION
-\*------------------------------------*/
-
-@import "includes/mywsb/nav";
-
-nav[epub|type~="page-list"],
-nav[epub\:type~="page-list"] {
-  display: none;
+body *,
+tr {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
 }
 
 
@@ -156,16 +122,6 @@ nav[epub\:type~="page-list"] {
 }
 
 
-/*
- * epub:type bridgehead
- */
-
- p[epub|type~="bridgehead"],
- p[epub\:type~="bridgehead"] {
-   @include bridgehead();
- }
-
-
 
 
 
@@ -175,109 +131,6 @@ nav[epub\:type~="page-list"] {
 
 @import "includes/shared/inline";
 
-a[data-ref] {
-  @include mywsb-scripture-ref
-}
-
-span[data-context~="scripture"],
-.versemode {
-  @include no-display();
-}
-
-
-
-
-
-/*------------------------------------*\
-  #ASIDES
-\*------------------------------------*/
-
-@import "includes/shared/asides";
-
-aside {
-  @include asides();
-}
-
-
-
-
-
-/*------------------------------------*\
-  #FIGURES
-\*------------------------------------*/
-
-@import "includes/shared/figures";
-
-figcaption {
-  @include figcap-decs();
-}
-
-
-
-
-
-/*------------------------------------*\
-  #LISTS
-\*------------------------------------*/
-
-@import "includes/shared/lists";
-@import "includes/shared/list-helpers";
-@import "includes/shared/def-lists";
-
-
-
-
-
-/*------------------------------------*\
-  #TABLES
-\*------------------------------------*/
-
-$offset-color: $moon-gray;
-
-/*
- * Table container
- */
-
-.table {
-  max-width: 100%;
-  width: 100%;
-  overflow: auto;
-}
-
-/*
- * Tables
- */
-
-@import "includes/shared/tables";
-
-/*
- * for use with any <tr>, <th>, or <td> element
- */
-
-.middle {
-  vertical-align: middle;
-}
-
-.offset {
-  background-color: $offset-color;
-}
-
-
-
-
-
-/*------------------------------------*\
-  #VIDEOS
-\*------------------------------------*/
-
-@import "includes/shared/video";
-
-video {
-  @include video-def();
-  max-width: 100%;
-  width: 100%;
-}
-
 
 
 
@@ -286,7 +139,16 @@ video {
   #QUOTES
 \*------------------------------------*/
 
-@import "includes/shared/quotes";
+.scriptext {
+  border: none;
+  font-size: $spacing-medium;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  .italic {
+    font-style: normal;
+  }
+}
 
 
 
@@ -297,30 +159,28 @@ video {
 \*------------------------------------*/
 
 @import "includes/mywsb/blocks";
-@import "includes/shared/poetry";
 
 /**
- * Index terms
+ * Poetry
  */
-
- span {
-  &[epub|type~=index-term],
-  &[epub\:type~=index-term] {
-    padding: 0 $spacing-extra-small 0 0;
-  }
+.poetry p,
+.poem1,
+.poem2,
+.poem3,
+.poem4,
+.poem5,
+.poem6,
+.poem7,
+.poem8,
+.poem9,
+.poem10 {
+  margin-left: 0.25em;
 }
 
-/**
- * Footnote divs
- */
 
-div {
-  &[epub|type~=footnote] p,
-  &[epub\:type~=footnote] p {
-    margin-left: $spacing-large;
-    text-align: left;
-    text-indent: -$spacing-large;
-  }
+ol,
+ul {
+  list-style-type: none;
 }
 
 
@@ -331,7 +191,6 @@ div {
   #TEXT-GENERAL
 \*------------------------------------*/
 
-@import "includes/shared/text-block";
 @import "includes/shared/text-inline";
 
 
@@ -343,11 +202,20 @@ div {
 \*------------------------------------*/
 
 $fn-size: $type-scale-8;
-$fn-color: $red;
+$fn-color: $black;
 
 @import "includes/shared/fn";
-@import "includes/shared/text-types";
 @import "includes/shared/bibles";
+
+.scripture {
+  display: block !important;
+  margin: 0;
+  border: 0;
+}
+
+.versemode {
+  display: inline;
+}
 
 .versenum::after,
 .nonversenum::after {
@@ -421,23 +289,3 @@ $fn-color: $red;
 //@import "includes/tachyons/nested";
 @import "includes/tachyons/styles";
 
-
-
-
-
-/*------------------------------------*\
-  #OVERRIDES
-\*------------------------------------*/
-
-/*
- * <dfn> font override
- */
-
-dl:not(.abbr-list) {
-  dfn {
-    span[lang],
-    span[trans] {
-      font: inherit;
-    }
-  }
-}

@@ -1,11 +1,11 @@
 /*!*
- * VERSION: 2018-05-01 | EPUB | Production
+ * VERSION: 2018-06-13 | EPUB | Production
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
 /**
- * A transitional stylesheet for myWSB EPUBs, combining
- * familiar styles for the B&H Direct eBook Development
+ * A stylesheet for myWSB EPUBs, combining classes and
+ * styling familiar to the B&H Direct eBook Development
  * team with functional CSS from Tachyons.
  *
  * This scss version is a developer document and should
@@ -239,10 +239,12 @@ video {
 $fn-size: $type-scale-8;
 $fn-color: $red;
 
+@import "includes/shared/fn";
 @import "includes/shared/text-types";
 @import "includes/shared/bibles";
 
-.versenum::after {
+.versenum::after,
+.nonversenum::after {
   content: "\00a0";
 }
 

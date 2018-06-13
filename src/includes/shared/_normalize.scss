@@ -38,7 +38,7 @@ p {
   margin: 0;
   text-align: left;
   text-indent: 0;
-  padding-top: $spacing-small;
+  padding-top: ($spacing-small + $spacing-extra-small);
 }
 
 li {

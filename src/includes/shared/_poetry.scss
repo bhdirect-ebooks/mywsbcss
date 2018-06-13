@@ -3,7 +3,7 @@
  */
 
 .poetry {
-  margin: $spacing-medium 0 $spacing-medium $def-ind;
+  margin: ($spacing-small + $spacing-extra-small) 0 0 $def-ind;
 }
 
 .poetry .poetry {
@@ -13,15 +13,17 @@
 
 .poetry p {
   margin-left: $def-ind;
+  padding-top: $spacing-extra-small;
   text-indent: -$def-ind;
 }
 
 @mixin poetry() {
-  text-indent: $poetry-neg-ind;
+  text-indent: -$def-ind;
+  padding-top: $spacing-extra-small;
 }
 
 @mixin poem-margin($num) {
-  margin: 0 0 0 ($base-poem-ind + $num);
+  margin: 0 0 0 ($def-ind * ($num + 1));
 }
 
 .poem1 {

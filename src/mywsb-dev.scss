@@ -179,7 +179,7 @@ a[data-ref] {
   @include mywsb-scripture-ref
 }
 
-span[data-context~="scripture"],
+span[data-context],
 .versemode {
   @include no-display();
 }

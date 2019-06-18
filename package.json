@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bhdirect-ebooks/mywsbcss/issues"
   },
-  "homepage": "https://github.com/bhdirect-ebooks/mywsbcss#readme"
+  "homepage": "https://github.com/bhdirect-ebooks/mywsbcss#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
 }

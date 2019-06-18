@@ -40,10 +40,10 @@
  */
 
 .sig {
-  margin-bottom: $spacing-medium;
-  margin-left: $spacing-extra-extra-extra-large;
-  text-align: left;
-  text-indent: 0;
+    text-align: left;
+    position: absolute;
+    right: 20px;
+    margin-right: $spacing-extra-large;
 }
 
 

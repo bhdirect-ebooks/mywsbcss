@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
- * VERSION: 2018-05-31 | CROSS | Verse Mode
+ * VERSION: 2019-09-24 | CROSS | Verse Mode
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -40,7 +40,6 @@
 /*
 
    FONT FAMILY GROUPS
-   Docs: http://tachyons.io/docs/typography/font-family/
 
 */
 .sans-serif {
@@ -52,7 +51,7 @@
 }
 
 .wsextra {
-  font-family: "wsextra";
+  font-family: "ws extra";
 }
 
 .gentiumplus {
@@ -2251,7 +2250,7 @@ span.JesusWords {
       Setting floats to display inline will fix the double margin bug in
       ie6. You know... just in case.
 
-   2. Don"t forget to clearfix your floats with .cf
+   2. Don't forget to clearfix your floats with .cf
 
    Base:
      f = float
@@ -2326,32 +2325,6 @@ span.JesusWords {
     float: none;
   }
 }
-/*
-
-   FONT FAMILY GROUPS
-   Docs: http://tachyons.io/docs/typography/font-family/
-
-*/
-.sans-serif {
-  font-family: "Verdana", "Arial", "Helvetica", sans-serif;
-}
-
-.serif {
-  font-family: "Georgia", "Times New Roman", serif;
-}
-
-.wsextra {
-  font-family: "wsextra";
-}
-
-.gentiumplus {
-  font-family: "gentium plus";
-}
-
-.ezra {
-  font-family: "ezra sil";
-}
-
 /*
 
    FONT STYLE

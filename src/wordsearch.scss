@@ -1,5 +1,5 @@
 /*!*
- * VERSION: 2018-06-13 | CROSS | General
+ * VERSION: 2019-09-24 | CROSS | General
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -11,7 +11,6 @@
  * This scss version is a developer document and should
  * be compiled and minified for production environments.
  */
-
 
 
 
@@ -81,8 +80,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 
 @import "includes/shared/normalize";
 @import "includes/tachyons/box-sizing";
-
-
 
 
 
@@ -188,7 +185,15 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 @import "includes/shared/list-helpers";
 @import "includes/shared/def-lists";
 
+/*
+ * Index groups
+ */
 
+div.index-group ul {
+  list-style-type: none;
+  padding: 0 $spacing-extra-large;
+  text-indent: $def-neg-ind;
+}
 
 
 /*------------------------------------*\
@@ -273,7 +278,13 @@ $offset-color: $moon-gray;
 @import "includes/shared/poetry";
 
 
+/**
+ * Index terms
+ */
 
+span.index-term {
+  padding: 0 $spacing-extra-small 0 0;
+}
 
 
 /*------------------------------------*\
@@ -330,7 +341,6 @@ $fn-color: $red;
 @import "includes/tachyons/display";
 //@import "includes/tachyons/flexbox";
 @import "includes/tachyons/floats";
-@import "includes/tachyons/font-family";
 @import "includes/tachyons/font-style";
 @import "includes/tachyons/font-weight";
 //@import "includes/tachyons/forms";

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
- * VERSION: 2018-06-13 | CROSS | General
+ * VERSION: 2019-09-24 | CROSS | General
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -45,7 +45,6 @@
 /*
 
    FONT FAMILY GROUPS
-   Docs: http://tachyons.io/docs/typography/font-family/
 
 */
 .sans-serif {
@@ -57,7 +56,7 @@
 }
 
 .wsextra {
-  font-family: "wsextra";
+  font-family: "ws extra";
 }
 
 .gentiumplus {
@@ -1207,6 +1206,15 @@ dd {
   display: table;
 }
 
+/*
+ * Index groups
+ */
+div.index-group ul {
+  list-style-type: none;
+  padding: 0 4em;
+  text-indent: -1.5em;
+}
+
 /*------------------------------------*\
   #TABLES
 \*------------------------------------*/
@@ -1537,6 +1545,13 @@ hr,
   margin: 0 0 0 16.5em;
   text-indent: -1.5em;
   padding-top: 0.25em;
+}
+
+/**
+ * Index terms
+ */
+span.index-term {
+  padding: 0 0.25em 0 0;
 }
 
 /*------------------------------------*\
@@ -2860,7 +2875,7 @@ hr,
       Setting floats to display inline will fix the double margin bug in
       ie6. You know... just in case.
 
-   2. Don"t forget to clearfix your floats with .cf
+   2. Don't forget to clearfix your floats with .cf
 
    Base:
      f = float
@@ -2935,32 +2950,6 @@ hr,
     float: none;
   }
 }
-/*
-
-   FONT FAMILY GROUPS
-   Docs: http://tachyons.io/docs/typography/font-family/
-
-*/
-.sans-serif {
-  font-family: "Verdana", "Arial", "Helvetica", sans-serif;
-}
-
-.serif {
-  font-family: "Georgia", "Times New Roman", serif;
-}
-
-.wsextra {
-  font-family: "wsextra";
-}
-
-.gentiumplus {
-  font-family: "gentium plus";
-}
-
-.ezra {
-  font-family: "ezra sil";
-}
-
 /*
 
    FONT STYLE

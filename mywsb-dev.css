@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!*
- * VERSION: 2018-07-06 | EPUB | Development
+ * VERSION: 2019-09-24 | EPUB | Development
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -53,7 +53,7 @@
  * for Font Software license information.
  */
 @font-face {
-  font-family: "wsextra";
+  font-family: "ws extra";
   src: url("../fonts/wsextra.otf");
   src: url("../fonts/wsextra.otf?#iefix") format("opentype");
   font-style: normal;
@@ -83,7 +83,6 @@
 /*
 
    FONT FAMILY GROUPS
-   Docs: http://tachyons.io/docs/typography/font-family/
 
 */
 .sans-serif {
@@ -95,7 +94,7 @@
 }
 
 .wsextra {
-  font-family: "wsextra";
+  font-family: "ws extra";
 }
 
 .gentiumplus {
@@ -2788,7 +2787,7 @@ div[epub|type~=footnote] p, div[epub\:type~=footnote] p {
       Setting floats to display inline will fix the double margin bug in
       ie6. You know... just in case.
 
-   2. Don"t forget to clearfix your floats with .cf
+   2. Don't forget to clearfix your floats with .cf
 
    Base:
      f = float
@@ -2863,32 +2862,6 @@ div[epub|type~=footnote] p, div[epub\:type~=footnote] p {
     float: none;
   }
 }
-/*
-
-   FONT FAMILY GROUPS
-   Docs: http://tachyons.io/docs/typography/font-family/
-
-*/
-.sans-serif {
-  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
-}
-
-.serif {
-  font-family: georgia, times, serif;
-}
-
-.wsextra {
-  font-family: "wsextra";
-}
-
-.gentiumplus {
-  font-family: "gentium plus";
-}
-
-.ezra {
-  font-family: "ezra sil";
-}
-
 /*
 
    FONT STYLE

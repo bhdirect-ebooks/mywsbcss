@@ -1,5 +1,5 @@
-/*!*
- * VERSION: 2019-09-24 | CROSS | General
+/*!
+ * VERSION: 2020-02-07 | CROSS | Wordsearch
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -7,12 +7,9 @@
  * A general stylesheet for CROSS eBooks, combining
  * familiar styles for the B&H Direct eBook Development
  * team with functional CSS from Tachyons.
- *
- * This scss version is a developer document and should
- * be compiled and minified for production environments.
  */
-
-
+ // This scss version is a developer document and should
+ // be compiled and minified for production environments.
 
 
 /*------------------------------------*\
@@ -45,8 +42,6 @@
 
 
 
-
-
 /*------------------------------------*\
  #FONTS
 \*------------------------------------*/
@@ -59,8 +54,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 
 
 
-
-
 /*------------------------------------*\
   #GLOBAL VARIABLES
 \*------------------------------------*/
@@ -69,8 +62,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 @import "includes/tachyons/media-queries";
 @import "includes/ws/global";
 @import "includes/ws/defaults";
-
-
 
 
 
@@ -91,8 +82,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 
 
 
-
-
 /*------------------------------------*\
   #HEADINGS
 \*------------------------------------*/
@@ -108,8 +97,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 .bridgehead {
   @include bridgehead(); //from shared/headings
 }
-
-
 
 
 
@@ -134,8 +121,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 
 
 
-
-
 /*------------------------------------*\
   #ASIDES
 \*------------------------------------*/
@@ -145,8 +130,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 .aside {
   @include asides();
 }
-
-
 
 
 
@@ -175,8 +158,6 @@ $lang-font:  "Gentium Plus", "Gentium", "Charis SIL", serif;
 
 
 
-
-
 /*------------------------------------*\
   #LISTS
 \*------------------------------------*/
@@ -194,6 +175,7 @@ div.index-group ul {
   padding: 0 $spacing-extra-large;
   text-indent: $def-neg-ind;
 }
+
 
 
 /*------------------------------------*\
@@ -235,8 +217,6 @@ $offset-color: $moon-gray;
 
 
 
-
-
 /*------------------------------------*\
   #VIDEOS
 \*------------------------------------*/
@@ -247,8 +227,6 @@ $offset-color: $moon-gray;
   @include video-def();
   width: 80%;
 }
-
-
 
 
 
@@ -265,8 +243,6 @@ $offset-color: $moon-gray;
 .pull-right {
   @include pullquote-float-ns(right);
 }
-
-
 
 
 
@@ -287,14 +263,14 @@ span.index-term {
 }
 
 
+
 /*------------------------------------*\
   #TEXT-GENERAL
 \*------------------------------------*/
 
 @import "includes/shared/text-block";
+@import "includes/ws/text-block";
 @import "includes/shared/text-inline";
-
-
 
 
 
@@ -306,9 +282,9 @@ $fn-size: $type-scale-8;
 $fn-color: $red;
 
 @import "includes/shared/fn";
+@import "includes/ws/bible-fn";
 @import "includes/shared/text-types";
-
-
+@import "includes/ws/bible-text-types";
 
 
 
@@ -317,8 +293,6 @@ $fn-color: $red;
 \*------------------------------------*/
 
 @import "includes/shared/languages";
-
-
 
 
 
@@ -373,3 +347,10 @@ $fn-color: $red;
 //@import "includes/tachyons/z-index";
 //@import "includes/tachyons/nested";
 @import "includes/tachyons/styles";
+
+// ⬇ necessary for differences between modern browsers (CP) and IE (WS)
+
+.biblechapter p.dib {
+  display: inline;
+  margin-right: 0.75em;
+}

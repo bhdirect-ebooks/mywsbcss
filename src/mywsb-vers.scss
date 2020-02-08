@@ -1,169 +1,26 @@
-/*!*
- * VERSION: 2019-09-24 | EPUB | Production
+/*!
+ * VERSION: 2020-02-07 | EPUB | Production
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
- */
-/**
- * A verse mode stylesheet for myWSB EPUBs
- * with functional CSS from Tachyons.
  *
- * This scss version is a developer document and should
- * be compiled and minified for production environments.
+ * A verse mode stylesheet for app.wordsearchbible.com EPUB Bibles
  */
 
+// This scss version is a developer document and should
+// be compiled and minified for production environments.
 
-
-
-
-/*------------------------------------*\
-  #CONTENTS
-\*------------------------------------*/
-/**
- * FONTS................Add font-families and variables.
- * GLOBAL...............Other globally-available variables.
- * NORMALIZATION........Box sizing and modified Normalize CSS
- *                      (http://normalize.css.github.io)
- *
- * HEADINGS.............h1–h6 and other headings styles.
- * INLINE-ELEMENTS......HTML inline element styles.
- *
- * FIGURES..............Figures and related helper classes.
- * QUOTES...............Block quotes and pull quotes.
- * BLOCKS...............Other type-associated blocks.
- *
- * TEXT-GENERAL.........Classes for basic formatting of text.
- * TEXT-TYPES...........Classes for specific types of content.
- * LANGUAGES............Styling for language elements and classes.
- *
- * TACHYONS.............TACHYONS (modified) | http://tachyons.io
- */
-
-
-
-
-
-/*------------------------------------*\
-  #FONTS
-\*------------------------------------*/
-
-$sans-font: -apple-system, BlinkMacSystemFont,
-            "avenir next", avenir,
-            "helvetica neue", helvetica,
-            ubuntu,
-            roboto, noto,
-            "segoe ui", arial,
-            sans-serif;
-
-$serif-font:  georgia,
-              times,
-              serif;
-
-$lang-font:  "gentium plus", serif;
-
-@import "includes/mywsb/font-faces";
-@import "includes/tachyons/font-family";
-
-
-
-
-
-/*------------------------------------*\
- #GLOBAL VARIABLES
-\*------------------------------------*/
-
-@import "includes/tachyons/colors";
-@import "includes/tachyons/media-queries";
-@import "includes/mywsb/global";
-@import "includes/mywsb/defaults";
-
-
-
-
-
-
-/*------------------------------------*\
-  #NORMALIZATION
-\*------------------------------------*/
-
-@import "includes/shared/normalize";
-@import "includes/tachyons/box-sizing";
-
-body *,
-tr {
-  display: inline;
-  margin: 0;
-  padding: 0;
-  text-indent: 0;
-}
-
-
-
-
-
-/*------------------------------------*\
-  #HEADINGS
-\*------------------------------------*/
-
-@import "includes/shared/headings";
-
-
-/*
- * Label class for use with <span> in <h1>
- */
-
-/* Use for any <h1> label */
-.label {
-  display: block;
-  color: gray;
-  font-variant: small-caps;
-  font-weight: 300;
-  font-size: $type-scale-3;
-  margin: $spacing-medium 0 $spacing-small 0;
-}
-
-
-
-
-
-/*------------------------------------*\
-  #INLINE-ELEMENTS
-\*------------------------------------*/
-
-@import "includes/shared/inline";
-
-
-
-
-
-/*------------------------------------*\
-  #QUOTES
-\*------------------------------------*/
-
-.scriptext {
-  border: none;
-  font-size: $spacing-medium;
-  font-style: italic;
-  margin: 0;
-  padding: 0;
-  .italic {
-    font-style: normal;
+[data-scripture-chapter] {
+  div:not(.center),
+  p:not(.tc):not(.h1sub):not(.h2sub):not(.h3sub) {
+    display: inline;
   }
 }
 
+.versenum::before {
+  content: "";
+  display: block;
+}
 
-
-
-
-/*------------------------------------*\
-  #BLOCKS
-\*------------------------------------*/
-
-@import "includes/mywsb/blocks";
-
-/**
- * Poetry
- */
-.poetry p,
 .poem1,
 .poem2,
 .poem3,
@@ -174,117 +31,5 @@ tr {
 .poem8,
 .poem9,
 .poem10 {
-  margin-left: 0.25em;
+  margin-left: 0;
 }
-
-
-ol,
-ul {
-  list-style-type: none;
-}
-
-
-
-
-
-/*------------------------------------*\
-  #TEXT-GENERAL
-\*------------------------------------*/
-
-@import "includes/shared/text-inline";
-
-
-
-
-
-/*------------------------------------*\
-  #TEXT-TYPES
-\*------------------------------------*/
-
-$fn-size: $type-scale-8;
-$fn-color: $black;
-
-@import "includes/shared/fn";
-@import "includes/shared/bibles";
-
-.scripture {
-  display: block !important;
-  margin: 0;
-  border: 0;
-}
-
-.versemode {
-  display: block;
-}
-
-.versenum::after,
-.nonversenum::after {
-  content: "\00a0";
-}
-
-
-
-
-
-/*------------------------------------*\
-  #LANGUAGES
-\*------------------------------------*/
-
-@import "includes/shared/languages";
-
-
-
-
-
-/*------------------------------------*\
-  #TACHYONS (modified)
-\*------------------------------------*/
-
-//@import "includes/tachyons/background-size";
-//@import "includes/tachyons/background-position";
-//@import "includes/tachyons/outlines";
-@import "includes/tachyons/borders";
-@import "includes/tachyons/border-colors";
-//@import "includes/tachyons/border-radius";
-@import "includes/tachyons/border-style";
-@import "includes/tachyons/border-widths";
-@import "includes/tachyons/box-shadow";
-//@import "includes/tachyons/code";
-//@import "includes/tachyons/coordinates";
-@import "includes/tachyons/clears";
-@import "includes/tachyons/display";
-//@import "includes/tachyons/flexbox";
-@import "includes/tachyons/floats";
-@import "includes/tachyons/font-style";
-@import "includes/tachyons/font-weight";
-//@import "includes/tachyons/forms";
-@import "includes/tachyons/heights";
-@import "includes/tachyons/letter-spacing";
-@import "includes/tachyons/line-height";
-//@import "includes/tachyons/links";
-//@import "includes/tachyons/lists";
-@import "includes/tachyons/max-widths";
-@import "includes/tachyons/widths";
-@import "includes/tachyons/overflow";
-@import "includes/tachyons/position";
-@import "includes/tachyons/opacity";
-//@import "includes/tachyons/rotations";
-@import "includes/tachyons/skins";
-@import "includes/tachyons/skins-pseudo";
-@import "includes/tachyons/spacing";
-@import "includes/tachyons/negative-margins";
-@import "includes/tachyons/tables";
-@import "includes/tachyons/text-decoration";
-@import "includes/tachyons/text-align";
-@import "includes/tachyons/text-transform";
-@import "includes/tachyons/type-scale";
-@import "includes/tachyons/typography";
-@import "includes/tachyons/utilities";
-//@import "includes/tachyons/visibility";
-@import "includes/tachyons/white-space";
-@import "includes/tachyons/vertical-align";
-//@import "includes/tachyons/hovers";
-//@import "includes/tachyons/z-index";
-//@import "includes/tachyons/nested";
-@import "includes/tachyons/styles";
-

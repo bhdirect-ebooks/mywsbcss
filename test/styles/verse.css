@@ -1,5 +1,5 @@
 /*!
- * VERSION: 2020-02-07 | CROSS | Verse Mode
+ * VERSION: 2020-02-10 | CROSS | Verse Mode
  *
  * A verse mode stylesheet for CROSS Bibles
  */
@@ -14,14 +14,6 @@
 }
 .biblechapter p {
   margin-right: 0.15em;
-}
-.biblechapter div.center {
-  display: block;
-  margin: 1em auto;
-}
-.biblechapter div.center p {
-  margin-right: 0;
-  padding-top: 0.75em;
 }
 .biblechapter .h1sub, .biblechapter .h2sub, .biblechapter .h3sub {
   margin: -0.25em 0 0.5em 0;

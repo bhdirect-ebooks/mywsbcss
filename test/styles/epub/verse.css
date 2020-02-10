@@ -1,7 +1,5 @@
 /*!
  * VERSION: 2020-02-07 | EPUB | Production
- * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
- * used in accordance with an MIT License (OSI).
  *
  * A verse mode stylesheet for app.wordsearchbible.com EPUB Bibles
  */[data-scripture-chapter] div:not(.center),[data-scripture-chapter] p:not(.tc):not(.h1sub):not(.h2sub):not(.h3sub){display:inline}.versenum::before{content:"";display:block}.poem1,.poem2,.poem3,.poem4,.poem5,.poem6,.poem7,.poem8,.poem9,.poem10{margin-left:0}

@@ -1544,16 +1544,6 @@ div[epub|type~=footnote] p, div[epub\:type~=footnote] p {
 }
 
 /**
- * Footnote text
- */
-.fntext {
-  color: #0000ff;
-  display: none;
-  font-size: 0.8em;
-  font-variant: normal;
-}
-
-/**
  * Chapter author"s name, for use with <p>
  */
 .auth {

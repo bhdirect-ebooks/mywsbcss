@@ -9,7 +9,7 @@
 
 [data-scripture-chapter] {
   div:not(.center),
-  p:not(.tc):not(.h1sub):not(.h2sub):not(.h3sub) {
+  p:not(.tc):not(.h1):not(.h1sub):not(.h2sub):not(.h3sub) {
     display: inline;
     padding: 0;
   }

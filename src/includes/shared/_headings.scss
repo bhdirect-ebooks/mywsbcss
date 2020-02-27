@@ -46,7 +46,8 @@ $level-6-font: italic bold $type-scale-6 $sans-font;
  * h1-6
  */
 
-h1 {
+h1,
+.h1 {
   font: $level-1-font;
   margin: $h1-margin;
   @include heading-center();

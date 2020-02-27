@@ -722,7 +722,8 @@ img {
 /*
  * h1-6
  */
-h1 {
+h1,
+.h1 {
   font: normal 500 2em "Verdana", "Arial", "Helvetica", sans-serif;
   margin: 2em 0 1em 0;
   clear: both;

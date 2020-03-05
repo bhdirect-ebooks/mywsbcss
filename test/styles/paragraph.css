@@ -6,10 +6,6 @@
 .biblechapter p {
   margin-right: 0.15em;
 }
-.biblechapter .versecontent {
-  display: block;
-  padding-right: 0.15em;
-}
 .biblechapter .dib.poem1,
 .biblechapter .dib.poem2,
 .biblechapter .dib.poem3,
@@ -22,6 +18,11 @@
 .biblechapter .dib.poem10 {
   padding-left: 1.5em;
   text-indent: 0;
+}
+
+.versecontent {
+  display: block;
+  padding-right: 0.15em;
 }
 
 .scripture,

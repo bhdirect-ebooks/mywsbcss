@@ -16,10 +16,6 @@ $letter-spacing: 0.15em;
   p {
     margin-right: $letter-spacing;
   }
-  .versecontent {
-    display: block;
-    padding-right: $letter-spacing;
-  }
   .dib.poem1,
   .dib.poem2,
   .dib.poem3,
@@ -33,6 +29,11 @@ $letter-spacing: 0.15em;
     padding-left: 1.5em;
     text-indent: 0;
   }
+}
+
+.versecontent {
+  display: block;
+  padding-right: $letter-spacing;
 }
 
 .scripture,

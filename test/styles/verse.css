@@ -1,19 +1,13 @@
 /*!
- * VERSION: 2020-02-10 | CROSS | Verse Mode
+ * VERSION: 2020-03-05 | CROSS | Verse Mode
  *
  * A verse mode stylesheet for CROSS Bibles
  */
-.biblechapter {
-  font-size: 100%;
-}
-.biblechapter div, .biblechapter p {
+.biblechapter div, .biblechapter p, .biblechapter .versecontent {
   display: inline;
   margin: 0;
   padding: 0;
   text-indent: 0;
-}
-.biblechapter p {
-  margin-right: 0.15em;
 }
 .biblechapter .h1sub, .biblechapter .h2sub, .biblechapter .h3sub {
   margin: -0.25em 0 0.5em 0;

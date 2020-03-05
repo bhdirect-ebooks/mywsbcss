@@ -1,0 +1,8 @@
+@mixin paragraph {
+  line-height: $def-line;
+  font-size: $def-font;
+  margin: 0;
+  text-align: left;
+  text-indent: 0;
+  padding-top: ($spacing-small + $spacing-extra-small);
+}

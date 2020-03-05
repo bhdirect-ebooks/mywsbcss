@@ -1,0 +1,5 @@
+@import "../shared/norm_para";
+
+.versecontent {
+  @include paragraph;
+}

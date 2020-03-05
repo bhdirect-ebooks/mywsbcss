@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * VERSION: 2020-02-10 | CROSS | Wordsearch
+ * VERSION: 2020-03-05 | CROSS | Wordsearch
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -1723,6 +1723,15 @@ span.index-term {
   font-weight: bold;
 }
 
+.versecontent {
+  line-height: 1.5;
+  font-size: 1em;
+  margin: 0;
+  text-align: left;
+  text-indent: 0;
+  padding-top: 0.75em;
+}
+
 .versenum,
 .nonversenum {
   font-size: 0.75em;
@@ -2886,6 +2895,11 @@ span.index-term {
     width: 100%;
   }
 }
+.biblechapter .dib {
+  display: inline;
+  margin-right: 0.75em;
+}
+
 /*
 
    FLOATS
@@ -9255,9 +9269,4 @@ span.index-term {
 
 .i .i {
   font-style: normal;
-}
-
-.biblechapter p.dib {
-  display: inline;
-  margin-right: 0.75em;
 }

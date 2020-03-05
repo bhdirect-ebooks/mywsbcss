@@ -250,6 +250,7 @@ $offset-color: $moon-gray;
   #BLOCKS
 \*------------------------------------*/
 
+@import "includes/ws/bible-versecontent";
 @import "includes/ws/blocks";
 @import "includes/shared/poetry";
 
@@ -283,7 +284,6 @@ $fn-color: $red;
 @import "includes/shared/fn";
 @import "includes/ws/bible-fn";
 @import "includes/shared/text-types";
-@import "includes/ws/bible-versecontent";
 @import "includes/ws/bible-text-types";
 
 

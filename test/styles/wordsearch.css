@@ -1392,6 +1392,15 @@ blockquote p {
 /*------------------------------------*\
   #BLOCKS
 \*------------------------------------*/
+.versecontent {
+  line-height: 1.5;
+  font-size: 1em;
+  margin: 0;
+  text-align: left;
+  text-indent: 0;
+  padding-top: 0.75em;
+}
+
 /**
  * Hidden
  */
@@ -1721,15 +1730,6 @@ span.index-term {
 .verse {
   font-size: 0.875em;
   font-weight: bold;
-}
-
-.versecontent {
-  line-height: 1.5;
-  font-size: 1em;
-  margin: 0;
-  text-align: left;
-  text-indent: 0;
-  padding-top: 0.75em;
 }
 
 .versenum,

@@ -1,5 +1,5 @@
 /*!
- * VERSION: 2020-02-10 | CROSS | Wordsearch
+ * VERSION: 2020-03-05 | CROSS | Wordsearch
  * TACHYONS is copyright (c) 2015 @mrmrs (mrmrs.io) and
  * used in accordance with an MIT License (OSI).
  */
@@ -250,6 +250,7 @@ $offset-color: $moon-gray;
   #BLOCKS
 \*------------------------------------*/
 
+@import "includes/ws/bible-versecontent";
 @import "includes/ws/blocks";
 @import "includes/shared/poetry";
 
@@ -313,6 +314,13 @@ $fn-color: $red;
 @import "includes/tachyons/clears";
 @import "includes/tachyons/display";
 //@import "includes/tachyons/flexbox";
+
+// ⬇ necessary for differences between modern browsers (CP) and IE (WS)
+.biblechapter .dib {
+  display: inline;
+  margin-right: 0.75em;
+}
+
 @import "includes/tachyons/floats";
 @import "includes/tachyons/font-style";
 @import "includes/tachyons/font-weight";
@@ -346,10 +354,3 @@ $fn-color: $red;
 //@import "includes/tachyons/z-index";
 //@import "includes/tachyons/nested";
 @import "includes/tachyons/styles";
-
-// ⬇ necessary for differences between modern browsers (CP) and IE (WS)
-
-.biblechapter p.dib {
-  display: inline;
-  margin-right: 0.75em;
-}

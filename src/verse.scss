@@ -1,5 +1,5 @@
 /*!
- * VERSION: 2020-02-10 | CROSS | Verse Mode
+ * VERSION: 2020-03-05 | CROSS | Verse Mode
  *
  * A verse mode stylesheet for CROSS Bibles
  */
@@ -11,15 +11,11 @@
 // be compiled and minified for production environments.
 
 .biblechapter {
-  font-size: 100%;
-  div, p {
+  div, p, .versecontent {
     display: inline;
     margin: 0;
     padding: 0;
     text-indent: 0;
-  }
-  p {
-    margin-right: 0.15em;
   }
   .h1sub, .h2sub, .h3sub {
     margin: -0.25em 0 0.5em 0;

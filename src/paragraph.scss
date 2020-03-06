@@ -1,5 +1,5 @@
 /*!
- * VERSION: 2020-02-07 | CROSS | Paragraph Mode
+ * VERSION: 2020-03-05 | CROSS | Paragraph Mode
  *
  * A paragraph mode stylesheet for CROSS Bibles
  */
@@ -10,20 +10,30 @@
 // This scss version is a developer document and should
 // be compiled and minified for production environments.
 
+$letter-spacing: 0.15em;
+
 .biblechapter {
-  p.dib.poem1,
-  p.dib.poem2,
-  p.dib.poem3,
-  p.dib.poem4,
-  p.dib.poem5,
-  p.dib.poem6,
-  p.dib.poem7,
-  p.dib.poem8,
-  p.dib.poem9,
-  p.dib.poem10 {
+  p {
+    margin-right: $letter-spacing;
+  }
+  .dib.poem1,
+  .dib.poem2,
+  .dib.poem3,
+  .dib.poem4,
+  .dib.poem5,
+  .dib.poem6,
+  .dib.poem7,
+  .dib.poem8,
+  .dib.poem9,
+  .dib.poem10 {
     padding-left: 1.5em;
     text-indent: 0;
   }
+}
+
+.versecontent {
+  display: block;
+  padding-right: $letter-spacing;
 }
 
 .scripture,

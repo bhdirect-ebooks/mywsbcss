@@ -1,20 +1,28 @@
 /*!
- * VERSION: 2020-02-07 | CROSS | Paragraph Mode
+ * VERSION: 2020-03-05 | CROSS | Paragraph Mode
  *
  * A paragraph mode stylesheet for CROSS Bibles
  */
-.biblechapter p.dib.poem1,
-.biblechapter p.dib.poem2,
-.biblechapter p.dib.poem3,
-.biblechapter p.dib.poem4,
-.biblechapter p.dib.poem5,
-.biblechapter p.dib.poem6,
-.biblechapter p.dib.poem7,
-.biblechapter p.dib.poem8,
-.biblechapter p.dib.poem9,
-.biblechapter p.dib.poem10 {
+.biblechapter p {
+  margin-right: 0.15em;
+}
+.biblechapter .dib.poem1,
+.biblechapter .dib.poem2,
+.biblechapter .dib.poem3,
+.biblechapter .dib.poem4,
+.biblechapter .dib.poem5,
+.biblechapter .dib.poem6,
+.biblechapter .dib.poem7,
+.biblechapter .dib.poem8,
+.biblechapter .dib.poem9,
+.biblechapter .dib.poem10 {
   padding-left: 1.5em;
   text-indent: 0;
+}
+
+.versecontent {
+  display: block;
+  padding-right: 0.15em;
 }
 
 .scripture,

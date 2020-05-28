@@ -184,6 +184,12 @@ li {
     text-align: justify;
   }
 }
+/* fix for app.wordsearchbible.com native style displaying links as block when in `li`s or `dt`s */
+li a,
+dt a {
+  display: inline;
+}
+
 /**
  * Add the correct display in IE 9-.
  */

@@ -135,6 +135,11 @@ img {
 /*------------------------------------*\
   #NORMALIZATION
 \*------------------------------------*/
+body {
+  font: normal normal 100% "Georgia", "Times New Roman", serif;
+  margin: 0 2em;
+}
+
 /*! Heavily-modified version of normalize.css v7.0.0
  * | MIT License | github.com/necolas/normalize.css
  */
@@ -156,11 +161,6 @@ html {
 
 /* Sections
    ========================================================================== */
-body {
-  font: normal normal 100% "Georgia", "Times New Roman", serif;
-  margin: 0 2em;
-}
-
 p {
   line-height: 1.5;
   font-size: 1em;

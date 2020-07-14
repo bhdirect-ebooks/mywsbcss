@@ -1,0 +1,9 @@
+body {
+  font: normal normal 100% $serif-font;
+  /* this differs from `shared/_body.scss` in that there is no left and right margin
+     because the web reader app puts the ePub in a container with left and right padding
+     and adding a left and right margin to the `body` on top of that is too much
+     - Peter Turner 07/14/2020
+  */
+  margin: 0;
+}

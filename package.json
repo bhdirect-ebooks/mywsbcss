@@ -1,6 +1,6 @@
 {
   "name": "@bhdirect/mywsbcss",
-  "version": "2.2.8",
+  "version": "2.2.9",
   "description": "Shared stylesheets for Wordsearch Bible (EPUB and CROSS), combining familiar styles with functional CSS from Tachyons.",
   "main": "mywsb.scss",
   "directories": {
@@ -10,7 +10,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "git+https://github.com/bhdirect-ebooks/mywsbcss.git",
-  "contributors": ["Weston Littrell", "Peter Turner"],
+  "contributors": [
+    "Weston Littrell",
+    "Peter Turner"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bhdirect-ebooks/mywsbcss/issues"

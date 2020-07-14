@@ -5,7 +5,7 @@
 // Custom Media Query Variables
 
 
-/*! Heavily-modified version of normalize.css v7.0.0
+/* Heavily-modified version of normalize.css v7.0.0
  * | MIT License | github.com/necolas/normalize.css
  */
 
@@ -26,13 +26,7 @@ html {
 
 /* Sections
    ========================================================================== */
-
-body {
-  font: normal normal 100% $serif-font;
-  margin: 0 $spacing-large;
-}
-
-@import "norm_para";
+@import "norm-para";
 
 p {
   @include paragraph;

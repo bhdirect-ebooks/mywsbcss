@@ -102,6 +102,7 @@ $lang-font:  "gentium plus", serif;
   #NORMALIZATION
 \*------------------------------------*/
 
+@import "includes/shared/body";
 @import "includes/shared/normalize";
 @import "includes/tachyons/box-sizing";
 
